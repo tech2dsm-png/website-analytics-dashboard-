@@ -1,0 +1,863 @@
+<!DOCTYPE HTML>
+<!--
+	
+	
+	Free tutorials for personal and commercial use 
+-->
+<html>
+	<head>
+		<title>Decision making in C Language Skill UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="keywords" content="printf,scanf,input,output, C,getchar,putchar, Programming">
+		
+		<meta name="description" content=" In every C program perform three task,accepting input,processing and generation output. The acceptance of data refers to input and the presentation of data refers to the output ">
+		<link rel="canonical" href="https://www.sankalandtech.com/Tutorials/C/inputoutput.html"/>
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--<link rel="stylesheet" href="assets/css/intstyle.css" /> -->
+		<script>
+					document.addEventListener("contextmenu", function(event)
+					{
+						event.preventDefault();
+						    
+					}, false);
+		</script>
+		<style>
+				
+				ul {
+ 					  padding: 20px;
+ 					  
+ 					}
+				li {
+					 	 background: #cce5ff;
+ 						 color: darkblue;
+ 						 margin: 5px;
+					}
+					body {
+							background: #cce5ff;	
+					    } 					
+         		p  {
+           				 
+  						font-size: 19px;
+  						color: black;
+  						font-family: Georgia, serif;
+  						font-style: italic;
+  						display:block;
+  						margin-left: 1.2em;
+  						margin-bottom: 1em;
+  						margin-right: 1em;
+
+         			 }
+         			 .bgc{
+         			 	background-color: rgb(155,142,179);
+         			 }
+         		.responsive {
+         			       width: 100%;
+         			       height: auto;
+         			      }
+ 	        	img {
+  					border-radius: 15%;
+					}
+					div.dashed{
+         				border-style: solid;
+         				border-width: 3px;
+
+         			}
+					hr {
+  								border: 2px solid #DAA520;
+							}
+					
+​
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="" class="logo"><strong>Input Output in C</strong> Language Skill UP</a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter">
+											<span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+
+									</ul>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h3 class="bgc">Input Output in  C Language <br />
+											</h3>
+											
+										</header>
+										<p> In this article, lets  learn How input and outputs are used in C programming language.<br>Topics covered in this Article.<br>
+											1. What is input? and what is output in C programming?<br>
+											2. Need for Input and Output?<br>
+											3.Types of Input and Output Function in C.<br>
+											   A. Formatted  Functions.<br>
+											      scanf(),printf()<br>
+											   B. Unformatted Functions.<br>
+											    getchar(),putchar(),gets(),puts()<br>
+									
+										Before to start learning this topic, first of all  we are to learn .<br>
+										<b>1.What is input? and what is output in C programming?</b><br>
+										<b class="bgc">Input:</b> In General input is to provide something to the computer or any device is receving signal or command from outside resources is reffered as input.<br>command or signals are data sent to the computer for processing.<br>
+										<b class="bgc">Output: </b> Computer program creates many output. these include messages,printed documents,on screen data ,sounds and videos.<br><br></p>
+										<p class="bgc">"Output is the information that it prints on paper,write to file or displays on screen as a result of particular program".</p><br><br>
+										<p>
+										Output in C Programming mean displaying some data or information on the printer, the screen, or any other file. For generating output the C programming language  has various built-in functions. These functions sends(process) data on any screen & printer, and also for saving the output in the form of binary files or texts.<br><br>
+										"Feeding some data or information in the program is reffered as input".<br>
+										Programmer or user can give the input  from the command line or in the from of binary or text file.<br>
+										 The C programming language comes with a set of various built-in functions for reading the input and then feeding it to the available program as per our requirements.<br>
+
+										
+
+
+
+
+
+										</p>
+										<p><b class="bgc">2. Need of input output in C</b><br>
+									When a programmer says input, it would mean that they are feeding some data or info in the program. They can give this input from the command line or in the form of any file. The C programming language comes with a set of various built-in functions for reading the input and then feeding it to the available program as per our requirements.
+									On the other hand, when a programmer says output, they mean displaying some data and information on the printer, the screen, or any other file. The C programming language also comes with various built-in functions for generating the output of the available data on any screen & printer, and also for saving the output in the form of binary files or texts.
+											<br>
+
+											</p>
+										<article>
+											<h3 class="bgc">3. Types of Input and Output Functions in C</h3><p>
+										In C, input refers to feeding information or data  in the program. On the other hand, output refers to writing the data and information on any printer file and displaying it on the screen. A standard library .i.e stdio.h header file is available in the C language for reading any input and generating the output to be displayed on the console. <br>
+										Input and Output Functions in C language are classified in to types.
+										<br><b > A. Formatted Functions </b></br>
+										<b >B. Unformatted Functions</b></br>
+
+											</p>
+										</article>
+										<article>
+											<p><b class="bgc"> A. Formatted Functions.</b></br>
+												The C Language comes with standard input output functions <b> printf() and scanf() </b>so that we can perform formatted input and output in a C program. C Language performs formatted input and output operations using standard input output formatted functions which is available in standard library file <b>stdio.h</b><br>
+												The formatted functions basically present or accept the available data (input) in a specific format. The standard library stdio.h in C contains various functions for the input-output operations. The scanf() and printf()  functions help a programmer to format the functions in their desired format. Programmer use the formatted input and output functions for taking single or multiple inputs from the user at console.These formated functions also allow user to display single or multiple values.<br>
+											</p>
+											<p class="bgc">Lets Learn Some Important formated input output function in C Language.<br>
+											</p><p><b class="bgc"> i.printf(): </b>&nbsp;&nbsp; C Program use this function for displaying a single or multiple values in the form of output for the user at console. <br>The printf() function basically gets defined in the header file stdio.h, and Programmer use it for showing the standard output at console. The printf function in C program is use to display or print the value of variable or any sample text.<br>
+											This function is a part of the C language standard library <b>"stdio.h"</b> and allow programmer to  format output in various ways.<br>
+											<b>Syntax of printf: &nbsp;printf("format String",args);</b>
+										</p>
+										<div class="dashed"><p><font color="green">printf("format String",args);</font><br>
+											<b>Format String:</b>It may have different format specifiers.It is format specifier to print the value of variables such as character,integer,long,bool etc.<br>
+											format specifiers:<br>
+											%d format specifier is to display integer value.<br>
+											%c format specifier is to display single character value.<br>
+											%f format specifier is to print floating point number value.<br>
+											%s format specifier is to display string value.<br>
+											%x format specifier is to display Hexadecimal value.<br>
+											<b>args</b>: These are the list of variables names that corresponds to the list of format specifiers.
+										</p>
+									   </div>										
+											
+										</article><br>
+										<article><div class="dashed scroll">
+											 <h3 class="bgc">printf() function example with format specifiers.</h3>
+											 <p>
+											 	/* C program to Demonstrate printf() function and various data type along with format specifiers */<br>
+
+											 	#include &lt;stdio.h&gt;<br>
+ 
+												int main()<br>
+												{<br>
+												    printf("Wellcome to C programming!");<br>
+												    int p = 900;<br>
+												    int q = 99;<br>
+												    printf("The sum of %d and %d is %d\n", p, q,
+												           p + q);<br>
+												           float num = 3.14159;<br>
+												    printf("The value of pi is approximately %f\n", num);<br>
+												    char c = 'C';<br>
+												    printf("The letter is %c\n", c);<br>
+												    int x = 100;<br>
+												    printf("Address of variable 'x' is %p", &x);<br>
+												    unsigned int num1 = 255;<br>
+												    printf("The value of num in hexadecimal is: %x\n", num1);<br>
+												    return 0;<br>
+												}<br>
+												<b> output:</b><br>
+												Wellcome to C programming!<br>
+												The sum of 900 and 99 is 999<br>
+												The value of pi is approximately 3.141590<br>
+												The letter is C<br>
+												Address of variable 'x' is  0x6ffee314342c<br>
+												value of num in hexadecimal is: ff
+
+																							</p>
+										</div>
+										</article>
+
+											
+
+
+											
+											<article>
+												<p>
+													
+												</p>
+											</article>
+											<article>
+												<p>
+												<b class="bgc">ii. scanf():</b><br>
+												The scanf() Library function in C programming  is a powerful tool for reading input from the user or from a file and storing it in variables.<br>
+												The scanf() function is a standard Library function in C Programming used to  reads all datatypes from the(user) standard input stream stdin into the locations(variables) given by the entries in argument-list. Each argument must list  be a pointer to a variable with a type that corresponds to a type specifier in format-string.<br>
+												 By specifying format specifiers in the format string, you can read input values of different types, such as character,strings,integers, floating-point numbers.<br>
+												The scanf in C accepts two values: formatted string and memory location of variables in which we wish to store input data obtained from the user.<br>
+												<b> Synatx: int scanf ( const char * format_string, &variable );</b><br>
+												The two parameters passed to scanf function are.<br>
+												<b>format_string:</b><br> Like printf() function scanf() has format specifier or format string. For example, %c is used for character value, %d is used for integer numbers, etc.<br>
+													<b>&variable:</b><br>
+													To store  input data, scanf needs to known the memory address or location of a variable. The ampersand (&)  operator or address of the operator is used to know memory address or a variable location.<br>
+													For example, &salary is the address of salary.The value taken from the input is stored in the location pointed by the variable. This is why we pass the variable address in which we want to store the value.
+												
+									
+
+												</p>
+												<div class="dashed scroll">
+													
+														<h3 class="bgc">C Program To Demonstrate working of scanf() function</h3><p>
+
+								#include&lt;stdio.h&gt;<br>
+							
+							int main() <br>{<br>
+							  int salary;<br>
+							  printf ("\nEnter the Salary");<br>
+							  scanf("%d",&salary);<br>
+							  printf("\n Value of salary=%d",salary);<br>
+							  return(0);<br>
+							}<br>
+							<b>Output :</b><br>
+
+							Enter the salary<br>
+							8000<br>
+							Value of salary=8000
+
+										</p>
+										</div>
+								</article><hr class="new4">
+
+										<article>
+												<h3 class="bgc">B.&nbsp; Unformatted Functions in C :</h3><p>
+													C Programming language has following types of unformatted function<br> a. getchar()<br> b. putchar()<br>c.gets()<br>d. puts()<br>e. getc().<br>
+													<b>a. getchar():</b> is the most basic input function in C Programming Language that reads a single character from the standard input stream stdin(i.e Keyboard device), regardless of what it is, and returns it to the program. This standard library function is used when single character input is required from the user.<br>
+													It is defined inside the standard input output stream &lt;stdio.h&gt; header file. 
+													<br>
+													The standard input stream provides multiple functions to take the input from the user at the run time of a program.<br>
+													The  function reads the next available character from the screen and returns it as an integer. Programmer  can use getchar() function  inside a loop to read more than one character from the screen .<br>
+													Syntax of getchar() in C :<br>
+													<hr><p>
+												<b><i>int getchar(void);</i></b></p>
+												<hr><p>
+												getchar() function does not take any parameters.
+
+												Return Value
+												The input from the standard input is read as an unsigned char and then it is typecast and returned as an integer value(int).
+												EOF is returned in two cases:
+												When the file end is reached
+												When there is an error during the execution
+											</p>
+											<div class="dashed scroll"><p>
+												/*C program to implement getchar() function to read a character*/<br>
+												/* including stdio.h which contains the definition of getchar() function */<br>
+											#include &lt;stdio.h&gt;<br>
+
+											int main () {<br>
+											    
+											    /* declaring the char variable */<br>
+											    char ch;<br>
+											 
+											    printf("Enter the character: ");<br>
+											    /* taking input of single character using getchar() function*/<br>
+											    ch = getchar();<br>
+											 
+											    printf("Character entered is: ");<br>
+											    /* printing the entered character using printf() function used to output the single character*/<br>
+											    printf("%c",ch);<br>
+
+											    return(0);<br>
+											}<br>
+											</p></div><br><p>
+												<b>b. putchar():</b>The putchar is a function in the C programming language that writes a single character to the standard output stream, stdout.<br>The putchar function is specified in the C standard library header file &lt;stdio.h&gt;.<br>
+												This function puts the passed character on the screen and returns the same character. This function displays only single character at a time. You can use this function in the loop in case you want to display more than one character on the screen. <br> Its syntax is as follows:<br><hr>
+
+														<p>int putchar (int character);</p>
+														<hr><p>
+														The int character parameter for this function is mandatory, which is the character to be printed or written to stdout or console.if the writing is successful, the argument character is returned. Otherwise, end-of-file is returned.
+
+														
+														<br>Check the following example −										
+
+													
+													<div class="dashed scroll">
+														<h3 class="bgc">The following program for getchar() and putchar() Function in C language.</h3><br><p>
+															#include&lt;stdio.h&gt;<br>
+															int	main() {<br>
+															 char ch;<br>
+															 printf("\nEnter some character");<br>
+															 c=getchar();<br>
+															 printf("\n Entered character is :");<br>
+															 putchar(ch);<br>
+															 return 0;<br>
+															}<br>
+															<b> Output:</b><br>
+															Enter some Character<br> 
+															C<br>
+															Entered character is: C
+
+
+
+														</p>
+													</div>
+											</article>
+										
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										
+									</header>
+									<div class="features">
+										<article>
+											<span class=""></span>
+											<div class="content">
+												
+												<p> <img src="images/input-output-in-c.jpg" class="responsive"/ alt="input output gets(),puts() in C programming Language.">
+
+
+
+												</p>
+											</div>
+										</article>
+										<article>
+											<span class=""></span>
+											<div class="content">
+												
+												
+												<p><!-- content side by image -->
+
+												</p>
+											</div>
+										</article>
+										
+									
+									</article>
+									<article>
+										<p> 
+ </p>
+									</article>
+								</div>
+								<article>
+
+									<div><article><p> <b class="bgc">c.gets() function in C</b>:<br>
+									gets() is a pre-defined function in C Library which is used to read a string or a text line. This function reads input until it encounters newline or End Of File(EOF) function and store the input in a defined string variable. The gets() function does not stop reading input until it encounter newline character.<br> in simple words we can say that the gets()  function stops its reading a soon as newline character is encountered. gets() function reads whitespace as string and does not stop when any whitespace is encountered. <br>
+									<b>Syntax:gets( variable name );</b>
+
+								</p><div class="dashed"><h3 class="bgc">The c program   below illustrates the use of the gets() function</h3><p>
+								     #include&lt;stdio.h&gt;<br>
+								     int main()<br>
+								     {<br>char name[10];<br>
+    										printf("Enter Your Favourite Programming: ");<br>
+   											 gets(name);<br>
+   											 printf("\n your favourite programming is %s",name);
+											<br>
+											return(0);<br>
+							     	}
+							     	<br>
+							     	<b>Output:</b><br>
+							     	Enter Your Favourite Programming:<br>
+							     	C Language<br>
+							     	your favourite programming is C Programming<br>
+							     	<b> Program Explanation:</b><br>
+							     	In the program given above we declared  name variable of character type which can store 10 character i.e char name[10].<br>
+							     	after that printf() function shows the message -->Enter Your Favourite Programming:<br>
+							     	at this point compiler waits for the name to be input from the user or stdin.<br>
+							     	next we entered the name <b> C language</b> . at this point the gets(name) reads the value entered and store it in name variable. Here the gets() function accepts white spaces also and contine reading character till EOF encountered.<br>
+							     	Next at the end printf() shows the output-><br>
+							     	your favourite programming is C Programming
+							     	</p>
+										
+									
+
+									</div>
+									<hr>
+									</article>	
+									<article>
+										<div>
+											<p>
+											
+											</p>
+										</div>
+									</article><article>
+										<div>
+											<p><b class="bgc">d. puts() function in C</b> <br>
+												puts() function is the standard library function defined in stdio.h header file. This function in c programming is used to write a line or string to standard output stream(stdout) or console. <br>puts() function  does not include null character. It prints the passed string along with a newline i.e.’\n’ and returns an integer value. The return value of this function depends on success of the program.
+											
+											</p>
+											<p>
+												<b>Syntax:	
+														int puts(const char* str);</b><br>
+														Here in the given syntax , str is the constant string that is to be printed.<br>
+														<u>Parameters:</u><br>
+														•	str − This is the constant string  is to be written on stdout.<br>
+														<u>Return Value:</u><br>
+														On successful execution the function returns non-negative value. On error or unsuccessful execution, the function returns EOF
+
+
+											</p>
+										</div>
+									</article>
+
+
+									<article>
+										
+										<div class="dashed scroll">
+											<h3 class="bgc">The c program   below illustrates the use of the gets() function </h3>
+											<p>// c program illustrate working of puts()<br>
+												#include &lt;stdio.h&gt;<br>
+								int main() <br>
+									{<br>
+									//string declaration and initialization<br>
+    								char name[] = "ANSI C";<br>
+    
+    								puts(name); //displays the string to stdout<br>
+    
+  								  return 0;<br>
+							}<br>
+							<br>
+						
+						<b>Output:</b><br>
+						ANSI C
+																	
+											</p>
+										</div>
+									</article>
+									<article>
+										<p><b class="bgc"> e. getch() in C:</b><br>
+											getch() function in C programming language is very usefil to get or read  a character from the user. getch stands for 'get character'. This function also used to hold the output screen unles user press the key on the keyboard.<br>While this is not a part of the C standard, this is still a POSIX C function.This function takes in a single character from the standard input (stdin) keyboard, and returns an integer.<br>. Using getch() function, we can hide the input character provided by the users.<br>
+											<b>Syntax: int getch(void); </b><br>  
+											Parameters: The getch() function has void parameter means this function does not accept any parameter from the  end user or standard input.
+										
+										
+
+										</p>
+										<div class="dashed scroll"><h3 class="bgc">program to display the character entered 			by the user using the getch() function in C.</h3>
+											<p>
+                                            #include &lt;stdio.h&gt;<br>   
+											#include &lt;conio.h&gt;  <br>	
+											int main()  <br>
+											{  <br>
+	       										printf(" You have entered the value is: %c", getch()); // print a character entered by the user <br> 
+	    										return 0;  <br>
+											} <br> 
+											Output:<br>
+												You have entered the value is:: C<br>
+
+											</p></div>
+									</article>
+									<article>
+										<div>
+											<p>
+											
+											</p>
+										</div>
+									</article>
+												<article><p>
+													
+												</p>
+
+												</article>
+										
+										</div>
+									</article>
+									<article>
+										<div>
+											<p>
+											
+											</p>
+										</div>
+									</article>
+											<div>						
+											<p>
+											Previous Topic:--&gt;&gt;<a href="assignment.html"> Simple Assignment Statement</a>&nbsp;||&nbsp;Next topic:--&gt;&gt;<a href="cprograms.html"> Simple C Programs</a>
+										</p>					
+									</div>
+								</section>
+
+							<!-- Section -->
+								
+
+						</div>
+						<div>
+				<!-- footer menu -->
+			</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<section>
+									<header class="">
+										<div>
+										<p>
+
+</p>	
+									</div>
+									
+
+									</header>
+									
+			
+								</section>
+							<!-- Section -->
+								
+
+							<!-- Section -->
+
+							<!-- Search -->
+								<!--<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form> 
+								</section> -->
+
+							<!-- Menu -->
+								
+								<nav id="menu">
+									<header class="major">
+										<h2>C Language</h2>
+									</header>
+									<ul>
+										<li><a href="../index.html">Home</a></li>
+										<li><a href="whyC.html">Why C Language</a></li>
+										<li><a href="historyC.html">History of C Language</a></li>
+										<li><a href="ApplicationsC.html">Applications of C Language</a>
+										</li>
+										<li>
+											<span class="opener">Introduction To C</span>
+											<ul><li><a href="whatisprogram.html">What is Program?</a></li>
+												<li><a href="cprogramstructure.html">Structure of C Program</a></li>
+												<li><a href="Cprogram.html">Working Of C Program</a></li>
+												<li><a href="CLanguageChar.html">CHARACTER SET </a></li>
+												<li><a href="c-variable-identifier.html">VARIABLES AND IDENTIFIERS </a></li>
+												<li><a href="c-datatype.html">BUILT-IN DATA TYPES </a></li>
+												
+												<li><a href="operators.html">OPERATORS AND EXPRESSIONS </a></li>
+												<li><a href="constant.html">CONSTANTS AND LITERALS</a></li>
+												<li><a href="assignment.html"> SIMPLE ASSIGNMENT STATEMENT </a></li>
+												<li><a href="inputoutput.html">BASIC INPUT/OUTPUT STATEMENT </a></li>
+												<li><a href="cprograms.html">SIMPLE 'C' PROGRAMS</a></li>
+												<li><a href="assignments-intro1.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Operators in C Programming </span>
+											<ul>
+											<li><a href="arithmatic-operators-c.html">Arithmetic Operators </a></li>
+												<li><a href="assignment-operators-c.html">Assignment Operators </a></li>
+												<li><a href="increment-decrement-operator-c.html">Increment and Decrement Operators</a></li>
+												<li><a href="relationaloperator.html">Relational Operators </a></li>
+												<li><a href="logicaloperator.html">Logical Operators</a></li>
+											 <li><a href="bitwiseopearator.html">Bitwise Operators </a></li>
+											 <li><a href="otheropearator.html">Other Operators </a></li>
+											 <li><a href="opearatorassignments.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">CONDITIONAL STATEMENTS</span>
+											<ul>
+												<li><a href="c-decision.html">DECISION MAKING WITHIN A PROGRAM</a></li>
+												<li><a href="c-condtions.html"> CONDITIONS</a></li>
+												<li><a href="c-if.html">IF STATEMENT </a></li>
+												<li><a href="c-ifelse.html">IF-ELSE STATEMENT</a></li>
+												<li><a href="c-ifelseladder.html">IF-ELSE LADDER</a></li>
+												<li><a href="c-nestedif.html">NESTED IF-ELSE </a></li>
+												<li><a href="c-switch.html">SWITCH CASE </a></li>
+												<li><a href="conditional-stmt-assign-c.html">Assignments</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">LOOPS STATEMENTS</span>
+											<ul>
+												<li><a href="loops-intro.html">Introduction to Loops</a></li>
+												<li><a href="c-goto.html"> GO TO Statement</a></li>
+												<li><a href="c-dowhile-loop.html"> Do while Loop </a></li>
+												<li><a href="c-while-loop.html">While Loop </a></li>
+												<li><a href="c-nested-while.html">Nested While Loop </a></li>
+												<li><a href="c-diff-while-dowhile.html">Difference Between While and Do while</a></li>
+												<li><a href="c-difference-goto-loop.html">Difference Between Goto and loop</a></li>
+												<li><a href="c-while-loop-assign.html"> while loop assignments</a></li>
+												<li><a href="c-for.html">C FOR Loop</a></li>
+												<li><a href="c-for-example.html">C For loop examples </a></li>
+												<li><a href="c-nested-for.html">Nested for loop</a></li>
+												<li><a href="nested-while-loop-c.html">Nested for loop examples </a></li>
+												<li><a href="infinite-while-loop-c.html">Infinite while Loops</a></li>
+												<li><a href="infinite-for-loop-c.html"> Infinite for Loops </a></li>
+												<li><a href="continue-c.html">Continue in Loops </a></li>
+												<li><a href="break-c.html">break in Loops </a></li>
+												<li><a href="while-vs-dowhile-vs-for-c.html">difference while do..while & for </a></li>
+												<li><a href="loop-assignment-c.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Arrays</span>
+											<ul>
+												<li><a href="one-d-array-c.html">One Dimensional Array</a></li>
+												<li><a href="declare-array-c.html">Declaring 1D Arrays</a></li>
+												<li><a href="initilize-array-c.html">Initilization of 1D arrays</a>
+												</li>
+												<li><a href="access-array-c.html">Accessing element of one 1D Array</a></li>
+												<li><a href="read-array-c.html">Read and Display 1D Arrays</a></li>
+												<li><a href="two-d-array.html">Two Dimensional Arrays</a></li>
+												<li><a href="declare-2d-array-c.html">Declare 2D Arrays</a></li>
+												<li><a href="read-2d-array.html">Read and Display 2D Arrays</a></li>
+												<li><a href="array-assignments.html">Assignments/Examples</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Functions</span>
+											<ul>
+												<li><a href="function-intro-c.html">Introduction</a></li>
+												<li><a href="user-defined-function-c.html">Need For User-Defined Function</a></li>
+												<li><a href="multiple-fun-program-c.html">Multiple Function Program</a></li>
+												
+												<li><a href="modular-programming-c.html">Modular Programming</a></li>
+												<li><a href="element-user-defined-fun-c.html">Elements Of User Defined Function</a></li>
+												<li><a href="function-definition-c.html">Function Definition</a></li>
+												</li>
+												<li><a href="function-declaration-c.html">Function Declaration</a></li>
+												</li>
+												<li><a href="types-of-function-c.html">Types of functions</a></li>
+												</li>
+												<li><a href="nesting-function-c.html">Nesting of Function</a></li>
+												<li><a href="recursion-c.html">Recursion</a></li>
+												<li><a href="passing-array-function-c.html">Passing Array To Functions</a></li>
+												<li><a href="visibility-scope-var-c.html">Scope,Visibility and Lifetime of Variables</a></li>
+												<li><a href="function-assignment-c.html">Assignments</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Structure</span>
+											<ul>
+												<li><a href="structure-intro-c.html">Introduction</a></li>
+												<li><a href="array-vs-structure-c.html">Array vs Structure</a></li>
+												<li><a href="define-structure-c.html">Defining Structure</a></li>
+												<li><a href="declare-structure-var-c.html">Declaring Structure Variables</a></li>
+												<li><a href="type-def-struct-c.html">Type Defined Structure</a></li>
+												<li><a href="access-struct-member-c.html">Accessing Structure Members</a></li>
+												<li><a href="struct-initilization-c.html">Structure Initilization</a></li>
+												<li><a href="copy-compare-struct-c.html">Copying & Comparing Structure Variables</a></li>
+												<li><a href="array-struct-c.html">Array of Structure</a></li>
+												<li><a href="array-within-struct-c.html">Arrays Within Structure</a></li>
+												<li><a href="struct-within-struct-c.html">Structures Within Structures</a></li>
+												<li><a href="struct-and-function-c.html">Structures and Functions</a></li>
+												<li><a href="struct-assignment-c.html">Structure Examples/Assignments</a></li>
+											</ul>
+									  </li>
+										<li>
+
+
+											<span class="opener">Union</span>
+											<ul>
+												<li><a href="define-union-c.html">Define Union</a></li>
+												<li><a href="create-union-c.html">Create and use Union</a></li>
+												<li><a href="diff-struct-union-c.html">Difference Between Structure and Union</a></li>
+												<li><a href="union-c-example.html">Union Examples</a></li>
+												<li><a href="union-c-faq.html">Union FAQ</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Pointers</span>
+											<ul>
+												<li><a href="what-is-pointer-c.html">What Are Pointers In C?</a></li>
+												<li><a href="how-use-pointer-c.html">How Do We Use Pointers In C?</a></li>
+												<li><a href="declare-pointer-c.html">Declaration Of A Pointer</a></li>
+												<li><a href="pointer-init-c.html">The Initialization Of A Pointer</a></li>
+												<li><a href="pointer-syntax-init.html">Syntax Of Pointer Initialization</a></li>
+												<li><a href="use-pointer-c.html">Use Of Pointers In C</a></li>
+												<li><a href="pointer-to-array-c.html">The Pointer To An Array</a></li>
+												<li><a href="pointer-to-function-c.html">The Pointer To A Function</a></li>
+												<li><a href="pointer-to-struct-c.html">The Pointer To A Structure</a></li>
+												<li><a href="types-pointer-c.html">Types Of Pointers</a></li>
+												<li><a href="null-pointer-c.html">The Null Pointer</a></li>
+												<li><a href="void-pointer-c.html">The Void Pointer</a></li>
+												<li><a href="wild-pointer-c.html">The Wild Pointer</a></li>
+												<li><a href="near-pointer-c.html">The Near Pointer</a></li>
+												<li><a href="huge-pointer-c.html">The Huge Pointer</a></li>
+												<li><a href="far-pointer-c.html">The far Pointer</a></li>
+												<li><a href="dangling-pointer-c.html">dangling pointer </a></li>
+												<li><a href="access-pointer-c.html">Accessing Pointers- Indirectly And Directly</a></li>
+												<li><a href="pros-pointer-c.html">Pros Of Using Pointers In C</a></li>
+												<li><a href="cons-pointer-c.html">Cons Of Pointers In C</a></li>
+												<li><a href="application-pointer-c.html">Applications Of Pointers In C</a></li>
+												<li><a href="address-operator-c.html">The & Address Of Operator In C</a></li>
+												<li><a href="complex-pointer-c.html">How To Read The Complex Pointers In C?</a></li>
+												<li><a href="practice-pointer-c.html">Practice Problems On Pointers </a></li>
+												
+												
+											</ul>
+									  </li>
+
+
+ 									<li>
+											<span class="opener">File Processiong</span>
+											<ul>
+												<li><a href="file-intro-c.html">File Handling In C</a></li>
+												<li><a href="types-file-c.html">Types Of Files In C </a></li>
+												<li><a href="operation-file-c.html">Operations Done In File Handling</a></li>
+												<li><a href="file-example-c.html">File Examples</a></li>
+												<li><a href="binary-file-c.html"> Binary Files</a></li>
+												<li><a href="file-count-word-line-c.html">count words,lines in a file</a></li>
+												<li><a href="copy-file-c.html">Copy files</a></li>
+												<li><a href="update-file-c.html">Update File</a></li>
+												<li><a href="count-vowels-file-c.html">count vowels in a file</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Preprocessor</span>
+											<ul>
+												<li><a href="macro-sub-div-c.html">Macro substitution division</a></li>
+												<li><a href="file-inclusion-c.html">File Inclusion</a></li>
+												<li><a href="conditional-compile-c.html">Conditional Compilation</a></li>
+												<li><a href="other-dir-c.html">Other directives</a></li>
+												<li><a href="preprocessor-example-c.html">Examples</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Dynamic Memory Allocation</span>
+											<ul>
+												<li><a href="malloc-c.html">malloc</a></li>
+												<li><a href="calloc-c.html">calloc</a></li>
+												<li><a href="free-c.html">free</a></li>
+												<li><a href="realloc-c.html">realloc</a></li>
+												<li><a href="dynamic-mem-example-c.html">Examples</a></li>
+											</ul>
+									  </li>
+										<li><a href="storage-class-c.html">Storage Classes</a></li>
+										<li><a href="graphics-c.html">Graphics</a></li>
+										<li>
+											<span class="opener">Frequently Asked Interview Questions
+										(FAQ)</span>
+											<ul>
+												<li><a href="intro-c-faq-c.html">Introduction To C FAQ</a></li>
+												<li><a href="operators-c-faq.html">Operators FAQ</a></li>
+												<li><a href="conditional-stmt-c-faq.html">Conditional Statements FAQ</a></li>
+												<li><a href="loop-faq-c.html">Loops FAQ</a></li>
+												<li><a href="array-faq-c.html">Arrays FAQ</a></li>
+												<li><a href="function-faq-c.html">Function FAQ</a></li>
+												<li><a href="structure-faq-c.html">Structure FAQ</a></li>
+												<li><a href="pointer-faq-c.html">Pointers FAQ</a></li>
+												<li><a href="files-faq-c.html">Files FAQ</a></li>
+												<li><a href="storage-class-faq-c.html">Storage classes FAQ</a></li>
+												<li><a href="dma-faq-c.html">Dynamic Memory FAQ</a></li>
+												
+
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Programs/Assignments</span>
+											<ul>
+												<li><a href="intro-assign-c.html">Introduction To C </a></li>
+												<li><a href="operators-assign-c.html">Operators </a></li>
+												<li><a href="conditional-stmt-assign-c.html">Conditional Statements </a></li>
+												<li><a href="loop-assign-c.html">Loops </a></li>
+												<li><a href="array-assign-c.html">Arrays </a></li>
+												<li><a href="function-assign-c.html">Function </a></li>
+												<li><a href="structure-assign-c.html">Structure </a></li>
+												<li><a href="pointer-assign-c.html">Pointers </a></li>
+												<li><a href="file-assign-c.html">Files </a></li>
+												<li><a href="storage-class-assign-c.html">Storage classes </a></li>
+												<li><a href="dma-assign-c.html">Dynamic Memory </a></li>
+												
+
+											</ul>
+									  </li>
+										<li><a href="case-studies-c.html">Case Studies</a></li>
+										<li>
+											<span class="opener">Multiple Choice Questions</span>
+											<ul>
+												<li><a href="intro-mcq-c.html">Introduction To C MCQ</a></li>
+												<li><a href="operators-mcq-c.html">Operators MCQ</a></li>
+												<li><a href="conditional-mcq-c.html">Conditional Statements MCQ</a></li>
+												<li><a href="loops-mcq-c.html">Loops MCQ</a></li>
+												<li><a href="array-mcq-c.html">Arrays MCQ</a></li>
+												<li><a href="function-mcq-c.html">Function MCQ</a></li>
+												<li><a href="structure-mcq-c.html">Structure MCQ</a></li>
+												<li><a href="pointer-mcq-c.html">Pointers MCQ</a></li>
+												<li><a href="files-mcq-c.html">Files MCQ</a></li>
+												<li><a href="storage-class-mcq-c.html">Storage classes MCQ</a></li>
+												<li><a href="dma-mcq-c.html">Dynamic Memory MCQ</a></li>
+												<li><a href="more-faqc.html">More MCQ</a></li>
+
+											</ul>
+									  </li>
+									</ul>
+								</nav>
+
+
+
+							<!-- Section   for activities -->
+								<section>
+									<header class="">
+										<div>
+										<p>
+
+										</p>	
+									</div>
+									
+
+									</header>
+									
+			
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">tech2dsm@gmail.com</a></li>
+										<!--<li class="icon solid fa-phone">-----</li>
+										<li class="icon solid fa-home"><br />
+										</li> -->
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Sankalan Data Technologies. All rights reserved. </p>
+
+								</footer>
+
+
+						</div>
+					</div>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+	</body>
+</html>

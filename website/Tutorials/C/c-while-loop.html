@@ -1,0 +1,810 @@
+<!DOCTYPE HTML>
+<!--
+	
+	
+	Free tutorials for personal and commercial use 
+-->
+<html>
+	<head>
+		<title>C Programming: Easy Guide to While Loops with Examples & Flowchart</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="keywords" content="C while loop, while loop in C, C programming loops, entry-controlled loop, C loop tutorial, while loop examples, C flowchart, loop advantages, loop disadvantages, C beginner loops">
+		<meta name="description" content="Learn all about the 'while' loop in C programming! This friendly guide covers its basics, how it works with a flowchart, practical examples, and its pros & cons. Perfect for beginners.">
+		<link rel="canonical" href="https://www.sankalandtech.com/Tutorials/C/c-while-loop.html" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/intstyle.css" />
+		<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["HowTo", "Article"],
+  "name": "Mastering the `while` Loop in C Programming",
+  "description": "Learn all about the 'while' loop in C programming! This friendly guide covers its basics, how it works with a flowchart, practical examples, and its pros & cons. Perfect for beginners.",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.sankalandtech.com/Tutorials/C/c-while-loop.html"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "SankalanTech"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SankalanTech",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.sankalandtech.com/images/sankalan1.jpg"
+    }
+  },
+  "datePublished": "2024-07-29T00:00:00+00:00",
+  "dateModified": "2024-07-29T00:00:00+00:00",
+  "keywords": "C while loop, while loop in C, C programming loops, entry-controlled loop, C loop tutorial, while loop examples, C flowchart, loop advantages, loop disadvantages, C beginner loops",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Understanding What a `while` Loop Is",
+      "text": "In this tutorial section, we will learn what a `while` loop is. A `while` loop in C Programming is a pre-tested loop. In general, a `while` loop repeatedly executes a part of the code statements multiple times, depending upon a given condition. The `while` loop is also known as a pre-tested or entry-controlled loop, meaning the condition is tested before the body of the loop. A `while` loop in C language is an iterative/repeating statement and is used when a specific statement needs to be executed again and again. A `while` loop is called an entry-controlled loop because first, the boolean expression is tested, and depending on the tested result, the loop is executed."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Real-World Use Cases of the `while` Loop",
+      "text": "Following are some real use cases of a `while` loop: 1. Music Player loop: While the user does NOT press 'stop' and the playlist is NOT stopped, get the next song and play the song. 2. User input loop: Ask a yes-no question to the user and get an answer. While the answer is not 'yes' and the answer is not 'no', repeat the question. 3. Username and password validation: Validate username and password until both are correct. 4. ATM PIN validation."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Advantages of Using a `while` Loop in C Programming",
+      "text": "Following are some advantages of using a `while` loop in C programming. 1. The `while` loop is very easy and simple to understand. 2. The statements inside a `while` loop will continue to execute as long as the condition is True."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Disadvantages of Using a `while` Loop in C Programming",
+      "text": "Following are some disadvantages of using a `while` loop in C programming. 1. Placing a semicolon after a `while` loop's condition (e.g., `while(condition);`) can create a problem. Although it might compile correctly, this will make the loop an infinite loop. 2. A `while` loop can lead to unexpected results in a C program when its exit condition is not well-defined."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "How the `while` Loop Works: A Flowchart Explanation",
+      "text": "The given diagram is the flowchart showing how a `while` loop works in C programming. 1. Initialization: The programmer declares or initializes a variable. This happens outside the loop but is essential for the loop's condition. 2. Condition: An expression is tested; it's either true or false. This decides if the loop's code runs. If true, the code inside the loop executes; otherwise, control jumps outside. 3. Body: This is the actual block of code or statements that run repeatedly as long as the condition is true. 4. Updation: An expression changes the loop variable's value in each cycle, ensuring the loop eventually terminates. In the flowchart, this is represented by 'Code inside body of loop'."
+    },
+    {
+        "@type": "HowToStep",
+        "name": "Understanding the `while` Loop Execution Flow",
+        "text": "This explains the flow based on the flowchart. 1. Control enters the `while` loop. 2. The control jumps to the Condition inside the `while` loop. 3. The condition is tested. Here, the condition tested will either be true or false. If true, then the flow goes into the Body of the loop. If false, then the flow goes outside the loop. 4. If the condition tested is true, the statements inside the body of the loop get executed. 5. Updation takes place. 6. Control jumps back to step 2. 7. If the condition tested is false, the `while` loop ends and the control jumps outside the loop."
+    },
+    {
+        "@type": "HowToStep",
+        "name": "Syntax of the `while` Loop in C",
+        "text": "Let us study the real-world syntax of the `while` loop. The structure is: `/* statements outside loop. initialization */ while(condition) { /* code inside body of loop statements to be executed */ /* update expression */ } /* statement outside loop */`. This shows where initialization, the condition, the loop body, and the update expression typically reside."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Example C Program: `while` Loop in Action",
+      "text": "This C program demonstrates the `while` loop by displaying 'Inside the While loop Body' 10 times. The code is: `#include <stdio.h> int main() { int n = 1; while(n<=10) { printf('\\n Inside the While loop Body'); n+=1; } return(0); }`. The explanation follows: The program starts from `main()`. `n` is 1. The condition `n<=10` is tested. Since `1 <= 10` is true, 'Inside the While loop Body' prints, and `n` becomes 2. This repeats. When `n` is 10, `10 <= 10` is true, it prints, and `n` becomes 11. Then, `11 <= 10` is false, and the loop ends. Control moves outside the loop, and the program exits."
+    }
+  ]
+}
+</script>
+		<style>
+				
+				ul {
+ 					  padding: 20px;
+ 					  
+ 					}
+				li {
+					 	 background: #cce5ff;
+ 						 color: darkblue;
+ 						 margin: 5px;
+					}
+					body {
+							background: #cce5ff;	
+					    } 					
+         		p  {
+           				 
+  						font-size: 19px;
+  						color: black;
+  						font-family: Georgia, serif;
+  						font-style: italic;
+  						display:block;
+  						margin-left: 1.2em;
+  						margin-bottom: 1em;
+  						margin-right: 1em;
+
+         			 }
+         			 .bgc{
+         			 	background-color: rgb(155,142,179);
+         			 }
+         		.responsive {
+         			       width: 100%;
+         			       height: auto;
+         			      }
+ 	        	img {
+  					border-radius: 12%;
+
+					  max-width: 100%;
+					  height: auto;
+					  float: right;
+
+					}
+					div.dashed{
+         				border-style: solid;
+         				border-width: 3px;
+
+         			}
+					hr {
+  								border: 2px solid #DAA520;
+							}
+					
+​
+		</style>
+		
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="" class="logo"><strong> while loop in C Language </strong> Skill UP</a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter">
+											<span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+
+									</ul>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1>Mastering the `while` Loop in C Programming</h1>										
+										</header>
+										<article>
+											<p> In this tutorial section, we will learn what a while loop is.
+
+<br><b>What is a while loop in C?</b><br>
+while loop: A while loop in C Programming is a pre-tested loop. In general, a while loop repeatedly executes a part of the code statements multiple times, depending upon a given condition.<br>
+
+The while loop is also known as a pre-tested or entry-controlled loop, meaning the condition is tested before the body of the loop.<br>
+A while loop in C language is an iterative/repeating statement and is used when a specific statement needs to be executed again and again.<br>
+A while loop is called an entry controlled loop because first, the boolean expression is tested and depending on the tested result, the loop is executed.<br>
+<br>Following are some real use cases of a while loop:<br>
+e.g.<br>
+
+1.Music Player loop: While the user does NOT press 'stop' and the playlist is NOT stopped, get the next song and play the song.<br>
+
+<br>2.User input loop: Ask a yes-no question to the user and get an answer.<br>
+3.While the answer is not 'yes' and the answer is not 'no', repeat the question.<br>
+
+4.Username and password validation: Validate username and password until both are correct.<br>
+
+5. PIN validation.												
+												
+										</p>
+										
+
+
+										
+										</article>
+										<article>
+											<p> 
+
+									
+
+											</p>
+										</article>
+										<article>
+											<p>
+											</p>
+										</article>
+											
+											
+									<hr class="new4">
+
+										<article>
+												<h3 class="bgc">&nbsp; Advantage using  while loop in C programming</h3>
+												<div class="dashed">
+												<p>Following are some of advantage using  while loop in C programming.<br>
+
+												1. The  while loop is  very  easy and simple  to understand.<br>
+												2.The statements inside a  while loop will continue to execute as long as the condition is True.
+
+
+												</p>
+																			
+
+													
+											</article>
+											<article><br>
+												<h3 class="bgc">&nbsp; Disadvantage using  while loop in C programming</h3>
+												<div class="dashed">
+												<p>Following are some of Disadvantage using while loop in C programming.<br>
+
+												1.Placing a semicolon after a while loop's condition (e.g., while(condition);) can create a problem. Although it might compile correctly, this will make the loop an infinite loop.<br>
+
+												<br>2.A while loop can lead to unexpected results in a C program when its exit condition is not well-defined.
+
+
+																								</p>
+																			
+
+													
+											</article>
+										
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										
+									</header>
+									<div>
+										<article>
+											
+											<div >
+												
+												<p> <img src="images/while-loop-in-c.jpg" width="430" height="340"
+													alt="Flowchart illustrating the step-by-step execution of a while loop in C programming, showing the flow from initialization, through condition check, loop body execution, and variable updation.">
+
+
+
+
+												</p>
+											</div>
+										</article>
+										
+										
+									
+									
+									<article>
+										<div>
+										<p> 
+                                         </p>
+                                     </div>
+									</article>
+								</div>
+							
+
+									<article><p> The given diagram is the flowchart showing how a 'while' loop works in C programming.
+    <br><br>
+    1. <b>Initialization:</b> After step-by-step execution of the instructions, the program control enters the initialization part. In this step, the programmer declares or initializes the variable to some value.
+    <br>
+    Initialization of the variable happens outside the loop and it is not part of the 'while' loop, but it is essential to initialize it before the loop starts because it is required when the programmer uses a variable in the condition or test expression.
+    </p><p>
+    2. <b>Condition:</b> The condition is an expression that may evaluate to either true or false. This is one of the primary and most essential steps, as it decides whether the block of code in the 'while' loop will execute or not. The code inside the body of the 'while' loop will be executed if and only if the tested condition is true; otherwise, control jumps outside the loop and stops the execution.
+    </p><p>
+    3. <b>Body:</b> It is a block of code or the actual set of statements that will be executed repeatedly until the specified condition is true. This block of code or statements is known as the body of the loop. It can include variables, functions, expressions, etc.
+    <br>
+    The block of code or statements in our flowchart is "Code inside body of loop."
+    </p><p>
+    4. <b>Updation:</b>
+    <br>
+    Updation is not part of the syntax, but we have to define it explicitly in the body of the loop. It is an expression that changes the value of the loop variable in each step of execution or iteration.
+</p>
+									<hr>
+									</article>	
+									<div>
+										<article>
+											
+											<div >
+												
+												<p> <img src="images/while-loop-in-c-syntax.jpg" width="430" height="340" alt="while loop syntax in C Programming">
+
+
+
+												</p>
+											</div>
+										</article>
+									</div>
+									<article><font size="4">
+										<b class="bgc">Syntax of while loop in C</b></font>
+										<p>Let us study real-world syntax of while loop and then we will look detail into all parts of the while loop.</p>
+											
+												
+												<p>
+												 /* statements outside loop.<br>
+												  initilization */<br>
+												&emsp;&emsp;while(condition)<br>{<br>
+												  &emsp;&emsp;&emsp;&emsp;  /* code inside body of loop<br>
+												  &emsp;&emsp;&emsp;&emsp;   statements to be executed */<br>
+												     
+												 &emsp;&emsp;&emsp;&emsp;   /* update expression */<br>
+												} <br>
+												/* statement outside loop */ <br>
+
+
+												</p>
+												<hr>
+												<div class="dashed">
+												<p>
+									    <b>Explanation:</b><br>
+									    1. Control enters the 'while' loop.
+									    <br>
+									    2. The control jumps to the Condition inside the 'while' loop.
+									    <br>
+									    3. The condition is tested. Here, the condition tested will either be true or false.
+									    <br>
+									    &emsp; i. If the condition tested is true, then the flow goes into the Body of the loop.
+									    <br>
+									    &emsp; ii. If the condition tested is false, then the flow goes outside the loop.
+									    <br>
+									    4. If the condition tested is true, the statements inside the body of the loop get executed.
+									    <br>
+									    5. Updation takes place.
+									    <br>
+									    6. Control jumps back to step 2.
+									    <br>
+									    7. If the condition tested is false, the 'while' loop ends and the control jumps outside the loop.
+									</p>
+											</div>
+									
+									</article>
+									<article>
+										
+									</article>
+									<article><p>
+									</p>
+										
+									</article>
+									<article><p>
+													
+												</p>
+                                        <hr>
+
+
+								
+												<article><p>
+													<div class="dashed scroll">
+													<h3 class="bgc">write a C program to illustrate use of while loop</h3>
+													<p>/* C program given below displays "Inside the While loop Body" 10 times */<br>
+													
+
+							#include &lt;stdio.h&gt;<br>
+
+							int main()<br>
+							 {<br>
+							 /* Declaration and initialization expression */<br>
+							  int n = 1;<br>
+							  /* test the expression */<br>
+							    &emsp;while(n<=10)<br>
+							    	&emsp;{<br>
+							    	&emsp;&emsp;printf("\n Inside the While loop Body");<br>
+							    	&emsp;&emsp;/*update expression */<br>
+							    	&emsp;&emsp;n+=1; &emsp;// n++<br>
+
+							    	&emsp;}<br>
+							    	return(0);<br>
+							    }<br>
+							    <b> output:</b>
+							<br>
+							Inside the While loop Body<br>
+							Inside the While loop Body<br>
+							Inside the While loop Body<br>
+							Inside the While loop Body<br>
+							Inside the While loop Body<br>
+							Inside the While loop Body<br>
+							Inside the While loop Body<br>
+							Inside the While loop Body<br>
+							Inside the While loop Body<br>
+							Inside the While loop Body<br></p>
+							</div>
+
+							<hr>
+							<p>
+						<b>Explanation:</b><br>
+						1. The program starts from the 'main()' function.
+						<br>
+						2. 'n' is declared and initialized to '1'.
+						<br>
+						3. The condition '<b>while(n<=10)</b>' is tested. Since '1 <= 10' yields 'true'.
+						<br>
+						&emsp; 3.1 "Inside the While loop Body" gets printed for the 1st time.
+						<br>
+						&emsp; 3.2 Updation takes place: 'n+=1' executes, so 'n' becomes '2' (i.e., 'n=2').
+						<br>
+						4. The condition '<b>while(n<=10)</b>' is tested. Since '2 <= 10' yields 'true'.
+						<br>
+						&emsp; 4.1 "Inside the While loop Body" gets printed for the 2nd time.
+						<br>
+						&emsp; 4.2 Updation takes place: 'n+=1' executes, so 'n' becomes '3' (i.e., 'n=3').
+						<br>
+						5. The condition '<b>while(n<=10)</b>' is tested. Since '3 <= 10' yields 'true'.
+						<br>
+						&emsp; 5.1 "Inside the While loop Body" gets printed for the 3rd time.
+						<br>
+						&emsp; 5.2 Updation takes place: 'n+=1' executes, so 'n' becomes '4' (i.e., 'n=4').
+						<br>
+						... (This process continues until 'n' becomes '10'
+						<br>
+						6. The condition '<b>while(n<=10)</b>' is tested. Since '10 <= 10' yields 'true'.
+						<br>
+						&emsp; 6.1 "Inside the While loop Body" gets printed for the 10th time.
+						<br>
+						&emsp; 7.2 Updation takes place: 'n+=1' executes, so 'n' becomes '11' (i.e., 'n=11').
+						<br>
+						8. The condition '<b>while(n<=10)</b>' is tested. Since '11 <= 10' yields 'false'.
+						<br>
+						9. Control flow goes outside the loop and 'return 0;' stops program execution.
+						</p>		
+						</article>
+						<div><hr>						
+											<p>
+											Previous Topic:--&gt;&gt;<a href="c-dowhile-loop.html"> do while loop in C</a>&nbsp;||&nbsp;Next topic:--&gt;&gt;<a href="c-nested-while.html">Nested while loop in C.</a>
+										</p><hr>
+										<p>
+										<b>Other Topics:</b>
+											<div class="dashed">
+
+												
+													<p><b>Other Topics </b><br><a href="https://www.sankalandtech.com/Tutorials/sql-plsql-faq-interview/single-row-functions-customize-output-sql-faq.html">SQL Interview Questions</a>&emsp;<a href="https://www.sankalandtech.com/Tutorials/java-interview-questions/java-control-flow-statements-operators-interview-faqs.html"> Java Control Flow and Loops Interview Questions</a>&emsp;<a href="https://www.sankalandtech.com/sql-faq-interview-questions/sql-faq.html">Top SQL Interview Questions</a>&emsp;<a href="https://www.sankalandtech.com/Tutorials/Python/interview-questions/python-control-structures-loops.html">Python Loops Interview Questions</a>&emsp;<a href="https://www.sankalandtech.com/account-management-case-study-sql/cross-join-sql.html">Banking Case Study in SQL</a></p>					
+									</div>
+									<hr>
+								</section>
+
+							<!-- Section -->
+								
+
+						</div>
+						<div>
+				<!-- footer menu -->
+			</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<section>
+									<header class="">
+										<div>
+										<p>
+
+</p>	
+									</div>
+									
+
+									</header>
+									
+			
+								</section>
+							<!-- Section -->
+								
+
+							<!-- Section -->
+
+							<!-- Search -->
+								<!--<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form> 
+								</section> -->
+
+							<!-- Menu -->
+								
+								<nav id="menu">
+									<header class="major">
+										<h2>C Language</h2>
+									</header>
+									<ul>
+										<li><a href="../index.html">Home</a></li>
+										<li><a href="whyC.html">Why C Language</a></li>
+										<li><a href="historyC.html">History of C Language</a></li>
+										<li><a href="ApplicationsC.html">Applications of C Language</a>
+										</li>
+										<li>
+											<span class="opener">Introduction To C</span>
+											<ul><li><a href="whatisprogram.html">What is Program?</a></li>
+												<li><a href="cprogramstructure.html">Structure of C Program</a></li>
+												<li><a href="Cprogram.html">Working Of C Program</a></li>
+												<li><a href="CLanguageChar.html">CHARACTER SET </a></li>
+												<li><a href="c-variable-identifier.html">VARIABLES AND IDENTIFIERS </a></li>
+												<li><a href="c-datatype.html">BUILT-IN DATA TYPES </a></li>
+												
+												<li><a href="operators.html">OPERATORS AND EXPRESSIONS </a></li>
+												<li><a href="constant.html">CONSTANTS AND LITERALS</a></li>
+												<li><a href="assignment.html"> SIMPLE ASSIGNMENT STATEMENT </a></li>
+												<li><a href="inputoutput.html">BASIC INPUT/OUTPUT STATEMENT </a></li>
+												<li><a href="cprograms.html">SIMPLE 'C' PROGRAMS</a></li>
+												<li><a href="assignments-intro1.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Operators in C Programming </span>
+											<ul>
+											<li><a href="arithmatic-operators-c.html">Arithmetic Operators </a></li>
+												<li><a href="assignment-operators-c.html">Assignment Operators </a></li>
+												<li><a href="increment-decrement-operator-c.html">Increment and Decrement Operators</a></li>
+												<li><a href="relationaloperator.html">Relational Operators </a></li>
+												<li><a href="logicaloperator.html">Logical Operators</a></li>
+											 <li><a href="bitwiseopearator.html">Bitwise Operators </a></li>
+											 <li><a href="otheropearator.html">Other Operators </a></li>
+											 <li><a href="opearatorassignments.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">CONDITIONAL STATEMENTS</span>
+											<ul>
+												<li><a href="c-decision.html">DECISION MAKING WITHIN A PROGRAM</a></li>
+												<li><a href="c-condtions.html"> CONDITIONS</a></li>
+												<li><a href="c-if.html">IF STATEMENT </a></li>
+												<li><a href="c-ifelse.html">IF-ELSE STATEMENT</a></li>
+												<li><a href="c-ifelseladder.html">IF-ELSE LADDER</a></li>
+												<li><a href="c-nestedif.html">NESTED IF-ELSE </a></li>
+												<li><a href="c-switch.html">SWITCH CASE </a></li>
+												<li><a href="conditional-stmt-assign-c.html">Assignments</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">LOOPS STATEMENTS</span>
+											<ul>
+												<li><a href="loops-intro.html">Introduction to Loops</a></li>
+												<li><a href="c-goto.html"> GO TO Statement</a></li>
+												<li><a href="c-dowhile-loop.html"> Do while Loop </a></li>
+												<li><a href="c-while-loop.html">While Loop </a></li>
+												<li><a href="c-nested-while.html">Nested While Loop </a></li>
+												<li><a href="c-diff-while-dowhile.html">Difference Between While and Do while</a></li>
+												<li><a href="c-difference-goto-loop.html">Difference Between Goto and loop</a></li>
+												<li><a href="c-while-loop-assign.html"> while loop assignments</a></li>
+												<li><a href="c-for.html">C FOR Loop</a></li>
+												<li><a href="c-for-example.html">C For loop examples </a></li>
+												<li><a href="c-nested-for.html">Nested for loop</a></li>
+												<li><a href="nested-while-loop-c.html">Nested for loop examples </a></li>
+												<li><a href="infinite-while-loop-c.html">Infinite while Loops</a></li>
+												<li><a href="infinite-for-loop-c.html"> Infinite for Loops </a></li>
+												<li><a href="continue-c.html">Continue in Loops </a></li>
+												<li><a href="break-c.html">break in Loops </a></li>
+												<li><a href="while-vs-dowhile-vs-for-c.html">difference while do..while & for </a></li>
+												<li><a href="loop-assignment-c.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Arrays</span>
+											<ul>
+												<li><a href="one-d-array-c.html">One Dimensional Array</a></li>
+												<li><a href="declare-array-c.html">Declaring 1D Arrays</a></li>
+												<li><a href="initilize-array-c.html">Initilization of 1D arrays</a>
+												</li>
+												<li><a href="access-array-c.html">Accessing element of one 1D Array</a></li>
+												<li><a href="read-array-c.html">Read and Display 1D Arrays</a></li>
+												<li><a href="two-d-array.html">Two Dimensional Arrays</a></li>
+												<li><a href="declare-2d-array-c.html">Declare 2D Arrays</a></li>
+												<li><a href="read-2d-array.html">Read and Display 2D Arrays</a></li>
+												<li><a href="array-assignments.html">Assignments/Examples</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Functions</span>
+											<ul>
+												<li><a href="function-intro-c.html">Introduction</a></li>
+												<li><a href="user-defined-function-c.html">Need For User-Defined Function</a></li>
+												<li><a href="multiple-fun-program-c.html">Multiple Function Program</a></li>
+												
+												<li><a href="modular-programming-c.html">Modular Programming</a></li>
+												<li><a href="element-user-defined-fun-c.html">Elements Of User Defined Function</a></li>
+												<li><a href="function-definition-c.html">Function Definition</a></li>
+												</li>
+												<li><a href="function-declaration-c.html">Function Declaration</a></li>
+												</li>
+												<li><a href="types-of-function-c.html">Types of functions</a></li>
+												</li>
+												<li><a href="nesting-function-c.html">Nesting of Function</a></li>
+												<li><a href="recursion-c.html">Recursion</a></li>
+												<li><a href="passing-array-function-c.html">Passing Array To Functions</a></li>
+												<li><a href="visibility-scope-var-c.html">Scope,Visibility and Lifetime of Variables</a></li>
+												<li><a href="function-assignment-c.html">Assignments</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Structure</span>
+											<ul>
+												<li><a href="structure-intro-c.html">Introduction</a></li>
+												<li><a href="array-vs-structure-c.html">Array vs Structure</a></li>
+												<li><a href="define-structure-c.html">Defining Structure</a></li>
+												<li><a href="declare-structure-var-c.html">Declaring Structure Variables</a></li>
+												<li><a href="type-def-struct-c.html">Type Defined Structure</a></li>
+												<li><a href="access-struct-member-c.html">Accessing Structure Members</a></li>
+												<li><a href="struct-initilization-c.html">Structure Initilization</a></li>
+												<li><a href="copy-compare-struct-c.html">Copying & Comparing Structure Variables</a></li>
+												<li><a href="array-struct-c.html">Array of Structure</a></li>
+												<li><a href="array-within-struct-c.html">Arrays Within Structure</a></li>
+												<li><a href="struct-within-struct-c.html">Structures Within Structures</a></li>
+												<li><a href="struct-and-function-c.html">Structures and Functions</a></li>
+												<li><a href="struct-assignment-c.html">Structure Examples/Assignments</a></li>
+											</ul>
+									  </li>
+										<li>
+
+
+											<span class="opener">Union</span>
+											<ul>
+												<li><a href="define-union-c.html">Define Union</a></li>
+												<li><a href="create-union-c.html">Create and use Union</a></li>
+												<li><a href="diff-struct-union-c.html">Difference Between Structure and Union</a></li>
+												<li><a href="union-c-example.html">Union Examples</a></li>
+												<li><a href="union-c-faq.html">Union FAQ</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Pointers</span>
+											<ul>
+												<li><a href="what-is-pointer-c.html">What Are Pointers In C?</a></li>
+												<li><a href="how-use-pointer-c.html">How Do We Use Pointers In C?</a></li>
+												<li><a href="declare-pointer-c.html">Declaration Of A Pointer</a></li>
+												<li><a href="pointer-init-c.html">The Initialization Of A Pointer</a></li>
+												<li><a href="pointer-syntax-init.html">Syntax Of Pointer Initialization</a></li>
+												<li><a href="use-pointer-c.html">Use Of Pointers In C</a></li>
+												<li><a href="pointer-to-array-c.html">The Pointer To An Array</a></li>
+												<li><a href="pointer-to-function-c.html">The Pointer To A Function</a></li>
+												<li><a href="pointer-to-struct-c.html">The Pointer To A Structure</a></li>
+												<li><a href="types-pointer-c.html">Types Of Pointers</a></li>
+												<li><a href="null-pointer-c.html">The Null Pointer</a></li>
+												<li><a href="void-pointer-c.html">The Void Pointer</a></li>
+												<li><a href="wild-pointer-c.html">The Wild Pointer</a></li>
+												<li><a href="near-pointer-c.html">The Near Pointer</a></li>
+												<li><a href="huge-pointer-c.html">The Huge Pointer</a></li>
+												<li><a href="far-pointer-c.html">The far Pointer</a></li>
+												<li><a href="dangling-pointer-c.html">dangling pointer </a></li>
+												<li><a href="access-pointer-c.html">Accessing Pointers- Indirectly And Directly</a></li>
+												<li><a href="pros-pointer-c.html">Pros Of Using Pointers In C</a></li>
+												<li><a href="cons-pointer-c.html">Cons Of Pointers In C</a></li>
+												<li><a href="application-pointer-c.html">Applications Of Pointers In C</a></li>
+												<li><a href="address-operator-c.html">The & Address Of Operator In C</a></li>
+												<li><a href="complex-pointer-c.html">How To Read The Complex Pointers In C?</a></li>
+												<li><a href="practice-pointer-c.html">Practice Problems On Pointers </a></li>
+												
+												
+											</ul>
+									  </li>
+
+
+ 									<li>
+											<span class="opener">File Processiong</span>
+											<ul>
+												<li><a href="file-intro-c.html">File Handling In C</a></li>
+												<li><a href="types-file-c.html">Types Of Files In C </a></li>
+												<li><a href="operation-file-c.html">Operations Done In File Handling</a></li>
+												<li><a href="file-example-c.html">File Examples</a></li>
+												<li><a href="binary-file-c.html"> Binary Files</a></li>
+												<li><a href="file-count-word-line-c.html">count words,lines in a file</a></li>
+												<li><a href="copy-file-c.html">Copy files</a></li>
+												<li><a href="update-file-c.html">Update File</a></li>
+												<li><a href="count-vowels-file-c.html">count vowels in a file</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Preprocessor</span>
+											<ul>
+												<li><a href="macro-sub-div-c.html">Macro substitution division</a></li>
+												<li><a href="file-inclusion-c.html">File Inclusion</a></li>
+												<li><a href="conditional-compile-c.html">Conditional Compilation</a></li>
+												<li><a href="other-dir-c.html">Other directives</a></li>
+												<li><a href="preprocessor-example-c.html">Examples</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Dynamic Memory Allocation</span>
+											<ul>
+												<li><a href="malloc-c.html">malloc</a></li>
+												<li><a href="calloc-c.html">calloc</a></li>
+												<li><a href="free-c.html">free</a></li>
+												<li><a href="realloc-c.html">realloc</a></li>
+												<li><a href="dynamic-mem-example-c.html">Examples</a></li>
+											</ul>
+									  </li>
+										<li><a href="storage-class-c.html">Storage Classes</a></li>
+										<li><a href="graphics-c.html">Graphics</a></li>
+										<li>
+											<span class="opener">Frequently Asked Interview Questions
+										(FAQ)</span>
+											<ul>
+												<li><a href="intro-c-faq-c.html">Introduction To C FAQ</a></li>
+												<li><a href="operators-c-faq.html">Operators FAQ</a></li>
+												<li><a href="conditional-stmt-c-faq.html">Conditional Statements FAQ</a></li>
+												<li><a href="loop-faq-c.html">Loops FAQ</a></li>
+												<li><a href="array-faq-c.html">Arrays FAQ</a></li>
+												<li><a href="function-faq-c.html">Function FAQ</a></li>
+												<li><a href="structure-faq-c.html">Structure FAQ</a></li>
+												<li><a href="pointer-faq-c.html">Pointers FAQ</a></li>
+												<li><a href="files-faq-c.html">Files FAQ</a></li>
+												<li><a href="storage-class-faq-c.html">Storage classes FAQ</a></li>
+												<li><a href="dma-faq-c.html">Dynamic Memory FAQ</a></li>
+												
+
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Programs/Assignments</span>
+											<ul>
+												<li><a href="intro-assign-c.html">Introduction To C </a></li>
+												<li><a href="operators-assign-c.html">Operators </a></li>
+												<li><a href="conditional-stmt-assign-c.html">Conditional Statements </a></li>
+												<li><a href="loop-assign-c.html">Loops </a></li>
+												<li><a href="array-assign-c.html">Arrays </a></li>
+												<li><a href="function-assign-c.html">Function </a></li>
+												<li><a href="structure-assign-c.html">Structure </a></li>
+												<li><a href="pointer-assign-c.html">Pointers </a></li>
+												<li><a href="file-assign-c.html">Files </a></li>
+												<li><a href="storage-class-assign-c.html">Storage classes </a></li>
+												<li><a href="dma-assign-c.html">Dynamic Memory </a></li>
+												
+
+											</ul>
+									  </li>
+										<li><a href="case-studies-c.html">Case Studies</a></li>
+										<li>
+											<span class="opener">Multiple Choice Questions</span>
+											<ul>
+												<li><a href="intro-mcq-c.html">Introduction To C MCQ</a></li>
+												<li><a href="operators-mcq-c.html">Operators MCQ</a></li>
+												<li><a href="conditional-mcq-c.html">Conditional Statements MCQ</a></li>
+												<li><a href="loops-mcq-c.html">Loops MCQ</a></li>
+												<li><a href="array-mcq-c.html">Arrays MCQ</a></li>
+												<li><a href="function-mcq-c.html">Function MCQ</a></li>
+												<li><a href="structure-mcq-c.html">Structure MCQ</a></li>
+												<li><a href="pointer-mcq-c.html">Pointers MCQ</a></li>
+												<li><a href="files-mcq-c.html">Files MCQ</a></li>
+												<li><a href="storage-class-mcq-c.html">Storage classes MCQ</a></li>
+												<li><a href="dma-mcq-c.html">Dynamic Memory MCQ</a></li>
+												<li><a href="more-faqc.html">More MCQ</a></li>
+
+											</ul>
+									  </li>
+									</ul>
+								</nav>
+
+							<!-- Section   for activities -->
+								<section>
+									<header class="">
+										<div>
+										<p>
+
+										</p>	
+									</div>
+									
+
+									</header>
+									
+			
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">tech2dsm@gmail.com</a></li>
+										<!--<li class="icon solid fa-phone">-----</li>
+										<li class="icon solid fa-home"><br />
+										</li> -->
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Sankalan Data Technologies. All rights reserved. </p>
+
+								</footer>
+
+
+						</div>
+					</div>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+	</body>
+</html>

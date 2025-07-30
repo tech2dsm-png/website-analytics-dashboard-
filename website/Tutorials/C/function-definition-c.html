@@ -1,0 +1,741 @@
+<!DOCTYPE HTML>
+<!--
+	
+	
+	Free tutorials for personal and commercial use 
+-->
+<html>
+	<head>
+		<title>Function Definition  in C Programming Language </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="keywords" content="Function definition,in,C,Programming">
+		
+		<meta name="description" content=" Function definition is  where programmer write the actual code that performs the specific operation or task. Function definition in C programming has two parts a Function header and a Function body.">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/intstyle.css" />
+		<script>
+					document.addEventListener("contextmenu", function(event)
+					{
+						event.preventDefault();
+						    
+					}, false);
+		</script> 
+		<style>
+				
+				ul {
+ 					  padding: 20px;
+ 					   background: #cce5ff;
+ 					  
+ 					}
+				li {
+					 	 background: #cce5ff;
+ 						 color: darkblue;
+ 						 margin:1px;
+					}
+					body {
+							background: #cce5ff;	
+					    } 					
+         		p  {
+           				 
+  					 
+  						color: black;
+  						font-family: Georgia, serif;
+  						font-style: italic;
+  						display:block;
+  						margin-left: 0em;
+  						margin-bottom: 1em;
+  						margin-right: .5em;
+
+
+         			 }
+         			 .bgc{
+         			 	background-color: rgb(155,142,179);
+         			 }
+         		.responsive {
+         			       width: 100%;
+         			       height: auto;
+         			      }
+ 	        	img {
+  					border-radius: 12%;
+
+					  max-width: 100%;
+					  height: auto;
+					  float: right;
+
+					}
+					div.dashed{
+         				border-style: solid;
+         				border-width: 1px;
+
+         			}
+         			div.dashed2{
+         				overflow-x: auto;
+        				overflow-y: hidden;
+        				white-space: nowrap;
+        				border-style: solid;
+         				border-width: .5px;
+
+
+         			}
+         			.scrl{
+         				overflow-x: auto;
+        				overflow-y: hidden;
+
+        				border-style: solid;
+         				border-width: 2.5px;
+
+
+         			}
+         			
+					hr {
+  								border: 2px solid #DAA520;
+							}
+					
+​
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="" class="logo"><strong> Function Definition in C Language </strong> </a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter">
+											<span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+
+									</ul>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1 class="bgc"> Function Definition in C programming Language.
+											</h1>
+											
+										</header>
+										<article>
+											<p> In this tutorial section we will learn  what is funtion Definition  in C programming Language.<br>
+												Function Definition is the whole description and actual implementation of the code.The function definition tells what are the inputs and output and what the function is doinig.<br>
+												Function definition is  where programmer write the actual code that performs the specific operation or task. <br>
+												Function definition in C programming has two parts a <b>Function header</b>and a <b>Function body.</b><br>
+												As we know function definition has divided in two parts -a function header and a function body.<br>
+												 The function definition  structure tells what the function is doing , what are its inputs and outputs  and what are the types of arguments. <br>
+											</p>
+											<div class="dashed"><p>											<p>
+														<b class="bgc">Syntax: Function Definition in Programming.</b><br>
+														 Return type function_name(Data-Type arg1,Data-Type arg2,Data-Type arg3)<br> 
+														 {<br> Local variable declaratons section; <br>
+														  Function body or Statements; <br>
+														.............. <br>
+														return(expression);<br>
+														 }
+
+
+											</p>
+										</div>
+												
+										</article>
+
+
+
+											    
+											<p>
+
+											</p>
+										
+										<article>
+											<p>
+											</p>
+										</article>
+											
+											
+									
+										
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										
+									</header>
+									<div>
+										<article>
+											
+											<div >
+												
+												<p> <img src="images/function-definition-c.jpg" width="430" height="340" alt="A function definition is the actual implementation of the  function. The definition contains the code or program that will be executed.">
+
+
+
+												</p>
+											</div>
+										</article>
+										
+										
+									
+									
+									<article>
+										<div>
+										<p> Let us understand the function definition in detail with example from the given diagram.
+                                         </p>
+                                     </div>
+									</article>
+								</div>
+							
+
+									<article><p> <b class="bgc">&nbsp; Function Definition and its Elements.</b><br>Let us understand the user defined function definition from the Given Diagram.<br>
+										In C programming language the Function definition consists of <b>Function Header</b> and <b>function body</b>.<br>
+										<b>1. Function Header:</b> &emsp;the function header is the signature of the function, provides detail information about the function.<br>
+											<b>Function Signature</b> &emsp;the function signature is the combination of a function's name and its types of  parameters and return type.<br>
+											Function signature  allows the compiler to understand how the function should be used and called in the program.<br>
+											Funtion definition actually is the body of the function .
+											<br> Following are the elements of Function definitions<br>
+										
+												1. Return Type:&emsp;  This can be any valid C data types if the function returns C valid data type values or void if the function does not return any value to the calling environment or function.<br>
+												2. Function Name:&emsp;This is unique identifier or name to the function.It is used to call the function in the program.<br>
+												3. Parameters:&emsp;Parameters are enclosed in parentheses and can have their own data types and names.<br>Parameters are the optional inputs that function can accepts.<br>
+												If the function have multiple parameters they are seperated by commas.
+												<br>
+												<b>2. Function Body:&emsp;</b> function body is the block of code where the  programmer can write the actual implementation action or computational task.
+												the function executes the task written in the body when the function get called.<br>
+												The function body is the actual code or task of the function that defines the behaviuor of the function. <br>The function body is where you define the logic  that the function perform. 
+												Function body can have various structure defined inside.<br>
+												for example control stataements,looping statements,variable declaration ,calculations or computations etc.<br>
+												Function body is executed when the function is called, and the result can be used or returned as needed.
+										<br>
+									</p><br>
+												<div class="dashed2"><h3 class="bgc">A function body example in C:</h3> <p>int addition(int p, int q)<br> {<br>
+									    int total;<br>
+									    total=p+q;<br>
+									    return(total);<br>
+									}<br></p></div>
+									<p>
+									<b>Explanation:</b><br>In the example given above, the function body starts with the opening ({) curly brace  and ends with the closing (})curly brace .</br> Inside the function body, we have a variable declared int total and an <br>assignment statement that calculates the sum of the two input parameters p and q(total=p+q).<br> Finally, the function returns the computed total using the return statement return(total);.
+									</p>
+
+										<h3 class="bgc">1. C program to illustrate function Definition.</h3>
+										<div class="dashed2">
+											<p>/* function to find addition of a two number */<br>
+												#include&lt;stdio.h&gt;<br>
+
+											int addition(int p,int q) &emsp;&emsp;//Function Definition/Declaration
+											<br>
+											{<br>
+										    &emsp; int total;<br>
+										     &emsp;total=p+q;<br>
+										     &emsp;return(total);<br>
+										     }<br>
+											int main()<br>
+											&emsp;{<br>
+											&emsp;&emsp;printf("\n Addition=%d",addition(5,3));
+											<br>
+											&emsp;&emsp;return 0;<br>
+											&emsp;}<br>
+											<b>Output:</b><br>
+											Addition=8
+											<br>
+											<b> Explanation:</b><br>
+												int addition(int p,int q) 
+											<br>
+											{<br>
+										    &emsp; int total;<br>
+										     &emsp;total=p+q;<br>
+										     &emsp;return(total);<br>
+										     }<br> 
+										     is the function Definition and declaraion.<br>
+										     addition is the function which takes two integer parameter p,q and return integer value.<br>In the function body{ } the addition total=p+q  of two int input <br>parameter p and q are performed and 
+										     total is returned ( return(total) ) to calling program.<br>
+										     we called the addition(5,3) function in main program inside printf() which gives result Addition=8.
+
+
+
+
+																				</p>
+										</div>
+                                        <p>
+
+										 </p>
+
+
+
+
+										
+									</article>	
+									
+									<article> 
+												
+									
+									</article>
+									
+									<article>
+										<p>
+								</p>
+
+									
+										
+									</article>
+									<article>
+										<p>
+										</p>
+
+										
+										
+									</article>
+									
+									<article>
+										
+									</article>
+									<article><p>
+													
+												</p>
+											</article>
+                                        <hr>
+
+
+								
+												
+										
+										
+								
+											<div>						
+											<p class="p">
+											Previous Topic:--&gt;&gt;<a href="element-user-defined-fun-c.html">  Elements of User Defined Function in C</a>&nbsp;||&nbsp;Next topic:--&gt;&gt;<a href="function-declaration-c.html">Function Declaration/Prototype.</a>
+											<br> <b>Other Topics:</b></p>
+											<div class="dashed">
+
+												
+													<p class="p">
+											<a href="c-variable-identifier.html">Variables and Identifiers</a>&emsp;
+											<a href="relationaloperator.html">Relational Operators </a>&emsp;
+											<a href="c-ifelse.html">if-else statements</a>&emsp;
+											<a href="c-switch.html">Switch case </a>&emsp;
+											<a href="c-while-loop.html">While Loop </a>&emsp;
+											<a href="infinite-while-loop-c.html">Infinite while Loops</a>&emsp;
+											<a href="c-for.html">C FOR Loop</a>&emsp;
+											<a href="infinite-for-loop-c.html"> Infinite for Loops </a>&emsp;
+											<a href="continue-c.html">Continue in Loops </a>&emsp;
+											<a href="one-d-array-c.html">One Dimensional Array</a>&emsp;
+											<a href="two-d-array.html">Two Dimensional Arrays</a>&emsp;
+											<a href="read-2d-array.html">Read and Display 2D Arrays</a>&emsp;
+											<a href="types-of-function-c.html">Types of functions</a>&emsp;
+											<a href="passing-array-function-c.html">Passing Array To Functions</a>&emsp;
+											<a href="nesting-function-c.html">Nesting of Function</a>&emsp;
+											<a href="array-vs-structure-c.html">Array vs Structure</a>&emsp;
+											<a href="array-struct-c.html">Array of Structure</a>&emsp;
+											<a href="struct-and-function-c.html">Structures and Functions</a>&emsp;
+											<a href="struct-within-struct-c.html">Structures Within Structures</a>&emsp;
+											<a href="use-pointer-c.html">Use Of Pointers In C</a>&emsp;
+											<a href="file-intro-c.html">File Handling In C</a>&emsp;
+											<a href="loop-faq-c.html">Loops FAQ</a>&emsp;
+											<a href="array-faq-c.html">Arrays FAQ</a>&emsp;
+											<a href="count-vowels-file-c.html">count vowels in a file</a>&emsp;
+										    <a href="function-faq-c.html">Function FAQ</a> &emsp;
+										    <a href="conditional-stmt-assign-c.html">Conditional Statements Assignments</a>&emsp;
+												<a href="c-for-example.html">For Loops Assignments</a>&emsp;
+												<a href="array-assign-c.html">Arrays Assignments</a>&emsp;
+												<a href="function-assign-c.html">Function Assignments</a>&emsp;
+												<a href="structure-assign-c.html">Structure Assignments</a>&emsp;
+												<a href="pointer-assign-c.html">Pointers Assignments</a>&emsp;
+												<a href="file-assign-c.html">Files Assignments</a>&emsp;
+												<a href="storage-class-assign-c.html">Storage classes Assignments</a>&emsp;
+												<a href="binary-file-c.html"> Binary Files</a>&emsp;
+												<a href="file-count-word-line-c.html">count words,lines in a file</a>&emsp;
+												<a href="copy-file-c.html">Copy files</a>&emsp;
+												<a href="update-file-c.html">Update File</a>&emsp;
+												<a href="continue-c.html">Continue in Loops </a>&emsp;
+												<a href="break-c.html">break in Loops </a>&emsp;
+												<a href="c-diff-while-dowhile.html">Difference Between While and Do while</a>&emsp;
+												<a href="while-vs-dowhile-vs-for-c.html">difference while do..while & for </a>&emsp;
+												<a href="malloc-c.html">malloc</a>&emsp;
+												<a href="calloc-c.html">calloc</a>&emsp;
+												<a href="storage-class-c.html">Storage Classes</a>&emsp;
+												<a href="operators-mcq-c.html">Operators MCQ</a>&emsp;
+												<a href="conditional-mcq-c.html">Conditional Statements MCQ</a>&emsp;
+												<a href="loops-mcq-c.html">Loops MCQ</a>&emsp;
+												<a href="array-mcq-c.html">Arrays MCQ</a>&emsp;
+												<a href="function-mcq-c.html">Function MCQ</a>&emsp;
+												<a href="structure-mcq-c.html">Structure MCQ</a>&emsp;
+												<a href="pointer-mcq-c.html">Pointers MCQ</a>&emsp;
+												<a href="files-mcq-c.html">Files MCQ</a>&emsp;
+												<a href="storage-class-mcq-c.html">Storage classes MCQ</a>
+											
+											
+										</p>					
+									</div>
+															
+									</div>
+								</section>
+
+							<!-- Section -->
+								
+
+						</div>
+						<div>
+				<!-- footer menu -->
+			</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<section>
+									<header class="">
+										<div>
+										<p>
+
+</p>	
+									</div>
+									
+
+									</header>
+									
+			
+								</section>
+							<!-- Section -->
+								
+
+							<!-- Section -->
+
+							<!-- Search -->
+								<!--<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form> 
+								</section> -->
+
+							<!-- Menu -->
+								
+								<nav id="menu">
+									<header class="major">
+										<h2>C Language</h2>
+									</header>
+									<ul>
+										<li><a href="../index.html">Home</a></li>
+										<li><a href="whyC.html">Why C Language</a></li>
+										<li><a href="historyC.html">History of C Language</a></li>
+										<li><a href="ApplicationsC.html">Applications of C Language</a>
+										</li>
+										<li>
+											<span class="opener">Introduction To C</span>
+											<ul><li><a href="whatisprogram.html">What is Program?</a></li>
+												<li><a href="cprogramstructure.html">Structure of C Program</a></li>
+												<li><a href="Cprogram.html">Working Of C Program</a></li>
+												<li><a href="CLanguageChar.html">CHARACTER SET </a></li>
+												<li><a href="c-variable-identifier.html">VARIABLES AND IDENTIFIERS </a></li>
+												<li><a href="c-datatype.html">BUILT-IN DATA TYPES </a></li>
+												
+												<li><a href="operators.html">OPERATORS AND EXPRESSIONS </a></li>
+												<li><a href="constant.html">CONSTANTS AND LITERALS</a></li>
+												<li><a href="assignment.html"> SIMPLE ASSIGNMENT STATEMENT </a></li>
+												<li><a href="inputoutput.html">BASIC INPUT/OUTPUT STATEMENT </a></li>
+												<li><a href="cprograms.html">SIMPLE 'C' PROGRAMS</a></li>
+												<li><a href="assignments-intro1.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Operators in C Programming </span>
+											<ul>
+											<li><a href="arithmatic-operators-c.html">Arithmetic Operators </a></li>
+												<li><a href="assignment-operators-c.html">Assignment Operators </a></li>
+												<li><a href="increment-decrement-operator-c.html">Increment and Decrement Operators</a></li>
+												<li><a href="relationaloperator.html">Relational Operators </a></li>
+												<li><a href="logicaloperator.html">Logical Operators</a></li>
+											 <li><a href="bitwiseopearator.html">Bitwise Operators </a></li>
+											 <li><a href="otheropearator.html">Other Operators </a></li>
+											 <li><a href="opearatorassignments.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">CONDITIONAL STATEMENTS</span>
+											<ul>
+												<li><a href="c-decision.html">DECISION MAKING WITHIN A PROGRAM</a></li>
+												<li><a href="c-condtions.html"> CONDITIONS</a></li>
+												<li><a href="c-if.html">IF STATEMENT </a></li>
+												<li><a href="c-ifelse.html">IF-ELSE STATEMENT</a></li>
+												<li><a href="c-ifelseladder.html">IF-ELSE LADDER</a></li>
+												<li><a href="c-nestedif.html">NESTED IF-ELSE </a></li>
+												<li><a href="c-switch.html">SWITCH CASE </a></li>
+												<li><a href="conditional-stmt-assign-c.html">Assignments</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">LOOPS STATEMENTS</span>
+											<ul>
+												<li><a href="loops-intro.html">Introduction to Loops</a></li>
+												<li><a href="c-goto.html"> GO TO Statement</a></li>
+												<li><a href="c-dowhile-loop.html"> Do while Loop </a></li>
+												<li><a href="c-while-loop.html">While Loop </a></li>
+												<li><a href="c-nested-while.html">Nested While Loop </a></li>
+												<li><a href="c-diff-while-dowhile.html">Difference Between While and Do while</a></li>
+												<li><a href="c-difference-goto-loop.html">Difference Between Goto and loop</a></li>
+												<li><a href="c-while-loop-assign.html"> while loop assignments</a></li>
+												<li><a href="c-for.html">C FOR Loop</a></li>
+												<li><a href="c-for-example.html">C For loop examples </a></li>
+												<li><a href="c-nested-for.html">Nested for loop</a></li>
+												<li><a href="nested-while-loop-c.html">Nested for loop examples </a></li>
+												<li><a href="infinite-while-loop-c.html">Infinite while Loops</a></li>
+												<li><a href="infinite-for-loop-c.html"> Infinite for Loops </a></li>
+												<li><a href="continue-c.html">Continue in Loops </a></li>
+												<li><a href="break-c.html">break in Loops </a></li>
+												<li><a href="while-vs-dowhile-vs-for-c.html">difference while do..while & for </a></li>
+												<li><a href="loop-assignment-c.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Arrays</span>
+											<ul>
+												<li><a href="one-d-array-c.html">One Dimensional Array</a></li>
+												<li><a href="declare-array-c.html">Declaring 1D Arrays</a></li>
+												<li><a href="initilize-array-c.html">Initilization of 1D arrays</a>
+												</li>
+												<li><a href="access-array-c.html">Accessing element of one 1D Array</a></li>
+												<li><a href="read-array-c.html">Read and Display 1D Arrays</a></li>
+												<li><a href="two-d-array.html">Two Dimensional Arrays</a></li>
+												<li><a href="declare-2d-array-c.html">Declare 2D Arrays</a></li>
+												<li><a href="read-2d-array.html">Read and Display 2D Arrays</a></li>
+												<li><a href="array-assignments.html">Assignments/Examples</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Functions</span>
+											<ul>
+												<li><a href="function-intro-c.html">Introduction</a></li>
+												<li><a href="user-defined-function-c.html">Need For User-Defined Function</a></li>
+												<li><a href="multiple-fun-program-c.html">Multiple Function Program</a></li>
+												
+												<li><a href="modular-programming-c.html">Modular Programming</a></li>
+												<li><a href="element-user-defined-fun-c.html">Elements Of User Defined Function</a></li>
+												<li><a href="function-definition-c.html">Function Definition</a></li>
+												</li>
+												<li><a href="function-declaration-c.html">Function Declaration</a></li>
+												</li>
+												<li><a href="types-of-function-c.html">Types of functions</a></li>
+												</li>
+												<li><a href="nesting-function-c.html">Nesting of Function</a></li>
+												<li><a href="recursion-c.html">Recursion</a></li>
+												<li><a href="passing-array-function-c.html">Passing Array To Functions</a></li>
+												<li><a href="visibility-scope-var-c.html">Scope,Visibility and Lifetime of Variables</a></li>
+												<li><a href="function-assignment-c.html">Assignments</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Structure</span>
+											<ul>
+												<li><a href="structure-intro-c.html">Introduction</a></li>
+												<li><a href="array-vs-structure-c.html">Array vs Structure</a></li>
+												<li><a href="define-structure-c.html">Defining Structure</a></li>
+												<li><a href="declare-structure-var-c.html">Declaring Structure Variables</a></li>
+												<li><a href="type-def-struct-c.html">Type Defined Structure</a></li>
+												<li><a href="access-struct-member-c.html">Accessing Structure Members</a></li>
+												<li><a href="struct-initilization-c.html">Structure Initilization</a></li>
+												<li><a href="copy-compare-struct-c.html">Copying & Comparing Structure Variables</a></li>
+												<li><a href="array-struct-c.html">Array of Structure</a></li>
+												<li><a href="array-within-struct-c.html">Arrays Within Structure</a></li>
+												<li><a href="struct-within-struct-c.html">Structures Within Structures</a></li>
+												<li><a href="struct-and-function-c.html">Structures and Functions</a></li>
+												<li><a href="struct-assignment-c.html">Structure Examples/Assignments</a></li>
+											</ul>
+									  </li>
+										<li>
+
+
+											<span class="opener">Union</span>
+											<ul>
+												<li><a href="define-union-c.html">Define Union</a></li>
+												<li><a href="create-union-c.html">Create and use Union</a></li>
+												<li><a href="diff-struct-union-c.html">Difference Between Structure and Union</a></li>
+												<li><a href="union-c-example.html">Union Examples</a></li>
+												<li><a href="union-c-faq.html">Union FAQ</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Pointers</span>
+											<ul>
+												<li><a href="what-is-pointer-c.html">What Are Pointers In C?</a></li>
+												<li><a href="how-use-pointer-c.html">How Do We Use Pointers In C?</a></li>
+												<li><a href="declare-pointer-c.html">Declaration Of A Pointer</a></li>
+												<li><a href="pointer-init-c.html">The Initialization Of A Pointer</a></li>
+												<li><a href="pointer-syntax-init.html">Syntax Of Pointer Initialization</a></li>
+												<li><a href="use-pointer-c.html">Use Of Pointers In C</a></li>
+												<li><a href="pointer-to-array-c.html">The Pointer To An Array</a></li>
+												<li><a href="pointer-to-function-c.html">The Pointer To A Function</a></li>
+												<li><a href="pointer-to-struct-c.html">The Pointer To A Structure</a></li>
+												<li><a href="types-pointer-c.html">Types Of Pointers</a></li>
+												<li><a href="null-pointer-c.html">The Null Pointer</a></li>
+												<li><a href="void-pointer-c.html">The Void Pointer</a></li>
+												<li><a href="wild-pointer-c.html">The Wild Pointer</a></li>
+												<li><a href="near-pointer-c.html">The Near Pointer</a></li>
+												<li><a href="huge-pointer-c.html">The Huge Pointer</a></li>
+												<li><a href="far-pointer-c.html">The far Pointer</a></li>
+												<li><a href="dangling-pointer-c.html">dangling pointer </a></li>
+												<li><a href="access-pointer-c.html">Accessing Pointers- Indirectly And Directly</a></li>
+												<li><a href="pros-pointer-c.html">Pros Of Using Pointers In C</a></li>
+												<li><a href="cons-pointer-c.html">Cons Of Pointers In C</a></li>
+												<li><a href="application-pointer-c.html">Applications Of Pointers In C</a></li>
+												<li><a href="address-operator-c.html">The & Address Of Operator In C</a></li>
+												<li><a href="complex-pointer-c.html">How To Read The Complex Pointers In C?</a></li>
+												<li><a href="practice-pointer-c.html">Practice Problems On Pointers </a></li>
+												
+												
+											</ul>
+									  </li>
+
+
+ 									<li>
+											<span class="opener">File Processiong</span>
+											<ul>
+												<li><a href="file-intro-c.html">File Handling In C</a></li>
+												<li><a href="types-file-c.html">Types Of Files In C </a></li>
+												<li><a href="operation-file-c.html">Operations Done In File Handling</a></li>
+												<li><a href="file-example-c.html">File Examples</a></li>
+												<li><a href="binary-file-c.html"> Binary Files</a></li>
+												<li><a href="file-count-word-line-c.html">count words,lines in a file</a></li>
+												<li><a href="copy-file-c.html">Copy files</a></li>
+												<li><a href="update-file-c.html">Update File</a></li>
+												<li><a href="count-vowels-file-c.html">count vowels in a file</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Preprocessor</span>
+											<ul>
+												<li><a href="macro-sub-div-c.html">Macro substitution division</a></li>
+												<li><a href="file-inclusion-c.html">File Inclusion</a></li>
+												<li><a href="conditional-compile-c.html">Conditional Compilation</a></li>
+												<li><a href="other-dir-c.html">Other directives</a></li>
+												<li><a href="preprocessor-example-c.html">Examples</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Dynamic Memory Allocation</span>
+											<ul>
+												<li><a href="malloc-c.html">malloc</a></li>
+												<li><a href="calloc-c.html">calloc</a></li>
+												<li><a href="free-c.html">free</a></li>
+												<li><a href="realloc-c.html">realloc</a></li>
+												<li><a href="dynamic-mem-example-c.html">Examples</a></li>
+											</ul>
+									  </li>
+										<li><a href="storage-class-c.html">Storage Classes</a></li>
+										<li><a href="graphics-c.html">Graphics</a></li>
+										<li>
+											<span class="opener">Frequently Asked Interview Questions
+										(FAQ)</span>
+											<ul>
+												<li><a href="intro-c-faq-c.html">Introduction To C FAQ</a></li>
+												<li><a href="operators-c-faq.html">Operators FAQ</a></li>
+												<li><a href="conditional-stmt-c-faq.html">Conditional Statements FAQ</a></li>
+												<li><a href="loop-faq-c.html">Loops FAQ</a></li>
+												<li><a href="array-faq-c.html">Arrays FAQ</a></li>
+												<li><a href="function-faq-c.html">Function FAQ</a></li>
+												<li><a href="structure-faq-c.html">Structure FAQ</a></li>
+												<li><a href="pointer-faq-c.html">Pointers FAQ</a></li>
+												<li><a href="files-faq-c.html">Files FAQ</a></li>
+												<li><a href="storage-class-faq-c.html">Storage classes FAQ</a></li>
+												<li><a href="dma-faq-c.html">Dynamic Memory FAQ</a></li>
+												
+
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Programs/Assignments</span>
+											<ul>
+												<li><a href="intro-assign-c.html">Introduction To C </a></li>
+												<li><a href="operators-assign-c.html">Operators </a></li>
+												<li><a href="conditional-stmt-assign-c.html">Conditional Statements </a></li>
+												<li><a href="loop-assign-c.html">Loops </a></li>
+												<li><a href="array-assign-c.html">Arrays </a></li>
+												<li><a href="function-assign-c.html">Function </a></li>
+												<li><a href="structure-assign-c.html">Structure </a></li>
+												<li><a href="pointer-assign-c.html">Pointers </a></li>
+												<li><a href="file-assign-c.html">Files </a></li>
+												<li><a href="storage-class-assign-c.html">Storage classes </a></li>
+												<li><a href="dma-assign-c.html">Dynamic Memory </a></li>
+												
+
+											</ul>
+									  </li>
+										<li><a href="case-studies-c.html">Case Studies</a></li>
+										<li>
+											<span class="opener">Multiple Choice Questions</span>
+											<ul>
+												<li><a href="intro-mcq-c.html">Introduction To C MCQ</a></li>
+												<li><a href="operators-mcq-c.html">Operators MCQ</a></li>
+												<li><a href="conditional-mcq-c.html">Conditional Statements MCQ</a></li>
+												<li><a href="loops-mcq-c.html">Loops MCQ</a></li>
+												<li><a href="array-mcq-c.html">Arrays MCQ</a></li>
+												<li><a href="function-mcq-c.html">Function MCQ</a></li>
+												<li><a href="structure-mcq-c.html">Structure MCQ</a></li>
+												<li><a href="pointer-mcq-c.html">Pointers MCQ</a></li>
+												<li><a href="files-mcq-c.html">Files MCQ</a></li>
+												<li><a href="storage-class-mcq-c.html">Storage classes MCQ</a></li>
+												<li><a href="dma-mcq-c.html">Dynamic Memory MCQ</a></li>
+												<li><a href="more-faqc.html">More MCQ</a></li>
+
+											</ul>
+									  </li>
+									</ul>
+								</nav>
+
+							<!-- Section   for activities -->
+								<section>
+									<header class="">
+										<div>
+										<p>
+
+										</p>	
+									</div>
+									
+
+									</header>
+									
+			
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">tech2dsm@gmail.com</a></li>
+										<!--<li class="icon solid fa-phone">-----</li>
+										<li class="icon solid fa-home"><br />
+										</li> -->
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Sankalan Data Tech. All rights reserved. </p>
+
+								</footer>
+
+
+						</div>
+					</div>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+	</body>
+</html>

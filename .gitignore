@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+Untitled.ipynb  # Explicitly ignore this file
+pydemo.py       # Explicitly ignore this file if it's a temporary test script
+
+# Virtual environment
+venv/
+.env
+/env
+
+# Database specific
+*.db
+*.sqlite3
+*.mdf
+*.ldf
+*.bak # Database backup files
+
+# OS and editor specific
+.DS_Store
+Thumbs.db # Windows thumbnail cache
+.vscode/  # VS Code settings
+*.log
+*~

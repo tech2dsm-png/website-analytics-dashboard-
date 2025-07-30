@@ -1,0 +1,800 @@
+<!DOCTYPE HTML>
+<!--
+	
+	
+	Free tutorials for personal and commercial use 
+-->
+<html>
+	<head>
+		<title>Recursion Function in C Language </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="keywords" content="Recursion ,function,C,Programming,factorial using recursion">
+		
+		<meta name="description" content="Discover the concept of recursion in C programming , learn about its types, how it works, and explore practical examples. Read now!"/>
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/intstyle.css" />
+		<script>
+					document.addEventListener("contextmenu", function(event)
+					{
+						event.preventDefault();
+						    
+					}, false);
+		</script> 
+		<style>
+				
+				ul {
+ 					  padding: 20px;
+ 					   background: #cce5ff;
+ 					  
+ 					}
+				li {
+					 	 background: #cce5ff;
+ 						 color: darkblue;
+ 						 margin: 5px;
+					}
+					body {
+							background: #cce5ff;	
+					    } 					
+         		p  {
+           				 
+  						font-size: 19px;
+  						color: black;
+  						font-family: Georgia, serif;
+  						font-style: italic;
+  						display:block;
+  						margin-left: 1.2em;
+  						margin-bottom: 1em;
+  						margin-right: 1em;
+
+         			 }
+         			 .bgc{
+         			 	background-color: rgb(155,142,179);
+         			 }
+         		.responsive {
+         			       width: 100%;
+         			       height: auto;
+         			      }
+ 	        	img {
+  					border-radius: 12%;
+
+					  max-width: 100%;
+					  height: auto;
+					  float: right;
+
+					}
+					div.dashed{
+         				border-style: solid;
+         				border-width: 3px;
+
+         			}
+         			div.dashed2{
+         				overflow-x: auto;
+        				overflow-y: hidden;
+        				white-space: nowrap;
+        				border-style: solid;
+         				border-width: 2.5px;
+
+
+         			}
+         			.scrl{
+         				overflow-x: auto;
+        				overflow-y: hidden;
+
+        				border-style: solid;
+         				border-width: 2.5px;
+
+
+         			}
+         			
+					hr {
+  								border: 2px solid #DAA520;
+							}
+					
+​
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="" class="logo"><strong> Recursion Function in C Language </strong> Skill UP</a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter">
+											<span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+
+									</ul>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1 class="bgc"> Recursion Function  in C Language
+											</h1>
+											
+										</header>
+										<article>
+											<p> In this tutorial  we will learn Recursion  Function   in C programming  Language.<br>
+												
+												<b> Recursion Function:</b> The recursion is the process in c programming language which allows to repeat the certain section of code in a program.<br>
+ 												Thus, in the C programming languages  the program allows the user to call the self function inside the  same function, it is known as a recursive call in that function .<br>
+ 												when ever the function calls same copy of itself then it is the actual recursion .  It is useful  when we do want to work on a smaller problem. <br>All the problems can not be solved by using recursion in C programming Langguage. It is mainly useful and benificial for  the similar types of subtask.For e.g. one  can apply recursion on sorting, searching,  and  traversal problems.<br>
+												But one important thing we need to  keep in our mind that the iterative or repeatative(looping)  solutions are very   efficient than the recursion. why It is efficient  because the function call is almost overhead  all the time. <br>
+												The recursion in a C program continues further until and unless it meets some condition to ultimately prevent it.
+												The recursion function continues its process infinite times. To stop or prevent the continues execution of the function  we should mention the exit condition.<br>
+ 												Thus, if we want to prevent recursion in our programming  code we have to use the if…else statement or some similar type of acondition or approch where one of the branches will makes a recursive call while the other one doesn’t.
+												 
+
+												 
+											</p>
+											</article>
+
+
+											    
+											<article>
+											<p> 								
+
+											</p>
+										</article>
+										<article>
+											<p>
+
+											</p>
+										</article>
+											
+											<article>
+											<p> 
+
+									
+
+											</p><article>
+											<p> 
+
+									
+
+											</p>
+									
+										
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										
+									</header>
+									<div>
+										<article>
+											
+											<div >
+												
+												<p> <img src="images/recursion-function-c.jpg" width="430" height="340" alt="Recursion function in C programming Language">
+
+
+
+												</p>
+											</div>
+										</article>
+										
+										
+									
+									
+									<article>
+										<div>
+										<p> 
+                                         </p>
+                                     </div>
+									</article>
+								</div>
+							
+
+									<article><p> <b class="bgc">&nbsp; Working of Recursion Function  in C Programming Language.</b>
+										<br>
+
+										In C programming language the recursion can be made by calling function to itself. The process of calling function to itself is called recursion.<br>
+										The recursive function performs some specific task by dividing it in to subtask.<br>
+										Let understand the recursion function from the given diagam.<br>
+										we have declared and defined the function recur_fun().<br>
+								The main() function calls the recur_fun().
+								The control transfers to the recur_fun() and start executing statements inside recur_fun() body.<br>
+								Inside recur_fun() we have again called the recur_fun() which  calls  the same function again and this process continues infinite times. <br>There should be  a termination condition that we need to define in the function to stop infinite execution of recursion function. Some specific subtasks should satisfy this termination condition. Due to this, the recursive execution of function stops and we get the final result. 
+
+										
+									</p><h3 class="bgc"> Simple Recursion Function example  in C Language.</h3>
+									<div class="dashed2"><p>
+										#include&lt;stdio.h&gt;<br>
+										void recurse_fun()<br>
+										&emsp;{<br>
+									    &emsp;&emsp;printf("\n Welcome to sankalan Data Technologies.");<br>
+									    &emsp;&emsp;recurse_fun();&emsp; // calling the recurse_fun() itself<br>
+									 &emsp; }<br>
+									  int main()<br>
+									  &emsp;{<br>
+									  &emsp;&emsp;printf("\n Call the recurse-function...");<br>
+									 &emsp;&emsp;recurse_fun(); &emsp;// calling recurse_fun() from main() function<br>
+									 &emsp;&emsp;return(0);<br>
+									&emsp;}
+
+										
+
+									  
+												
+											</p>
+										</div>
+									
+                                        <p>
+
+										<b> Output:</b><br>
+										Call the recurse-function...<br>
+										Welcome to sankalan Data Technologies.<br>
+										Welcome to sankalan Data Technologies.<br>
+										.<br>
+										.<br>
+										.<br>
+										.<br>
+										<b> Explanation:</b><br>
+										1.The main()  program function calls the recurse_fun().The control transfers to the recur_fun() body and start executing the statements.
+										The printf() function is executed and gives the output "Welcome to sankalan Data Technologies" .<br>
+										2. Again the recurse_fun() has been called inside the the function body , which again call the same function and the process continues infinite times giving the output "Welcome to sankalan Data Technologies".<br>
+										3. This recursive execution may  crash the system so that we should put the exit condiotion. 
+
+
+									    </p>
+
+
+
+
+										<h3 class="bgc">C program to find Factorial of a Number .</h3>
+										<p>The following example given is a simple implementation of recursion functions in C Programming that calculates the factorial of a number.<br>
+									
+										</p>
+										<div class="dashed2">
+											<p>
+												
+									#include &lt;stdio.h&gt;<br>
+
+									int fact_n(int n)<br>
+									{<br>
+									    &emsp;&emsp;if(n==1 || n==0)<br>
+									&emsp;&emsp;{<br>
+									        &emsp;&emsp;&emsp;return 1;<br>
+									   &emsp;&emsp; }<br>
+									    &emsp;&emsp;else<br>
+									    &emsp;&emsp;{<br>
+									   	 &emsp;&emsp;&emsp; return n*fact_n(n-1);<br>
+									   	 &emsp; }<br>
+									}<br>
+								 int main()<br>
+									{<br>
+										&emsp;int x;<br>
+										&emsp;printf("\n Enter any Number");<br>
+										&emsp;scanf("%d",&x);<br>
+										&emsp;printf("\n The Factorial of %d!=%d",x,fact_n(x));<br>
+										&emsp;return(0);<br>
+								   }<br>
+
+										<b>Output:</b><br>
+										Enter any Number:<br>
+										3.<br>
+										The Factorial of 3! is 6.
+
+
+										
+
+
+									</p>
+										</div>
+										</article>
+										<article>
+											<p><b>Explanation:</b>In the given program above we have declared and defined the function fact_n() which calculates the factorial of any number entered by user.<br>Let us understand how the program calculates and process the factorial step by step.<br>
+												step 1: &emsp;int x;<br>
+										&emsp;printf("\n Enter any Number");<br>
+										&emsp;scanf("%d",&x);<br>
+										The variable x has been declared as integer which one has used to  store any integer number whose factorial we is to actually  find.<br>
+										The given printf() prompts us the  Message  "Enter any Number:"  we have entered the number 3.<br>
+										The scanf("%d",&x); function store the entered integer number 3 at the address of x or in the x variable.<br>
+										Step 2: The next Statement &emsp;printf("\n The Factorial of %d!=%d",x,fact_n(x)); executes gives the final resul.<br>
+										The Factorial of 3!=6.<br>
+										 &emsp; Let Understand how does Recursion Function fact_n(x) calculates the factorial.<br>
+										 &emsp; step 2.1: &emsp;printf("\n The Factorial of %d!=%d",x,fact_n(x));<br>
+										  inside the printf() function the fact_n(x) function calls the <br>
+										  int fact_n(int n) function where the value of x=3 is passed to fact_n(int n) so n is 3 .<br>
+										  step 2.2:The  if(n==1 ||n==0) condition does not match then the control transfer to the statements inside else  the   return n*fact(n-1) statement  which one calculate ,call and return the  result. here the statement becomes return 3*fact(2);<br>
+
+										  step 2.3: the statement from above again invokes  the return n*fact(n-1).<br> now here value of n is 2.<br>									   The statement  <b>return 2*fact(1)</b> which is again call the fact() function.Inside the fact() function the condiion is checked i.e if(n==1 || n==0) which is true. then the  return 1 statement returns the value 1 to the function called from step 2.3 .i.e  return 2*1.  <br>
+										   The <b>return 2*1</b> returns 2 to the step number 2.2.
+										   The return statement in step number 2.2 is return 3*fact(2) becomes 
+										   return 3*2 which is again retruns the number 6 to the function called  from "printf("\n The Factorial of %d!=%d",x,fact_n(x)); "<br>
+										   which gives the final result.<br>
+										   The Factorial of 3!=6.
+
+
+
+
+											</p>
+										
+										</article>				
+												
+									
+										
+									
+									
+									
+									<article>
+										
+										
+									</article>
+									<article>
+										
+
+									</article>
+									<article>
+										<p>
+											
+										</p>
+										
+
+																				
+									</article>
+									
+									
+									<article>
+										<p>
+										</p>
+										
+									
+										
+									</article>
+									
+									<article><p>
+													
+												</p>
+								 </article>
+                                       
+
+
+								
+												
+										
+										
+								
+											<div>						
+											<p>
+											Previous Topic:--&gt;&gt;<a href="nesting-function-c.html">  Nesting of Functions  in C</a>&nbsp;||&nbsp;Next topic:--&gt;&gt;<a href="passing-array-function-c.html">Passing array to Function.</a><br>
+											</p>
+											<div class="dashed">
+
+												
+													<p class="p"> <b>Other Topics:</b><br>
+											<a href="c-variable-identifier.html">Variables and Identifiers</a>&emsp;
+											<a href="relationaloperator.html">Relational Operators </a>&emsp;
+											<a href="c-ifelse.html">if-else statements</a>&emsp;
+											<a href="c-switch.html">Switch case </a>&emsp;
+											<a href="c-while-loop.html">While Loop </a>&emsp;
+											<a href="infinite-while-loop-c.html">Infinite while Loops</a>&emsp;
+											<a href="c-for.html">C FOR Loop</a>&emsp;
+											<a href="infinite-for-loop-c.html"> Infinite for Loops </a>&emsp;
+											<a href="continue-c.html">Continue in Loops </a>&emsp;
+											<a href="one-d-array-c.html">One Dimensional Array</a>&emsp;
+											<a href="two-d-array.html">Two Dimensional Arrays</a>&emsp;
+											<a href="read-2d-array.html">Read and Display 2D Arrays</a>&emsp;
+											<a href="types-of-function-c.html">Types of functions</a>&emsp;
+											<a href="passing-array-function-c.html">Passing Array To Functions</a>&emsp;
+											<a href="nesting-function-c.html">Nesting of Function</a>&emsp;
+											<a href="array-vs-structure-c.html">Array vs Structure</a>&emsp;
+											<a href="array-struct-c.html">Array of Structure</a>&emsp;
+											<a href="struct-and-function-c.html">Structures and Functions</a>&emsp;
+											<a href="struct-within-struct-c.html">Structures Within Structures</a>&emsp;
+											<a href="use-pointer-c.html">Use Of Pointers In C</a>&emsp;
+											<a href="file-intro-c.html">File Handling In C</a>&emsp;
+											<a href="loop-faq-c.html">Loops FAQ</a>&emsp;
+											<a href="array-faq-c.html">Arrays FAQ</a>&emsp;
+											<a href="count-vowels-file-c.html">count vowels in a file</a>&emsp;
+										    <a href="function-faq-c.html">Function FAQ</a> &emsp;
+										    <a href="conditional-stmt-assign-c.html">Conditional Statements Assignments</a>&emsp;
+												<a href="c-for-example.html">For Loops Assignments</a>&emsp;
+												<a href="array-assign-c.html">Arrays Assignments</a>&emsp;
+												<a href="function-assign-c.html">Function Assignments</a>&emsp;
+												<a href="structure-assign-c.html">Structure Assignments</a>&emsp;
+												<a href="pointer-assign-c.html">Pointers Assignments</a>&emsp;
+												<a href="file-assign-c.html">Files Assignments</a>&emsp;
+												<a href="storage-class-assign-c.html">Storage classes Assignments</a>&emsp;
+												<a href="binary-file-c.html"> Binary Files</a>&emsp;
+												<a href="file-count-word-line-c.html">count words,lines in a file</a>&emsp;
+												<a href="copy-file-c.html">Copy files</a>&emsp;
+												<a href="update-file-c.html">Update File</a>&emsp;
+												<a href="continue-c.html">Continue in Loops </a>&emsp;
+												<a href="break-c.html">break in Loops </a>&emsp;
+												<a href="c-diff-while-dowhile.html">Difference Between While and Do while</a>&emsp;
+												<a href="while-vs-dowhile-vs-for-c.html">difference while do..while & for </a>&emsp;
+												<a href="malloc-c.html">malloc</a>&emsp;
+												<a href="calloc-c.html">calloc</a>&emsp;
+												<a href="storage-class-c.html">Storage Classes</a>&emsp;
+												<a href="operators-mcq-c.html">Operators MCQ</a>&emsp;
+												<a href="conditional-mcq-c.html">Conditional Statements MCQ</a>&emsp;
+												<a href="loops-mcq-c.html">Loops MCQ</a>&emsp;
+												<a href="array-mcq-c.html">Arrays MCQ</a>&emsp;
+												<a href="function-mcq-c.html">Function MCQ</a>&emsp;
+												<a href="structure-mcq-c.html">Structure MCQ</a>&emsp;
+												<a href="pointer-mcq-c.html">Pointers MCQ</a>&emsp;
+												<a href="files-mcq-c.html">Files MCQ</a>&emsp;
+												<a href="storage-class-mcq-c.html">Storage classes MCQ</a>
+											
+											
+										</p>					
+									</div>
+															
+									</div>
+								</section>
+
+							<!-- Section -->
+								
+
+						</div>
+						<div>
+				<!-- footer menu -->
+			</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<section>
+									<header class="">
+										<div>
+										<p>
+
+</p>	
+									</div>
+									
+
+									</header>
+									
+			
+								</section>
+							<!-- Section -->
+								
+
+							<!-- Section -->
+
+							<!-- Search -->
+								<!--<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form> 
+								</section> -->
+
+							<!-- Menu -->
+								
+								<nav id="menu">
+									<header class="major">
+										<h2>C Language</h2>
+									</header>
+									<ul>
+										<li><a href="../index.html">Home</a></li>
+										<li><a href="whyC.html">Why C Language</a></li>
+										<li><a href="historyC.html">History of C Language</a></li>
+										<li><a href="ApplicationsC.html">Applications of C Language</a>
+										</li>
+										<li>
+											<span class="opener">Introduction To C</span>
+											<ul><li><a href="whatisprogram.html">What is Program?</a></li>
+												<li><a href="cprogramstructure.html">Structure of C Program</a></li>
+												<li><a href="Cprogram.html">Working Of C Program</a></li>
+												<li><a href="CLanguageChar.html">CHARACTER SET </a></li>
+												<li><a href="c-variable-identifier.html">VARIABLES AND IDENTIFIERS </a></li>
+												<li><a href="c-datatype.html">BUILT-IN DATA TYPES </a></li>
+												
+												<li><a href="operators.html">OPERATORS AND EXPRESSIONS </a></li>
+												<li><a href="constant.html">CONSTANTS AND LITERALS</a></li>
+												<li><a href="assignment.html"> SIMPLE ASSIGNMENT STATEMENT </a></li>
+												<li><a href="inputoutput.html">BASIC INPUT/OUTPUT STATEMENT </a></li>
+												<li><a href="cprograms.html">SIMPLE 'C' PROGRAMS</a></li>
+												<li><a href="assignments-intro1.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Operators in C Programming </span>
+											<ul>
+											<li><a href="arithmatic-operators-c.html">Arithmetic Operators </a></li>
+												<li><a href="assignment-operators-c.html">Assignment Operators </a></li>
+												<li><a href="increment-decrement-operator-c.html">Increment and Decrement Operators</a></li>
+												<li><a href="relationaloperator.html">Relational Operators </a></li>
+												<li><a href="logicaloperator.html">Logical Operators</a></li>
+											 <li><a href="bitwiseopearator.html">Bitwise Operators </a></li>
+											 <li><a href="otheropearator.html">Other Operators </a></li>
+											 <li><a href="opearatorassignments.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">CONDITIONAL STATEMENTS</span>
+											<ul>
+												<li><a href="c-decision.html">DECISION MAKING WITHIN A PROGRAM</a></li>
+												<li><a href="c-condtions.html"> CONDITIONS</a></li>
+												<li><a href="c-if.html">IF STATEMENT </a></li>
+												<li><a href="c-ifelse.html">IF-ELSE STATEMENT</a></li>
+												<li><a href="c-ifelseladder.html">IF-ELSE LADDER</a></li>
+												<li><a href="c-nestedif.html">NESTED IF-ELSE </a></li>
+												<li><a href="c-switch.html">SWITCH CASE </a></li>
+												<li><a href="conditional-stmt-assign-c.html">Assignments</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">LOOPS STATEMENTS</span>
+											<ul>
+												<li><a href="loops-intro.html">Introduction to Loops</a></li>
+												<li><a href="c-goto.html"> GO TO Statement</a></li>
+												<li><a href="c-dowhile-loop.html"> Do while Loop </a></li>
+												<li><a href="c-while-loop.html">While Loop </a></li>
+												<li><a href="c-nested-while.html">Nested While Loop </a></li>
+												<li><a href="c-diff-while-dowhile.html">Difference Between While and Do while</a></li>
+												<li><a href="c-difference-goto-loop.html">Difference Between Goto and loop</a></li>
+												<li><a href="c-while-loop-assign.html"> while loop assignments</a></li>
+												<li><a href="c-for.html">C FOR Loop</a></li>
+												<li><a href="c-for-example.html">C For loop examples </a></li>
+												<li><a href="c-nested-for.html">Nested for loop</a></li>
+												<li><a href="nested-while-loop-c.html">Nested for loop examples </a></li>
+												<li><a href="infinite-while-loop-c.html">Infinite while Loops</a></li>
+												<li><a href="infinite-for-loop-c.html"> Infinite for Loops </a></li>
+												<li><a href="continue-c.html">Continue in Loops </a></li>
+												<li><a href="break-c.html">break in Loops </a></li>
+												<li><a href="while-vs-dowhile-vs-for-c.html">difference while do..while & for </a></li>
+												<li><a href="loop-assignment-c.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Arrays</span>
+											<ul>
+												<li><a href="one-d-array-c.html">One Dimensional Array</a></li>
+												<li><a href="declare-array-c.html">Declaring 1D Arrays</a></li>
+												<li><a href="initilize-array-c.html">Initilization of 1D arrays</a>
+												</li>
+												<li><a href="access-array-c.html">Accessing element of one 1D Array</a></li>
+												<li><a href="read-array-c.html">Read and Display 1D Arrays</a></li>
+												<li><a href="two-d-array.html">Two Dimensional Arrays</a></li>
+												<li><a href="declare-2d-array-c.html">Declare 2D Arrays</a></li>
+												<li><a href="read-2d-array.html">Read and Display 2D Arrays</a></li>
+												<li><a href="array-assignments.html">Assignments/Examples</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Functions</span>
+											<ul>
+												<li><a href="function-intro-c.html">Introduction</a></li>
+												<li><a href="user-defined-function-c.html">Need For User-Defined Function</a></li>
+												<li><a href="multiple-fun-program-c.html">Multiple Function Program</a></li>
+												
+												<li><a href="modular-programming-c.html">Modular Programming</a></li>
+												<li><a href="element-user-defined-fun-c.html">Elements Of User Defined Function</a></li>
+												<li><a href="function-definition-c.html">Function Definition</a></li>
+												</li>
+												<li><a href="function-declaration-c.html">Function Declaration</a></li>
+												</li>
+												<li><a href="types-of-function-c.html">Types of functions</a></li>
+												</li>
+												<li><a href="nesting-function-c.html">Nesting of Function</a></li>
+												<li><a href="recursion-c.html">Recursion</a></li>
+												<li><a href="passing-array-function-c.html">Passing Array To Functions</a></li>
+												<li><a href="visibility-scope-var-c.html">Scope,Visibility and Lifetime of Variables</a></li>
+												<li><a href="function-assignment-c.html">Assignments</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Structure</span>
+											<ul>
+												<li><a href="structure-intro-c.html">Introduction</a></li>
+												<li><a href="array-vs-structure-c.html">Array vs Structure</a></li>
+												<li><a href="define-structure-c.html">Defining Structure</a></li>
+												<li><a href="declare-structure-var-c.html">Declaring Structure Variables</a></li>
+												<li><a href="type-def-struct-c.html">Type Defined Structure</a></li>
+												<li><a href="access-struct-member-c.html">Accessing Structure Members</a></li>
+												<li><a href="struct-initilization-c.html">Structure Initilization</a></li>
+												<li><a href="copy-compare-struct-c.html">Copying & Comparing Structure Variables</a></li>
+												<li><a href="array-struct-c.html">Array of Structure</a></li>
+												<li><a href="array-within-struct-c.html">Arrays Within Structure</a></li>
+												<li><a href="struct-within-struct-c.html">Structures Within Structures</a></li>
+												<li><a href="struct-and-function-c.html">Structures and Functions</a></li>
+												<li><a href="struct-assignment-c.html">Structure Examples/Assignments</a></li>
+											</ul>
+									  </li>
+										<li>
+
+
+											<span class="opener">Union</span>
+											<ul>
+												<li><a href="define-union-c.html">Define Union</a></li>
+												<li><a href="create-union-c.html">Create and use Union</a></li>
+												<li><a href="diff-struct-union-c.html">Difference Between Structure and Union</a></li>
+												<li><a href="union-c-example.html">Union Examples</a></li>
+												<li><a href="union-c-faq.html">Union FAQ</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Pointers</span>
+											<ul>
+												<li><a href="what-is-pointer-c.html">What Are Pointers In C?</a></li>
+												<li><a href="how-use-pointer-c.html">How Do We Use Pointers In C?</a></li>
+												<li><a href="declare-pointer-c.html">Declaration Of A Pointer</a></li>
+												<li><a href="pointer-init-c.html">The Initialization Of A Pointer</a></li>
+												<li><a href="pointer-syntax-init.html">Syntax Of Pointer Initialization</a></li>
+												<li><a href="use-pointer-c.html">Use Of Pointers In C</a></li>
+												<li><a href="pointer-to-array-c.html">The Pointer To An Array</a></li>
+												<li><a href="pointer-to-function-c.html">The Pointer To A Function</a></li>
+												<li><a href="pointer-to-struct-c.html">The Pointer To A Structure</a></li>
+												<li><a href="types-pointer-c.html">Types Of Pointers</a></li>
+												<li><a href="null-pointer-c.html">The Null Pointer</a></li>
+												<li><a href="void-pointer-c.html">The Void Pointer</a></li>
+												<li><a href="wild-pointer-c.html">The Wild Pointer</a></li>
+												<li><a href="near-pointer-c.html">The Near Pointer</a></li>
+												<li><a href="huge-pointer-c.html">The Huge Pointer</a></li>
+												<li><a href="far-pointer-c.html">The far Pointer</a></li>
+												<li><a href="dangling-pointer-c.html">dangling pointer </a></li>
+												<li><a href="access-pointer-c.html">Accessing Pointers- Indirectly And Directly</a></li>
+												<li><a href="pros-pointer-c.html">Pros Of Using Pointers In C</a></li>
+												<li><a href="cons-pointer-c.html">Cons Of Pointers In C</a></li>
+												<li><a href="application-pointer-c.html">Applications Of Pointers In C</a></li>
+												<li><a href="address-operator-c.html">The & Address Of Operator In C</a></li>
+												<li><a href="complex-pointer-c.html">How To Read The Complex Pointers In C?</a></li>
+												<li><a href="practice-pointer-c.html">Practice Problems On Pointers </a></li>
+												
+												
+											</ul>
+									  </li>
+
+
+ 									<li>
+											<span class="opener">File Processiong</span>
+											<ul>
+												<li><a href="file-intro-c.html">File Handling In C</a></li>
+												<li><a href="types-file-c.html">Types Of Files In C </a></li>
+												<li><a href="operation-file-c.html">Operations Done In File Handling</a></li>
+												<li><a href="file-example-c.html">File Examples</a></li>
+												<li><a href="binary-file-c.html"> Binary Files</a></li>
+												<li><a href="file-count-word-line-c.html">count words,lines in a file</a></li>
+												<li><a href="copy-file-c.html">Copy files</a></li>
+												<li><a href="update-file-c.html">Update File</a></li>
+												<li><a href="count-vowels-file-c.html">count vowels in a file</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Preprocessor</span>
+											<ul>
+												<li><a href="macro-sub-div-c.html">Macro substitution division</a></li>
+												<li><a href="file-inclusion-c.html">File Inclusion</a></li>
+												<li><a href="conditional-compile-c.html">Conditional Compilation</a></li>
+												<li><a href="other-dir-c.html">Other directives</a></li>
+												<li><a href="preprocessor-example-c.html">Examples</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Dynamic Memory Allocation</span>
+											<ul>
+												<li><a href="malloc-c.html">malloc</a></li>
+												<li><a href="calloc-c.html">calloc</a></li>
+												<li><a href="free-c.html">free</a></li>
+												<li><a href="realloc-c.html">realloc</a></li>
+												<li><a href="dynamic-mem-example-c.html">Examples</a></li>
+											</ul>
+									  </li>
+										<li><a href="storage-class-c.html">Storage Classes</a></li>
+										<li><a href="graphics-c.html">Graphics</a></li>
+										<li>
+											<span class="opener">Frequently Asked Interview Questions
+										(FAQ)</span>
+											<ul>
+												<li><a href="intro-c-faq-c.html">Introduction To C FAQ</a></li>
+												<li><a href="operators-c-faq.html">Operators FAQ</a></li>
+												<li><a href="conditional-stmt-c-faq.html">Conditional Statements FAQ</a></li>
+												<li><a href="loop-faq-c.html">Loops FAQ</a></li>
+												<li><a href="array-faq-c.html">Arrays FAQ</a></li>
+												<li><a href="function-faq-c.html">Function FAQ</a></li>
+												<li><a href="structure-faq-c.html">Structure FAQ</a></li>
+												<li><a href="pointer-faq-c.html">Pointers FAQ</a></li>
+												<li><a href="files-faq-c.html">Files FAQ</a></li>
+												<li><a href="storage-class-faq-c.html">Storage classes FAQ</a></li>
+												<li><a href="dma-faq-c.html">Dynamic Memory FAQ</a></li>
+												
+
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Programs/Assignments</span>
+											<ul>
+												<li><a href="intro-assign-c.html">Introduction To C </a></li>
+												<li><a href="operators-assign-c.html">Operators </a></li>
+												<li><a href="conditional-stmt-assign-c.html">Conditional Statements </a></li>
+												<li><a href="loop-assign-c.html">Loops </a></li>
+												<li><a href="array-assign-c.html">Arrays </a></li>
+												<li><a href="function-assign-c.html">Function </a></li>
+												<li><a href="structure-assign-c.html">Structure </a></li>
+												<li><a href="pointer-assign-c.html">Pointers </a></li>
+												<li><a href="file-assign-c.html">Files </a></li>
+												<li><a href="storage-class-assign-c.html">Storage classes </a></li>
+												<li><a href="dma-assign-c.html">Dynamic Memory </a></li>
+												
+
+											</ul>
+									  </li>
+										<li><a href="case-studies-c.html">Case Studies</a></li>
+										<li>
+											<span class="opener">Multiple Choice Questions</span>
+											<ul>
+												<li><a href="intro-mcq-c.html">Introduction To C MCQ</a></li>
+												<li><a href="operators-mcq-c.html">Operators MCQ</a></li>
+												<li><a href="conditional-mcq-c.html">Conditional Statements MCQ</a></li>
+												<li><a href="loops-mcq-c.html">Loops MCQ</a></li>
+												<li><a href="array-mcq-c.html">Arrays MCQ</a></li>
+												<li><a href="function-mcq-c.html">Function MCQ</a></li>
+												<li><a href="structure-mcq-c.html">Structure MCQ</a></li>
+												<li><a href="pointer-mcq-c.html">Pointers MCQ</a></li>
+												<li><a href="files-mcq-c.html">Files MCQ</a></li>
+												<li><a href="storage-class-mcq-c.html">Storage classes MCQ</a></li>
+												<li><a href="dma-mcq-c.html">Dynamic Memory MCQ</a></li>
+												<li><a href="more-faqc.html">More MCQ</a></li>
+
+											</ul>
+									  </li>
+									</ul>
+								</nav>
+
+							<!-- Section   for activities -->
+								<section>
+									<header class="">
+										<div>
+										<p>
+
+										</p>	
+									</div>
+									
+
+									</header>
+									
+			
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">tech2dsm@gmail.com</a></li>
+										<!--<li class="icon solid fa-phone">-----</li>
+										<li class="icon solid fa-home"><br />
+										</li> -->
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Sankalan Data Tech. All rights reserved. </p>
+
+								</footer>
+
+
+						</div>
+					</div>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+	</body>
+</html>

@@ -1,0 +1,880 @@
+<!DOCTYPE HTML>
+<!--
+	
+	
+	Free tutorials for personal and commercial use 
+-->
+<html>
+	<head>
+		<title>?,&,*,sizeof  Operators  in C Language </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="keywords" content="ternary,?,Operator,sizeof(),&,*, C, Programming">
+		
+		<meta name="description" content="  conditional,address of(&) sizeof and * operator in C programing ">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/intstyle.css" />
+		<script>
+					document.addEventListener("contextmenu", function(event)
+					{
+						event.preventDefault();
+						    
+					}, false);
+		</script>
+		<style>
+				
+				ul {
+ 					  padding: 20px;
+ 					  
+ 					}
+				li {
+					 	 background: #cce5ff;
+ 						 color: darkblue;
+ 						 margin: 5px;
+					}
+					body {
+							background: #cce5ff;	
+					    } 					
+         		p  {
+           				 
+  						font-size: 18px;
+  						color: black;
+  						font-family: Georgia, serif;
+  						font-style: italic;
+  						display:block;
+  						margin-left: 1.2em;
+  						margin-bottom: 1em;
+  						margin-right: 1em;
+
+         			 }
+         			 .bgc{
+         			 	background-color: rgb(155,142,179);
+         			 }
+         		.responsive {
+         			       width: 100%;
+         			       height: auto;
+         			      }
+ 	        	img {
+  					border-radius: 15%;
+					}
+					div.dashed{
+         				border-style: solid;
+         				border-width: 3px;
+
+         			}
+					
+					
+​
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>C</strong> Language Skill UP</a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter">
+											<span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+
+									</ul>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h3 class="bgc">?,&,*,sizeof  Operators  in C Language  <br />
+											</h3>
+											
+										</header>
+										<p> In this article, we are discussing some special  operators in C Language. Here, we will discuss all types of  operators what we have not learned in previous tutorials<br>
+										<br> 
+										 In C programming are the special type of operators are generally used to perform operation on the data .<br><br>
+										
+										<b class="bgc">C language use following  some Other Types of operators:</b><br>
+
+										<br>
+											1.&nbsp;<b> </b> &nbsp;&nbsp;&nbsp;&nbsp; 	sizeof(): Operator.<br>
+											2.&nbsp;<b> </b> &nbsp;&nbsp;&nbsp;&nbsp; Conditional   Operator ?:<br>
+											3.&nbsp;<b></b>&nbsp;&nbsp;&nbsp;&nbsp; 	dot (.) and arrow (->) Operators. <br>
+											4.&nbsp;<b> </b> &nbsp;&nbsp;&nbsp;&nbsp; Cast Operator<br>
+											5.&nbsp;<b> </b>&nbsp;&nbsp;&nbsp;&nbsp; &,* Operator<br>
+
+
+										</p><article>
+										<p>
+											<b class="bgc">1.<b> </b> &nbsp;&nbsp;&nbsp;&nbsp; 	sizeof() Operator:</b><br> Bitwise AND operator is denoted by the single ampersand sign (&). Two integer operands are written on both sides of the (&) operator. If the corresponding bits of both the operands are 1, then the output of the bitwise AND operation is 1; otherwise, the output would be 0.<br>
+											Truth table for bitwise operators<br>
+										sizeof operator is widely and much used  in the C programming language. This operator can be used to compute the size of operand or variable.<br>
+										When we use the sizeof  operator  whose result is  the unsigned integral type which is usually denoted by size_t.<br>
+										it simply returns the amount of memory allocated to that data types. 
+										This operator can be applied to any data type, including primitive types such as integer and floating-point types, pointer types, or compound datatypes such as Structure, union, etc.<br>
+										Syntax:<br>
+										sizeof(Expression);<br>
+										where ‘Expression‘ can be a data type or a variable of any type.<br>
+										 It returns the size  of the given expression.
+										</p>
+
+										</article>
+										<article>
+											<p>
+											</p>
+										</article>
+										<article>
+											<p>
+											
+								<div class="dashed scroll">
+								<h3 class="bgc"> C Program To demonstrate  working of sizeof operator</h3>
+													<p>
+									
+									/* C Program To demonstrate
+									sizeof operator * /<br>
+									#include &lt;stdio.h&gt;  <br>
+									int main()<br>
+									{<br>
+									    printf("%lu\n", sizeof(char)); <br>
+									    printf("%lu\n", sizeof(int)); <br>
+									    printf("%lu\n", sizeof(float)); <br>
+									    printf("%lu", sizeof(double)); <br>
+									    return 0; <br>
+									}<br>
+									Output:<br>
+									1<br>
+									4<br>
+									4<br>
+									8<br>
+									Note: sizeof() operator  may give different output according to machine architecture. The size varies according to system architecture 32-bit or 64 we have run our programme on a 32-bit gcc compiler. <br>
+									</p>
+									</div>
+
+										<br>
+										</p>
+									</article>
+
+											
+
+
+										
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										
+									</header>
+									<div class="features">
+										<article>
+											<span class=""></span>
+											<div class="content">
+												
+												<p> <img src="images/conditional-operator-in-c.jpg" class="responsive"/ alt="conditional Operators in C programing Language">
+
+
+
+												</p>
+											</div>
+										</article>
+										<article>
+											<span class=""></span>
+											<div class="content">
+												
+												
+												<p><!-- content side by image -->
+
+												</p>
+											</div>
+										</article>
+										
+									<article><p>  <br>
+											<table border="1">
+													<tr><th> <b>sizeof()</b></th><th> sizeif() Operator in C Programming mainly use for Giving the total amount of storage required for storing any object in the form of operand. </th></th>
+													</tr>
+													<tr>
+													<td><b>Conditional Operator(?:) <br>or<br>
+														ternary Operator</b>
+													</td>
+													<td> <b>Conditional Operator in C is similar to the if else staement as it work same as if-else statement . It is also known as ternary opearator as it work on three operands.</b>
+													</td>
+													
+													</tr>
+													<tr>
+													<td><b>The Dot(.) operator </b>
+													</td>
+													<td> <b>The Dot(.) operator is used to normally access members of a structure or union.</b>
+													</td>
+													
+													</tr>
+													<tr>
+													<td><b>Arrow(->) operator </b>
+													</td>
+													<td> <b>The Arrow(->) operator used to access the members of the structure or the unions using pointers.</b>
+													</td>
+													
+													</tr>
+													<tr>
+													<td><b> & Operator</b>
+													</td>
+													<td> <b>& is known as address of  operator and It is used to get the address of the given  variable.</b>
+													</td>
+													
+													</tr>
+													<tr>
+													<td><b> * Operator </b>
+													</td>
+													<td> <b>The pointer operator *  in c programming is a pointer to a variable. * gives the value at the address of a operand. And known dereferencing or indirection  operator </b>
+													</td>
+													
+													</tr>
+													
+												</table>
+									</article>
+                                
+								</div>
+								<article>
+									<div>
+										
+											<article> 
+										
+														<p><br>
+
+													 <h3 class="bgc">2. &nbsp;&nbsp;&nbsp;&nbsp;Conditional Operator ?: </h3><p>What is the conditional operator?<br>
+										In C Programming The conditional operator (? :) is also known as a ternary operator (it takes three operands). <br>
+										The conditional operator works similar to the 'if-else' statement as 'if-else' statement is also a decision-making statement. <br>
+										The conditional operator is  the decision-making statements which depends upon the output of the expression. It is represented by two symbols, i.e., '?' and ':'. <br>
+										In other words, the conditional operator or ternary operator first evaluates an expression for a true or false value and then executes one of the two given statements depending upon the result of the evaluation. <br>
+										<b>Syntax of a conditional operator</b> <br>
+										Exp1? exp2: exp3;  <br>
+
+
+										The conditional operator is of the form Exp1? Exp2: Exp3 <br>
+										Here, Exp1 is the condition to be evaluated. <br>If the condition(Exp1) is True then it  will execute and return the result of Exp2 otherwise if the condition(Exp1) is false then it will execute and return the result of Exp3. <br>
+										<b class="bgc">?: Operator Working:</b><br>
+									Diagram shows syntax how conditional or ternary(?:) Operator works. <br>
+									In the syntax, the expression1 is a Boolean condition that can be either evaluate true or false value.<br> After execution if If the expression1 results into a true value, then the expression2 will execute. And then The expression2 is said to be true only when it returns a non-zero value.<br>If the expression1 returns false value then the expression3 will execute. At last The expression3 is said to be false only when it returns zero value.<br>
+
+
+										<b>The pictorial represention.</p></b><br>
+										<div class="features">
+										<article>
+											<span class=""></span>
+											<div class="content">
+												
+												<p> <img src="images/ternary-operator-c.jpg" class="responsive" alt=" ternary operator in c programming">
+
+
+												</p>
+											</div>
+										</article>
+									</div>
+
+
+											</p>
+											<article>
+											<div class="dashed scroll">
+											
+												<h3 class="bgc"> C Program to show working ternary or conditional operator  to check if the number is odd or even.</h3>
+												<br><p>
+													#include &lt;stdio.h&gt;  <br>
+											
+											int main()  <br>
+											{  <br>
+											    int n;  &emsp;/*variable declaration */  <br>
+										    printf("Enter any number"); <br> 
+										    scanf("%d",&n);  &emsp;&emsp; /* taking user input for n variable*/ <br> 
+										    (n%2==0)? (printf("Number is Even")) : (printf("Number is Odd"));  /* conditional operator*/  <br>
+										    return 0;  <br>
+											}  <br>
+										Output:<br>
+										Enter any number<br>
+										6<br>
+										Number is even<br>
+
+										In the above code, we are taking input n as any number from the user to check whether it is even or odd. After taking input, we have applied the condition by using a conditional operator. In this condition, we are checking the given number n. If the number i.e n is successfully divides by 2 and remainder is zero , then the statement1 will execute, i.e., (printf("Number is Even")) otherwise, statement2 will execute, i.e., (printf("Number is Odd")).
+
+											</p>
+										</div>
+											</article>
+											<article>
+												
+											  
+												<br>
+												<h3 class="bgc">3.&nbsp; dot (.) and arrow (->) Operators</h3><br>
+
+													<p>These operators also known as member operators are used to refer individual members of structure and union. The dot operator is applied to the actual variable of structure or union. An Arrow operator in C allows to access elements in Structures and Unions. <br>
+													The arrow operator is used with a pointer to a variable structure or union.
+													The arrow operator is formed by using a minus sign, followed by the greater than symbol as shown below. <br> 
+													Syntax:  <br>
+													(pointer_name)->(variable_name) <br>
+													 The -> operator in C  gives the value held by variable_name to structure or union variable pointer_name.
+													<br>
+													The Arrow(->) operator used to access the members of the structure or the unions using pointers<br>
+
+													The Dot(.) operator is used to normally access members of a structure or union.
+													</p>
+													<div class="dashed scroll">
+														<h3 class="bgc">C Program to show working of dot . operator</h3>
+													<p>
+												/* C program to show dot . operatorused in structure */<br>
+													#include &lt;stdio.h&gt;<br>
+
+												#include &lt;stdlib.h&gt;<br>
+												 
+												/* Creating the structure*/<br>
+												struct employee<br> {<br>
+												    char name[80]; <br>
+												    int age; <br>
+												    float salary; <br>
+												};<br>
+												 int main()<br>
+												{<br>
+												/* Creating the structure object */<br>
+												struct employee  emp; <br>
+												   /* Assigning memory to struct variable emp*/ <br>
+												    strcpy(emp.name,”Ajay”); <br>
+												    emp.age = 21; <br>
+												 
+												    /* Printing the assigned value to the variable */<br>
+												    printf("%d", emp.age); <br>
+												 
+												    return 0; <br>
+												}<br>
+												<b>Output:</b><br> 21<br>
+
+												</p>
+												<article>
+													<p><br><br>
+											C program to show Arrow operator
+											/* C program to show Arrow operator<br>
+											 used in structure */<br>
+											 
+											#include &lt;stdio.h&gt;<br>
+											#include &lt;stdlib.h&gt;<br>
+											 
+											// Creating the union<br>
+											union employee<br> {<br>
+											    char name[80]; <br>
+											    int age; <br>
+											    float salary; <br>
+											};<br>
+											 
+											// Creating the union object<br>
+											union employee* emp = NULL; <br>
+
+											 
+											// Main Program code<br>
+
+											int main()<br>
+											{<br>
+											    /* Assigning memory to struct variable emp */<br>
+											    emp = (union employee*)
+											        malloc(sizeof(union employee)); <br>
+											 
+											    /* Assigning value to age variable<br>
+											     of emp using arrow operator */<br>
+											    emp->age = 18; <br>
+											 
+											    /* DIsplaying the assigned value to the variable */<br>
+											    printf("%d", emp->age); <br>
+											}<br><br>
+											<b>Output:</b><br>
+											<br>18
+
+												</p>
+												</article>
+												</div>
+
+
+
+
+												
+											</article>
+											<article>
+												
+											</article>
+											<br>
+											<article>
+												
+											  
+												<br>
+												<h3 class="bgc">4.&nbsp; Type Cast Operator </h3><br>
+
+													<p>Converting one datatype into another is known as type casting or, type-conversion.
+											A cast is a special operator that forces one data type to be converted into another. <br>
+
+											Casting operators convert one data type to another. <br> For example, if you want to store a 'long' value into a simple integer then you can type cast 'long' to 'int'. You can convert the values from one type to another explicitly using the <b>cast operator</b> as follows −<br>
+											<i>(type_name) expression</i>
+											<div class="dashed">
+												<h3 class="bgc">Example the type cast operator In C Programming</h3>
+												<p>
+													#include &lt;stdio.h&gt;<br>
+
+													main() <br>{<br>
+
+													   int x= 17, y = 5; <br>
+													   double avg; <br>
+
+													   avg= (double) x / y; <br>
+													   printf("The Result of %d / %d= : %f\n",x,y,avg ); <br>
+													}<br>
+													Output:<br>
+													The Result of 17 / 5= 3.400000<br>
+												</p>
+											</div>
+											<p>
+													When the above code is compiled and executed, it produces the following result −<br>
+											Value of avg : 3.400000<br>
+											The cast operator has precedence over division, so the value of avg is first converted to type double and finally it gets divided by y produce a double value. <br>
+											It is considered good programming practice to use the cast operator whenever type conversions are necessary. <br>
+											Type conversions in C programming can be implicit which is performed by the compiler automatically, <br>or it can be specified explicitly done by programmer through the use of the cast operator. 
+
+
+
+												</p>
+											</p>
+										</article>
+											<br>
+											<article>
+
+												<h3 class="bgc">5.&nbsp; 	&,* Operator</h3><br>
+
+													<p>
+													In C Programming There are two types of pointer operators.  They are<br>
+													1. Address operator(&)<br>
+													2. Indirection operator(*)<br>
+
+													& is known as address of  operator and It is used to get the address of the given  variable.<br>
+													For example &a; will give the actual address of the variable.<br><br>
+													The pointer operator *  in c programming is a pointer to a variable. * gives the value at the address of a operand. And known dereferencing or indirection  operator  <br> For example *age will pointer to a variable age. <br>
+
+
+												
+													<div class="dashed">
+														<h3 class="bgc">C program on &,*  pointer operators</h3>
+														<p>#include &lt;stdio.h&gt;<br>
+													  int main() <br>
+														{<br>
+													        int p = 100, q, *ptr; <br>
+													        ptr = &p;  &emsp;&emsp;// referencing (&a) <br>
+													        q = *ptr; &emsp;&emsp; // dereferencing (*ptr) <br>
+													        printf("Value of &p  is 0x%x\n", &p); <br>
+													        printf("Value of ptr is 0x%x\n", ptr); <br>
+													        printf("Value of q is %d\n", q); <br>
+													        printf("Value of b is %d\n", b); <br>
+													        printf("Value of *ptr is %d\n", *ptr); <br>
+													        return 0; <br>
+													  }<br>
+													<b>Output:</b><br>
+													Value of &p is 0xbfb1715c<br>
+													Value of ptr is 0xbfb175c<br>
+													Value of p is 100<br>
+													Value of q is 100<br>
+													Value of *ptr is 100<br>
+
+														</p>
+													</div>
+												</article>
+
+
+													
+
+
+
+
+													<br>
+																								
+											</article>
+
+									</div>
+								</article>
+										<br>
+										</article>
+											<br>
+											
+									
+									<article>
+										<div>
+											<p>
+											
+											</p>
+										</div>
+									</article>
+											<div>						
+											<p>
+											Previous Topic:--&gt;&gt;<a href="bitwiseopearator.html"> Bitwise Operators</a>&nbsp;||&nbsp;Next topic:--&gt;&gt;<a href="c-decision.html">Decision Making in C</a>
+										</p>					
+									</div>
+								</section>
+
+							<!-- Section -->
+								
+
+						</div>
+						<div>
+				<!-- footer menu -->
+			</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<section>
+									<header class="">
+										<div>
+										<p>
+
+</p>	
+									</div>
+									
+
+									</header>
+									
+			
+								</section>
+							<!-- Section -->
+								
+
+							<!-- Section -->
+
+							<!-- Search -->
+								<!--<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form> 
+								</section> -->
+
+							<!-- Menu -->
+								
+								<nav id="menu">
+									<header class="major">
+										<h2>C Language</h2>
+									</header>
+									<ul>
+										<li><a href="../index.html">Home</a></li>
+										<li><a href="whyC.html">Why C Language</a></li>
+										<li><a href="historyC.html">History of C Language</a></li>
+										<li><a href="ApplicationsC.html">Applications of C Language</a>
+										</li>
+										<li>
+											<span class="opener">Introduction To C</span>
+											<ul><li><a href="whatisprogram.html">What is Program?</a></li>
+												<li><a href="cprogramstructure.html">Structure of C Program</a></li>
+												<li><a href="Cprogram.html">Working Of C Program</a></li>
+												<li><a href="CLanguageChar.html">CHARACTER SET </a></li>
+												<li><a href="c-variable-identifier.html">VARIABLES AND IDENTIFIERS </a></li>
+												<li><a href="c-datatype.html">BUILT-IN DATA TYPES </a></li>
+												
+												<li><a href="operators.html">OPERATORS AND EXPRESSIONS </a></li>
+												<li><a href="constant.html">CONSTANTS AND LITERALS</a></li>
+												<li><a href="assignment.html"> SIMPLE ASSIGNMENT STATEMENT </a></li>
+												<li><a href="inputoutput.html">BASIC INPUT/OUTPUT STATEMENT </a></li>
+												<li><a href="cprograms.html">SIMPLE 'C' PROGRAMS</a></li>
+												<li><a href="assignments-intro1.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Operators in C Programming </span>
+											<ul>
+											<li><a href="arithmatic-operators-c.html">Arithmetic Operators </a></li>
+												<li><a href="assignment-operators-c.html">Assignment Operators </a></li>
+												<li><a href="increment-decrement-operator-c.html">Increment and Decrement Operators</a></li>
+												<li><a href="relationaloperator.html">Relational Operators </a></li>
+												<li><a href="logicaloperator.html">Logical Operators</a></li>
+											 <li><a href="bitwiseopearator.html">Bitwise Operators </a></li>
+											 <li><a href="otheropearator.html">Other Operators </a></li>
+											 <li><a href="opearatorassignments.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">CONDITIONAL STATEMENTS</span>
+											<ul>
+												<li><a href="c-decision.html">DECISION MAKING WITHIN A PROGRAM</a></li>
+												<li><a href="c-condtions.html"> CONDITIONS</a></li>
+												<li><a href="c-if.html">IF STATEMENT </a></li>
+												<li><a href="c-ifelse.html">IF-ELSE STATEMENT</a></li>
+												<li><a href="c-ifelseladder.html">IF-ELSE LADDER</a></li>
+												<li><a href="c-nestedif.html">NESTED IF-ELSE </a></li>
+												<li><a href="c-switch.html">SWITCH CASE </a></li>
+												<li><a href="conditional-stmt-assign-c.html">Assignments</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">LOOPS STATEMENTS</span>
+											<ul>
+												<li><a href="loops-intro.html">Introduction to Loops</a></li>
+												<li><a href="c-goto.html"> GO TO Statement</a></li>
+												<li><a href="c-dowhile-loop.html"> Do while Loop </a></li>
+												<li><a href="c-while-loop.html">While Loop </a></li>
+												<li><a href="c-nested-while.html">Nested While Loop </a></li>
+												<li><a href="c-diff-while-dowhile.html">Difference Between While and Do while</a></li>
+												<li><a href="c-difference-goto-loop.html">Difference Between Goto and loop</a></li>
+												<li><a href="c-while-loop-assign.html"> while loop assignments</a></li>
+												<li><a href="c-for.html">C FOR Loop</a></li>
+												<li><a href="c-for-example.html">C For loop examples </a></li>
+												<li><a href="c-nested-for.html">Nested for loop</a></li>
+												<li><a href="nested-while-loop-c.html">Nested for loop examples </a></li>
+												<li><a href="infinite-while-loop-c.html">Infinite while Loops</a></li>
+												<li><a href="infinite-for-loop-c.html"> Infinite for Loops </a></li>
+												<li><a href="continue-c.html">Continue in Loops </a></li>
+												<li><a href="break-c.html">break in Loops </a></li>
+												<li><a href="while-vs-dowhile-vs-for-c.html">difference while do..while & for </a></li>
+												<li><a href="loop-assignment-c.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Arrays</span>
+											<ul>
+												<li><a href="one-d-array-c.html">One Dimensional Array</a></li>
+												<li><a href="declare-array-c.html">Declaring 1D Arrays</a></li>
+												<li><a href="initilize-array-c.html">Initilization of 1D arrays</a>
+												</li>
+												<li><a href="access-array-c.html">Accessing element of one 1D Array</a></li>
+												<li><a href="read-array-c.html">Read and Display 1D Arrays</a></li>
+												<li><a href="two-d-array.html">Two Dimensional Arrays</a></li>
+												<li><a href="declare-2d-array-c.html">Declare 2D Arrays</a></li>
+												<li><a href="read-2d-array.html">Read and Display 2D Arrays</a></li>
+												<li><a href="array-assignments.html">Assignments/Examples</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Functions</span>
+											<ul>
+												<li><a href="function-intro-c.html">Introduction</a></li>
+												<li><a href="user-defined-function-c.html">Need For User-Defined Function</a></li>
+												<li><a href="multiple-fun-program-c.html">Multiple Function Program</a></li>
+												
+												<li><a href="modular-programming-c.html">Modular Programming</a></li>
+												<li><a href="element-user-defined-fun-c.html">Elements Of User Defined Function</a></li>
+												<li><a href="function-definition-c.html">Function Definition</a></li>
+												</li>
+												<li><a href="function-declaration-c.html">Function Declaration</a></li>
+												</li>
+												<li><a href="types-of-function-c.html">Types of functions</a></li>
+												</li>
+												<li><a href="nesting-function-c.html">Nesting of Function</a></li>
+												<li><a href="recursion-c.html">Recursion</a></li>
+												<li><a href="passing-array-function-c.html">Passing Array To Functions</a></li>
+												<li><a href="visibility-scope-var-c.html">Scope,Visibility and Lifetime of Variables</a></li>
+												<li><a href="function-assignment-c.html">Assignments</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Structure</span>
+											<ul>
+												<li><a href="structure-intro-c.html">Introduction</a></li>
+												<li><a href="array-vs-structure-c.html">Array vs Structure</a></li>
+												<li><a href="define-structure-c.html">Defining Structure</a></li>
+												<li><a href="declare-structure-var-c.html">Declaring Structure Variables</a></li>
+												<li><a href="type-def-struct-c.html">Type Defined Structure</a></li>
+												<li><a href="access-struct-member-c.html">Accessing Structure Members</a></li>
+												<li><a href="struct-initilization-c.html">Structure Initilization</a></li>
+												<li><a href="copy-compare-struct-c.html">Copying & Comparing Structure Variables</a></li>
+												<li><a href="array-struct-c.html">Array of Structure</a></li>
+												<li><a href="array-within-struct-c.html">Arrays Within Structure</a></li>
+												<li><a href="struct-within-struct-c.html">Structures Within Structures</a></li>
+												<li><a href="struct-and-function-c.html">Structures and Functions</a></li>
+												<li><a href="struct-assignment-c.html">Structure Examples/Assignments</a></li>
+											</ul>
+									  </li>
+										<li>
+
+
+											<span class="opener">Union</span>
+											<ul>
+												<li><a href="define-union-c.html">Define Union</a></li>
+												<li><a href="create-union-c.html">Create and use Union</a></li>
+												<li><a href="diff-struct-union-c.html">Difference Between Structure and Union</a></li>
+												<li><a href="union-c-example.html">Union Examples</a></li>
+												<li><a href="union-c-faq.html">Union FAQ</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Pointers</span>
+											<ul>
+												<li><a href="what-is-pointer-c.html">What Are Pointers In C?</a></li>
+												<li><a href="how-use-pointer-c.html">How Do We Use Pointers In C?</a></li>
+												<li><a href="declare-pointer-c.html">Declaration Of A Pointer</a></li>
+												<li><a href="pointer-init-c.html">The Initialization Of A Pointer</a></li>
+												<li><a href="pointer-syntax-init.html">Syntax Of Pointer Initialization</a></li>
+												<li><a href="use-pointer-c.html">Use Of Pointers In C</a></li>
+												<li><a href="pointer-to-array-c.html">The Pointer To An Array</a></li>
+												<li><a href="pointer-to-function-c.html">The Pointer To A Function</a></li>
+												<li><a href="pointer-to-struct-c.html">The Pointer To A Structure</a></li>
+												<li><a href="types-pointer-c.html">Types Of Pointers</a></li>
+												<li><a href="null-pointer-c.html">The Null Pointer</a></li>
+												<li><a href="void-pointer-c.html">The Void Pointer</a></li>
+												<li><a href="wild-pointer-c.html">The Wild Pointer</a></li>
+												<li><a href="near-pointer-c.html">The Near Pointer</a></li>
+												<li><a href="huge-pointer-c.html">The Huge Pointer</a></li>
+												<li><a href="far-pointer-c.html">The far Pointer</a></li>
+												<li><a href="dangling-pointer-c.html">dangling pointer </a></li>
+												<li><a href="access-pointer-c.html">Accessing Pointers- Indirectly And Directly</a></li>
+												<li><a href="pros-pointer-c.html">Pros Of Using Pointers In C</a></li>
+												<li><a href="cons-pointer-c.html">Cons Of Pointers In C</a></li>
+												<li><a href="application-pointer-c.html">Applications Of Pointers In C</a></li>
+												<li><a href="address-operator-c.html">The & Address Of Operator In C</a></li>
+												<li><a href="complex-pointer-c.html">How To Read The Complex Pointers In C?</a></li>
+												<li><a href="practice-pointer-c.html">Practice Problems On Pointers </a></li>
+												
+												
+											</ul>
+									  </li>
+
+
+ 									<li>
+											<span class="opener">File Processiong</span>
+											<ul>
+												<li><a href="file-intro-c.html">File Handling In C</a></li>
+												<li><a href="types-file-c.html">Types Of Files In C </a></li>
+												<li><a href="operation-file-c.html">Operations Done In File Handling</a></li>
+												<li><a href="file-example-c.html">File Examples</a></li>
+												<li><a href="binary-file-c.html"> Binary Files</a></li>
+												<li><a href="file-count-word-line-c.html">count words,lines in a file</a></li>
+												<li><a href="copy-file-c.html">Copy files</a></li>
+												<li><a href="update-file-c.html">Update File</a></li>
+												<li><a href="count-vowels-file-c.html">count vowels in a file</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Preprocessor</span>
+											<ul>
+												<li><a href="macro-sub-div-c.html">Macro substitution division</a></li>
+												<li><a href="file-inclusion-c.html">File Inclusion</a></li>
+												<li><a href="conditional-compile-c.html">Conditional Compilation</a></li>
+												<li><a href="other-dir-c.html">Other directives</a></li>
+												<li><a href="preprocessor-example-c.html">Examples</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Dynamic Memory Allocation</span>
+											<ul>
+												<li><a href="malloc-c.html">malloc</a></li>
+												<li><a href="calloc-c.html">calloc</a></li>
+												<li><a href="free-c.html">free</a></li>
+												<li><a href="realloc-c.html">realloc</a></li>
+												<li><a href="dynamic-mem-example-c.html">Examples</a></li>
+											</ul>
+									  </li>
+										<li><a href="storage-class-c.html">Storage Classes</a></li>
+										<li><a href="graphics-c.html">Graphics</a></li>
+										<li>
+											<span class="opener">Frequently Asked Interview Questions
+										(FAQ)</span>
+											<ul>
+												<li><a href="intro-c-faq-c.html">Introduction To C FAQ</a></li>
+												<li><a href="operators-c-faq.html">Operators FAQ</a></li>
+												<li><a href="conditional-stmt-c-faq.html">Conditional Statements FAQ</a></li>
+												<li><a href="loop-faq-c.html">Loops FAQ</a></li>
+												<li><a href="array-faq-c.html">Arrays FAQ</a></li>
+												<li><a href="function-faq-c.html">Function FAQ</a></li>
+												<li><a href="structure-faq-c.html">Structure FAQ</a></li>
+												<li><a href="pointer-faq-c.html">Pointers FAQ</a></li>
+												<li><a href="files-faq-c.html">Files FAQ</a></li>
+												<li><a href="storage-class-faq-c.html">Storage classes FAQ</a></li>
+												<li><a href="dma-faq-c.html">Dynamic Memory FAQ</a></li>
+												
+
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Programs/Assignments</span>
+											<ul>
+												<li><a href="intro-assign-c.html">Introduction To C </a></li>
+												<li><a href="operators-assign-c.html">Operators </a></li>
+												<li><a href="conditional-stmt-assign-c.html">Conditional Statements </a></li>
+												<li><a href="loop-assign-c.html">Loops </a></li>
+												<li><a href="array-assign-c.html">Arrays </a></li>
+												<li><a href="function-assign-c.html">Function </a></li>
+												<li><a href="structure-assign-c.html">Structure </a></li>
+												<li><a href="pointer-assign-c.html">Pointers </a></li>
+												<li><a href="file-assign-c.html">Files </a></li>
+												<li><a href="storage-class-assign-c.html">Storage classes </a></li>
+												<li><a href="dma-assign-c.html">Dynamic Memory </a></li>
+												
+
+											</ul>
+									  </li>
+										<li><a href="case-studies-c.html">Case Studies</a></li>
+										<li>
+											<span class="opener">Multiple Choice Questions</span>
+											<ul>
+												<li><a href="intro-mcq-c.html">Introduction To C MCQ</a></li>
+												<li><a href="operators-mcq-c.html">Operators MCQ</a></li>
+												<li><a href="conditional-mcq-c.html">Conditional Statements MCQ</a></li>
+												<li><a href="loops-mcq-c.html">Loops MCQ</a></li>
+												<li><a href="array-mcq-c.html">Arrays MCQ</a></li>
+												<li><a href="function-mcq-c.html">Function MCQ</a></li>
+												<li><a href="structure-mcq-c.html">Structure MCQ</a></li>
+												<li><a href="pointer-mcq-c.html">Pointers MCQ</a></li>
+												<li><a href="files-mcq-c.html">Files MCQ</a></li>
+												<li><a href="storage-class-mcq-c.html">Storage classes MCQ</a></li>
+												<li><a href="dma-mcq-c.html">Dynamic Memory MCQ</a></li>
+												<li><a href="more-faqc.html">More MCQ</a></li>
+
+											</ul>
+									  </li>
+									</ul>
+								</nav>
+
+
+
+							<!-- Section   for activities -->
+								<section>
+									<header class="">
+										<div>
+										<p>
+
+										</p>	
+									</div>
+									
+
+									</header>
+									
+			
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">tech2dsm@gmail.com</a></li>
+										<!--<li class="icon solid fa-phone">-----</li>
+										<li class="icon solid fa-home"><br />
+										</li> -->
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Sankalan Data Technologies. All rights reserved. </p>
+
+								</footer>
+
+
+						</div>
+					</div>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+	</body>
+</html>

@@ -1,0 +1,673 @@
+<!DOCTYPE HTML>
+<!--
+	
+	
+	
+-->
+<html>
+	<head>
+		<title>Function FAQ, interview questions in C.  </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="keywords" content="function faq in C, functions interview questions in c">
+		
+		<meta name="description" content="Frequently Asked questions on functions in c language, function FAQ in this tutorial help you to prepare for function faq asked in interviews"/>
+
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/intstyle.css" />
+		
+		
+		<style>
+				
+				ul {
+ 					  padding: 20px;
+ 					   background: #cce5ff;
+ 					  
+ 					}
+				li {
+					 	 background: #cce5ff;
+ 						 color: darkblue;
+ 						 margin: 5px;
+					}
+					body {
+							background: #cce5ff;	
+					    } 					
+         		p  {
+         			font-size: 19px;
+  						color: black;
+  						font-family: Georgia, serif;
+  						font-style: italic;
+  						display:block;
+  						margin-left: .1em;
+  						margin-bottom: 1em;
+  						margin-right: .1em;
+         			 }
+         			 .bgc{
+         			 	background-color: rgb(155,142,179);
+         			 }
+         		.responsive {
+         		width: 100%;
+         		height: auto;
+         		 }
+ 	        	img {
+ 	        		border-radius: 12%;
+					max-width: 100%;
+					height: auto;
+					float: right;
+					}
+					div.dashed{
+         				border-style: solid;
+         				border-width: 3px;
+         			}
+         			div.dashed2{
+         				overflow-x: auto;
+        				overflow-y: hidden;
+        				white-space: nowrap;
+        				border-style: solid;
+         				border-width: 2.5px;
+          			}
+
+					hr {
+						border: 2px solid #DAA520;
+						}
+					
+​
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="" class="logo"><strong> Functions FAQ interview questions in C.  </strong> </a>
+									
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											
+											
+										</header>
+										<article>
+											<h1 class="bgc">Function FAQ Frequently Asked Questions  in C. </h1>
+											<p>
+											<b class="bgc">Q1.What is a function prototype? Why is it necessary? </b><br>
+											A function prototype in C is a function declaration that specifies the return type, name, number, and data type of its parameters. It serves as a contract between the definition of a function and its caller, providing information about the inputs and outputs expected by the function.<br>
+						Functional prototyping is essential to achieve the following goals:<br>
+						1. A function prototype represents the return type of the data that the function will return.<br>
+						2. The function prototype represents the number of arguments passed to the function.<br>
+						3. The function prototype represents the data type of each argument passed.<br>
+						4. Also, the function prototype specifies the order in which arguments are passed to the function.<br>
+						So basically, a function prototype specifies the input/output interface to the function, ie. what should be given to the function and what should be expected from the function.<br>
+
+					 
+				<br></p>
+				<hr>
+				<p>
+				<b class="bgc">Q2.Explain the difference between a function declaration and a function definition.</b><br>A declaration establishes the name and attribute of a task but does not allocate storage for it, where as a definition specifies a body for the task performed by function, associates an identifier with the task, and allocates storage for it.
+
+			</p>
+			<hr>
+			<p>
+				<b class="bgc">Q3.How do you pass arguments to a function in C?</b><br>
+				Two ways to pass parameters in to function C: pass by value, pass by reference.<br>
+			1. Pass by value:  Must be sent by value. i.e. data is copied and stored by parameter name. ...<br>
+			2. Pass the reference. The reference parameter "points" to the original data of the calling function.
+				<br>
+
+
+				
+
+
+												
+
+												</p>
+												
+																																	
+											</article>
+                                            
+
+											    
+											
+										<article>
+											<p> 
+												</p>
+								
+
+
+
+										</article>
+										
+									
+										
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										
+									</header>
+									<div>
+										<article>
+											
+											<div >
+												
+										<p> <img src="images/functions-faq-c.jpg" width="430" height="340" alt="functions in C interview FAQ frequently Asked questions,interview preparation C functions">
+											
+
+
+ 
+												</p>
+											</div>
+										</article>
+										
+										
+									
+									
+									<article>
+										<p>
+										<b class="bgc">Q4.What is the significance of the return statement in a function?</b><br>
+
+									The return statement finishes the execution of a function and returns control back to the calling function. Execution continues in the calling function from the moment immediately following the call. The return statement returns a value to the calling function.
+								</p>
+								<hr><p>
+				<b class="bgc">Q5.Explain the concept of recursion. Provide an example of a recursive function.</b><br>
+				
+					Recursion in C is a process in which a program repeats a specific section of code in the same way. So, in programming languages, when a program allows the user to call any function within the same function, it is called  recursion or a call back to that function.<br>
+					An example of recursive programming involves the factorial calculation. Calculate the factorial of a number as the product of that number with all the numbers below it up to 1. For example, the factorial (5) is 5*4*3*2*1 and the factorial of  (3) is 3*2*1.
+
+				</p>
+				<hr>
+                <p>
+
+				<b class="bgc">Q6.Describe the difference between call by value and call by reference. When would you use each?</b><br>
+				
+					Following list gives the difference <br>
+					<b>Call by Value:</b><br>In this particular parameter pass method, the actual parameter values are copied into the formal parameter of the function. It stores these both types of parameters in diverse memory locations.  if a function makes changes internally, it doesn't show up in the caller's actual parameter.<br>
+					This method passes a copy of the actual argument to the formal argument of any called function. When a method is called by value, any changes or modifications to the formal arguments called do not affect the overall values of the actual arguments. This way, all the original arguments are preserved and no accidental changes are made to them.<br>
+
+
+					<b>Call by Reference:</b><br>
+					In this case, both the formal and actual parameters refer to the same location. This means that if someone makes any changes inside the function, they are reflected in the actual parameter of the caller.<br>
+					This method passes the  reference or address or position of the arguments to the formal arguments of any called function. This means that they can be easily changed from within the called function by accessing the addresses of the arguments themselves. So when you call by reference, you can make changes to the arguments themselves. Therefore, the code must handle arguments very carefully. Otherwise, unexpected results and random errors may occur.
+
+
+
+				</p>
+				<hr>
+				<p>
+
+				<b class="bgc">Q7.What happens if a function is called before it is declared or defined?</b><br>
+				In this case, the computer considers the normal return type to be an integer. If the function returns a different data type, an error will be displayed. If the return type is also an integer it will work fine.
+
+
+				</p>
+				<hr>
+
+
+
+				
+
+
+
+							
+								
+										</article>
+										<article>
+												<p><b class="bgc">Q8.How do you declare a function that takes no arguments in C?</b><br>
+													In C, you use void no_args(void) to declare a function that takes no parameters (and returns nothing). When you declare a function with an empty argument list, you invoke K&R (prototype) semantics and don't accept anything about the parameter list; this is to ensure that C code written before ANSI will still be compiled.<br>
+
+						
+
+							
+										</p>	
+										</article>
+									<hr>
+					
+							     <article>
+							     	
+							     	<p><b class="bgc">Q9.Can a function return multiple values in C? If not, how can you achieve a similar effect?</b><br>
+							     		Yes function can return multiple value in c  by having your function return an array or a pointer to an array. An array is a collection of elements of the same data type, stored in contiguous memory locations.
+									</p>
+									<hr>
+									<p>
+										<b class="bgc">Q10.Explain the purpose of the static keyword when used with a function.</b><br>
+										The static keyword in C is used to indicate that a variable or function has a fixed or static  storage duration. A variable declared as static  in a function keeps its value even after the function returns, which means that the variable remains in memory during the lifetime of the program.</b>
+									</p>
+									<hr>
+									<p><b class="bgc">Q11.How do you handle errors or exceptions in C functions?</b><br>
+										The programmer must first prevent errors and test the return values of the function. Many C functions are called to return -1 or NULL or set if the error code is a global variable such as error, so tests are performed with these values with  examples of "if statements".
+									</p>
+									<hr>
+									<p><b class="bgc">Q12.What are function pointers? How are they useful?</b><br>
+										Function pointers are pointers, that is, variables that point to the address of a function. A certain amount of RAM is applied to running programs. This memory contains the compiled executable program code and the variables used. Therefore, a function in program code is also an address.<br>
+										Function pointers may be useful if we want to make a callback mechanism and need to pass the address of one function to another function. They can also be useful if you want to store a set of functions, such as those that are called dynamically.
+
+									</p>
+									<hr>
+									<p>
+										<b class="bgc">13.Describe the use of the inline keyword with functions in C.</b>
+										As the word "Inline" say "In" "Line", adding this keyword to a function affects the program in runtime,When a program is compiled, the code written in the function is put under the function call, because function calls are more expensive than inline code, so the code is optimized.<br>
+
+										Because the word "inline" means "in a line," adding the inline keyword to a function affects how the program behaves at runtime.<br>
+										<b class="bgc">14.What is function overloading? Does C support it?</b><br>
+										C does not support overloading. Overloading consists of two or more functions with the same type and return name, but different parameters.<br>
+
+
+									</p>
+
+         						</article> 
+         						<hr>
+         						<article>
+         							<p><b class="bgc">15.How do you create a function that accepts a variable number of arguments?</b><br>
+         								In C , you can pass multiple arguments from 'main' to functions that take a variable number of arguments using the ellipsis (`...`) syntax and the `va_list` macros from stdarg. h` header file.<br><br>
+         								<b class="bgc">16.Explain the concept of a callback function in C.</b><br>
+         								Any code callback is a function that is passed as an argument to other code and is expected to call (execute) the argument at some point. Simply put, if a reference to a function is passed as an argument to call another function, that function is called a callback function.<br>
+
+									</p>
+         						</article>
+         						 
+         						<hr>
+
+         						<article>							     	
+							     	<p><b class="bgc">
+							     	17.	What is the purpose of the void keyword in function declarations?</b><br>
+							     	In C , void is used as the return type for a function that does not return a value. When we declare a function with "void" as the return type, it means that the function does not return any value to the caller.<br>
+
+							     		
+							     	</p>
+         						</article>
+         						<hr>
+         						<article>							     	
+							     	<p>
+							     		<b class="bgc">18.	Can a function in C return a pointer to a local variable? Why or why not?</b><br>
+							     		We can pass pointers to functions and return pointers from functions as well. But the return address of a local variable is not recommended because it goes out of scope  after the function returns.
+							     	</p>
+         						</article>
+         						<article>							     	
+							     	<p></p>
+         						</article>
+         						<hr>
+         																	
+									
+								
+											<!-- <div>   commented by me -->
+																
+											<p>
+											Previous Topic:--&gt;&gt;<a href="array-faq-c.html">Loops FAQ in C.</a>&nbsp;||&nbsp;Next topic:--&gt;&gt;<a href="structure-faq-c.html">Structure FAQ in C.</a><br>
+											</p>
+											<hr>
+											
+															
+									</div>
+								</section>
+
+							<!-- Section -->
+								
+
+						</div>
+						<div>
+				<!-- footer menu -->
+			</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<section>
+									<header class="">
+										<div>
+										<p>
+
+</p>	
+									</div>
+									
+
+									</header>
+									
+			
+								</section>
+							<!-- Section -->
+								
+
+							<!-- Section -->
+
+							<!-- Search -->
+								<!--<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form> 
+								</section> -->
+
+							<!-- Menu -->
+								
+								<nav id="menu">
+									<header class="major">
+										<h2>C Language</h2>
+									</header>
+									<ul>
+										<li><a href="../index.html">Home</a></li>
+										<li><a href="whyC.html">Why C Language</a></li>
+										<li><a href="historyC.html">History of C Language</a></li>
+										<li><a href="ApplicationsC.html">Applications of C Language</a>
+										</li>
+										<li>
+											<span class="opener">Introduction To C</span>
+											<ul><li><a href="whatisprogram.html">What is Program?</a></li>
+												<li><a href="cprogramstructure.html">Structure of C Program</a></li>
+												<li><a href="Cprogram.html">Working Of C Program</a></li>
+												<li><a href="CLanguageChar.html">CHARACTER SET </a></li>
+												<li><a href="c-variable-identifier.html">VARIABLES AND IDENTIFIERS </a></li>
+												<li><a href="c-datatype.html">BUILT-IN DATA TYPES </a></li>
+												
+												<li><a href="operators.html">OPERATORS AND EXPRESSIONS </a></li>
+												<li><a href="constant.html">CONSTANTS AND LITERALS</a></li>
+												<li><a href="assignment.html"> SIMPLE ASSIGNMENT STATEMENT </a></li>
+												<li><a href="inputoutput.html">BASIC INPUT/OUTPUT STATEMENT </a></li>
+												<li><a href="cprograms.html">SIMPLE 'C' PROGRAMS</a></li>
+												<li><a href="assignments-intro1.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Operators in C Programming </span>
+											<ul>
+											<li><a href="arithmatic-operators-c.html">Arithmetic Operators </a></li>
+												<li><a href="assignment-operators-c.html">Assignment Operators </a></li>
+												<li><a href="increment-decrement-operator-c.html">Increment and Decrement Operators</a></li>
+												<li><a href="relationaloperator.html">Relational Operators </a></li>
+												<li><a href="logicaloperator.html">Logical Operators</a></li>
+											 <li><a href="bitwiseopearator.html">Bitwise Operators </a></li>
+											 <li><a href="otheropearator.html">Other Operators </a></li>
+											 <li><a href="opearatorassignments.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">CONDITIONAL STATEMENTS</span>
+											<ul>
+												<li><a href="c-decision.html">DECISION MAKING WITHIN A PROGRAM</a></li>
+												<li><a href="c-condtions.html"> CONDITIONS</a></li>
+												<li><a href="c-if.html">IF STATEMENT </a></li>
+												<li><a href="c-ifelse.html">IF-ELSE STATEMENT</a></li>
+												<li><a href="c-ifelseladder.html">IF-ELSE LADDER</a></li>
+												<li><a href="c-nestedif.html">NESTED IF-ELSE </a></li>
+												<li><a href="c-switch.html">SWITCH CASE </a></li>
+												<li><a href="conditional-stmt-assign-c.html">Assignments</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">LOOPS STATEMENTS</span>
+											<ul>
+												<li><a href="loops-intro.html">Introduction to Loops</a></li>
+												<li><a href="c-goto.html"> GO TO Statement</a></li>
+												<li><a href="c-dowhile-loop.html"> Do while Loop </a></li>
+												<li><a href="c-while-loop.html">While Loop </a></li>
+												<li><a href="c-nested-while.html">Nested While Loop </a></li>
+												<li><a href="c-diff-while-dowhile.html">Difference Between While and Do while</a></li>
+												<li><a href="c-difference-goto-loop.html">Difference Between Goto and loop</a></li>
+												<li><a href="c-while-loop-assign.html"> while loop assignments</a></li>
+												<li><a href="c-for.html">C FOR Loop</a></li>
+												<li><a href="c-for-example.html">C For loop examples </a></li>
+												<li><a href="c-nested-for.html">Nested for loop</a></li>
+												<li><a href="nested-while-loop-c.html">Nested for loop examples </a></li>
+												<li><a href="infinite-while-loop-c.html">Infinite while Loops</a></li>
+												<li><a href="infinite-for-loop-c.html"> Infinite for Loops </a></li>
+												<li><a href="continue-c.html">Continue in Loops </a></li>
+												<li><a href="break-c.html">break in Loops </a></li>
+												<li><a href="while-vs-dowhile-vs-for-c.html">difference while do..while & for </a></li>
+												<li><a href="loop-assignment-c.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Arrays</span>
+											<ul>
+												<li><a href="one-d-array-c.html">One Dimensional Array</a></li>
+												<li><a href="declare-array-c.html">Declaring 1D Arrays</a></li>
+												<li><a href="initilize-array-c.html">Initilization of 1D arrays</a>
+												</li>
+												<li><a href="access-array-c.html">Accessing element of one 1D Array</a></li>
+												<li><a href="read-array-c.html">Read and Display 1D Arrays</a></li>
+												<li><a href="two-d-array.html">Two Dimensional Arrays</a></li>
+												<li><a href="declare-2d-array-c.html">Declare 2D Arrays</a></li>
+												<li><a href="read-2d-array.html">Read and Display 2D Arrays</a></li>
+												<li><a href="array-assignments.html">Assignments/Examples</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Functions</span>
+											<ul>
+												<li><a href="function-intro-c.html">Introduction</a></li>
+												<li><a href="user-defined-function-c.html">Need For User-Defined Function</a></li>
+												<li><a href="multiple-fun-program-c.html">Multiple Function Program</a></li>
+												
+												<li><a href="modular-programming-c.html">Modular Programming</a></li>
+												<li><a href="element-user-defined-fun-c.html">Elements Of User Defined Function</a></li>
+												<li><a href="function-definition-c.html">Function Definition</a></li>
+												</li>
+												<li><a href="function-declaration-c.html">Function Declaration</a></li>
+												</li>
+												<li><a href="types-of-function-c.html">Types of functions</a></li>
+												</li>
+												<li><a href="nesting-function-c.html">Nesting of Function</a></li>
+												<li><a href="recursion-c.html">Recursion</a></li>
+												<li><a href="passing-array-function-c.html">Passing Array To Functions</a></li>
+												<li><a href="visibility-scope-var-c.html">Scope,Visibility and Lifetime of Variables</a></li>
+												<li><a href="function-assignment-c.html">Assignments</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Structure</span>
+											<ul>
+												<li><a href="structure-intro-c.html">Introduction</a></li>
+												<li><a href="array-vs-structure-c.html">Array vs Structure</a></li>
+												<li><a href="define-structure-c.html">Defining Structure</a></li>
+												<li><a href="declare-structure-var-c.html">Declaring Structure Variables</a></li>
+												<li><a href="type-def-struct-c.html">Type Defined Structure</a></li>
+												<li><a href="access-struct-member-c.html">Accessing Structure Members</a></li>
+												<li><a href="struct-initilization-c.html">Structure Initilization</a></li>
+												<li><a href="copy-compare-struct-c.html">Copying & Comparing Structure Variables</a></li>
+												<li><a href="array-struct-c.html">Array of Structure</a></li>
+												<li><a href="array-within-struct-c.html">Arrays Within Structure</a></li>
+												<li><a href="struct-within-struct-c.html">Structures Within Structures</a></li>
+												<li><a href="struct-and-function-c.html">Structures and Functions</a></li>
+												<li><a href="struct-assignment-c.html">Structure Examples/Assignments</a></li>
+											</ul>
+									  </li>
+										<li>
+
+
+											<span class="opener">Union</span>
+											<ul>
+												<li><a href="define-union-c.html">Define Union</a></li>
+												<li><a href="create-union-c.html">Create and use Union</a></li>
+												<li><a href="diff-struct-union-c.html">Difference Between Structure and Union</a></li>
+												<li><a href="union-c-example.html">Union Examples</a></li>
+												<li><a href="union-c-faq.html">Union FAQ</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Pointers</span>
+											<ul>
+												<li><a href="what-is-pointer-c.html">What Are Pointers In C?</a></li>
+												<li><a href="how-use-pointer-c.html">How Do We Use Pointers In C?</a></li>
+												<li><a href="declare-pointer-c.html">Declaration Of A Pointer</a></li>
+												<li><a href="pointer-init-c.html">The Initialization Of A Pointer</a></li>
+												<li><a href="pointer-syntax-init.html">Syntax Of Pointer Initialization</a></li>
+												<li><a href="use-pointer-c.html">Use Of Pointers In C</a></li>
+												<li><a href="pointer-to-array-c.html">The Pointer To An Array</a></li>
+												<li><a href="pointer-to-function-c.html">The Pointer To A Function</a></li>
+												<li><a href="pointer-to-struct-c.html">The Pointer To A Structure</a></li>
+												<li><a href="types-pointer-c.html">Types Of Pointers</a></li>
+												<li><a href="null-pointer-c.html">The Null Pointer</a></li>
+												<li><a href="void-pointer-c.html">The Void Pointer</a></li>
+												<li><a href="wild-pointer-c.html">The Wild Pointer</a></li>
+												<li><a href="near-pointer-c.html">The Near Pointer</a></li>
+												<li><a href="huge-pointer-c.html">The Huge Pointer</a></li>
+												<li><a href="far-pointer-c.html">The far Pointer</a></li>
+												<li><a href="dangling-pointer-c.html">dangling pointer </a></li>
+												<li><a href="access-pointer-c.html">Accessing Pointers- Indirectly And Directly</a></li>
+												<li><a href="pros-pointer-c.html">Pros Of Using Pointers In C</a></li>
+												<li><a href="cons-pointer-c.html">Cons Of Pointers In C</a></li>
+												<li><a href="application-pointer-c.html">Applications Of Pointers In C</a></li>
+												<li><a href="address-operator-c.html">The & Address Of Operator In C</a></li>
+												<li><a href="complex-pointer-c.html">How To Read The Complex Pointers In C?</a></li>
+												<li><a href="practice-pointer-c.html">Practice Problems On Pointers </a></li>
+												
+												
+											</ul>
+									  </li>
+
+
+ 									<li>
+											<span class="opener">File Processiong</span>
+											<ul>
+												<li><a href="file-intro-c.html">File Handling In C</a></li>
+												<li><a href="types-file-c.html">Types Of Files In C </a></li>
+												<li><a href="operation-file-c.html">Operations Done In File Handling</a></li>
+												<li><a href="file-example-c.html">File Examples</a></li>
+												<li><a href="binary-file-c.html"> Binary Files</a></li>
+												<li><a href="file-count-word-line-c.html">count words,lines in a file</a></li>
+												<li><a href="copy-file-c.html">Copy files</a></li>
+												<li><a href="update-file-c.html">Update File</a></li>
+												<li><a href="count-vowels-file-c.html">count vowels in a file</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Preprocessor</span>
+											<ul>
+												<li><a href="macro-sub-div-c.html">Macro substitution division</a></li>
+												<li><a href="file-inclusion-c.html">File Inclusion</a></li>
+												<li><a href="conditional-compile-c.html">Conditional Compilation</a></li>
+												<li><a href="other-dir-c.html">Other directives</a></li>
+												<li><a href="preprocessor-example-c.html">Examples</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Dynamic Memory Allocation</span>
+											<ul>
+												<li><a href="malloc-c.html">malloc</a></li>
+												<li><a href="calloc-c.html">calloc</a></li>
+												<li><a href="free-c.html">free</a></li>
+												<li><a href="realloc-c.html">realloc</a></li>
+												<li><a href="dynamic-mem-example-c.html">Examples</a></li>
+											</ul>
+									  </li>
+										<li><a href="storage-class-c.html">Storage Classes</a></li>
+										<li><a href="graphics-c.html">Graphics</a></li>
+										<li>
+											<span class="opener">Frequently Asked Interview Questions
+										(FAQ)</span>
+											<ul>
+												<li><a href="intro-c-faq-c.html">Introduction To C FAQ</a></li>
+												<li><a href="operators-c-faq.html">Operators FAQ</a></li>
+												<li><a href="conditional-stmt-c-faq.html">Conditional Statements FAQ</a></li>
+												<li><a href="loop-faq-c.html">Loops FAQ</a></li>
+												<li><a href="array-faq-c.html">Arrays FAQ</a></li>
+												<li><a href="function-faq-c.html">Function FAQ</a></li>
+												<li><a href="structure-faq-c.html">Structure FAQ</a></li>
+												<li><a href="pointer-faq-c.html">Pointers FAQ</a></li>
+												<li><a href="files-faq-c.html">Files FAQ</a></li>
+												<li><a href="storage-class-faq-c.html">Storage classes FAQ</a></li>
+												<li><a href="dma-faq-c.html">Dynamic Memory FAQ</a></li>
+												
+
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Programs/Assignments</span>
+											<ul>
+												<li><a href="intro-assign-c.html">Introduction To C </a></li>
+												<li><a href="operators-assign-c.html">Operators </a></li>
+												<li><a href="conditional-stmt-assign-c.html">Conditional Statements </a></li>
+												<li><a href="loop-assign-c.html">Loops </a></li>
+												<li><a href="array-assign-c.html">Arrays </a></li>
+												<li><a href="function-assign-c.html">Function </a></li>
+												<li><a href="structure-assign-c.html">Structure </a></li>
+												<li><a href="pointer-assign-c.html">Pointers </a></li>
+												<li><a href="file-assign-c.html">Files </a></li>
+												<li><a href="storage-class-assign-c.html">Storage classes </a></li>
+												<li><a href="dma-assign-c.html">Dynamic Memory </a></li>
+												
+
+											</ul>
+									  </li>
+										<li><a href="case-studies-c.html">Case Studies</a></li>
+										<li>
+											<span class="opener">Multiple Choice Questions</span>
+											<ul>
+												<li><a href="intro-mcq-c.html">Introduction To C MCQ</a></li>
+												<li><a href="operators-mcq-c.html">Operators MCQ</a></li>
+												<li><a href="conditional-mcq-c.html">Conditional Statements MCQ</a></li>
+												<li><a href="loops-mcq-c.html">Loops MCQ</a></li>
+												<li><a href="array-mcq-c.html">Arrays MCQ</a></li>
+												<li><a href="function-mcq-c.html">Function MCQ</a></li>
+												<li><a href="structure-mcq-c.html">Structure MCQ</a></li>
+												<li><a href="pointer-mcq-c.html">Pointers MCQ</a></li>
+												<li><a href="files-mcq-c.html">Files MCQ</a></li>
+												<li><a href="storage-class-mcq-c.html">Storage classes MCQ</a></li>
+												<li><a href="dma-mcq-c.html">Dynamic Memory MCQ</a></li>
+												<li><a href="more-faqc.html">More MCQ</a></li>
+
+											</ul>
+									  </li>
+									</ul>
+								</nav>
+
+							<!-- Section   for activities -->
+								<section>
+									<header class="">
+										<div>
+										<p>
+
+										</p>	
+									</div>
+									
+
+									</header>
+									
+			
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">tech2dsm@gmail.com</a></li>
+										<!--<li class="icon solid fa-phone">-----</li>
+										<li class="icon solid fa-home"><br />
+										</li> -->
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Sankalan Data Tech. All rights reserved. </p>
+
+								</footer>
+
+
+						</div>
+					</div>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+	</body>
+</html>

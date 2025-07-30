@@ -1,0 +1,950 @@
+<!DOCTYPE HTML>
+<!--
+	
+	
+	Free tutorials for personal and commercial use 
+-->
+<html>
+	<head>
+		<title>Scope visibility and life time of a variable in C Programming.  </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="keywords" content="scope,visibility,life time,of, variable,in,c programming">
+		
+		<meta name="description" content="Discover the concept of scope,visibility and life time of a variables in C programming ,and explore practical examples. Read now!"/>
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/intstyle.css" />
+		<script>
+					document.addEventListener("contextmenu", function(event)
+					{
+						event.preventDefault();
+						    
+					}, false);
+		</script> 
+		<style>
+				
+				ul {
+ 					  padding: 20px;
+ 					   background: #cce5ff;
+ 					  
+ 					}
+				li {
+					 	 background: #cce5ff;
+ 						 color: darkblue;
+ 						 margin: 5px;
+					}
+					body {
+							background: #cce5ff;	
+					    } 					
+         		p  {
+           				 
+  						font-size: 19px;
+  						color: black;
+  						font-family: Georgia, serif;
+  						font-style: italic;
+  						display:block;
+  						margin-left: .1em;
+  						margin-bottom: 1em;
+  						margin-right: 1em;
+
+         			 }
+         			 .bgc{
+         			 	background-color: rgb(155,142,179);
+         			 }
+         		.responsive {
+         			       width: 100%;
+         			       height: auto;
+         			      }
+ 	        	img {
+  					border-radius: 12%;
+
+					  max-width: 100%;
+					  height: auto;
+					  float: right;
+
+					}
+					div.dashed{
+         				border-style: solid;
+         				border-width: 3px;
+
+         			}
+         			div.dashed2{
+         				overflow-x: auto;
+        				overflow-y: hidden;
+        				white-space: nowrap;
+        				border-style: solid;
+         				border-width: 2.5px;
+
+
+         			}
+         			.scrl{
+         				overflow-x: auto;
+        				overflow-y: hidden;
+
+        				border-style: solid;
+         				border-width: 2.5px;
+
+
+         			}
+         			
+					hr {
+  								border: 2px solid #DAA520;
+							}
+					
+​
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="" class="logo"><strong> Scope visibility and life time of a variable in C Programming.   </strong> Skill UP</a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter">
+											<span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+
+									</ul>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h1 class="bgc"> Scope ,visibility and life time of a variable in C Programming.  
+											</h1>
+											
+										</header>
+										<article>
+											<p>
+												<b>Scope and Life time of a variable:</b> The scope of a variable in C  is the area  where the variable can be accessed or used . <br>
+												The scope is the  region in which variable can be used. Variables can not be used Out of that area.<br>
+												There are Two scopes for C variables.<br>
+												 Local Scope and Global Scope.<br>
+												 1. Local Scope: The local scope is limited to the code or function in which the variable is declared. <br>
+												 2. Global Scope: The global scope of a variable or function  in C is the  region outside any blockb of code or function. The Global variables are visible in entire part of the program.<br>
+													The variables declared in the global scope are known as  global variables.<br>
+
+												 
+
+												 
+											</p>
+											</article>
+
+
+											    
+											<article>
+											<p> 								
+
+											</p>
+										</article>
+										<article>
+											<p>
+
+											</p>
+										</article>
+											
+											<article>
+											<p> 
+
+									
+
+											</p><article>
+											<p> 
+
+									
+
+											</p>
+									
+										
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										
+									</header>
+									<div>
+										<article>
+											
+											<div >
+												
+												<p> <img src="images/scope-visibility-life-time-variable-c.jpg" width="430" height="340" alt="scope,visibility and life time of a variable in C language">
+
+
+ 
+												</p>
+											</div>
+										</article>
+										
+										
+									
+									
+									<article>
+										<div>
+										<p> 
+                                         </p>
+                                     </div>
+									</article>
+								</div>
+							
+
+									<article><p> 
+										<br>
+										<b>Life time:</b> Life time of a variable in c program  is the alive state or life of a variable in the memory. 
+										It is the time or life  of  a variable how long  does the variable holds in the memory. The life time of a variable is automatic  and static.  The  life time of a Local variable remains active till the end of program .
+
+
+										
+									    </p>
+
+
+
+
+										
+										<p>The following example given is a simple implementation of local variable and global variable in C programming.<br>
+											The variable that is declared in a function or code is called a local variable.A local variables can not be used  outside the function in which They are declared. The scope of Local variables 
+ 											remains within the defined function body or block of code only. 
+									
+										</p>
+									</article>
+									<article>
+										<div class="dashed2">
+										
+												
+									  
+									<h2 class="bgc">Program of local variables in C.</h2>
+									<p>
+									 
+									#include &lt;stdio.h&gt;<br> 
+
+									void employee() <br> 
+									&emsp;{ <br> 
+									  &emsp;&emsp;  // Local Variables of the function<br>  
+									   &emsp;&emsp; int salary= 20000; <br> 
+									   &emsp;&emsp; float bonus = 0.45; <br> 
+
+									   &emsp;&emsp; printf("\nEmployee Salary is = %d \n", salary); <br> 
+									   &emsp;&emsp; printf("\n Employee Bonus is= %f", bonus);<br>  
+									&emsp;} <br> 
+
+									int main() <br> 
+									&emsp;{ <br> 
+									&emsp;&emsp;    employee(); <br> 
+									&emsp;&emsp;    return 0; <br> 
+									}<br> 
+									 
+                                  </p>
+										</div>
+										<p>
+											<b> Output:</b>
+											<br>Employee Salary is =20000<br>
+										Employee Bonus is=0.450000</p>
+
+										</article>
+										<article>
+											<p><b>Explanation:</b>In the program given above, inside the the definition of employee() function the variables are declared and    initialized. The local variable salary has declared as int data type and assigned the value 20000, similarly the variable bonus has declared as float and assigned value 0.45. The scope and life of these variable remains local to the employee() function and cannot be used outside   the function.<br>
+												Inside the main function the employee() function is called and gives the following output.<br>
+												Employee Salary is =20000<br>
+										Employee Bonus is=0.450000</p>
+
+
+
+												
+
+
+
+
+											</p><hr>
+										
+										</article>				
+												
+									
+										
+									
+									<article><p><b> Global Variable:</b>The variable whose scope remains through the entire program is called global variable in C. Global variables are not defined inside any function and can be accessed and used in any function. 
+												</p><h3 class="bgc">Program of Global variables in C.</h3>
+										<div class="dashed2">
+										
+												
+									  
+									
+									<p>
+									 
+									#include &lt;stdio.h&gt;<br> 
+									//Declaring Global Variable<br>
+									  &emsp;&emsp; int salary= 20000; <br> 
+									   &emsp;&emsp; float bonus = 0.45; <br> 
+
+									void employee() <br> 
+									&emsp;{ <br> 
+									   &emsp;&emsp; printf("\n Details inside employee() function");<br>
+									   &emsp;&emsp; printf("\nEmployee Salary is = %d \n", salary); <br> 
+									   &emsp;&emsp; printf("\n Employee Bonus is= %f", bonus);<br>  
+									&emsp;} <br> 
+
+									int main() <br> 
+									&emsp;{ <br> 
+									&emsp;&emsp;    employee(); <br>
+									&emsp;&emsp; printf("\n Details inside main() function");<br>
+									   &emsp;&emsp; printf("\nEmployee Salary is = %d \n", salary); <br> 
+									   &emsp;&emsp; printf("\n Employee Bonus is= %f", bonus);<br>   
+									&emsp;&emsp;    return 0; <br> 
+									}<br> 
+									 
+                                  </p>
+										</div>
+										<p>
+											<b> Output:</b><br>
+											Details inside employee() function
+											<br>Employee Salary is =20000<br>
+												Employee Bonus is=0.450000<br><br>
+												Details inside main() function<br>
+												Employee Salary is =20000<br>
+												Employee Bonus is=0.450000<br>
+												<b>Explanation:</b>The variables salary and bonus has declared and initialized outside the function's definition. These variables are global whose values can be used and accessed within or outside the function and any where in main() function. . 
+											</p>
+
+
+										</article>
+										<article>
+											<p></p>
+
+
+
+												
+
+
+
+
+											</p><hr>
+										
+										</article>
+									
+									<article>
+										<h3 class="bgc"> Variables Types  on the Basis of  Lifetime  or Storage Class in C.</h3> 
+										<p>
+											There are 4 types of keyword variables in C programming. These Variables use the special keywords before their definition. These keywords are reserved word and have specific meaning and purpose. The keyword defines the use and the purpose of the variable. The scope of these variable will be global, local or both depending on type of variables.<br>
+											<b>a.Static Variable:</b><br> 
+											The Static is  the keyword in C language. Static keyword is used to define static variable. The  scope  of static depends on the area of its declaration. The scope of variable is local  If a static variable is defined within a function. If the a variable declared outside the function, its scope is global. The life time of the static variable  remains throughout the program and its life time. Static variable  holds its value whenever a program is called. The default value of the static variable is 0.<br>
+											<b>Syntax:
+											<br>
+											<i>static data_type variable_name = initial_value; </i></b>
+
+										</p>
+									</article>				
+																											
+									<article>
+										
+										
+									</article>
+									<article>
+										<h4 class="bgc"> C program demonstrate static keyword.</h3> <p>
+										
+									</p><div class="dashed2">
+										<p>
+										/*<br>
+										  The program given below increase the value of  static variable  10<br> every time when the function is called. <br>
+										 */<br>
+
+										#include &lt;stdio.h&gt;<br>
+
+										void inc_val() <br>
+										{ <br>
+										  &emsp;  int p = 20;  // Local variable declaration<br>
+										  &emsp;  static int q = 30;  // Static variable<br>
+
+										   &emsp; p = p + 10; <br>
+										   &emsp; q = q + 10; <br>
+
+										   &emsp; printf("\nThe value of local variable : %d ", p);<br> 
+										   &emsp; printf("\nThe value of Static variable : %d ", q);<br>  
+										}<br> 
+
+										int main()<br> 
+										{ <br>
+										   &emsp; inc_val(); <br>
+										   &emsp; printf("\nCalling inc_val function 2nd time "); <br>
+										    &emsp;inc_val(); <br>
+										    &emsp;printf("\nCalling inc_val function 3rd time ");<br> 
+										   &emsp; inc_val();<br> 
+
+										    &emsp;return 0;<br> 
+										}
+
+									</p>
+								</div>
+								<p>
+									<b> OUTPUT :</b><br>
+									
+									The value of local variable: 30 <br>
+									The value of Static variable: 40 <br>
+									Calling inc_val function 2nd time <br>
+									The value of local variable: 30 <br>
+									The value of Static variable: 50 <br>
+									Calling inc_val function 3rd time <br>
+									The value of local variable: 30 <br>
+									The value of Static variable: 60 </p>
+									<hr>
+
+
+
+									</article>
+									<article>
+										<p>
+											
+										</p>
+																													
+									</article>
+									<article>
+										<p><b> b.Auto Variable :</b>When the Variables in C is declared with an auto keywords are known as automatic variables.
+										By default the variables declared inside the function body or block of function are known as automatic variable.</br> 
+										 The scope of auto  variable is  local by default  in  the function, where  it is declared.The lifetime of a auto variable is local to the function body.The auto keyword  is used to declare the automatic variable.A auto variable  can be accessed inside nested blocks within the parent function or block in which the auto variable was declared. 
+											<br>
+											The default value for it is garbage.<br></p>
+											<div class="dashed2"><p>
+											<b>Syntax:</b>
+											auto data_type Name_of_Variable = value;<br> 
+											  Or <br>
+											data_type Name_of_Variable = value; 
+
+
+										</p>
+									</div>
+																													
+									</article>
+									
+									
+									<article><br>
+										<div class="dashed2">
+										<p><b class="bgc">Program to use automatic variable in C </b>
+											<br>
+ 
+								#include &lt;stdio.h&gt; <br>
+
+								void auto_value()<br>
+								{ 
+								&emsp;auto int y = 20; //automatic variable <br>
+								&emsp;int x = 10; //local variable <br>
+								&emsp;printf("The value of automatic variable y is : %d \n", y); <br>
+								&emsp;printf("The value of local variable x is : %d \n", x); <br>
+								} <br>
+								 
+								int main() <br>
+								{ <br>
+								&emsp;auto_value; //calling function<br> 
+								&emsp;return 0; <br>
+								}<br>
+								<b> OUTPUT :</b><br>
+								The value of automatic variable y is: 20 <br>
+								The value of local variable x is: 10 <br>
+								
+
+
+										</p>
+										
+									</div>
+										<hr>
+									</article>
+									
+									<article><p><b>c. Register Variable:</b>
+									Register variable is a local variable. 
+									 It uses register keyword before its definitions and it is stored in the CPU register. The processing of these variables is very fast.If a value is not assigned to the variable the default value of the register variable is garbage. Lifetime of this vriable remains  till to the end of the function. <br>
+									Syntax:<br>
+									register data_type variable_name = initial_value <br>
+									<b class="bgc">Program to declare and initialize register variable</b> 
+									 <div class="dashed2"><p>
+									#include &lt;stdio.h&gt;<br> 
+
+									int main() <br> 
+									{ <br> 
+									    &emsp;register int p = 530; &emsp; // Declaring and initialize register variable<br>  
+									    &emsp;printf("The value of register variable p is  %d", p);<br>  
+
+									    return 0; <br> 
+									}<br> 
+
+									OUTPUT:<br>
+									The value of register variable p is 530 
+
+													
+												</p>
+											</div>
+								 </article>
+                                       <article><br><p><b>d.  Extern Variable:</b>
+                                       The scope of these variable  is  global . The extern keyword is used before the variable definition.By using the extern keyword it  enhances the variable visibility.This  variable can be used in different C files . The lifetime of extern variable reamains in  the entire program. extern variable need not to  initialize  at the time of its declaration. <br>
+										Syntax:
+										extern data_type variable_name;<br><b class="bgc"> extern variable example in C</b>
+										</p>
+								 </article>
+                                       <article><div class="dashed2"><p>
+                                       	//file1.c<br>
+                                       	int n=120;<br>
+                                      </p>	<hr><p>
+                                       	//file2.c<br>
+                                       	extern int n;<br>
+
+
+										int main()<br> {<br>
+										   &emsp;printf("The value of n is %d", n);<br>
+										   &emsp;return 0;<br>
+										}<br>
+
+										Output:<br> 
+
+										The value of n is 120<br>
+                                       </p></div>
+
+
+                                       	<p> In the example given above, In the file1.c we have defined  a global variable “n”  and we want to use it in another file file2.c . We have declared the variable n  as “extern” in the second file to let the compiler know that it is defined externally in another file. <br>
+
+													
+												</p>
+								 </article>
+                                       
+
+
+								
+												
+										
+										
+								
+											<div>						
+											<p>
+											Previous Topic:--&gt;&gt;<a href="passing-array-function-c.html"> Passing array to Function</a>&nbsp;||&nbsp;Next topic:--&gt;&gt;<a href="function-assignment-c.html">Function Assignments.</a><br>
+											</p>
+											<div class="dashed">
+
+												
+													<p class="p"> <b>Other Topics:</b><br>
+											<a href="c-variable-identifier.html">Variables and Identifiers</a>&emsp;
+											<a href="relationaloperator.html">Relational Operators </a>&emsp;
+											<a href="c-ifelse.html">if-else statements</a>&emsp;
+											<a href="c-switch.html">Switch case </a>&emsp;
+											<a href="c-while-loop.html">While Loop </a>&emsp;
+											<a href="infinite-while-loop-c.html">Infinite while Loops</a>&emsp;
+											<a href="c-for.html">C FOR Loop</a>&emsp;
+											<a href="infinite-for-loop-c.html"> Infinite for Loops </a>&emsp;
+											<a href="continue-c.html">Continue in Loops </a>&emsp;
+											<a href="one-d-array-c.html">One Dimensional Array</a>&emsp;
+											<a href="two-d-array.html">Two Dimensional Arrays</a>&emsp;
+											<a href="read-2d-array.html">Read and Display 2D Arrays</a>&emsp;
+											<a href="types-of-function-c.html">Types of functions</a>&emsp;
+											<a href="passing-array-function-c.html">Passing Array To Functions</a>&emsp;
+											<a href="nesting-function-c.html">Nesting of Function</a>&emsp;
+											<a href="array-vs-structure-c.html">Array vs Structure</a>&emsp;
+											<a href="array-struct-c.html">Array of Structure</a>&emsp;
+											<a href="struct-and-function-c.html">Structures and Functions</a>&emsp;
+											<a href="struct-within-struct-c.html">Structures Within Structures</a>&emsp;
+											<a href="use-pointer-c.html">Use Of Pointers In C</a>&emsp;
+											<a href="file-intro-c.html">File Handling In C</a>&emsp;
+											<a href="loop-faq-c.html">Loops FAQ</a>&emsp;
+											<a href="array-faq-c.html">Arrays FAQ</a>&emsp;
+											<a href="count-vowels-file-c.html">count vowels in a file</a>&emsp;
+										    <a href="function-faq-c.html">Function FAQ</a> &emsp;
+										    <a href="conditional-stmt-assign-c.html">Conditional Statements Assignments</a>&emsp;
+												<a href="c-for-example.html">For Loops Assignments</a>&emsp;
+												<a href="array-assign-c.html">Arrays Assignments</a>&emsp;
+												<a href="function-assign-c.html">Function Assignments</a>&emsp;
+												<a href="structure-assign-c.html">Structure Assignments</a>&emsp;
+												<a href="pointer-assign-c.html">Pointers Assignments</a>&emsp;
+												<a href="file-assign-c.html">Files Assignments</a>&emsp;
+												<a href="storage-class-assign-c.html">Storage classes Assignments</a>&emsp;
+												<a href="binary-file-c.html"> Binary Files</a>&emsp;
+												<a href="file-count-word-line-c.html">count words,lines in a file</a>&emsp;
+												<a href="copy-file-c.html">Copy files</a>&emsp;
+												<a href="update-file-c.html">Update File</a>&emsp;
+												<a href="continue-c.html">Continue in Loops </a>&emsp;
+												<a href="break-c.html">break in Loops </a>&emsp;
+												<a href="c-diff-while-dowhile.html">Difference Between While and Do while</a>&emsp;
+												<a href="while-vs-dowhile-vs-for-c.html">difference while do..while & for </a>&emsp;
+												<a href="malloc-c.html">malloc</a>&emsp;
+												<a href="calloc-c.html">calloc</a>&emsp;
+												<a href="storage-class-c.html">Storage Classes</a>&emsp;
+												<a href="operators-mcq-c.html">Operators MCQ</a>&emsp;
+												<a href="conditional-mcq-c.html">Conditional Statements MCQ</a>&emsp;
+												<a href="loops-mcq-c.html">Loops MCQ</a>&emsp;
+												<a href="array-mcq-c.html">Arrays MCQ</a>&emsp;
+												<a href="function-mcq-c.html">Function MCQ</a>&emsp;
+												<a href="structure-mcq-c.html">Structure MCQ</a>&emsp;
+												<a href="pointer-mcq-c.html">Pointers MCQ</a>&emsp;
+												<a href="files-mcq-c.html">Files MCQ</a>&emsp;
+												<a href="storage-class-mcq-c.html">Storage classes MCQ</a>
+											
+											
+										</p>					
+									</div>
+															
+									</div>
+								</section>
+
+							<!-- Section -->
+								
+
+						</div>
+						<div>
+				<!-- footer menu -->
+			</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<section>
+									<header class="">
+										<div>
+										<p>
+
+</p>	
+									</div>
+									
+
+									</header>
+									
+			
+								</section>
+							<!-- Section -->
+								
+
+							<!-- Section -->
+
+							<!-- Search -->
+								<!--<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form> 
+								</section> -->
+
+							<!-- Menu -->
+								
+								<nav id="menu">
+									<header class="major">
+										<h2>C Language</h2>
+									</header>
+									<ul>
+										<li><a href="../index.html">Home</a></li>
+										<li><a href="whyC.html">Why C Language</a></li>
+										<li><a href="historyC.html">History of C Language</a></li>
+										<li><a href="ApplicationsC.html">Applications of C Language</a>
+										</li>
+										<li>
+											<span class="opener">Introduction To C</span>
+											<ul><li><a href="whatisprogram.html">What is Program?</a></li>
+												<li><a href="cprogramstructure.html">Structure of C Program</a></li>
+												<li><a href="Cprogram.html">Working Of C Program</a></li>
+												<li><a href="CLanguageChar.html">CHARACTER SET </a></li>
+												<li><a href="c-variable-identifier.html">VARIABLES AND IDENTIFIERS </a></li>
+												<li><a href="c-datatype.html">BUILT-IN DATA TYPES </a></li>
+												
+												<li><a href="operators.html">OPERATORS AND EXPRESSIONS </a></li>
+												<li><a href="constant.html">CONSTANTS AND LITERALS</a></li>
+												<li><a href="assignment.html"> SIMPLE ASSIGNMENT STATEMENT </a></li>
+												<li><a href="inputoutput.html">BASIC INPUT/OUTPUT STATEMENT </a></li>
+												<li><a href="cprograms.html">SIMPLE 'C' PROGRAMS</a></li>
+												<li><a href="assignments-intro1.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Operators in C Programming </span>
+											<ul>
+											<li><a href="arithmatic-operators-c.html">Arithmetic Operators </a></li>
+												<li><a href="assignment-operators-c.html">Assignment Operators </a></li>
+												<li><a href="increment-decrement-operator-c.html">Increment and Decrement Operators</a></li>
+												<li><a href="relationaloperator.html">Relational Operators </a></li>
+												<li><a href="logicaloperator.html">Logical Operators</a></li>
+											 <li><a href="bitwiseopearator.html">Bitwise Operators </a></li>
+											 <li><a href="otheropearator.html">Other Operators </a></li>
+											 <li><a href="opearatorassignments.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">CONDITIONAL STATEMENTS</span>
+											<ul>
+												<li><a href="c-decision.html">DECISION MAKING WITHIN A PROGRAM</a></li>
+												<li><a href="c-condtions.html"> CONDITIONS</a></li>
+												<li><a href="c-if.html">IF STATEMENT </a></li>
+												<li><a href="c-ifelse.html">IF-ELSE STATEMENT</a></li>
+												<li><a href="c-ifelseladder.html">IF-ELSE LADDER</a></li>
+												<li><a href="c-nestedif.html">NESTED IF-ELSE </a></li>
+												<li><a href="c-switch.html">SWITCH CASE </a></li>
+												<li><a href="conditional-stmt-assign-c.html">Assignments</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">LOOPS STATEMENTS</span>
+											<ul>
+												<li><a href="loops-intro.html">Introduction to Loops</a></li>
+												<li><a href="c-goto.html"> GO TO Statement</a></li>
+												<li><a href="c-dowhile-loop.html"> Do while Loop </a></li>
+												<li><a href="c-while-loop.html">While Loop </a></li>
+												<li><a href="c-nested-while.html">Nested While Loop </a></li>
+												<li><a href="c-diff-while-dowhile.html">Difference Between While and Do while</a></li>
+												<li><a href="c-difference-goto-loop.html">Difference Between Goto and loop</a></li>
+												<li><a href="c-while-loop-assign.html"> while loop assignments</a></li>
+												<li><a href="c-for.html">C FOR Loop</a></li>
+												<li><a href="c-for-example.html">C For loop examples </a></li>
+												<li><a href="c-nested-for.html">Nested for loop</a></li>
+												<li><a href="nested-while-loop-c.html">Nested for loop examples </a></li>
+												<li><a href="infinite-while-loop-c.html">Infinite while Loops</a></li>
+												<li><a href="infinite-for-loop-c.html"> Infinite for Loops </a></li>
+												<li><a href="continue-c.html">Continue in Loops </a></li>
+												<li><a href="break-c.html">break in Loops </a></li>
+												<li><a href="while-vs-dowhile-vs-for-c.html">difference while do..while & for </a></li>
+												<li><a href="loop-assignment-c.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Arrays</span>
+											<ul>
+												<li><a href="one-d-array-c.html">One Dimensional Array</a></li>
+												<li><a href="declare-array-c.html">Declaring 1D Arrays</a></li>
+												<li><a href="initilize-array-c.html">Initilization of 1D arrays</a>
+												</li>
+												<li><a href="access-array-c.html">Accessing element of one 1D Array</a></li>
+												<li><a href="read-array-c.html">Read and Display 1D Arrays</a></li>
+												<li><a href="two-d-array.html">Two Dimensional Arrays</a></li>
+												<li><a href="declare-2d-array-c.html">Declare 2D Arrays</a></li>
+												<li><a href="read-2d-array.html">Read and Display 2D Arrays</a></li>
+												<li><a href="array-assignments.html">Assignments/Examples</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Functions</span>
+											<ul>
+												<li><a href="function-intro-c.html">Introduction</a></li>
+												<li><a href="user-defined-function-c.html">Need For User-Defined Function</a></li>
+												<li><a href="multiple-fun-program-c.html">Multiple Function Program</a></li>
+												
+												<li><a href="modular-programming-c.html">Modular Programming</a></li>
+												<li><a href="element-user-defined-fun-c.html">Elements Of User Defined Function</a></li>
+												<li><a href="function-definition-c.html">Function Definition</a></li>
+												</li>
+												<li><a href="function-declaration-c.html">Function Declaration</a></li>
+												</li>
+												<li><a href="types-of-function-c.html">Types of functions</a></li>
+												</li>
+												<li><a href="nesting-function-c.html">Nesting of Function</a></li>
+												<li><a href="recursion-c.html">Recursion</a></li>
+												<li><a href="passing-array-function-c.html">Passing Array To Functions</a></li>
+												<li><a href="visibility-scope-var-c.html">Scope,Visibility and Lifetime of Variables</a></li>
+												<li><a href="function-assignment-c.html">Assignments</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Structure</span>
+											<ul>
+												<li><a href="structure-intro-c.html">Introduction</a></li>
+												<li><a href="array-vs-structure-c.html">Array vs Structure</a></li>
+												<li><a href="define-structure-c.html">Defining Structure</a></li>
+												<li><a href="declare-structure-var-c.html">Declaring Structure Variables</a></li>
+												<li><a href="type-def-struct-c.html">Type Defined Structure</a></li>
+												<li><a href="access-struct-member-c.html">Accessing Structure Members</a></li>
+												<li><a href="struct-initilization-c.html">Structure Initilization</a></li>
+												<li><a href="copy-compare-struct-c.html">Copying & Comparing Structure Variables</a></li>
+												<li><a href="array-struct-c.html">Array of Structure</a></li>
+												<li><a href="array-within-struct-c.html">Arrays Within Structure</a></li>
+												<li><a href="struct-within-struct-c.html">Structures Within Structures</a></li>
+												<li><a href="struct-and-function-c.html">Structures and Functions</a></li>
+												<li><a href="struct-assignment-c.html">Structure Examples/Assignments</a></li>
+											</ul>
+									  </li>
+										<li>
+
+
+											<span class="opener">Union</span>
+											<ul>
+												<li><a href="define-union-c.html">Define Union</a></li>
+												<li><a href="create-union-c.html">Create and use Union</a></li>
+												<li><a href="diff-struct-union-c.html">Difference Between Structure and Union</a></li>
+												<li><a href="union-c-example.html">Union Examples</a></li>
+												<li><a href="union-c-faq.html">Union FAQ</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Pointers</span>
+											<ul>
+												<li><a href="what-is-pointer-c.html">What Are Pointers In C?</a></li>
+												<li><a href="how-use-pointer-c.html">How Do We Use Pointers In C?</a></li>
+												<li><a href="declare-pointer-c.html">Declaration Of A Pointer</a></li>
+												<li><a href="pointer-init-c.html">The Initialization Of A Pointer</a></li>
+												<li><a href="pointer-syntax-init.html">Syntax Of Pointer Initialization</a></li>
+												<li><a href="use-pointer-c.html">Use Of Pointers In C</a></li>
+												<li><a href="pointer-to-array-c.html">The Pointer To An Array</a></li>
+												<li><a href="pointer-to-function-c.html">The Pointer To A Function</a></li>
+												<li><a href="pointer-to-struct-c.html">The Pointer To A Structure</a></li>
+												<li><a href="types-pointer-c.html">Types Of Pointers</a></li>
+												<li><a href="null-pointer-c.html">The Null Pointer</a></li>
+												<li><a href="void-pointer-c.html">The Void Pointer</a></li>
+												<li><a href="wild-pointer-c.html">The Wild Pointer</a></li>
+												<li><a href="near-pointer-c.html">The Near Pointer</a></li>
+												<li><a href="huge-pointer-c.html">The Huge Pointer</a></li>
+												<li><a href="far-pointer-c.html">The far Pointer</a></li>
+												<li><a href="dangling-pointer-c.html">dangling pointer </a></li>
+												<li><a href="access-pointer-c.html">Accessing Pointers- Indirectly And Directly</a></li>
+												<li><a href="pros-pointer-c.html">Pros Of Using Pointers In C</a></li>
+												<li><a href="cons-pointer-c.html">Cons Of Pointers In C</a></li>
+												<li><a href="application-pointer-c.html">Applications Of Pointers In C</a></li>
+												<li><a href="address-operator-c.html">The & Address Of Operator In C</a></li>
+												<li><a href="complex-pointer-c.html">How To Read The Complex Pointers In C?</a></li>
+												<li><a href="practice-pointer-c.html">Practice Problems On Pointers </a></li>
+												
+												
+											</ul>
+									  </li>
+
+
+ 									<li>
+											<span class="opener">File Processiong</span>
+											<ul>
+												<li><a href="file-intro-c.html">File Handling In C</a></li>
+												<li><a href="types-file-c.html">Types Of Files In C </a></li>
+												<li><a href="operation-file-c.html">Operations Done In File Handling</a></li>
+												<li><a href="file-example-c.html">File Examples</a></li>
+												<li><a href="binary-file-c.html"> Binary Files</a></li>
+												<li><a href="file-count-word-line-c.html">count words,lines in a file</a></li>
+												<li><a href="copy-file-c.html">Copy files</a></li>
+												<li><a href="update-file-c.html">Update File</a></li>
+												<li><a href="count-vowels-file-c.html">count vowels in a file</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Preprocessor</span>
+											<ul>
+												<li><a href="macro-sub-div-c.html">Macro substitution division</a></li>
+												<li><a href="file-inclusion-c.html">File Inclusion</a></li>
+												<li><a href="conditional-compile-c.html">Conditional Compilation</a></li>
+												<li><a href="other-dir-c.html">Other directives</a></li>
+												<li><a href="preprocessor-example-c.html">Examples</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Dynamic Memory Allocation</span>
+											<ul>
+												<li><a href="malloc-c.html">malloc</a></li>
+												<li><a href="calloc-c.html">calloc</a></li>
+												<li><a href="free-c.html">free</a></li>
+												<li><a href="realloc-c.html">realloc</a></li>
+												<li><a href="dynamic-mem-example-c.html">Examples</a></li>
+											</ul>
+									  </li>
+										<li><a href="storage-class-c.html">Storage Classes</a></li>
+										<li><a href="graphics-c.html">Graphics</a></li>
+										<li>
+											<span class="opener">Frequently Asked Interview Questions
+										(FAQ)</span>
+											<ul>
+												<li><a href="intro-c-faq-c.html">Introduction To C FAQ</a></li>
+												<li><a href="operators-c-faq.html">Operators FAQ</a></li>
+												<li><a href="conditional-stmt-c-faq.html">Conditional Statements FAQ</a></li>
+												<li><a href="loop-faq-c.html">Loops FAQ</a></li>
+												<li><a href="array-faq-c.html">Arrays FAQ</a></li>
+												<li><a href="function-faq-c.html">Function FAQ</a></li>
+												<li><a href="structure-faq-c.html">Structure FAQ</a></li>
+												<li><a href="pointer-faq-c.html">Pointers FAQ</a></li>
+												<li><a href="files-faq-c.html">Files FAQ</a></li>
+												<li><a href="storage-class-faq-c.html">Storage classes FAQ</a></li>
+												<li><a href="dma-faq-c.html">Dynamic Memory FAQ</a></li>
+												
+
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Programs/Assignments</span>
+											<ul>
+												<li><a href="intro-assign-c.html">Introduction To C </a></li>
+												<li><a href="operators-assign-c.html">Operators </a></li>
+												<li><a href="conditional-stmt-assign-c.html">Conditional Statements </a></li>
+												<li><a href="loop-assign-c.html">Loops </a></li>
+												<li><a href="array-assign-c.html">Arrays </a></li>
+												<li><a href="function-assign-c.html">Function </a></li>
+												<li><a href="structure-assign-c.html">Structure </a></li>
+												<li><a href="pointer-assign-c.html">Pointers </a></li>
+												<li><a href="file-assign-c.html">Files </a></li>
+												<li><a href="storage-class-assign-c.html">Storage classes </a></li>
+												<li><a href="dma-assign-c.html">Dynamic Memory </a></li>
+												
+
+											</ul>
+									  </li>
+										<li><a href="case-studies-c.html">Case Studies</a></li>
+										<li>
+											<span class="opener">Multiple Choice Questions</span>
+											<ul>
+												<li><a href="intro-mcq-c.html">Introduction To C MCQ</a></li>
+												<li><a href="operators-mcq-c.html">Operators MCQ</a></li>
+												<li><a href="conditional-mcq-c.html">Conditional Statements MCQ</a></li>
+												<li><a href="loops-mcq-c.html">Loops MCQ</a></li>
+												<li><a href="array-mcq-c.html">Arrays MCQ</a></li>
+												<li><a href="function-mcq-c.html">Function MCQ</a></li>
+												<li><a href="structure-mcq-c.html">Structure MCQ</a></li>
+												<li><a href="pointer-mcq-c.html">Pointers MCQ</a></li>
+												<li><a href="files-mcq-c.html">Files MCQ</a></li>
+												<li><a href="storage-class-mcq-c.html">Storage classes MCQ</a></li>
+												<li><a href="dma-mcq-c.html">Dynamic Memory MCQ</a></li>
+												<li><a href="more-faqc.html">More MCQ</a></li>
+
+											</ul>
+									  </li>
+									</ul>
+								</nav>
+
+							<!-- Section   for activities -->
+								<section>
+									<header class="">
+										<div>
+										<p>
+
+										</p>	
+									</div>
+									
+
+									</header>
+									
+			
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">tech2dsm@gmail.com</a></li>
+										<!--<li class="icon solid fa-phone">-----</li>
+										<li class="icon solid fa-home"><br />
+										</li> -->
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Sankalan Data Tech. All rights reserved. </p>
+
+								</footer>
+
+
+						</div>
+					</div>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+	</body>
+</html>

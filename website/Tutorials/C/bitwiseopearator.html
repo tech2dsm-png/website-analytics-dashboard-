@@ -1,0 +1,989 @@
+<!DOCTYPE HTML>
+<!--
+	
+	
+	Free tutorials for personal and commercial use 
+-->
+<html>
+	<head>
+		 <title>Bitwise Operators in C Language: Comprehensive Guide with Examples</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="keywords" content="Bitwise operators in C, C programming, bitwise AND, bitwise OR, XOR operator, left shift operator, right shift operator, C programming examples, bit-level operations">
+		
+		<meta name="description" content="Learn about bitwise operators in C language, including types such as AND, OR, XOR, shift operators and more. Explore examples and C code to understand how bitwise operations work.">
+		<meta name="author" content="Sankalan Tech">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/intstyle.css" />
+		<link rel="canonical" href="https://www.sankalandtech.com/Tutorials/C/bitwiseopearator.html" />
+		<script>
+					document.addEventListener("contextmenu", function(event)
+					{
+						event.preventDefault();
+						    
+					}, false);
+		</script>
+	<script type="application/ld+json">
+			{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Bitwise Operators in C Language",
+  "description": "In this article, we discuss Bitwise operators and their types in C programming. Learn how to use Bitwise AND, OR, XOR, shift, and complement operators with examples.",
+  "author": {
+    "@type": "Person",
+    "name": "Sankalan Tech"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Sankalan Tech",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.sankalandtech.com/images/logo.png"
+    }
+  },
+  "datePublished": "2025-04-27",
+  "image": "https://www.sankalandtech.com/Tutorilas/C/images/bitwise-operators-in-c.jpg",
+  "mainEntityOfPage": "https://www.sankalandtech.com/Tutorials/C/bitwiseopearator.html"
+}
+		</script>
+
+		<style>
+				
+				ul {
+ 					  padding: 20px;
+ 					  
+ 					}
+				li {
+					 	 background: #cce5ff;
+ 						 color: darkblue;
+ 						 margin: 5px;
+					}
+					body {
+							background: #cce5ff;	
+					    } 					
+         		p  {
+           				 
+  						font-size: 18px;
+  						color: black;
+  						font-family: Georgia, serif;
+  						font-style: italic;
+  						display:block;
+  						margin-left: 1.2em;
+  						margin-bottom: 1em;
+  						margin-right: 1em;
+
+         			 }
+         			 .bgc{
+         			 	background-color: rgb(155,142,179);
+         			 }
+         		.responsive {
+         			       width: 100%;
+         			       height: auto;
+         			      }
+ 	        	img {
+  					border-radius: 15%;
+					}
+					div.dashed{
+         				border-style: solid;
+         				border-width: 3px;
+
+         			}
+					
+					
+​
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>C</strong> Language Skill UP</a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter">
+											<span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+
+									</ul>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											     <h1>Bitwise Operators in C Language</h1>
+											
+										</header>
+										<p> In this article, we are discussing the Bitwise operators and their types. Here, we will discuss all types of Bitwise operators used in C programming language.<br>
+										.<br> 
+										Bitwise operators in c programming are the special type of operators are generally used to perform operation on the at data bit level.When the operations perfomed on bit level then it is called bit level programming.
+										<br>
+										In the arithmetic-logic unit (which is within the CPU), mathematical operations like: addition, subtraction, multiplication and division are done in bit-level.<br>
+										<b class="bgc">C language use following types of Bitwise operators:</b><br>
+
+										<br>
+											1.&nbsp;<b> &</b> &nbsp;&nbsp;&nbsp;&nbsp; Bitwise AND Operator.<br>
+											2.&nbsp;<b> |</b> &nbsp;&nbsp;&nbsp;&nbsp; Bitwise OR  Operator.<br>
+											3.&nbsp;<b>^</b>&nbsp;&nbsp;&nbsp;&nbsp; Bitwise Exclusive OR Operator. <br>
+											4.&nbsp;<b><< </b> &nbsp;&nbsp;&nbsp;&nbsp; Bitwise Left shift Operator.<br>
+											5.&nbsp;<b> >> </b>&nbsp;&nbsp;&nbsp;&nbsp; Bitwise Right Shift Operator.<br>
+											6.&nbsp;<b>~</b> &nbsp;&nbsp;&nbsp;&nbsp; One's Compliment Operator. <br>
+
+
+										</p><article>
+										<p>
+											<b class="bgc">Let us learn The Bitwise   Operators:</b></br>
+											Bitwise operations are fast and simple,basic to higher-level arithmetic operations and directly supported by processor.<br>Bitwise operations are faster than normal addition,subtraction,multiplication and division.
+											<br>
+											Lets learn bitwise Operators one by one.<br>
+											<b class="bgc">1.<b> </b> &nbsp;&nbsp;&nbsp;&nbsp; 	&  Bitwise AND Operator</b><br> Bitwise AND operator is denoted by the single ampersand sign (&). Two integer operands are written on both sides of the (&) operator. If the corresponding bits of both the operands are 1, then the output of the bitwise AND operation is 1; otherwise, the output would be 0.<br>
+											Truth table for bitwise operators<br></p>
+										</article>
+										<article>
+											<p>&nbsp;a &nbsp;&nbsp;&nbsp; b&nbsp;&nbsp;&nbsp; a&b&nbsp;&nbsp;&nbsp; a|b &nbsp;&nbsp;&nbsp;a^b<br>
+												----------------------------<br>
+												&nbsp;0 &nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;0&nbsp;&nbsp;&nbsp; &nbsp&nbsp0 &nbsp;&nbsp&nbsp&nbsp;&nbsp;0<br>
+
+												----------------------------<br>
+												&nbsp;0 &nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;0&nbsp;&nbsp;&nbsp; &nbsp&nbsp1 &nbsp;&nbsp&nbsp&nbsp;&nbsp;1<br>
+
+												----------------------------<br>
+												&nbsp;1 &nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;0&nbsp;&nbsp;&nbsp; &nbsp&nbsp1 &nbsp;&nbsp&nbsp&nbsp;&nbsp;1<br>
+
+												----------------------------<br>
+												&nbsp;1 &nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;1&nbsp;&nbsp;&nbsp; &nbsp&nbsp1 &nbsp;&nbsp&nbsp&nbsp;&nbsp;0
+											</p>
+										</article>
+										<article>
+											<p>
+											<br> for example,<p>We have two variables a and b.<br>
+							a = 5;<br>
+							b = 3;<br>
+							The binary representation of the values of the two variables 5 and 3 is below:<br>
+							a = 0101<br>
+							b = 0011<br>
+							On performing the bitwise AND operation on the above two variables, that is, a&b, the output will be<br>
+							Result = 0001<br>
+							From the output above, one can see the matching of the bits of the two variables one after the other. If it is 1 in both variables, the output is 1; otherwise, 0.<br>
+												</p>
+								<div class="dashed scroll">
+								<h3 class="bgc"> C Program to show working of Bitwise AND & Operator</h3>
+													<p>
+									#include &lt;stdio.h&gt;  <br>
+									int main()  <br>
+									{  <br>
+											   int a=5, b=3,c;   &nbsp;/* integer variable declarations */ <br> 
+											   c=a&b;<br>
+											   printf("The output of the Bitwise AND operator a&b is %d",c); <br> 
+											   return 0;  <br>
+											}  <br>
+											Output:<br>
+											The output of the Bitwise AND operator a&b is 1<br>
+										In the above code, we have created and initilized three integer variables, i.e., a=5, b=3 and c=0 respectively. <br> The binary value of 'a' and 'b' are 0101 and 0011, respectively. When we apply the AND operator between these two variables,<br>
+										a & b = 0101 && 0011 = 0001</p>
+									</div>
+
+										<br>
+										</p>
+									</article>
+
+											
+
+
+										
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										
+									</header>
+									<div class="features">
+										<article>
+											<span class=""></span>
+											<div class="content">
+												
+												<p> <img src="images/bitwise-operators-in-c.jpg" class="responsive"/ alt=" Bitwise operators in C, bitwise AND (&), OR (|), XOR (^), left shift (<<), right shift (>>), and one's complement (~)">
+
+
+
+												</p>
+											</div>
+										</article>
+										<article>
+											<span class=""></span>
+											<div class="content">
+												
+												
+												<p><!-- content side by image -->
+
+												</p>
+											</div>
+										</article>
+										
+									<article><p>  Bitwise Operator Example<br>
+											<table border="1">
+													<tr><th> a</th><th> b</th><th> a&b</th><th> a|b</th><th> a&lt;&lt;b</th><th> a&gt;&gt;b</th>
+													</tr>
+													<tr>
+													<td>5
+													</td>
+													<td>3
+													</td>
+													<td>1
+													</td>
+													<td>7
+													</td>
+													<td>40
+													</td>
+													<td>0
+													</td>
+													</tr>
+													
+												</table>
+									</article>
+                                
+								</div>
+								<article>
+									<div>
+										
+											<hr><article> 
+										
+														<p><br>
+
+													 <b class="bgc">2.&nbsp;| Bitwise  OR  Operator</b><br>
+													 The bitwise OR operator is represented by a single vertical sign (|). Two integer operands are written on both sides of the (|) symbol. If the bit value of any of the operand is 1, then the output would be 1, otherwise 0.<br> 	
+											The result upon applying bitwise OR | becomes 1 if any one of of the operands  bit value is 1 . Otherwise, it returns  0 as the value.<br>
+											This type of operator returns 1 even when both or even one of the operand bit is 1 otherwise return 0. For instance, the p | q will return 1 when both or one of p and q  bit value is 1.
+											<br>
+											Syntax: &nbsp;&nbsp;&nbsp;(var1 | var2)<br>
+											e.g.  If c = 5 and d = 2 then, expression c|d equals to 7.
+
+											</p>
+											<div class="dashed scroll">
+											
+												<h3 class="bgc"> C Program to show working of Bitwise OR | Operator</h3><br><p>#include &lt;stdio.h&gt;  <br>
+											int main()  <br>
+											{  <br>
+											   int a=5, b=3,c=0;   &nbsp;/* integer variable declarations */ <br> 
+											   c=a|b;<br>
+											   printf("The output of the Bitwise OR operator a|b is %d",c); <br> 
+											   return 0;  <br>
+											}  <br>
+											Output:<br>
+											The output of the Bitwise OR operator a|b is 7<br>
+										In the above code, we have created and initilized three integer variables, i.e., a=5, b=3 and c=0 respectively. <br> The binary value of 'a' and 'b' are 0101 and 0011 respectively. When we apply the OR operator between these two variables,<br>
+										a | b = 0101 && 0011 = 0111</p>
+											</p>
+										</div>
+											</article><hr>
+											<article>
+												
+											  
+												<br>
+												<h3 class="bgc">3.&nbsp; Bitwise XOR Operator ^</h3><br>
+
+													<p>
+													Bitwise XOR (exclusive OR) ^ is an Operator  in C Programming  language that provides the answer 1 (true) if both of the bits in the operands are different .<br> If both of the bits are same then XOR (^) Operator gives the result 0(false).
+													The XOR Operator It is denoted by the Symbol ^.<br>
+													Let us  understand how XOR ^ Operator work by using Following example.<br>
+													10 = 00001010 (In Binary)<br>
+													12 = 00001100 (In Binary)<br><br>
+
+													Bitwise XOR Operation of 10 and 12<br>
+													  &nbsp;&nbsp;&nbsp;00001010<br>
+													^<br>
+													 &nbsp;&nbsp;&nbsp;00001100<br>
+													  &nbsp;&nbsp;&nbsp;________<br>
+													  &nbsp;&nbsp;&nbsp;00000110  = 6 (In decimal)<br>
+													Example : Bitwise XOR<br></p>
+													<div class="dashed scroll">
+														<h3 class="bgc">C Program to show working of Bitwise XOR ^ Operator</h3>
+													<p>
+													#include &lt;stdio.h&gt;<br>
+
+													int main()<br>
+													 {<br>
+
+													    int a = 10, b = 12;<br>
+													    printf("Result after using xor ^ Operator= %d", (a ^ b));<br>
+
+
+													    return 0;<br>
+													}<br>
+													Output<br>
+													
+													
+													Result after using xor ^ Operator= 6
+
+												</p>
+												</div>
+
+
+
+
+												
+											</article>
+											<article>
+												
+											</article>
+											<hr>
+											<article>
+												
+											  
+												<br>
+												<h3 class="bgc">4.&nbsp; Bitwise Left Shift Operator <<</h3><br>
+
+													<p>
+													Bitwise Left shift operator is  the logical bitwise and binary operator in C Programming.It is called binary operator because this operator operates on two positive integral Operands.<br>It shifts all bits towards left by a certain number of specified bits. The bit positions that have been vacated by the left shift operator are filled with 0. The symbol of the left shift operator is <<.<br>
+														<b>Syntax:&nbsp;&nbsp;	Operand << n</b><br>  
+														Where,<br> 
+														Operand is an integer expression on which we apply the left-shift operation.<br>
+														n is the number of bits to be shifted.<br>
+														Here n number of bits will be shifted to left side.<br>
+														 The 'n' bits on the left side will be popped out, and 'n' bits on the right-side are filled with 0.<br>
+														For example,<br>
+															Suppose we have a statement:  <br>
+															int a = 5;  <br>
+															The binary representation of 'a' is given below: <br> 
+															a = 0101  <br>
+															One thing we need to keep in mind that when we shift 1 bit Postion to the left then it becomes double and becomes half(neglects the fractional part) when shifted to right.<br>
+															If we want to left-shift the above representation by 2 to left, then the statement would be:  <br> 
+															a << 2;  <br>
+															0101<<2 = 00010100  <br>
+															Binary number 00010100 is 20 in decimal.<br>
+															<br>
+															<hr>
+												<h3 class="bgc">5.&nbsp; Bitwise Right Shift Operator >></h3><br>
+
+													<p>
+													Bitwise right shift operator is  the logical bitwise and binary operator in C Programming.It is called binary operator because this operator operates on two positive integral Operands.<br>It shifts all bits towards right by a certain number of specified bits. The symbol of the right shift operator is >>.<br>
+													When ever we perform this operation on an integer a with integer b the result obtained after always equal to division of 2^b.
+													<br>
+												For example 1.<br>
+													 a=40<br>
+													 b=1<br>
+													 a=a>>b<br>
+													 thus the result obtained will be 20.<br>
+													 a/2^1 --->   40/2--->20<br>
+
+
+														
+														For example 2<br>
+															Suppose we have a statement:  <br>
+															int a = 5;  <br>
+															The binary representation of 'a' is given below: <br> 
+															a = 0101  <br>
+															One thing we need to keep in mind that when we shift 1 bit Postion to the right then it becomes half (neglects the fractional part) <br>
+															If we want to shift the above representation by 1 to right, then the statement would be:  <br> 
+															a >> 1;  <br>
+															0101>>1 = 00000010  <br>
+															Binary number 00000010 is 2 in decimal.<br>
+													</p>
+<hr>
+
+													<h3 class="bgc">6.&nbsp;   Compliment Operator  ~ </h3><br>
+
+													<p>
+													Bitwise Complement Operator ~ also called One's Compliment Operator  ~ . It produce a bitwise one's complement of it's operand.<br>
+													Bitwise complement operator is a unary operator (works on only one operand). It changes 1 to 0 and 0 to 1. It is denoted by ~.
+													<br>
+															35 = 00100011 (In Binary)<br>
+
+															Bitwise complement Operation of 35<br>
+																~ 00100011 <br>
+														 		 ________<br>
+														 		 11011100  = 220 (In decimal)<br>
+														 		 <br>
+														 		 The bitwise complement of 35 (~35) is -36 instead of 220, but why?<br>
+									For any integer n, bitwise complement of n will be -(n + 1). To understand this, you should have the knowledge of 2's complement.<br>
+									<b>2's Complement</b><br>
+									Two's complement is an operation on binary numbers. The 2's complement of a number is equal to the complement of that number plus 1<br>
+									The bitwise complement of 35 is 220 (in decimal). The 2's complement of 220 is -36. Hence, the output is -36 instead of 220.
+									Bitwise Complement of Any Number N is -(N+1). <br><b>Here's how:</b><br>
+									bitwise complement of N = ~N (represented in 2's complement form)<br>
+									2'complement of ~N= -(~(~N)+1) = -(N+1)
+
+
+
+
+
+													<br>
+																								
+											</article>
+
+									</div>
+								</article>
+										<br>
+										</article>
+											<br>
+											<article>
+									<article>
+									<div>
+										<div class="dashed scroll">
+												<h3 class="bgc"> C Program to demonstrate Working of Bitwise Operator.</h2><br>
+												<p>
+													/*This C program that shows how Bitwise &,|,~,^,>>,<< operators  works.< */br>
+
+											#include &lt;stdio.h&gt;<br>
+											int main()<br>
+											{<br>
+											    /* a = 5 binary of 5 is 00000101  <br>
+											       b = 9 binary of 9 is 00001001 */<br>
+											    unsigned char a = 5, b = 9;<br>
+											 
+											    
+											    printf("a = %d, b = %d\n", a, b);<br>
+											    printf("a&b = %d\n", a & b); <br>
+											    
+											    printf("a|b = %d\n", a | b); <br> 
+											 
+											    
+											    printf("a^b = %d\n", a ^ b); <br>   
+											 
+											    
+											    printf("~a = %d\n", a = ~a);  <br>   
+											 
+											    
+											    printf("b<<1 = %d\n", b << 1); <br>   
+											 
+											    
+											    printf("b>>1 = %d\n", b >> 1);  <br> 
+											 
+											    return 0;<br>
+											   
+											}<br>
+
+												
+											
+										<br>
+	    										    <b>Output:</b>
+	    										    <br>
+	    										a = 5<br>
+	    										b = 9 <br>
+											    a&b = 1<br> 
+											    
+											    a|b = 13  <br>
+											 
+											    a^b = 12<br> 
+											 
+											    
+											    ~a = -6<br>    
+											 
+											    
+											    b<<1 =18 <br>    
+											 
+											    
+											    b>>1 = 4<br> 
+
+												</div><hr><p>
+	    										    
+	    										    <b class="bgc"> Program Explanation:</b><br><br>
+	    										    In this program, we have declared and initialized two variables, a = 5 and b = 9.<br> Let's break down the code and explain the results step-by-step.<br>
+
+													Initial Values:<br>
+													a = 5<br>
+													In binary, a is represented as 00000101.<br>
+
+													b = 9<br>
+													In binary, b is represented as 00001001.<br>
+
+													Now, let's explore how different bitwise operators work with these two values.<br>
+													<b>1. Bitwise AND (a & b)</b><br>
+							Result: a & b = 1<br>
+
+							The bitwise AND operator compares the corresponding bits of two numbers. For each position, the result is 1 if both bits are 1; otherwise, the result is 0.<br>
+
+							Let's break down how the operation a & b = 1 works:<br>
+
+							a = 00000101<br>
+
+							b = 00001001<br>
+
+							Now, let's perform the AND operation:<br>
+
+
+							   a = 00000101  <br>
+							   b = 00001001 <br> 
+							   ----------------<br>
+							   a & b = 00000001  (which is 1 in decimal)<br>
+							So, the output of a & b is 1.<br>
+
+							Note:<br>
+							The AND operation produces a 1 only when both bits in the corresponding positions are 1. Otherwise, the result is 0.<br>
+							<br>
+							<b>2. Bitwise OR (a | b)</b><br>
+						Result: a | b = 13<br>
+
+						The bitwise OR operator compares the bits of two numbers. For each bit position, the result is 1 if at least one of the corresponding bits is 1; otherwise, the result is 0.<br>
+
+						Let's see how the operation a | b = 13 works:<br>
+
+						a = 00000101<br>
+
+						b = 00001001<br>
+
+						Performing the OR operation:<br>
+
+
+						   a = 00000101  <br>
+						   b = 00001001 <br> 
+						   ----------------<br>
+						   a | b = 00001101  (which is 13 in decimal)<br>
+						So, the output of a | b is 13.<br>
+
+						Note:<br>
+						The OR operation produces a 1 if at least one of the bits in the corresponding positions is 1.<br>
+						<br>
+
+
+					<b>3. Bitwise XOR (a ^ b)</b><br>
+					Result: a ^ b = 12<br>
+
+					The bitwise XOR operator compares two bits and returns 1 if the bits are different, and 0 if they are the same. This operation is quite useful for tasks such as flipping bits.<br>
+
+					Let's explore how a ^ b = 12 works:<br>
+
+					a = 00000101<br>
+
+					b = 00001001<br>
+
+					Performing the XOR operation:<br>
+
+
+					   a = 00000101  <br>
+					   b = 00001001 <br> 
+					   ----------------<br>
+					   a ^ b = 00001100  (which is 12 in decimal)<br>
+					So, the output of a ^ b is 12.<br>
+
+					Note:<br>
+					The XOR operation produces a 1 if the corresponding bits are different and a 0 if they are the same. It's like comparing two bits and flipping the result based on their inequality.
+					<br>
+					<br>
+
+
+					<b>4. Left Shift (b << 1)</b><br>
+					Result: b << 1 = 18<br>
+
+					The left shift operator (<<) shifts the bits of a number to the left by a specified number of positions, filling the vacant positions on the right with zeros. This operation essentially multiplies the number by 2 for each shift.<br>
+
+					Let's see how b << 1 = 18 works:<br>
+
+					b = 00001001 (which is 9 in decimal)<br>
+
+					When we shift the bits of b one position to the left, we get:<br>
+
+
+					   b = 00001001  <br>
+					   After shifting left:<br>  
+					   b << 1 = 00010010  (which is 18 in decimal)<br>
+					So, the output of b << 1 is 18.<br><br>
+								
+						<b>5. Right Shift (b >> 1)</b><br>
+						Result: b >> 1 = 4<br>
+
+						The right shift operator (>>) shifts the bits of a number to the right by a specified number of positions, discarding the bits that are shifted out, and filling the vacant positions on the left with zeros.<br>
+
+						Let's see how b >> 1 = 4 works:<br>
+
+						b = 00001001 (which is 9 in decimal)<br>
+
+						When we shift the bits of b one position to the right, we get:<br>
+
+
+						   b = 00001001  <br>
+						   After shifting right:  <br>
+						   b >> 1 = 00000100  (which is 4 in decimal)<br>
+						So, the output of b >> 1 is 4.				 
+
+
+			                          </p>
+
+
+									</div>	
+								</article>
+									<article>
+										<div>
+											<p>
+											
+											</p>
+										</div>
+									</article>
+									<hr>
+											<div>						
+											<p>
+											Previous Topic:--&gt;&gt;<a href="logicaloperator.html"> Logical Operators</a>&nbsp;||&nbsp;Next topic:--&gt;&gt;<a href="otheropearator.html">? ,* ,&,sizeof() Operators</a>
+										</p>					
+									</div>
+									<hr>
+								</section>
+
+							<!-- Section -->
+								
+
+						</div>
+						<div>
+				<!-- footer menu -->
+			</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<section>
+									<header class="">
+										<div>
+										<p>
+
+</p>	
+									</div>
+									
+
+									</header>
+									
+			
+								</section>
+							<!-- Section -->
+								
+
+							<!-- Section -->
+
+							<!-- Search -->
+								<!--<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form> 
+								</section> -->
+
+							<!-- Menu -->
+								
+								<nav id="menu">
+									<header class="major">
+										<h2>C Language</h2>
+									</header>
+									<ul>
+										<li><a href="../index.html">Home</a></li>
+										<li><a href="whyC.html">Why C Language</a></li>
+										<li><a href="historyC.html">History of C Language</a></li>
+										<li><a href="ApplicationsC.html">Applications of C Language</a>
+										</li>
+										<li>
+											<span class="opener">Introduction To C</span>
+											<ul><li><a href="whatisprogram.html">What is Program?</a></li>
+												<li><a href="cprogramstructure.html">Structure of C Program</a></li>
+												<li><a href="Cprogram.html">Working Of C Program</a></li>
+												<li><a href="CLanguageChar.html">CHARACTER SET </a></li>
+												<li><a href="c-variable-identifier.html">VARIABLES AND IDENTIFIERS </a></li>
+												<li><a href="c-datatype.html">BUILT-IN DATA TYPES </a></li>
+												
+												<li><a href="operators.html">OPERATORS AND EXPRESSIONS </a></li>
+												<li><a href="constant.html">CONSTANTS AND LITERALS</a></li>
+												<li><a href="assignment.html"> SIMPLE ASSIGNMENT STATEMENT </a></li>
+												<li><a href="inputoutput.html">BASIC INPUT/OUTPUT STATEMENT </a></li>
+												<li><a href="cprograms.html">SIMPLE 'C' PROGRAMS</a></li>
+												<li><a href="assignments-intro1.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Operators in C Programming </span>
+											<ul>
+											<li><a href="arithmatic-operators-c.html">Arithmetic Operators </a></li>
+												<li><a href="assignment-operators-c.html">Assignment Operators </a></li>
+												<li><a href="increment-decrement-operator-c.html">Increment and Decrement Operators</a></li>
+												<li><a href="relationaloperator.html">Relational Operators </a></li>
+												<li><a href="logicaloperator.html">Logical Operators</a></li>
+											 <li><a href="bitwiseopearator.html">Bitwise Operators </a></li>
+											 <li><a href="otheropearator.html">Other Operators </a></li>
+											 <li><a href="opearatorassignments.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">CONDITIONAL STATEMENTS</span>
+											<ul>
+												<li><a href="c-decision.html">DECISION MAKING WITHIN A PROGRAM</a></li>
+												<li><a href="c-condtions.html"> CONDITIONS</a></li>
+												<li><a href="c-if.html">IF STATEMENT </a></li>
+												<li><a href="c-ifelse.html">IF-ELSE STATEMENT</a></li>
+												<li><a href="c-ifelseladder.html">IF-ELSE LADDER</a></li>
+												<li><a href="c-nestedif.html">NESTED IF-ELSE </a></li>
+												<li><a href="c-switch.html">SWITCH CASE </a></li>
+												<li><a href="conditional-stmt-assign-c.html">Assignments</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">LOOPS STATEMENTS</span>
+											<ul>
+												<li><a href="loops-intro.html">Introduction to Loops</a></li>
+												<li><a href="c-goto.html"> GO TO Statement</a></li>
+												<li><a href="c-dowhile-loop.html"> Do while Loop </a></li>
+												<li><a href="c-while-loop.html">While Loop </a></li>
+												<li><a href="c-nested-while.html">Nested While Loop </a></li>
+												<li><a href="c-diff-while-dowhile.html">Difference Between While and Do while</a></li>
+												<li><a href="c-difference-goto-loop.html">Difference Between Goto and loop</a></li>
+												<li><a href="c-while-loop-assign.html"> while loop assignments</a></li>
+												<li><a href="c-for.html">C FOR Loop</a></li>
+												<li><a href="c-for-example.html">C For loop examples </a></li>
+												<li><a href="c-nested-for.html">Nested for loop</a></li>
+												<li><a href="nested-while-loop-c.html">Nested for loop examples </a></li>
+												<li><a href="infinite-while-loop-c.html">Infinite while Loops</a></li>
+												<li><a href="infinite-for-loop-c.html"> Infinite for Loops </a></li>
+												<li><a href="continue-c.html">Continue in Loops </a></li>
+												<li><a href="break-c.html">break in Loops </a></li>
+												<li><a href="while-vs-dowhile-vs-for-c.html">difference while do..while & for </a></li>
+												<li><a href="loop-assignment-c.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Arrays</span>
+											<ul>
+												<li><a href="one-d-array-c.html">One Dimensional Array</a></li>
+												<li><a href="declare-array-c.html">Declaring 1D Arrays</a></li>
+												<li><a href="initilize-array-c.html">Initilization of 1D arrays</a>
+												</li>
+												<li><a href="access-array-c.html">Accessing element of one 1D Array</a></li>
+												<li><a href="read-array-c.html">Read and Display 1D Arrays</a></li>
+												<li><a href="two-d-array.html">Two Dimensional Arrays</a></li>
+												<li><a href="declare-2d-array-c.html">Declare 2D Arrays</a></li>
+												<li><a href="read-2d-array.html">Read and Display 2D Arrays</a></li>
+												<li><a href="array-assignments.html">Assignments/Examples</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Functions</span>
+											<ul>
+												<li><a href="function-intro-c.html">Introduction</a></li>
+												<li><a href="user-defined-function-c.html">Need For User-Defined Function</a></li>
+												<li><a href="multiple-fun-program-c.html">Multiple Function Program</a></li>
+												
+												<li><a href="modular-programming-c.html">Modular Programming</a></li>
+												<li><a href="element-user-defined-fun-c.html">Elements Of User Defined Function</a></li>
+												<li><a href="function-definition-c.html">Function Definition</a></li>
+												</li>
+												<li><a href="function-declaration-c.html">Function Declaration</a></li>
+												</li>
+												<li><a href="types-of-function-c.html">Types of functions</a></li>
+												</li>
+												<li><a href="nesting-function-c.html">Nesting of Function</a></li>
+												<li><a href="recursion-c.html">Recursion</a></li>
+												<li><a href="passing-array-function-c.html">Passing Array To Functions</a></li>
+												<li><a href="visibility-scope-var-c.html">Scope,Visibility and Lifetime of Variables</a></li>
+												<li><a href="function-assignment-c.html">Assignments</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Structure</span>
+											<ul>
+												<li><a href="structure-intro-c.html">Introduction</a></li>
+												<li><a href="array-vs-structure-c.html">Array vs Structure</a></li>
+												<li><a href="define-structure-c.html">Defining Structure</a></li>
+												<li><a href="declare-structure-var-c.html">Declaring Structure Variables</a></li>
+												<li><a href="type-def-struct-c.html">Type Defined Structure</a></li>
+												<li><a href="access-struct-member-c.html">Accessing Structure Members</a></li>
+												<li><a href="struct-initilization-c.html">Structure Initilization</a></li>
+												<li><a href="copy-compare-struct-c.html">Copying & Comparing Structure Variables</a></li>
+												<li><a href="array-struct-c.html">Array of Structure</a></li>
+												<li><a href="array-within-struct-c.html">Arrays Within Structure</a></li>
+												<li><a href="struct-within-struct-c.html">Structures Within Structures</a></li>
+												<li><a href="struct-and-function-c.html">Structures and Functions</a></li>
+												<li><a href="struct-assignment-c.html">Structure Examples/Assignments</a></li>
+											</ul>
+									  </li>
+										<li>
+
+
+											<span class="opener">Union</span>
+											<ul>
+												<li><a href="define-union-c.html">Define Union</a></li>
+												<li><a href="create-union-c.html">Create and use Union</a></li>
+												<li><a href="diff-struct-union-c.html">Difference Between Structure and Union</a></li>
+												<li><a href="union-c-example.html">Union Examples</a></li>
+												<li><a href="union-c-faq.html">Union FAQ</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Pointers</span>
+											<ul>
+												<li><a href="what-is-pointer-c.html">What Are Pointers In C?</a></li>
+												<li><a href="how-use-pointer-c.html">How Do We Use Pointers In C?</a></li>
+												<li><a href="declare-pointer-c.html">Declaration Of A Pointer</a></li>
+												<li><a href="pointer-init-c.html">The Initialization Of A Pointer</a></li>
+												<li><a href="pointer-syntax-init.html">Syntax Of Pointer Initialization</a></li>
+												<li><a href="use-pointer-c.html">Use Of Pointers In C</a></li>
+												<li><a href="pointer-to-array-c.html">The Pointer To An Array</a></li>
+												<li><a href="pointer-to-function-c.html">The Pointer To A Function</a></li>
+												<li><a href="pointer-to-struct-c.html">The Pointer To A Structure</a></li>
+												<li><a href="types-pointer-c.html">Types Of Pointers</a></li>
+												<li><a href="null-pointer-c.html">The Null Pointer</a></li>
+												<li><a href="void-pointer-c.html">The Void Pointer</a></li>
+												<li><a href="wild-pointer-c.html">The Wild Pointer</a></li>
+												<li><a href="near-pointer-c.html">The Near Pointer</a></li>
+												<li><a href="huge-pointer-c.html">The Huge Pointer</a></li>
+												<li><a href="far-pointer-c.html">The far Pointer</a></li>
+												<li><a href="dangling-pointer-c.html">dangling pointer </a></li>
+												<li><a href="access-pointer-c.html">Accessing Pointers- Indirectly And Directly</a></li>
+												<li><a href="pros-pointer-c.html">Pros Of Using Pointers In C</a></li>
+												<li><a href="cons-pointer-c.html">Cons Of Pointers In C</a></li>
+												<li><a href="application-pointer-c.html">Applications Of Pointers In C</a></li>
+												<li><a href="address-operator-c.html">The & Address Of Operator In C</a></li>
+												<li><a href="complex-pointer-c.html">How To Read The Complex Pointers In C?</a></li>
+												<li><a href="practice-pointer-c.html">Practice Problems On Pointers </a></li>
+												
+												
+											</ul>
+									  </li>
+
+
+ 									<li>
+											<span class="opener">File Processiong</span>
+											<ul>
+												<li><a href="file-intro-c.html">File Handling In C</a></li>
+												<li><a href="types-file-c.html">Types Of Files In C </a></li>
+												<li><a href="operation-file-c.html">Operations Done In File Handling</a></li>
+												<li><a href="file-example-c.html">File Examples</a></li>
+												<li><a href="binary-file-c.html"> Binary Files</a></li>
+												<li><a href="file-count-word-line-c.html">count words,lines in a file</a></li>
+												<li><a href="copy-file-c.html">Copy files</a></li>
+												<li><a href="update-file-c.html">Update File</a></li>
+												<li><a href="count-vowels-file-c.html">count vowels in a file</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Preprocessor</span>
+											<ul>
+												<li><a href="macro-sub-div-c.html">Macro substitution division</a></li>
+												<li><a href="file-inclusion-c.html">File Inclusion</a></li>
+												<li><a href="conditional-compile-c.html">Conditional Compilation</a></li>
+												<li><a href="other-dir-c.html">Other directives</a></li>
+												<li><a href="preprocessor-example-c.html">Examples</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Dynamic Memory Allocation</span>
+											<ul>
+												<li><a href="malloc-c.html">malloc</a></li>
+												<li><a href="calloc-c.html">calloc</a></li>
+												<li><a href="free-c.html">free</a></li>
+												<li><a href="realloc-c.html">realloc</a></li>
+												<li><a href="dynamic-mem-example-c.html">Examples</a></li>
+											</ul>
+									  </li>
+										<li><a href="storage-class-c.html">Storage Classes</a></li>
+										<li><a href="graphics-c.html">Graphics</a></li>
+										<li>
+											<span class="opener">Frequently Asked Interview Questions
+										(FAQ)</span>
+											<ul>
+												<li><a href="intro-c-faq-c.html">Introduction To C FAQ</a></li>
+												<li><a href="operators-c-faq.html">Operators FAQ</a></li>
+												<li><a href="conditional-stmt-c-faq.html">Conditional Statements FAQ</a></li>
+												<li><a href="loop-faq-c.html">Loops FAQ</a></li>
+												<li><a href="array-faq-c.html">Arrays FAQ</a></li>
+												<li><a href="function-faq-c.html">Function FAQ</a></li>
+												<li><a href="structure-faq-c.html">Structure FAQ</a></li>
+												<li><a href="pointer-faq-c.html">Pointers FAQ</a></li>
+												<li><a href="files-faq-c.html">Files FAQ</a></li>
+												<li><a href="storage-class-faq-c.html">Storage classes FAQ</a></li>
+												<li><a href="dma-faq-c.html">Dynamic Memory FAQ</a></li>
+												
+
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Programs/Assignments</span>
+											<ul>
+												<li><a href="intro-assign-c.html">Introduction To C </a></li>
+												<li><a href="operators-assign-c.html">Operators </a></li>
+												<li><a href="conditional-stmt-assign-c.html">Conditional Statements </a></li>
+												<li><a href="loop-assign-c.html">Loops </a></li>
+												<li><a href="array-assign-c.html">Arrays </a></li>
+												<li><a href="function-assign-c.html">Function </a></li>
+												<li><a href="structure-assign-c.html">Structure </a></li>
+												<li><a href="pointer-assign-c.html">Pointers </a></li>
+												<li><a href="file-assign-c.html">Files </a></li>
+												<li><a href="storage-class-assign-c.html">Storage classes </a></li>
+												<li><a href="dma-assign-c.html">Dynamic Memory </a></li>
+												
+
+											</ul>
+									  </li>
+										<li><a href="case-studies-c.html">Case Studies</a></li>
+										<li>
+											<span class="opener">Multiple Choice Questions</span>
+											<ul>
+												<li><a href="intro-mcq-c.html">Introduction To C MCQ</a></li>
+												<li><a href="operators-mcq-c.html">Operators MCQ</a></li>
+												<li><a href="conditional-mcq-c.html">Conditional Statements MCQ</a></li>
+												<li><a href="loops-mcq-c.html">Loops MCQ</a></li>
+												<li><a href="array-mcq-c.html">Arrays MCQ</a></li>
+												<li><a href="function-mcq-c.html">Function MCQ</a></li>
+												<li><a href="structure-mcq-c.html">Structure MCQ</a></li>
+												<li><a href="pointer-mcq-c.html">Pointers MCQ</a></li>
+												<li><a href="files-mcq-c.html">Files MCQ</a></li>
+												<li><a href="storage-class-mcq-c.html">Storage classes MCQ</a></li>
+												<li><a href="dma-mcq-c.html">Dynamic Memory MCQ</a></li>
+												<li><a href="more-faqc.html">More MCQ</a></li>
+
+											</ul>
+									  </li>
+									</ul>
+								</nav>
+							<!-- Section   for activities -->
+								<section>
+									<header class="">
+										<div>
+										<p>
+
+										</p>	
+									</div>
+									
+
+									</header>
+									
+			
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">tech2dsm@gmail.com</a></li>
+										<!--<li class="icon solid fa-phone">-----</li>
+										<li class="icon solid fa-home"><br />
+										</li> -->
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Sankalan Data Technologies. All rights reserved. </p>
+
+								</footer>
+
+
+						</div>
+					</div>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+	</body>
+</html>

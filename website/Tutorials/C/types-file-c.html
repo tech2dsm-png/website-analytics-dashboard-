@@ -1,0 +1,712 @@
+<!DOCTYPE HTML>
+<!--
+	
+	
+	
+-->
+<html>
+	<head>
+		<title>Types of files  in C programming.  </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="keywords" content="types of file,c,language,file handling in c">
+		
+		<meta name="description" content=" In C Programming Language, there are two types of files categorised based on their data storage format.Text Files and Binary Files. "/>
+
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/intstyle.css" />
+		
+		<script>
+					document.addEventListener("contextmenu", function(event)
+					{
+						event.preventDefault();
+						    
+					}, false);
+		</script> 
+		<style>
+				
+				ul {
+ 					  padding: 20px;
+ 					   background: #cce5ff;
+ 					  
+ 					}
+				li {
+					 	 background: #cce5ff;
+ 						 color: darkblue;
+ 						 margin: 5px;
+					}
+					body {
+							background: #cce5ff;	
+					    } 					
+         		p  {
+           				 
+  						font-size: 19px;
+  						color: black;
+  						font-family: Georgia, serif;
+  						font-style: italic;
+  						display:block;
+  						margin-left: .1em;
+  						margin-bottom: 1em;
+  						margin-right: .1em;
+
+         			 }
+         			 .bgc{
+         			 	background-color: rgb(155,142,179);
+         			 }
+         		.responsive {
+         			       width: 100%;
+         			       height: auto;
+         			      }
+ 	        	img {
+  					border-radius: 12%;
+
+					  max-width: 100%;
+					  height: auto;
+					  float: right;
+
+					}
+					div.dashed{
+         				border-style: solid;
+         				border-width: 3px;
+
+         			}
+         			div.dashed2{
+         				overflow-x: auto;
+        				overflow-y: hidden;
+        				white-space: nowrap;
+        				border-style: solid;
+         				border-width: 2.5px;
+
+
+         			}
+         			.scrl{
+         				overflow-x: auto;
+        				overflow-y: hidden;
+
+        				border-style: solid;
+         				border-width: 2.5px;
+
+
+         			}
+         			
+					hr {
+  								border: 2px solid #DAA520;
+							}
+					
+​
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="" class="logo"><strong> Types of files  in C programming.   </strong> </a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter">
+											<span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+
+									</ul>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											
+											
+										</header>
+										<article>
+											<h1 class="bgc">Types of files  in C programming.   </h1>
+											<p>
+												<b class="bgc">Types of Files :</b><br>&emsp;In C Programming Language, there are two types of files categorised based on their data storage format.<br>
+												1. Text Files:<br>
+												2. Binary Files.<br>
+												<br>
+												<b class="bgc">1.	Text files:</b><br>
+									In the context of C programming, a text file is a type of computer file that stores human-readable information using ASCII (American Standard Code for Information Interchange). This means that each character in the file, including letters, numbers, symbols and punctuation marks, is represented by one byte.<br>
+									     These files contain data in the form of plain text. Each line of text in a text file usually ends with a newline character ('\n').<br>
+									Text files are human-readable and editable using any text editor. They are generally saved with file extensions like .txt, .cpp, .c, or .java.
+
+												</p>
+												
+																																	
+											</article>
+                                            
+
+											    
+											
+										<article>
+											<p> 								
+
+											</p>
+										</article>
+										
+									
+										
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										
+									</header>
+									<div>
+										<article>
+											
+											<div >
+												
+										<p> <img src="images/types-files-in-c.jpg" width="430" height="340" alt="Types of files in C language are ,Text Files and Binary Files. ">
+
+
+ 
+												</p>
+											</div>
+										</article>
+										
+										
+									
+									
+									<article>											
+				<b class="bgc">Basic features of text files: </b><br>
+				<p>  <b class="bgc">    a. Readability:</b><br>&emsp; File Can be opened and viewed directly using any standard text      editor such as Notepad or TextEdit. What you see on the screen is what appears as plain text.<br>
+			   <b class="bgc">   b. Content:</b><br>&emsp; Most text-based content is stored with source code (.c, .cpp, .h), configuration files, log files, or any information that users want to understand.<br>
+
+				<b class="bgc">   c.Structure:</b><br>&emsp; Text is organized into lines, each ending with a special character (\n) indicating the end of the line. This is different from how the text looks visually, where the line spacing for the text can be adjusted.<br>
+
+				<b class="bgc">   d. C Functions:</b><br>&emsp; C Language provides various functions like fscanf, fopen, fgets, fprintf and fputs to work with text files. These functions allow you to open, write, read and manipulate text information in a file.
+			
+
+										</p>
+											
+										</article>
+										<article>
+											<p>
+												<b class="bgc">Read data from existing files:</b><br> The program can access and process information stored in files. Programs can read and access data from existing files using file handling. This involves: <br>
+												1.	Opening the file  using fopen().<br>
+												2.	Reading data in chunks using  fscanf()or fread() .<br>
+												3.	Processing the  data (disp laying, calculations, etc.).<br>
+												4.	Checking for errors if the file cannot be opened.<br>
+												5.	Closing the file using fclose().<br>
+												These programs allow you to read contents in  files from computers, and allow you to perform the operations for various reasons.
+
+											</p>
+										</article>
+										<article>
+											<p>
+											</p>
+										</article>
+							<hr>
+							     <article>
+							     	<h2 class="bgc">2. Binary files:</h2>
+							     	<p>
+							     		In the broader context of computers, a binary file is a type of computer file that stores information in a non-human-readable format. Unlike text files, which use characters such as letters and numbers, binary files use a sequence of bytes to represent data.<br>
+							     		meaning they use sequences of 0s and 1s to represent various data types like numbers, images, or audio.<br>
+							     		Binary files are not directly human-readable, because the file format requires their contents to be interpreted by a specific program or library. They may have different extensions depending on the data they contain (for example,.mp3 for audio, .jpg for images,.exe for executable programs).
+							     	</p>
+
+
+								
+									
+							
+
+							</article>
+							<article>
+							<p>
+								<b class="bgc">Real Use Cases:</b>
+								Storing images, audio, video files<br>
+								Storing scientific data<br>
+								Executable program files<br>
+								Saving program data (e.g., game progress)<br>
+
+								Example: <br>
+								An image file named "c-language.jpg" will contain binary data representing the color information of the image, which cannot be directly understood by humans.
+
+							</p>
+								
+							</article>
+									
+																		
+																	
+
+										
+									<article><br>
+										<p>
+
+									</p>
+										
+									</article>
+									
+																		
+										<article>
+											<h3 class="bgc">	Features of binary files:</h3>
+										<p>
+											<b class="bgc">Unreadable by humans:</b> They store data using raw bytes instead of characters which cannot be directly understood by humans.<br>
+
+											<b class="bgc">Variable Structure:</b> Unlike the well-defined structure of text files (lines and characters), binary files can have different internal structures depending on the format. Some may have headers with metadata, others may be plain and contain no additional information.<br>
+											<b class="bgc">Efficient storage.</b> By using raw data, they provide more compact storage than text files, especially for complex data such as images, audio files, or numeric arrays.
+
+										<b class="bgc">Platform independence:</b> Text files can be more platform independent than text files requiring specific encoding, although some formats may require special software to be interpreted on different platforms.
+
+
+
+
+										</p>
+									
+									</article><article>
+											
+										<p>
+										</p>
+									
+									</article><article>
+											
+										<p><b class="bgc">summary:</b> understanding the difference between binary and text files in C Programming Language is important to choosing the right file type for your specific needs and to ensure that your program stores and retrieves data efficiently.
+
+
+										</p>
+									
+									</article>
+										<hr>
+										
+										
+								
+											<div>
+																
+											<p>
+											Previous Topic:--&gt;&gt;<a href="file-intro-c.html"> File Handling in C.</a>&nbsp;||&nbsp;Next topic:--&gt;&gt;<a href="operation-file-c.html">File Operaions.</a><br>
+											</p>
+											<div class="dashed">
+
+												
+													<p class="p"> <b>&emsp;&emsp;Other Topics:</b><br>
+											<a href="c-variable-identifier.html">Variables and Identifiers</a>&emsp;
+											<a href="relationaloperator.html">Relational Operators </a>&emsp;
+											<a href="c-ifelse.html">if-else statements</a>&emsp;
+											<a href="c-switch.html">Switch case </a>&emsp;
+											<a href="c-while-loop.html">While Loop </a>&emsp;
+											<a href="infinite-while-loop-c.html">Infinite while Loops</a>&emsp;
+											<a href="c-for.html">C FOR Loop</a>&emsp;
+											<a href="infinite-for-loop-c.html"> Infinite for Loops </a>&emsp;
+											<a href="continue-c.html">Continue in Loops </a>&emsp;
+											<a href="one-d-array-c.html">One Dimensional Array</a>&emsp;
+											<a href="two-d-array.html">Two Dimensional Arrays</a>&emsp;
+											<a href="read-2d-array.html">Read and Display 2D Arrays</a>&emsp;
+											<a href="types-of-function-c.html">Types of functions</a>&emsp;
+											<a href="passing-array-function-c.html">Passing Array To Functions</a>&emsp;
+											<a href="nesting-function-c.html">Nesting of Function</a>&emsp;
+											<a href="array-vs-structure-c.html">Array vs Structure</a>&emsp;
+											<a href="array-struct-c.html">Array of Structure</a>&emsp;
+											<a href="struct-and-function-c.html">Structures and Functions</a>&emsp;
+											<a href="struct-within-struct-c.html">Structures Within Structures</a>&emsp;
+											<a href="use-pointer-c.html">Use Of Pointers In C</a>&emsp;
+											<a href="file-intro-c.html">File Handling In C</a>&emsp;
+											<a href="loop-faq-c.html">Loops FAQ</a>&emsp;
+											<a href="array-faq-c.html">Arrays FAQ</a>&emsp;
+											<a href="count-vowels-file-c.html">count vowels in a file</a>&emsp;
+										    <a href="function-faq-c.html">Function FAQ</a> &emsp;
+										    <a href="conditional-stmt-assign-c.html">Conditional Statements Assignments</a>&emsp;
+												<a href="c-for-example.html">For Loops Assignments</a>&emsp;
+												<a href="array-assign-c.html">Arrays Assignments</a>&emsp;
+												<a href="function-assign-c.html">Function Assignments</a>&emsp;
+												<a href="structure-assign-c.html">Structure Assignments</a>&emsp;
+												<a href="pointer-assign-c.html">Pointers Assignments</a>&emsp;
+												<a href="file-assign-c.html">Files Assignments</a>&emsp;
+												<a href="storage-class-assign-c.html">Storage classes Assignments</a>&emsp;
+												<a href="binary-file-c.html"> Binary Files</a>&emsp;
+												<a href="file-count-word-line-c.html">count words,lines in a file</a>&emsp;
+												<a href="copy-file-c.html">Copy files</a>&emsp;
+												<a href="update-file-c.html">Update File</a>&emsp;
+												<a href="continue-c.html">Continue in Loops </a>&emsp;
+												<a href="break-c.html">break in Loops </a>&emsp;
+												<a href="c-diff-while-dowhile.html">Difference Between While and Do while</a>&emsp;
+												<a href="while-vs-dowhile-vs-for-c.html">difference while do..while & for </a>&emsp;
+												<a href="malloc-c.html">malloc</a>&emsp;
+												<a href="calloc-c.html">calloc</a>&emsp;
+												<a href="storage-class-c.html">Storage Classes</a>&emsp;
+												<a href="operators-mcq-c.html">Operators MCQ</a>&emsp;
+												<a href="conditional-mcq-c.html">Conditional Statements MCQ</a>&emsp;
+												<a href="loops-mcq-c.html">Loops MCQ</a>&emsp;
+												<a href="array-mcq-c.html">Arrays MCQ</a>&emsp;
+												<a href="function-mcq-c.html">Function MCQ</a>&emsp;
+												<a href="structure-mcq-c.html">Structure MCQ</a>&emsp;
+												<a href="pointer-mcq-c.html">Pointers MCQ</a>&emsp;
+												<a href="files-mcq-c.html">Files MCQ</a>&emsp;
+												<a href="storage-class-mcq-c.html">Storage classes MCQ</a>
+											
+											
+										</p>					
+									</div>
+															
+									</div>
+								</section>
+
+							<!-- Section -->
+								
+
+						</div>
+						<div>
+				<!-- footer menu -->
+			</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<section>
+									<header class="">
+										<div>
+										<p>
+
+</p>	
+									</div>
+									
+
+									</header>
+									
+			
+								</section>
+							<!-- Section -->
+								
+
+							<!-- Section -->
+
+							<!-- Search -->
+								<!--<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form> 
+								</section> -->
+
+							<!-- Menu -->
+								
+								<nav id="menu">
+									<header class="major">
+										<h2>C Language</h2>
+									</header>
+									<ul>
+										<li><a href="../index.html">Home</a></li>
+										<li><a href="whyC.html">Why C Language</a></li>
+										<li><a href="historyC.html">History of C Language</a></li>
+										<li><a href="ApplicationsC.html">Applications of C Language</a>
+										</li>
+										<li>
+											<span class="opener">Introduction To C</span>
+											<ul><li><a href="whatisprogram.html">What is Program?</a></li>
+												<li><a href="cprogramstructure.html">Structure of C Program</a></li>
+												<li><a href="Cprogram.html">Working Of C Program</a></li>
+												<li><a href="CLanguageChar.html">CHARACTER SET </a></li>
+												<li><a href="c-variable-identifier.html">VARIABLES AND IDENTIFIERS </a></li>
+												<li><a href="c-datatype.html">BUILT-IN DATA TYPES </a></li>
+												
+												<li><a href="operators.html">OPERATORS AND EXPRESSIONS </a></li>
+												<li><a href="constant.html">CONSTANTS AND LITERALS</a></li>
+												<li><a href="assignment.html"> SIMPLE ASSIGNMENT STATEMENT </a></li>
+												<li><a href="inputoutput.html">BASIC INPUT/OUTPUT STATEMENT </a></li>
+												<li><a href="cprograms.html">SIMPLE 'C' PROGRAMS</a></li>
+												<li><a href="assignments-intro1.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Operators in C Programming </span>
+											<ul>
+											<li><a href="arithmatic-operators-c.html">Arithmetic Operators </a></li>
+												<li><a href="assignment-operators-c.html">Assignment Operators </a></li>
+												<li><a href="increment-decrement-operator-c.html">Increment and Decrement Operators</a></li>
+												<li><a href="relationaloperator.html">Relational Operators </a></li>
+												<li><a href="logicaloperator.html">Logical Operators</a></li>
+											 <li><a href="bitwiseopearator.html">Bitwise Operators </a></li>
+											 <li><a href="otheropearator.html">Other Operators </a></li>
+											 <li><a href="opearatorassignments.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">CONDITIONAL STATEMENTS</span>
+											<ul>
+												<li><a href="c-decision.html">DECISION MAKING WITHIN A PROGRAM</a></li>
+												<li><a href="c-condtions.html"> CONDITIONS</a></li>
+												<li><a href="c-if.html">IF STATEMENT </a></li>
+												<li><a href="c-ifelse.html">IF-ELSE STATEMENT</a></li>
+												<li><a href="c-ifelseladder.html">IF-ELSE LADDER</a></li>
+												<li><a href="c-nestedif.html">NESTED IF-ELSE </a></li>
+												<li><a href="c-switch.html">SWITCH CASE </a></li>
+												<li><a href="conditional-stmt-assign-c.html">Assignments</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">LOOPS STATEMENTS</span>
+											<ul>
+												<li><a href="loops-intro.html">Introduction to Loops</a></li>
+												<li><a href="c-goto.html"> GO TO Statement</a></li>
+												<li><a href="c-dowhile-loop.html"> Do while Loop </a></li>
+												<li><a href="c-while-loop.html">While Loop </a></li>
+												<li><a href="c-nested-while.html">Nested While Loop </a></li>
+												<li><a href="c-diff-while-dowhile.html">Difference Between While and Do while</a></li>
+												<li><a href="c-difference-goto-loop.html">Difference Between Goto and loop</a></li>
+												<li><a href="c-while-loop-assign.html"> while loop assignments</a></li>
+												<li><a href="c-for.html">C FOR Loop</a></li>
+												<li><a href="c-for-example.html">C For loop examples </a></li>
+												<li><a href="c-nested-for.html">Nested for loop</a></li>
+												<li><a href="nested-while-loop-c.html">Nested for loop examples </a></li>
+												<li><a href="infinite-while-loop-c.html">Infinite while Loops</a></li>
+												<li><a href="infinite-for-loop-c.html"> Infinite for Loops </a></li>
+												<li><a href="continue-c.html">Continue in Loops </a></li>
+												<li><a href="break-c.html">break in Loops </a></li>
+												<li><a href="while-vs-dowhile-vs-for-c.html">difference while do..while & for </a></li>
+												<li><a href="loop-assignment-c.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Arrays</span>
+											<ul>
+												<li><a href="one-d-array-c.html">One Dimensional Array</a></li>
+												<li><a href="declare-array-c.html">Declaring 1D Arrays</a></li>
+												<li><a href="initilize-array-c.html">Initilization of 1D arrays</a>
+												</li>
+												<li><a href="access-array-c.html">Accessing element of one 1D Array</a></li>
+												<li><a href="read-array-c.html">Read and Display 1D Arrays</a></li>
+												<li><a href="two-d-array.html">Two Dimensional Arrays</a></li>
+												<li><a href="declare-2d-array-c.html">Declare 2D Arrays</a></li>
+												<li><a href="read-2d-array.html">Read and Display 2D Arrays</a></li>
+												<li><a href="array-assignments.html">Assignments/Examples</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Functions</span>
+											<ul>
+												<li><a href="function-intro-c.html">Introduction</a></li>
+												<li><a href="user-defined-function-c.html">Need For User-Defined Function</a></li>
+												<li><a href="multiple-fun-program-c.html">Multiple Function Program</a></li>
+												
+												<li><a href="modular-programming-c.html">Modular Programming</a></li>
+												<li><a href="element-user-defined-fun-c.html">Elements Of User Defined Function</a></li>
+												<li><a href="function-definition-c.html">Function Definition</a></li>
+												</li>
+												<li><a href="function-declaration-c.html">Function Declaration</a></li>
+												</li>
+												<li><a href="types-of-function-c.html">Types of functions</a></li>
+												</li>
+												<li><a href="nesting-function-c.html">Nesting of Function</a></li>
+												<li><a href="recursion-c.html">Recursion</a></li>
+												<li><a href="passing-array-function-c.html">Passing Array To Functions</a></li>
+												<li><a href="visibility-scope-var-c.html">Scope,Visibility and Lifetime of Variables</a></li>
+												<li><a href="function-assignment-c.html">Assignments</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Structure</span>
+											<ul>
+												<li><a href="structure-intro-c.html">Introduction</a></li>
+												<li><a href="array-vs-structure-c.html">Array vs Structure</a></li>
+												<li><a href="define-structure-c.html">Defining Structure</a></li>
+												<li><a href="declare-structure-var-c.html">Declaring Structure Variables</a></li>
+												<li><a href="type-def-struct-c.html">Type Defined Structure</a></li>
+												<li><a href="access-struct-member-c.html">Accessing Structure Members</a></li>
+												<li><a href="struct-initilization-c.html">Structure Initilization</a></li>
+												<li><a href="copy-compare-struct-c.html">Copying & Comparing Structure Variables</a></li>
+												<li><a href="array-struct-c.html">Array of Structure</a></li>
+												<li><a href="array-within-struct-c.html">Arrays Within Structure</a></li>
+												<li><a href="struct-within-struct-c.html">Structures Within Structures</a></li>
+												<li><a href="struct-and-function-c.html">Structures and Functions</a></li>
+												<li><a href="struct-assignment-c.html">Structure Examples/Assignments</a></li>
+											</ul>
+									  </li>
+										<li>
+
+
+											<span class="opener">Union</span>
+											<ul>
+												<li><a href="define-union-c.html">Define Union</a></li>
+												<li><a href="create-union-c.html">Create and use Union</a></li>
+												<li><a href="diff-struct-union-c.html">Difference Between Structure and Union</a></li>
+												<li><a href="union-c-example.html">Union Examples</a></li>
+												<li><a href="union-c-faq.html">Union FAQ</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Pointers</span>
+											<ul>
+												<li><a href="what-is-pointer-c.html">What Are Pointers In C?</a></li>
+												<li><a href="how-use-pointer-c.html">How Do We Use Pointers In C?</a></li>
+												<li><a href="declare-pointer-c.html">Declaration Of A Pointer</a></li>
+												<li><a href="pointer-init-c.html">The Initialization Of A Pointer</a></li>
+												<li><a href="pointer-syntax-init.html">Syntax Of Pointer Initialization</a></li>
+												<li><a href="use-pointer-c.html">Use Of Pointers In C</a></li>
+												<li><a href="pointer-to-array-c.html">The Pointer To An Array</a></li>
+												<li><a href="pointer-to-function-c.html">The Pointer To A Function</a></li>
+												<li><a href="pointer-to-struct-c.html">The Pointer To A Structure</a></li>
+												<li><a href="types-pointer-c.html">Types Of Pointers</a></li>
+												<li><a href="null-pointer-c.html">The Null Pointer</a></li>
+												<li><a href="void-pointer-c.html">The Void Pointer</a></li>
+												<li><a href="wild-pointer-c.html">The Wild Pointer</a></li>
+												<li><a href="near-pointer-c.html">The Near Pointer</a></li>
+												<li><a href="huge-pointer-c.html">The Huge Pointer</a></li>
+												<li><a href="far-pointer-c.html">The far Pointer</a></li>
+												<li><a href="dangling-pointer-c.html">dangling pointer </a></li>
+												<li><a href="access-pointer-c.html">Accessing Pointers- Indirectly And Directly</a></li>
+												<li><a href="pros-pointer-c.html">Pros Of Using Pointers In C</a></li>
+												<li><a href="cons-pointer-c.html">Cons Of Pointers In C</a></li>
+												<li><a href="application-pointer-c.html">Applications Of Pointers In C</a></li>
+												<li><a href="address-operator-c.html">The & Address Of Operator In C</a></li>
+												<li><a href="complex-pointer-c.html">How To Read The Complex Pointers In C?</a></li>
+												<li><a href="practice-pointer-c.html">Practice Problems On Pointers </a></li>
+												
+												
+											</ul>
+									  </li>
+
+
+ 									<li>
+											<span class="opener">File Processiong</span>
+											<ul>
+												<li><a href="file-intro-c.html">File Handling In C</a></li>
+												<li><a href="types-file-c.html">Types Of Files In C </a></li>
+												<li><a href="operation-file-c.html">Operations Done In File Handling</a></li>
+												<li><a href="file-example-c.html">File Examples</a></li>
+												<li><a href="binary-file-c.html"> Binary Files</a></li>
+												<li><a href="file-count-word-line-c.html">count words,lines in a file</a></li>
+												<li><a href="copy-file-c.html">Copy files</a></li>
+												<li><a href="update-file-c.html">Update File</a></li>
+												<li><a href="count-vowels-file-c.html">count vowels in a file</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Preprocessor</span>
+											<ul>
+												<li><a href="macro-sub-div-c.html">Macro substitution division</a></li>
+												<li><a href="file-inclusion-c.html">File Inclusion</a></li>
+												<li><a href="conditional-compile-c.html">Conditional Compilation</a></li>
+												<li><a href="other-dir-c.html">Other directives</a></li>
+												<li><a href="preprocessor-example-c.html">Examples</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Dynamic Memory Allocation</span>
+											<ul>
+												<li><a href="malloc-c.html">malloc</a></li>
+												<li><a href="calloc-c.html">calloc</a></li>
+												<li><a href="free-c.html">free</a></li>
+												<li><a href="realloc-c.html">realloc</a></li>
+												<li><a href="dynamic-mem-example-c.html">Examples</a></li>
+											</ul>
+									  </li>
+										<li><a href="storage-class-c.html">Storage Classes</a></li>
+										<li><a href="graphics-c.html">Graphics</a></li>
+										<li>
+											<span class="opener">Frequently Asked Interview Questions
+										(FAQ)</span>
+											<ul>
+												<li><a href="intro-c-faq-c.html">Introduction To C FAQ</a></li>
+												<li><a href="operators-c-faq.html">Operators FAQ</a></li>
+												<li><a href="conditional-stmt-c-faq.html">Conditional Statements FAQ</a></li>
+												<li><a href="loop-faq-c.html">Loops FAQ</a></li>
+												<li><a href="array-faq-c.html">Arrays FAQ</a></li>
+												<li><a href="function-faq-c.html">Function FAQ</a></li>
+												<li><a href="structure-faq-c.html">Structure FAQ</a></li>
+												<li><a href="pointer-faq-c.html">Pointers FAQ</a></li>
+												<li><a href="files-faq-c.html">Files FAQ</a></li>
+												<li><a href="storage-class-faq-c.html">Storage classes FAQ</a></li>
+												<li><a href="dma-faq-c.html">Dynamic Memory FAQ</a></li>
+												
+
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Programs/Assignments</span>
+											<ul>
+												<li><a href="intro-assign-c.html">Introduction To C </a></li>
+												<li><a href="operators-assign-c.html">Operators </a></li>
+												<li><a href="conditional-stmt-assign-c.html">Conditional Statements </a></li>
+												<li><a href="loop-assign-c.html">Loops </a></li>
+												<li><a href="array-assign-c.html">Arrays </a></li>
+												<li><a href="function-assign-c.html">Function </a></li>
+												<li><a href="structure-assign-c.html">Structure </a></li>
+												<li><a href="pointer-assign-c.html">Pointers </a></li>
+												<li><a href="file-assign-c.html">Files </a></li>
+												<li><a href="storage-class-assign-c.html">Storage classes </a></li>
+												<li><a href="dma-assign-c.html">Dynamic Memory </a></li>
+												
+
+											</ul>
+									  </li>
+										<li><a href="case-studies-c.html">Case Studies</a></li>
+										<li>
+											<span class="opener">Multiple Choice Questions</span>
+											<ul>
+												<li><a href="intro-mcq-c.html">Introduction To C MCQ</a></li>
+												<li><a href="operators-mcq-c.html">Operators MCQ</a></li>
+												<li><a href="conditional-mcq-c.html">Conditional Statements MCQ</a></li>
+												<li><a href="loops-mcq-c.html">Loops MCQ</a></li>
+												<li><a href="array-mcq-c.html">Arrays MCQ</a></li>
+												<li><a href="function-mcq-c.html">Function MCQ</a></li>
+												<li><a href="structure-mcq-c.html">Structure MCQ</a></li>
+												<li><a href="pointer-mcq-c.html">Pointers MCQ</a></li>
+												<li><a href="files-mcq-c.html">Files MCQ</a></li>
+												<li><a href="storage-class-mcq-c.html">Storage classes MCQ</a></li>
+												<li><a href="dma-mcq-c.html">Dynamic Memory MCQ</a></li>
+												<li><a href="more-faqc.html">More MCQ</a></li>
+
+											</ul>
+									  </li>
+									</ul>
+								</nav>
+
+							<!-- Section   for activities -->
+								<section>
+									<header class="">
+										<div>
+										<p>
+
+										</p>	
+									</div>
+									
+
+									</header>
+									
+			
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">tech2dsm@gmail.com</a></li>
+										<!--<li class="icon solid fa-phone">-----</li>
+										<li class="icon solid fa-home"><br />
+										</li> -->
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Sankalan Data Tech. All rights reserved. </p>
+
+								</footer>
+
+
+						</div>
+					</div>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+	</body>
+</html>

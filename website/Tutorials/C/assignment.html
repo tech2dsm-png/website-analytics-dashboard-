@@ -1,0 +1,923 @@
+<!DOCTYPE HTML>
+<!--
+	
+	
+	Free tutorials for personal and commercial use 
+-->
+<html>
+	<head>
+		<title>Assignment statements in C Language Skill UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="keywords" content="assignments,=,statements,in, C, Programming">
+		
+		<meta name="description" content=" In C program the process of assigning the value to a variable using assignment operator(=) is known as an assignment statement ">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/intstyle.css" />
+		<script>
+					document.addEventListener("contextmenu", function(event)
+					{
+						event.preventDefault();
+						    
+					}, false);
+		</script>
+		<style>
+				
+				ul {
+ 					  padding: 20px;
+ 					  
+ 					}
+				li {
+					 	 background: #cce5ff;
+ 						 color: darkblue;
+ 						 margin: 5px;
+					}
+					body {
+							background: #cce5ff;	
+					    } 					
+         		p  {
+           				 
+  						font-size: 19px;
+  						color: black;
+  						font-family: Georgia, serif;
+  						font-style: italic;
+  						display:block;
+  						margin-left: 1.2em;
+  						margin-bottom: 1em;
+  						margin-right: 1em;
+
+         			 }
+         			 .bgc{
+         			 	background-color: rgb(155,142,179);
+         			 }
+         		.responsive {
+         			       width: 100%;
+         			       height: auto;
+         			      }
+ 	        	img {
+  					border-radius: 12%;
+
+					  max-width: 100%;
+					  height: auto;
+					  float: right;
+
+					}
+					div.dashed{
+         				border-style: solid;
+         				border-width: 3px;
+
+         			}
+					hr {
+  								border: 2px solid #DAA520;
+							}
+					
+​
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="" class="logo"><strong>Assignment Statement(=) in C Language</strong>  Skill UP</a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter">
+											<span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+
+									</ul>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h3 class="bgc">Assignment Statement (=) in  C Language <br />
+											</h3>
+											
+										</header>
+										<article>
+											<p>Assignment Statement in C language is a statement that assigns or set a value to a variable during program execution.<br>
+											Assignement statements in programming allows the programmer to change or set the value stored in variable using Assignment(=) Operator.<br>
+											The process of  assigning the value to a variable using the assignment(=) operator is known as an assignment statement in C.<br>
+											Assignment(=) Operator Assigns The value or value in a variable  on right hand side to the variable on the left hand side.
+											<br>
+											The data type of the variable on right hand side should match to the data type of variable or constant or expression on right hand side.<br>
+											C Language has different (types) ways to assigns values to variable, we will learn from the diagram given below.
+											  
+											</p>
+										</article>
+										<article>
+											<p> 
+
+									
+
+											</p>
+										</article>
+										<article>
+											<p>
+											</p>
+										</article>
+											
+											
+									<hr class="new4">
+
+										<article>
+												<h3 class="bgc">&nbsp; Syntax :1.Basic Assignment statement</h3>
+												<p class="dashed">
+												<b>Data Type Variable_name =  variable/ constant /expression;</b><br>
+												The Variable_name is assigned the values in variable or constants or expression. 
+												The data type of the variable/ constant/expression on right hand side should match to the left hand side variable Variable_name with a few exceptions where automatic type conversions are possible.
+												
+
+												</p>
+											
+												<h3 class="bgc">Naming Rules or conventions for Assignment Statement</h3>
+													<p>
+									Programmer need to follow some Rules while writing the Assignment Statements in C program:<br>
+									1.	Variable names should not begin or start  with number. Variable name can a letter, underscore, non-number any character like alphabet,underscore.<br>
+									2.	A new value assigned  to an existing variable  will overwrite the previous value and assign the new value to the variable.<br>
+									3.	The Data type defined and the variable value must match.<br>
+									4.All the statements declaration must end with a semi-colon. (;)<br>
+									5. The name of variable must be meaningful and clearly describe the purpose of variable  name.<br>
+									6.Duplicate name of variable is not allowed i.e the name once defined can only be used once in the program. programmer cannot redefine  it to store other types of value.
+									<br>
+									
+
+												</p>							
+
+													
+											</article>
+										
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										
+									</header>
+									<div>
+										<article>
+											
+											<div >
+												
+												<p> <img src="images/assignment-statement-in-c.jpg" width="430" height="340" alt=" assignment statements in C programming">
+
+
+
+												</p>
+											</div>
+										</article>
+										
+										
+									
+									
+									 <article>
+										<div>
+									 	<p> 
+                                         </p>
+                                        </div>
+									  </article>
+								    </div>
+								<article>
+
+									<div><article><p> Given Diagram  shows the  differnt ways of assigning values to variables.<br> 
+										<b>1.Simple Assignment or Basic Form:</b>
+										Simple Assignment or Basic form  is one of the  common forms of Assignment Statements in C program. Simple Assignment allow the programmer to declare,define  and initialize and assign a value in the same statement to a variable. This form is generally used when the programmer want to use the Variable  a few times.<br>
+										This is the most commonly used form of assignment in programming.<br>
+										<h3 class="bgc">Example 1: C program to illustrates the use of Simple Assignment statement .</h3>
+										<div class="dashed"><p class=""> 
+										/* e.g. C program to illustrate the use of simple Assignment statement or basic  of 
+										assignment statements */<br>
+										#include&lt;stdio.h&gt;<br>
+										int main()<br>
+										{<br>
+										int a,b,c;<br>
+										float avg; <br>
+										a = 9 ; <br>
+										c = 10 ; <br>
+										b = c ;<br>
+										printf("\n a=%d",a);<br>
+										printf("\n b=%d",b);<br>
+										printf("\n c=%d",c);<br>
+										
+										b = c+3; <br>
+										printf("\n Value of b after b=c+3-->%d",b);<br>
+										avg = (b+c) / 2.0; <br>
+										printf("\n Value of avg=%.2f",avg);<br>
+										a = b && c; <br>
+										printf("\n a=b&&c--->%d",a);<br>
+										a = (b+c) && (b &lt;c); <br>
+										printf("\n a=(b+c) && (b &lt;c)--->%d",a);<br>
+										return(0);<br>
+									}<br>
+									<b> Output:</b><br>
+									a=9<br>
+									b=10<br>
+									c=10<br>
+									Value of b after b=c+3-->13<br>
+									Value of avg=11.50<br>
+									a=b&&c--->1<br>
+									a=(b+c) && (b &lt;c)--->0
+
+
+										</p>
+										<hr>
+										<p><b> Program Explanation:</b><br>
+											1. In the above program a,b,c is declared as integer variable to store the numbers  where as  avg is declared as float.<br> 
+											int a,b,c;<br>
+										    float avg; <br>
+										    2. <br><b>	a = 9 ; <br>
+												c = 10 ; <br>
+												b = c ;</b><br>
+												variable a is assigned value 9.<br>
+												variable c is assigned value 10.<br>
+												and b is assigned the value of c. Here value of b is 10 .i.e. b=10<br>
+											3.<br><b>	printf("\n a=%d",a);<br>
+												printf("\n b=%d",b);<br>
+												printf("\n c=%d",c);</b><br>
+												The above statements displays the integer values of variable a,b,c<br>
+												a=9<br>
+												b=10<br>
+												c=10<br>
+											4.<br><b> b = c+3; <br>
+												printf("\n Value of b after b=c+3-->%d",b);</b><br>
+												here 3 is added in c(value of vaiable c is 10) it becomes 13 and value 13 is assigned to left hand side variable b , here b is 13 i.e. b=13.<br>
+											    the printf() displays output " Value of b after b=c+3--->13".<br> 
+											5. avg = (b+c) / 2.0; <br>
+													printf("\n Value of avg=%.2f",avg);<br>
+													After execution of a=(b+c)/2.0 the value of a is 11.50
+													<br>so the output shown by printf() is "Value of avg=11.50".<br>
+
+
+											6.<br><b>a = b && c; <br>
+											printf("\n a=b&&c--->%d",a);</b><br>
+											   Logical anding operation  is performed on the values in the variables a and b.<br>
+										   The value of c=10 and the value of b=13.<br>
+										   After succesful execution of this statement value of  variable a is 1 or 'true'.<br>
+										   Any value in a variable  except 'zero' (0 i.e false) is considered 'true' or 1.<br> The variable a  is assigned to the  integer value 1 which is true.<br>
+										   so a=1 && 1 is a=1 <br>
+										   or<br>
+										    a=true && true is  a=true or a=1.<br>
+										   printf("\n a=b&&c--->%d",a); displays output <b>a=b&&c---->1</b><br>
+										   7. <b>a = (b+c) && (b &lt;c);</b> <br>
+										printf("\n a=(b+c) && (b &lt;c)--->%d",a);<br>
+										 here expression (b+c) is true(1) and (b &lt;c) is false(0).<br>
+										 so the entire expression evaluates to false(0) and the value  is assigned to the variable a i.e a=0.<br>
+										 the printf() display the message " a=(b+c) && (b &lt;c)--->0 "
+
+										</p>
+
+									</div> 
+										 
+
+
+								</p>
+									<hr>
+									</article>	
+									<article><p>
+										<b>2.Compound Assignment:</b>
+										As we learn in above section the simple assignment statement is used to assign values in right hand side variable to left hand side variable using = operator.<br>
+										A compound assignment operator has a shorter syntax to assign the result.<br> 
+										A compound assignment operator or statements are used to do mathematical operation in shortcut.<br>Two operands needs to  perform the compound assignment operations.<br>The operation is performed on the two operands before the result is assigned to the first operand.<br>
+										compound assignment operator are binary operators that modify the variable to their left hand side using the value or variable to  their right.<br>
+									    </p>
+									</article>
+									    <article>
+									    	<div class=""><p>Syntax: <br>
+									    		expression1+= expression2;<br>
+									    		These type of expression can also be written in expanded form, that is expression1=expression1+expression2;<br></p></div>
+									    		<p>
+									    		+= Operator is called compound assignment operator.<br>
+									    		C Language provides the following list of compound Assignment Operators.<br>
+									    		<b class="bgc">1. &emsp; +=</b><br>  plus equal to += is Addition and Assignment operators. It add the value of the variable1 and variable2 and assigns the result to variable1.<br>
+									    		e.g. <br>
+									    		 X+=Y<br>
+									    		In the above  expression the addition of values in X and Y is performd and assigns result to X.<br>
+									    		The expression X+=Y is same as X=X+Y<br>
+									    		<b class="bgc">2. &emsp; -=</b><br>  minus equal to -= is Subtraction and Assignment operators. It Subtract the value of the variable2 from variable1 and assigns the result to variable1.<br>
+									    		e.g. <br>
+									    		 X-=Y<br>
+									    		In the above  expression the subtraction is performd,the value of X is subtracted from the value in X and assigns result to X.<br>
+									    		The expression X-=Y is same as X=X-Y<br>
+									    		<b class="bgc">3. &emsp; *=</b><br>  Multiplication equal to *= is  Multiplication and Assignment operators. It Multiply the value of the variable1 and variable2 and assigns the result to variable1.<br>
+									    		e.g. <br>
+									    		 X*=Y<br>
+									    		In the above  expression the Multiplication is performd,the value of X is Multiplyed to the value in Y and assigns result to X.<br>
+									    		The expression X*=Y is same as X=X*Y<br>
+									    		<b class="bgc">4. &emsp; /=</b><br>  Division equal to *= is  Division and Assignment operators. It Divides the value of the variable1 byvariable2 and assigns the result to variable1.<br>
+									    		e.g. <br>
+									    		 X/=Y<br>
+									    		In the above  expression the Division is performd,the value of X is Divided by the  value in Y and assigns result to X.<br>
+									    		The expression X/=Y is same as X=X/Y<br>
+									    		<b class="bgc">5. &emsp; %=</b><br>  Modulus equal to %= is  Modulus and Assignment operators. It Divides the value of the variable1 byvariable2 and assigns the remainder to variable1.<br>
+									    		e.g. <br>
+									    		 X%=Y<br>
+									    		In the above  expression the Division is performd,the value of X is Divided by the  value in Y and assigns remainder to X.<br>
+									    		The expression X%=Y is same as X=X%Y<br>
+									    		<b class="bgc">6. &emsp; &=</b><br>  Bitwise and equal to &= is  Bitwise AND and Assignment operators. It performs the bitwise AND with variable1 and variable2 and assigns the result to variable1.<br>
+									    		e.g. <br>
+									    		 X&=Y<br>
+									    		In the above  expression the bitwise anding operation is performd, after executing the X&=Y expression the result is assigned to  X.<br>
+									    		The expression X&=Y is same as X=X&Y<br>
+									    		<b class="bgc">7. &emsp; |=</b><br>  Bitwise OR equal to != is  Bitwise OR  Assignment operators. It performs the bitwise OR with variable1 and variable2 and assigns the result to variable1.<br>
+									    		e.g. <br>
+									    		 X|=Y<br>
+									    		In the above  expression the bitwise OR operation is performd, after executing the X|=Y expression the result is assigned to  X.<br>
+									    		The expression X|=Y is same as X=X|Y<br>
+									    		<b class="bgc">8. &emsp; ^=</b><br>  Bitwise XOR equal to ^= is  Bitwise XOR  Assignment operators. It performs the bitwise XOR with variable1 and variable2 and assigns the result to variable1.<br>
+									    		e.g. <br>
+									    		 X^=Y<br>
+									    		In the above  expression the bitwise XOR operation is performd, after executing the X^=Y expression the result is assigned to  X.<br>
+									    		The expression X^=Y is same as X=X^Y.<br>
+									    		<b class="bgc">9. &emsp; <<=</b><br>  Bitwise left shift and equal to <<= is  Bitwise Left Shift and Assignment operators. It performs the bitwise Left shift with variable1 and assigns the result to variable1.<br>
+									    		e.g. <br>
+									    		 X<<=Y<br>
+									    		In the above  expression the bitwise left shift operation is performd, after executing the X<<=Y expression the result is assigned to  X.<br>
+									    		The expression X<<=Y is same as X=X&lt;&lt;Y <br>
+									    		<b class="bgc">10. &emsp; >>=</b><br>  Bitwise right shift and equal to >>= is  Bitwise Right Shift and Assignment operators. It performs the bitwise Right shift with variable1 and assigns the result to variable1.<br>
+									    		e.g. <br>
+									    		 X>>=Y<br>
+									    		In the above  expression the bitwise right shift operation is performd, after executing the X>>=Y expression the result is assigned to  X.<br>
+									    		The expression X>>=Y is same as X=X>>Y <br>
+									    		Lets Learn and practice The Assigment operator in detail using the following C program.
+
+
+
+									        </p>
+									    </article>
+									
+										
+											
+										
+
+
+								<article><h3 class="bgc"> 2. Assignment Operator complete C Program.</h3>
+										<div class="dashed">
+											<p>
+												#include &lt;stdio.h&gt;<br>
+
+								int main()<br>
+								{<br>
+								  &emsp; /* Simple Assignment*/<br>
+								  &emsp; int x,i;<br>
+								   &emsp;int y,j;<br>
+								   &emsp;float c=30.0;<br>
+								   &emsp;float d=5.0;<br>
+
+								   &emsp;/*Nested or Multiple Assignment */<br>
+								   &emsp;x = i = 5;<br>
+								   &emsp;y = j = 3;<br>
+
+								   &emsp;/*Compound Assignment*/<br>
+								  &emsp; x += y;<br>
+								  &emsp; printf("After Add and Assign :%d \n",x);<br>
+
+								   &emsp;i -= j;<br>
+								   &emsp;printf("After Subtract and Assign :%d \n",i);<br>
+
+								   &emsp;x *= y;<br>
+								   &emsp;printf("After Multiple and Assign :%d \n",x);<br>
+
+								   &emsp;c /= d;<br>
+								   &emsp;printf("After Divide and Assign :%f \n",c);<br>
+
+								   &emsp;j %= i;<br>
+								   &emsp;printf("After Modulo and Assign :%d \n",j);<br>
+
+								   &emsp;j &= i;<br>
+								   printf("After Bitwise And and Assign :%d \n",j);<br>
+
+								   &emsp;j |= i;<br>
+								  &emsp; printf("After Bitwise OR and Assign :%d \n",j);<br>
+
+								  &emsp; x ^= y;<br>
+								   &emsp;printf("After Bitwise XOR and Assign :%d \n",a);<br>
+
+								  &emsp; x <<= 2;<br>
+								  &emsp; printf ("After Bitwise Left Shift and Assign :%d \n",a);<br>
+
+								   &emsp;x >>= 3;<br>
+								   &emsp;printf ("After Bitwise Right Shift and Assign :%d \n",a);<br>
+								   &emsp; return(0);<br>
+								 }</p>
+								 <p>
+								 	<b>Output:</b><br>
+								 	After Add and Assign :8<br>
+									After Subtract and Assign :2<br>
+									After Multiple and Assign :24<br>
+									After Divide and Assign :6.000000<br>
+									After Modulo and Assign :1<br>
+									After Bitwise And and Assign :0<br>
+									After Bitwise OR and Assign :2<br>
+									After Bitwise XOR and Assign :27<br>
+									After Bitwise Left Shift and Assign :108<br>
+									After Bitwise Right Shift and Assign :13
+								 
+																			
+										</p>
+										</div>
+									</article>
+												<article>
+													<p><b>3.Conditional Assignment .  </b><br>
+														Conditional Assignments in C programming language is performed with the help of conditional ?: operator or Ternary Operator.<br>
+														 It takes three operands. Conditional operator is closely related with if..else statement.<br>
+														 <div class=""> <p>
+														 <b> Syntax Conditional Assignment</b><br>
+														 var1=Condition ? exp1 : exp2;<br>
+														 <b>Explanation:</b><br>
+														 The Condition is the boolean test Condition  expression that results in either true or false.<br> If the condition is<br>
+														 false - exp2 after the colon is executes<br>
+														 true - exp1 before the colon  is executes<br>
+														
+														The ternary operator usually takes 3 operands  the condition, exp1 and exp2.<br> Hence, the operator is  named ternary operator.<p>
+														</div>
+													
+												</p></article>
+												<article>
+												<div class="dashed">
+													<p>/**
+									 * C program to check leap year using conditional operator ?
+									 */<br>
+
+									#include &lt;stdio.h&gt;<br>
+
+									int main()<br>
+									{
+										<br>
+									    int year;<br>
+									 
+									    /*<br>
+									     * Input the  year from user<br>
+									     */<br>
+									    printf("Enter any year: ");<br>
+									    scanf("%d", &year);<br>
+
+									    /*<br>
+									     * If year%4==0 and year%100==0 then<br>
+									     *     print leap year<br>
+									     * else if year%400==0 then<br>
+									     *     print leap year<br>
+									     * else<br>
+									     *     print common year <br>
+									     */<br>
+									    (year%4==0 && year%100!=0) ? printf("LEAP YEAR") : (year%400 ==0 ) ? printf("LEAP YEAR") : printf("COMMON YEAR");<br>
+
+									    return 0;<br>
+
+									} <br>
+									<b>Output:</b>
+									<br>
+									Enter any year<br>
+									2004<br>
+									LEAP YEAR
+													</p>
+												</div>
+
+												</article>
+												<article>
+													<p></p>
+												</article>
+
+
+												<article>
+													<p><b>4.Unary Assignment .  </b><br>
+														C Language unary operators are the types that need only one operand to perform any operation like decrement,increment,negation,minus etc. It consists of various logical,arithmetic  and other operators that operate on a single operand. <br>
+														The unary assignment operators are the increment ( ++ ) and decrement ( -- ) operators; 
+														 <div class="bgc"> <p>
+														 <b> Syntax: </b><br>
+														 var++;<br>
+														 ++var;;<br>
+														 var--<br>
+														 --var<br>
+														 <b>Explanation:</b><br>
+
+														  for more detail about unary operator  assignment <a href="increment-decrement-operator-c.html"><b>click here</b></a><p>
+														</div>
+													
+												</p></article>
+												<article>
+												<div class="dashed">
+													<p>/**
+									 * C program to check leap year using conditional operator ?
+									 */<br>
+
+									#include &lt;stdio.h&gt;<br>
+
+									int main()<br>
+									{<br>
+									    int year;<br>
+									 
+									    /*<br>
+									     * Input the  year from user<br>
+									     */<br>
+									    printf("Enter any year: ");<br>
+									    scanf("%d", &year);<br>
+
+									    /*<br>
+									      If year%4==0 and year%100==0 then<br>
+									         print leap year<br>
+									      else if year%400==0 then<br>
+									          print leap year<br>
+									      else<br>
+									          print common year <br>
+									     */<br>
+									    (year%4==0 && year%100!=0) ? printf("LEAP YEAR") : (year%400 ==0 ) ? printf("LEAP YEAR") : printf("COMMON YEAR");<br>
+
+									    return 0;<br>
+
+									} <br>
+									<b>Output:</b>
+									<br>
+									Enter any year<br>
+									2004<br>
+									LEAP YEAR
+													</p>
+												</div>
+
+												</article>
+										
+									
+									<article>
+										<div>
+											<p>
+											
+											</p>
+										</div>
+									</article>
+											<div>						
+											<p>
+											Previous Topic:--&gt;&gt;<a href="constant.html"> Constant and Literals in C</a>&nbsp;||&nbsp;Next topic:--&gt;&gt;<a href="inputoutput.html">Input/Output in   C.</a>
+										</p>					
+									</div>
+								</section>
+
+							<!-- Section -->
+								
+
+						</div>
+						<div>
+				<!-- footer menu -->
+			</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<section>
+									<header class="">
+										<div>
+										<p>
+
+</p>	
+									</div>
+									
+
+									</header>
+									
+			
+								</section>
+							<!-- Section -->
+								
+
+							<!-- Section -->
+
+							<!-- Search -->
+								<!--<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form> 
+								</section> -->
+
+							<!-- Menu -->
+								
+								<nav id="menu">
+									<header class="major">
+										<h2>C Language</h2>
+									</header>
+									<ul>
+										<li><a href="../index.html">Home</a></li>
+										<li><a href="whyC.html">Why C Language</a></li>
+										<li><a href="historyC.html">History of C Language</a></li>
+										<li><a href="ApplicationsC.html">Applications of C Language</a>
+										</li>
+										<li>
+											<span class="opener">Introduction To C</span>
+											<ul><li><a href="whatisprogram.html">What is Program?</a></li>
+												<li><a href="cprogramstructure.html">Structure of C Program</a></li>
+												<li><a href="Cprogram.html">Working Of C Program</a></li>
+												<li><a href="CLanguageChar.html">CHARACTER SET </a></li>
+												<li><a href="c-variable-identifier.html">VARIABLES AND IDENTIFIERS </a></li>
+												<li><a href="c-datatype.html">BUILT-IN DATA TYPES </a></li>
+												
+												<li><a href="operators.html">OPERATORS AND EXPRESSIONS </a></li>
+												<li><a href="constant.html">CONSTANTS AND LITERALS</a></li>
+												<li><a href="assignment.html"> SIMPLE ASSIGNMENT STATEMENT </a></li>
+												<li><a href="inputoutput.html">BASIC INPUT/OUTPUT STATEMENT </a></li>
+												<li><a href="cprograms.html">SIMPLE 'C' PROGRAMS</a></li>
+												<li><a href="assignments-intro1.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Operators in C Programming </span>
+											<ul>
+											<li><a href="arithmatic-operators-c.html">Arithmetic Operators </a></li>
+												<li><a href="assignment-operators-c.html">Assignment Operators </a></li>
+												<li><a href="increment-decrement-operator-c.html">Increment and Decrement Operators</a></li>
+												<li><a href="relationaloperator.html">Relational Operators </a></li>
+												<li><a href="logicaloperator.html">Logical Operators</a></li>
+											 <li><a href="bitwiseopearator.html">Bitwise Operators </a></li>
+											 <li><a href="otheropearator.html">Other Operators </a></li>
+											 <li><a href="opearatorassignments.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">CONDITIONAL STATEMENTS</span>
+											<ul>
+												<li><a href="c-decision.html">DECISION MAKING WITHIN A PROGRAM</a></li>
+												<li><a href="c-condtions.html"> CONDITIONS</a></li>
+												<li><a href="c-if.html">IF STATEMENT </a></li>
+												<li><a href="c-ifelse.html">IF-ELSE STATEMENT</a></li>
+												<li><a href="c-ifelseladder.html">IF-ELSE LADDER</a></li>
+												<li><a href="c-nestedif.html">NESTED IF-ELSE </a></li>
+												<li><a href="c-switch.html">SWITCH CASE </a></li>
+												<li><a href="conditional-stmt-assign-c.html">Assignments</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">LOOPS STATEMENTS</span>
+											<ul>
+												<li><a href="loops-intro.html">Introduction to Loops</a></li>
+												<li><a href="c-goto.html"> GO TO Statement</a></li>
+												<li><a href="c-dowhile-loop.html"> Do while Loop </a></li>
+												<li><a href="c-while-loop.html">While Loop </a></li>
+												<li><a href="c-nested-while.html">Nested While Loop </a></li>
+												<li><a href="c-diff-while-dowhile.html">Difference Between While and Do while</a></li>
+												<li><a href="c-difference-goto-loop.html">Difference Between Goto and loop</a></li>
+												<li><a href="c-while-loop-assign.html"> while loop assignments</a></li>
+												<li><a href="c-for.html">C FOR Loop</a></li>
+												<li><a href="c-for-example.html">C For loop examples </a></li>
+												<li><a href="c-nested-for.html">Nested for loop</a></li>
+												<li><a href="nested-while-loop-c.html">Nested for loop examples </a></li>
+												<li><a href="infinite-while-loop-c.html">Infinite while Loops</a></li>
+												<li><a href="infinite-for-loop-c.html"> Infinite for Loops </a></li>
+												<li><a href="continue-c.html">Continue in Loops </a></li>
+												<li><a href="break-c.html">break in Loops </a></li>
+												<li><a href="while-vs-dowhile-vs-for-c.html">difference while do..while & for </a></li>
+												<li><a href="loop-assignment-c.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Arrays</span>
+											<ul>
+												<li><a href="one-d-array-c.html">One Dimensional Array</a></li>
+												<li><a href="declare-array-c.html">Declaring 1D Arrays</a></li>
+												<li><a href="initilize-array-c.html">Initilization of 1D arrays</a>
+												</li>
+												<li><a href="access-array-c.html">Accessing element of one 1D Array</a></li>
+												<li><a href="read-array-c.html">Read and Display 1D Arrays</a></li>
+												<li><a href="two-d-array.html">Two Dimensional Arrays</a></li>
+												<li><a href="declare-2d-array-c.html">Declare 2D Arrays</a></li>
+												<li><a href="read-2d-array.html">Read and Display 2D Arrays</a></li>
+												<li><a href="array-assignments.html">Assignments/Examples</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Functions</span>
+											<ul>
+												<li><a href="function-intro-c.html">Introduction</a></li>
+												<li><a href="user-defined-function-c.html">Need For User-Defined Function</a></li>
+												<li><a href="multiple-fun-program-c.html">Multiple Function Program</a></li>
+												
+												<li><a href="modular-programming-c.html">Modular Programming</a></li>
+												<li><a href="element-user-defined-fun-c.html">Elements Of User Defined Function</a></li>
+												<li><a href="function-definition-c.html">Function Definition</a></li>
+												</li>
+												<li><a href="function-declaration-c.html">Function Declaration</a></li>
+												</li>
+												<li><a href="types-of-function-c.html">Types of functions</a></li>
+												</li>
+												<li><a href="nesting-function-c.html">Nesting of Function</a></li>
+												<li><a href="recursion-c.html">Recursion</a></li>
+												<li><a href="passing-array-function-c.html">Passing Array To Functions</a></li>
+												<li><a href="visibility-scope-var-c.html">Scope,Visibility and Lifetime of Variables</a></li>
+												<li><a href="function-assignment-c.html">Assignments</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Structure</span>
+											<ul>
+												<li><a href="structure-intro-c.html">Introduction</a></li>
+												<li><a href="array-vs-structure-c.html">Array vs Structure</a></li>
+												<li><a href="define-structure-c.html">Defining Structure</a></li>
+												<li><a href="declare-structure-var-c.html">Declaring Structure Variables</a></li>
+												<li><a href="type-def-struct-c.html">Type Defined Structure</a></li>
+												<li><a href="access-struct-member-c.html">Accessing Structure Members</a></li>
+												<li><a href="struct-initilization-c.html">Structure Initilization</a></li>
+												<li><a href="copy-compare-struct-c.html">Copying & Comparing Structure Variables</a></li>
+												<li><a href="array-struct-c.html">Array of Structure</a></li>
+												<li><a href="array-within-struct-c.html">Arrays Within Structure</a></li>
+												<li><a href="struct-within-struct-c.html">Structures Within Structures</a></li>
+												<li><a href="struct-and-function-c.html">Structures and Functions</a></li>
+												<li><a href="struct-assignment-c.html">Structure Examples/Assignments</a></li>
+											</ul>
+									  </li>
+										<li>
+
+
+											<span class="opener">Union</span>
+											<ul>
+												<li><a href="define-union-c.html">Define Union</a></li>
+												<li><a href="create-union-c.html">Create and use Union</a></li>
+												<li><a href="diff-struct-union-c.html">Difference Between Structure and Union</a></li>
+												<li><a href="union-c-example.html">Union Examples</a></li>
+												<li><a href="union-c-faq.html">Union FAQ</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Pointers</span>
+											<ul>
+												<li><a href="what-is-pointer-c.html">What Are Pointers In C?</a></li>
+												<li><a href="how-use-pointer-c.html">How Do We Use Pointers In C?</a></li>
+												<li><a href="declare-pointer-c.html">Declaration Of A Pointer</a></li>
+												<li><a href="pointer-init-c.html">The Initialization Of A Pointer</a></li>
+												<li><a href="pointer-syntax-init.html">Syntax Of Pointer Initialization</a></li>
+												<li><a href="use-pointer-c.html">Use Of Pointers In C</a></li>
+												<li><a href="pointer-to-array-c.html">The Pointer To An Array</a></li>
+												<li><a href="pointer-to-function-c.html">The Pointer To A Function</a></li>
+												<li><a href="pointer-to-struct-c.html">The Pointer To A Structure</a></li>
+												<li><a href="types-pointer-c.html">Types Of Pointers</a></li>
+												<li><a href="null-pointer-c.html">The Null Pointer</a></li>
+												<li><a href="void-pointer-c.html">The Void Pointer</a></li>
+												<li><a href="wild-pointer-c.html">The Wild Pointer</a></li>
+												<li><a href="near-pointer-c.html">The Near Pointer</a></li>
+												<li><a href="huge-pointer-c.html">The Huge Pointer</a></li>
+												<li><a href="far-pointer-c.html">The far Pointer</a></li>
+												<li><a href="dangling-pointer-c.html">dangling pointer </a></li>
+												<li><a href="access-pointer-c.html">Accessing Pointers- Indirectly And Directly</a></li>
+												<li><a href="pros-pointer-c.html">Pros Of Using Pointers In C</a></li>
+												<li><a href="cons-pointer-c.html">Cons Of Pointers In C</a></li>
+												<li><a href="application-pointer-c.html">Applications Of Pointers In C</a></li>
+												<li><a href="address-operator-c.html">The & Address Of Operator In C</a></li>
+												<li><a href="complex-pointer-c.html">How To Read The Complex Pointers In C?</a></li>
+												<li><a href="practice-pointer-c.html">Practice Problems On Pointers </a></li>
+												
+												
+											</ul>
+									  </li>
+
+
+ 									<li>
+											<span class="opener">File Processiong</span>
+											<ul>
+												<li><a href="file-intro-c.html">File Handling In C</a></li>
+												<li><a href="types-file-c.html">Types Of Files In C </a></li>
+												<li><a href="operation-file-c.html">Operations Done In File Handling</a></li>
+												<li><a href="file-example-c.html">File Examples</a></li>
+												<li><a href="binary-file-c.html"> Binary Files</a></li>
+												<li><a href="file-count-word-line-c.html">count words,lines in a file</a></li>
+												<li><a href="copy-file-c.html">Copy files</a></li>
+												<li><a href="update-file-c.html">Update File</a></li>
+												<li><a href="count-vowels-file-c.html">count vowels in a file</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Preprocessor</span>
+											<ul>
+												<li><a href="macro-sub-div-c.html">Macro substitution division</a></li>
+												<li><a href="file-inclusion-c.html">File Inclusion</a></li>
+												<li><a href="conditional-compile-c.html">Conditional Compilation</a></li>
+												<li><a href="other-dir-c.html">Other directives</a></li>
+												<li><a href="preprocessor-example-c.html">Examples</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Dynamic Memory Allocation</span>
+											<ul>
+												<li><a href="malloc-c.html">malloc</a></li>
+												<li><a href="calloc-c.html">calloc</a></li>
+												<li><a href="free-c.html">free</a></li>
+												<li><a href="realloc-c.html">realloc</a></li>
+												<li><a href="dynamic-mem-example-c.html">Examples</a></li>
+											</ul>
+									  </li>
+										<li><a href="storage-class-c.html">Storage Classes</a></li>
+										<li><a href="graphics-c.html">Graphics</a></li>
+										<li>
+											<span class="opener">Frequently Asked Interview Questions
+										(FAQ)</span>
+											<ul>
+												<li><a href="intro-c-faq-c.html">Introduction To C FAQ</a></li>
+												<li><a href="operators-c-faq.html">Operators FAQ</a></li>
+												<li><a href="conditional-stmt-c-faq.html">Conditional Statements FAQ</a></li>
+												<li><a href="loop-faq-c.html">Loops FAQ</a></li>
+												<li><a href="array-faq-c.html">Arrays FAQ</a></li>
+												<li><a href="function-faq-c.html">Function FAQ</a></li>
+												<li><a href="structure-faq-c.html">Structure FAQ</a></li>
+												<li><a href="pointer-faq-c.html">Pointers FAQ</a></li>
+												<li><a href="files-faq-c.html">Files FAQ</a></li>
+												<li><a href="storage-class-faq-c.html">Storage classes FAQ</a></li>
+												<li><a href="dma-faq-c.html">Dynamic Memory FAQ</a></li>
+												
+
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Programs/Assignments</span>
+											<ul>
+												<li><a href="intro-assign-c.html">Introduction To C </a></li>
+												<li><a href="operators-assign-c.html">Operators </a></li>
+												<li><a href="conditional-stmt-assign-c.html">Conditional Statements </a></li>
+												<li><a href="loop-assign-c.html">Loops </a></li>
+												<li><a href="array-assign-c.html">Arrays </a></li>
+												<li><a href="function-assign-c.html">Function </a></li>
+												<li><a href="structure-assign-c.html">Structure </a></li>
+												<li><a href="pointer-assign-c.html">Pointers </a></li>
+												<li><a href="file-assign-c.html">Files </a></li>
+												<li><a href="storage-class-assign-c.html">Storage classes </a></li>
+												<li><a href="dma-assign-c.html">Dynamic Memory </a></li>
+												
+
+											</ul>
+									  </li>
+										<li><a href="case-studies-c.html">Case Studies</a></li>
+										<li>
+											<span class="opener">Multiple Choice Questions</span>
+											<ul>
+												<li><a href="intro-mcq-c.html">Introduction To C MCQ</a></li>
+												<li><a href="operators-mcq-c.html">Operators MCQ</a></li>
+												<li><a href="conditional-mcq-c.html">Conditional Statements MCQ</a></li>
+												<li><a href="loops-mcq-c.html">Loops MCQ</a></li>
+												<li><a href="array-mcq-c.html">Arrays MCQ</a></li>
+												<li><a href="function-mcq-c.html">Function MCQ</a></li>
+												<li><a href="structure-mcq-c.html">Structure MCQ</a></li>
+												<li><a href="pointer-mcq-c.html">Pointers MCQ</a></li>
+												<li><a href="files-mcq-c.html">Files MCQ</a></li>
+												<li><a href="storage-class-mcq-c.html">Storage classes MCQ</a></li>
+												<li><a href="dma-mcq-c.html">Dynamic Memory MCQ</a></li>
+												<li><a href="more-faqc.html">More MCQ</a></li>
+
+											</ul>
+									  </li>
+									</ul>
+								</nav>
+
+							<!-- Section   for activities -->
+								<section>
+									<header class="">
+										<div>
+										<p>
+
+										</p>	
+									</div>
+									
+
+									</header>
+									
+			
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">tech2dsm@gmail.com</a></li>
+										<!--<li class="icon solid fa-phone">-----</li>
+										<li class="icon solid fa-home"><br />
+										</li> -->
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Sankalan Data Technologies. All rights reserved. </p>
+
+								</footer>
+
+
+						</div>
+					</div>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+	</body>
+</html>

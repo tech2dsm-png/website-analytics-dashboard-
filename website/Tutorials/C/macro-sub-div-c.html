@@ -1,0 +1,862 @@
+<!DOCTYPE HTML>
+<!--
+	
+	
+	
+-->
+<html>
+	<head>
+		<title>Macro substitution C programming.  </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="keywords" content="macros, in ,C programming">
+		
+		<meta name="description" content=" A macro in C language is a piece of code that is given a name. Whenever a name is used, it is replaced by the contents of the macro. There are two types of macros. "/>
+
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/intstyle.css" />
+		
+		<script>
+					document.addEventListener("contextmenu", function(event)
+					{
+						event.preventDefault();
+						    
+					}, false);
+		</script> 
+		<style>
+				
+				ul {
+ 					  padding: 20px;
+ 					   background: #cce5ff;
+ 					  
+ 					}
+				li {
+					 	 background: #cce5ff;
+ 						 color: darkblue;
+ 						 margin: 5px;
+					}
+					body {
+							background: #cce5ff;	
+					    } 					
+         		p  {
+           				 
+  						font-size: 19px;
+  						color: black;
+  						font-family: Georgia, serif;
+  						font-style: italic;
+  						display:block;
+  						margin-left: .1em;
+  						margin-bottom: 1em;
+  						margin-right: .1em;
+
+         			 }
+         			 .bgc{
+         			 	background-color: rgb(155,142,179);
+         			 }
+         		.responsive {
+         			       width: 100%;
+         			       height: auto;
+         			      }
+ 	        	img {
+  					border-radius: 12%;
+
+					  max-width: 100%;
+					  height: auto;
+					  float: right;
+
+					}
+					div.dashed{
+         				border-style: solid;
+         				border-width: 3px;
+
+         			}
+         			div.dashed2{
+         				overflow-x: auto;
+        				overflow-y: hidden;
+        				white-space: nowrap;
+        				border-style: solid;
+         				border-width: 2.5px;
+
+
+         			}
+         			.scrl{
+         				overflow-x: auto;
+        				overflow-y: hidden;
+
+        				border-style: solid;
+         				border-width: 2.5px;
+
+
+         			}
+         			
+					hr {
+  								border: 2px solid #DAA520;
+							}
+					
+​
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="" class="logo"><strong> Macros   in C programming.   </strong> </a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter">
+											<span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+
+									</ul>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											
+											
+										</header>
+										<article>
+											<h1 class="bgc">Macros   in C programming. </h1>
+											<p>
+												<b class="bgc">Macros :</b><br>&emsp;A macro in C language is a piece of code that is given a name. Whenever a name is used, it is replaced by the contents of the macro. There are two types of macros. Object macros and function macros. They mainly differ in appearance during use. Object macros look like data objects; function macros look like function calls.<br>
+												Any C keyword can be used as valid identifier as a macro. The preprocessor knows nothing about keywords. This can be useful if you want to hide keywords like const from older compilers that don't understand them.<br>
+ 											However, preprocessor operators cannot be defined as macros.<br>
+
+												</p>
+												
+																																	
+											</article>
+                                            
+
+											    
+											
+										<article>
+											<p> 
+												<b class="bgc">1.Object-like Macros</b><br>
+												An object-like macro is a simple identifier that will be replaced by a piece of code. <br>
+							It is called object-like because the data in the code that uses it is like an object. These are commonly used to give symbolic names to numeric constants.<br>
+
+							Create a macro with the "#define" directive. “#define” is followed by the macro name, followed by a sequence of tokens that must be its abbreviation, called the macro body, expansion, or replacement list.<br>
+							 For example,<br>
+							 	#define SIZE 200
+
+							defines a macro named SIZE as an abbreviation for the token 200. If somewhere after this `#define' directive there comes a C statement of the form<br>
+							 	ptr = (char *) malloc (SIZE);<br>
+
+							then the C pre-processor will recognize and expand the macro SIZE. The C compiler will look for the same symbols as you written<br>
+
+							 	ptr = (char *) malloc (200);<br>
+
+							By convention, macro names are written in capital letters. Programs become easier to read when you can tell at a glance which names are macros.<br>
+							The macro's body ends at the end of the `#define' line. <br>
+							When the preprocessor expands  name of a macro , the macro extension replaces the macro call, and the extension is tested for extra macro extensions.<br>
+							For example,<br>
+								
+
+											</p>
+											<div class="dashed2">
+												<p>#define ARRSIZE SIZE<br>
+											#define SIZE 500<br>
+											ARRSIZE <br>
+											==> SIZE<br>
+											==> 500<br>
+
+												</p>											
+											</div>
+											<p>
+												ARRSIZE is first extended to produce SIZE, then that macro is expanded to produce the final result, 500.<br>
+									Note that SIZE was not defined when ARRSIZE was defined. `#define' uses the correct extension for ARRSIZE - in this case SIZE - and does not check whether it also includes macro names. Simply when you use ARRSIZE will the outcome of its extension be scanned for extra macro names.<br>
+									It makes a difference if you change the definition of SIZE at some point in the file. <br>ARRAYSIZE will always be expanded using the current positive values, as shown:
+
+											</p>
+											<div class="dashed2">
+												<p>#define SIZE 500<br>
+											#define ARRSIZE SIZE<br>
+											#undef SIZE<br>
+											
+											#define SIZE 35<br>
+											
+
+												</p>											
+											</div>
+											<p>
+
+												Now  ARRSIZE expands to 35.<br>
+					If an extension macro is named straight or via a macro, it is not expanded when the extension is tested for additional macros. This avoids unlimited iterative progress.</p>
+								
+
+
+
+										</article>
+										
+									
+										
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										
+									</header>
+									<div>
+										<article>
+											
+											<div >
+												
+										<p> <img src="images/macros-in-c.jpg" width="430" height="340" alt="A macro in C language is a piece of code that is given a name. Whenever a name is used, it is replaced by the contents of the macro. ">
+											
+
+
+ 
+												</p>
+											</div>
+										</article>
+										
+										
+									
+									
+									<article><h2 class="bgc">2 Function-like Macros</h2>
+										<p>
+														You can define a macro that is similar to a function call. This is known as function-like macros. To define a function like a macro, we can use the same '#define' command or directive, but you add two parantheses immediately after the macro of name. For example, you can define a macro that is similar to a function call. They are called function-like macros. To define a macro that is similar to a function, use the #define command, but immediately after the macro name, put two parentheses. <br>for example,<br>
+				 	#define tmp_exp()  c_exp()<br>
+				tmp_exp()
+				     ==> c_exp()<br>
+
+				A function-like macro is extended only by a pair of parentheses earlier its name. If you write only the name, it will stay alone. This can be suitable if you have a function and a macro with the same name and want to use that function from time to time.<br>
+				 	extern void func(void);<br>
+				#define func() <br>
+				...<br>
+				  func();<br>
+				  ptrfunc = func;<br>
+
+				In the example above, the call to func() will use the macro, but the function pointer will have the address of the current function.<br>
+
+				 If the macro requires expansion, a syntax error will be displayed. If you put a space between the macro name and the parentheses in your macro definition, it will not define a function like macro, but an object like macro that expands from two sets of parentheses.
+
+
+												
+
+
+
+
+									</p>
+									<hr>	
+										</article>
+										<article>
+											
+												<h3 class="bgc">3 Macro Arguments </h3>
+												<p>
+							Function-like macros can accept the same arguments as real functions. To define a macro that takes arguments, add a parameter to the macro definition, which makes the macro look like a function. Parameters must be legal C identifiers, separated by commas and optional spaces.<br>
+							To call a macro with arguments, you write the macro name after the main argument names in parentheses separated by commas. A macro invocation is not limited to a single line of arguments - it can be as long as you want in a file. The number of arguments you supply corresponds to the number of parameters in the microdefinition.<br>
+
+							When a macro is expanded, each use of its body parameter is substituted by the equivalent argument token. You don’t need to usage all the parameters in the macro body.<br>
+							Example,<br>
+							 A macro that calculates the minimum of two numeric values, as it is defined in many C programs and some applications.</p>
+							 <div class="dashed2"><p>
+
+							 	#define min(X, Y)  ((X) < (Y) ? (X) : (Y))<br>
+							  x = min(a, b); ==>  x = ((a) < (b) ? (a) : (b));<br>
+							  y = min(11, 12);==>  y = ((11) < (12) ? (11) : (12));<br>
+							  z = min(a + 18, *p);==>  z = ((a + 18) < (*p) ? (a + 18) : (*p));
+							</p>
+						</div><p>
+							Trailing and leading whitespaces in each argument are discarded, and all spaces in the argument token are reduced to a single space.<br>
+							The parentheses in each argument must be balanced; Such a parentheses comma does not end the argument. However, square brackets or braces are not required for balance, and they do not prevent arguments from being separated by commas.<br> 
+
+							 	macro (array[p = q, p + 1])<br>
+
+							Two arguments are passed to the macro: <br>array[p = q and p + 1].<br> If you want to pass an array [p = q, p + 1] as an argument, you can write it as an array [(p = q, p + 1)], which is equivalent to C code.
+							All macro arguments are fully expanded before being placed in the macro body. After conversion, all text is then checked for macro expansion, including arguments. This rule may look strange, but it is cautiously designed so that you don't have to concern about whether a function call is really a macro call. <br>
+							However, if you are too smart, you may run into trouble.
+							</p>
+							 <div class="dashed2"><p>
+							Let learn the following example.<br>
+							 min (min (p, q), r) is first expanded to<br>
+							 	min (((p) < (q) ? (p) : (q)), (r))<br>
+
+							and then to<br>
+							 	((((p) < (q) ? (p) : (q))) < (r)<br>
+							 ? (((p) < (q) ? (p) : (q)))<br>
+							 : (r))
+
+
+
+
+															
+
+											</p>
+										</div>
+								<hr>
+											
+										</article>
+										
+					
+							     <article>
+							     	
+							     	<p><b class="bgc">4 Stringification:</b><br>
+							     		
+									Sometimes you want to translate or convert macro arguments to string constants. Parameters are not transmuted to string constants, but we can use the `#' pre-processing operator instead. When a macro parameter with a leading `#' is used, the pre-processor replaces it with the literal text of the original argument, which is converted to a string constant.<br>
+									Unlike normal parameter substitution, the first argument is not macro-extensible. This is called stringification.<br>
+									There is no method to combine the argument with the neighbouring text and stringify it all together. As an alternative, you can write an array of concatenated string constants and stringified arguments. The pre-processor will substitute the stringified argument with string constants. The C compiler will then concatenate all neighbouring string constants into one long string.</p>
+									<div class="dashed2"><p>
+									C program Demonstrate a macro definition that uses stringification:<br>
+									#define IF_ WARN(EXP_COND)<br><br>
+									do {<br>
+									&emsp;&emsp;if (IF_ WARN)<br>
+									      &emsp;&emsp;&emsp;&emsp; fprintf (stderr, "Warning: " #EXP_COND "\n"); <br>
+									 &emsp;}while(0)<br>
+									&emsp;IF_ WARN (x1 == 0);<br>
+									 do { <br>
+									 &emsp;  if (x1 == 0)<br>
+									         &emsp;&emsp;  fprintf (stderr, "Warning!: " "x1 == 0" "\n");<br> 
+									&emsp;} while (0);
+									</p>
+									</div><p>
+									The argument for IF_ WARN is replaced once, as-is, into the if statement, and once, stringified, into the argument to fprintf. If x1 were a macro, it would be extended in the if statement, but not in the string.<br>
+									The do and while (0) are a kludge to make it possible to write IF_ WARN (arg);, which the similarity of IF_ WARN to a function would make C programmers want to do
+
+																     		
+							     		
+							     	</p>
+
+
+								
+									
+							
+
+							</article>
+							<article>
+								<h4 class="bgc">5.Concatenation</h4>
+								<p>
+									It is repetitively useful to combine two tokens into one when expanding a macro. This process is called token concatenation or token pasting in C language . The pre-processor Operator `##' pastes the pre-processing operator token. When ever the macro is extended, the two tokens on each side of each `##' operator are combined into a single token, which substitutes `##' and the two original tokens in the macro extension or expansion.<br>
+						Generally, both are identifiers. or one will be an identifier And the other one will be the pre-executed code. When the code is pasted It will create a long identifier. This is not the only quality problem. Two numbers are likely (or numbers and names, such as 1.5 and E3) are combined into one. You can also create multi-character operators, such as +=, by pasting a token.<br>
+
+
+						Conversely, two tokens symbols that do not form a valid token  when added together can be inserted together. For example, you cannot combine x with + in any order. If you try, the executable warns and outputs the two characters as if they were written next to each other. It is common to find redundant use of `## in complex macros. If you get this warning, you can easily remove the '##'.<br>
+						All characters connected by "##" can be taken from the body of the macro, but you can first write them as a single token at the first place. Token pasting is very useful when one or both tokens come from a macro argument. If one of the characters around ``##'' is the name of a parameter, it is replaced with the original argument before ``##' is executed. As with casting to a string or stringification, the actual argument does not initialize the macro expansion. If the argument is empty, this `## has no effect.<br>
+						Note that the C preprocessor converts the comments to white spaces before the macros are straight considered. Hence, you cannot make cmment  by combining `*' and `/'. You can put as many whitespaces as you like between "##" and its functions, including comments, and also insert comments into arguments that will be concatenated. However, the appearance of the "##" symbol at the end of the macro body is an error.
+
+
+								</p>
+							
+								
+							</article>
+							
+					
+									<article>
+											<p>In this program, we create a new file employee.bin in the C drive.
+									We declare a structure employee with three  members in int  - empno, salary and bonus, and define it in the main function as e1.<br>
+									Now, inside the for loop, we store the value into the file using fwrite().
+									The first parameter takes the address of e1 and the second parameter takes the size of the structure employee.<br>
+									Since we're only inserting one instance of e1, the third parameter is 1. And, the last parameter *fptr points to the file we're storing the data.
+									Finally, we close the file.
+
+												
+											</p>
+										</article>
+																		
+																	
+
+										
+									<article>
+										<div class="dashed2">
+										<p>Let us study a C program that interprets named commands:<br>
+											struct command<br>
+											&emsp;{<br>
+											  &emsp;&emsp;char *name;<br>
+											  &emsp;&emsp;void (*function) (void);<br>
+											&emsp;};<br>
+
+											&emsp;struct command commands[] =<br>
+											&emsp;{<br>
+											 &emsp;&emsp; { "quit", quit_command },<br>
+											  &emsp;&emsp;{ "help", help_command },<br>
+											 &emsp;&emsp; ...<br>
+											&emsp;};
+
+
+									</p>
+								</div>
+								<p>
+										It is easy to avoid specifying the name of each command twice: once in the string statement and once in the function name. A macro that takes a command name as an argument can make this unnecessary. String expressions can be implemented using string conversions, and function names can be created by concatenating arguments with the "_ command”. Here’s how to do it:</p>
+										<div class="dashed2"><p>
+									 	#define COMMAND(NAME)<br>
+									&emsp;{
+									&emsp;&emsp;#NAME,NAME ## _command<br>
+									&emsp;}<br>
+
+									struct command commands[] =<br>
+									&emsp;{<br>
+									  &emsp;&emsp;COMMAND (quit),<br>
+									  &emsp;&emsp;COMMAND (help),<br>
+									  &emsp;...<br>
+									&emsp;};<br>
+
+									</p>
+										</div>
+									</article>
+									
+																		
+										<article>
+											<p>
+											</p>
+											
+										
+								
+									</article>
+									<article>
+											
+										<p>
+											</p>
+									</article>
+								
+									
+										<article>
+											<p>
+											</p>
+										</article>
+										
+									
+								
+											<!-- <div>   commented by me -->
+											<hr>					
+											<p>
+											Previous Topic:--&gt;&gt;<a href="count-vowels-file-c.html"> count vowels in files.</a>&nbsp;||&nbsp;Next topic:--&gt;&gt;<a href="file-inclusion-c.html">file inclusion.</a><br>
+											</p>
+											<hr>
+											<div class="dashed">
+
+												
+													<p class="p"> <b>&emsp;&emsp;Other Topics:</b><br>
+											<a href="c-variable-identifier.html">Variables and Identifiers</a>&emsp;
+											<a href="relationaloperator.html">Relational Operators </a>&emsp;
+											<a href="c-ifelse.html">if-else statements</a>&emsp;
+											<a href="c-switch.html">Switch case </a>&emsp;
+											<a href="c-while-loop.html">While Loop </a>&emsp;
+											<a href="infinite-while-loop-c.html">Infinite while Loops</a>&emsp;
+											<a href="c-for.html">C FOR Loop</a>&emsp;
+											<a href="infinite-for-loop-c.html"> Infinite for Loops </a>&emsp;
+											<a href="continue-c.html">Continue in Loops </a>&emsp;
+											<a href="one-d-array-c.html">One Dimensional Array</a>&emsp;
+											<a href="two-d-array.html">Two Dimensional Arrays</a>&emsp;
+											<a href="read-2d-array.html">Read and Display 2D Arrays</a>&emsp;
+											<a href="types-of-function-c.html">Types of functions</a>&emsp;
+											<a href="passing-array-function-c.html">Passing Array To Functions</a>&emsp;
+											<a href="nesting-function-c.html">Nesting of Function</a>&emsp;
+											<a href="array-vs-structure-c.html">Array vs Structure</a>&emsp;
+											<a href="array-struct-c.html">Array of Structure</a>&emsp;
+											<a href="struct-and-function-c.html">Structures and Functions</a>&emsp;
+											<a href="struct-within-struct-c.html">Structures Within Structures</a>&emsp;
+											<a href="use-pointer-c.html">Use Of Pointers In C</a>&emsp;
+											<a href="file-intro-c.html">File Handling In C</a>&emsp;
+											<a href="loop-faq-c.html">Loops FAQ</a>&emsp;
+											<a href="array-faq-c.html">Arrays FAQ</a>&emsp;
+											<a href="count-vowels-file-c.html">count vowels in a file</a>&emsp;
+										    <a href="function-faq-c.html">Function FAQ</a> &emsp;
+										    <a href="conditional-stmt-assign-c.html">Conditional Statements Assignments</a>&emsp;
+												<a href="c-for-example.html">For Loops Assignments</a>&emsp;
+												<a href="array-assign-c.html">Arrays Assignments</a>&emsp;
+												<a href="function-assign-c.html">Function Assignments</a>&emsp;
+												<a href="structure-assign-c.html">Structure Assignments</a>&emsp;
+												<a href="pointer-assign-c.html">Pointers Assignments</a>&emsp;
+												<a href="file-assign-c.html">Files Assignments</a>&emsp;
+												<a href="storage-class-assign-c.html">Storage classes Assignments</a>&emsp;
+												<a href="binary-file-c.html"> Binary Files</a>&emsp;
+												<a href="file-count-word-line-c.html">count words,lines in a file</a>&emsp;
+												<a href="copy-file-c.html">Copy files</a>&emsp;
+												<a href="update-file-c.html">Update File</a>&emsp;
+												<a href="continue-c.html">Continue in Loops </a>&emsp;
+												<a href="break-c.html">break in Loops </a>&emsp;
+												<a href="c-diff-while-dowhile.html">Difference Between While and Do while</a>&emsp;
+												<a href="while-vs-dowhile-vs-for-c.html">difference while do..while & for </a>&emsp;
+												<a href="malloc-c.html">malloc</a>&emsp;
+												<a href="calloc-c.html">calloc</a>&emsp;
+												<a href="storage-class-c.html">Storage Classes</a>&emsp;
+												<a href="operators-mcq-c.html">Operators MCQ</a>&emsp;
+												<a href="conditional-mcq-c.html">Conditional Statements MCQ</a>&emsp;
+												<a href="loops-mcq-c.html">Loops MCQ</a>&emsp;
+												<a href="array-mcq-c.html">Arrays MCQ</a>&emsp;
+												<a href="function-mcq-c.html">Function MCQ</a>&emsp;
+												<a href="structure-mcq-c.html">Structure MCQ</a>&emsp;
+												<a href="pointer-mcq-c.html">Pointers MCQ</a>&emsp;
+												<a href="files-mcq-c.html">Files MCQ</a>&emsp;
+												<a href="storage-class-mcq-c.html">Storage classes MCQ</a>
+											
+											
+										</p>					
+									</div>
+															
+									</div>
+								</section>
+
+							<!-- Section -->
+								
+
+						</div>
+						<div>
+				<!-- footer menu -->
+			</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<section>
+									<header class="">
+										<div>
+										<p>
+
+</p>	
+									</div>
+									
+
+									</header>
+									
+			
+								</section>
+							<!-- Section -->
+								
+
+							<!-- Section -->
+
+							<!-- Search -->
+								<!--<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form> 
+								</section> -->
+
+							<!-- Menu -->
+								
+								<nav id="menu">
+									<header class="major">
+										<h2>C Language</h2>
+									</header>
+									<ul>
+										<li><a href="../index.html">Home</a></li>
+										<li><a href="whyC.html">Why C Language</a></li>
+										<li><a href="historyC.html">History of C Language</a></li>
+										<li><a href="ApplicationsC.html">Applications of C Language</a>
+										</li>
+										<li>
+											<span class="opener">Introduction To C</span>
+											<ul><li><a href="whatisprogram.html">What is Program?</a></li>
+												<li><a href="cprogramstructure.html">Structure of C Program</a></li>
+												<li><a href="Cprogram.html">Working Of C Program</a></li>
+												<li><a href="CLanguageChar.html">CHARACTER SET </a></li>
+												<li><a href="c-variable-identifier.html">VARIABLES AND IDENTIFIERS </a></li>
+												<li><a href="c-datatype.html">BUILT-IN DATA TYPES </a></li>
+												
+												<li><a href="operators.html">OPERATORS AND EXPRESSIONS </a></li>
+												<li><a href="constant.html">CONSTANTS AND LITERALS</a></li>
+												<li><a href="assignment.html"> SIMPLE ASSIGNMENT STATEMENT </a></li>
+												<li><a href="inputoutput.html">BASIC INPUT/OUTPUT STATEMENT </a></li>
+												<li><a href="cprograms.html">SIMPLE 'C' PROGRAMS</a></li>
+												<li><a href="assignments-intro1.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Operators in C Programming </span>
+											<ul>
+											<li><a href="arithmatic-operators-c.html">Arithmetic Operators </a></li>
+												<li><a href="assignment-operators-c.html">Assignment Operators </a></li>
+												<li><a href="increment-decrement-operator-c.html">Increment and Decrement Operators</a></li>
+												<li><a href="relationaloperator.html">Relational Operators </a></li>
+												<li><a href="logicaloperator.html">Logical Operators</a></li>
+											 <li><a href="bitwiseopearator.html">Bitwise Operators </a></li>
+											 <li><a href="otheropearator.html">Other Operators </a></li>
+											 <li><a href="opearatorassignments.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">CONDITIONAL STATEMENTS</span>
+											<ul>
+												<li><a href="c-decision.html">DECISION MAKING WITHIN A PROGRAM</a></li>
+												<li><a href="c-condtions.html"> CONDITIONS</a></li>
+												<li><a href="c-if.html">IF STATEMENT </a></li>
+												<li><a href="c-ifelse.html">IF-ELSE STATEMENT</a></li>
+												<li><a href="c-ifelseladder.html">IF-ELSE LADDER</a></li>
+												<li><a href="c-nestedif.html">NESTED IF-ELSE </a></li>
+												<li><a href="c-switch.html">SWITCH CASE </a></li>
+												<li><a href="conditional-stmt-assign-c.html">Assignments</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">LOOPS STATEMENTS</span>
+											<ul>
+												<li><a href="loops-intro.html">Introduction to Loops</a></li>
+												<li><a href="c-goto.html"> GO TO Statement</a></li>
+												<li><a href="c-dowhile-loop.html"> Do while Loop </a></li>
+												<li><a href="c-while-loop.html">While Loop </a></li>
+												<li><a href="c-nested-while.html">Nested While Loop </a></li>
+												<li><a href="c-diff-while-dowhile.html">Difference Between While and Do while</a></li>
+												<li><a href="c-difference-goto-loop.html">Difference Between Goto and loop</a></li>
+												<li><a href="c-while-loop-assign.html"> while loop assignments</a></li>
+												<li><a href="c-for.html">C FOR Loop</a></li>
+												<li><a href="c-for-example.html">C For loop examples </a></li>
+												<li><a href="c-nested-for.html">Nested for loop</a></li>
+												<li><a href="nested-while-loop-c.html">Nested for loop examples </a></li>
+												<li><a href="infinite-while-loop-c.html">Infinite while Loops</a></li>
+												<li><a href="infinite-for-loop-c.html"> Infinite for Loops </a></li>
+												<li><a href="continue-c.html">Continue in Loops </a></li>
+												<li><a href="break-c.html">break in Loops </a></li>
+												<li><a href="while-vs-dowhile-vs-for-c.html">difference while do..while & for </a></li>
+												<li><a href="loop-assignment-c.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Arrays</span>
+											<ul>
+												<li><a href="one-d-array-c.html">One Dimensional Array</a></li>
+												<li><a href="declare-array-c.html">Declaring 1D Arrays</a></li>
+												<li><a href="initilize-array-c.html">Initilization of 1D arrays</a>
+												</li>
+												<li><a href="access-array-c.html">Accessing element of one 1D Array</a></li>
+												<li><a href="read-array-c.html">Read and Display 1D Arrays</a></li>
+												<li><a href="two-d-array.html">Two Dimensional Arrays</a></li>
+												<li><a href="declare-2d-array-c.html">Declare 2D Arrays</a></li>
+												<li><a href="read-2d-array.html">Read and Display 2D Arrays</a></li>
+												<li><a href="array-assignments.html">Assignments/Examples</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Functions</span>
+											<ul>
+												<li><a href="function-intro-c.html">Introduction</a></li>
+												<li><a href="user-defined-function-c.html">Need For User-Defined Function</a></li>
+												<li><a href="multiple-fun-program-c.html">Multiple Function Program</a></li>
+												
+												<li><a href="modular-programming-c.html">Modular Programming</a></li>
+												<li><a href="element-user-defined-fun-c.html">Elements Of User Defined Function</a></li>
+												<li><a href="function-definition-c.html">Function Definition</a></li>
+												</li>
+												<li><a href="function-declaration-c.html">Function Declaration</a></li>
+												</li>
+												<li><a href="types-of-function-c.html">Types of functions</a></li>
+												</li>
+												<li><a href="nesting-function-c.html">Nesting of Function</a></li>
+												<li><a href="recursion-c.html">Recursion</a></li>
+												<li><a href="passing-array-function-c.html">Passing Array To Functions</a></li>
+												<li><a href="visibility-scope-var-c.html">Scope,Visibility and Lifetime of Variables</a></li>
+												<li><a href="function-assignment-c.html">Assignments</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Structure</span>
+											<ul>
+												<li><a href="structure-intro-c.html">Introduction</a></li>
+												<li><a href="array-vs-structure-c.html">Array vs Structure</a></li>
+												<li><a href="define-structure-c.html">Defining Structure</a></li>
+												<li><a href="declare-structure-var-c.html">Declaring Structure Variables</a></li>
+												<li><a href="type-def-struct-c.html">Type Defined Structure</a></li>
+												<li><a href="access-struct-member-c.html">Accessing Structure Members</a></li>
+												<li><a href="struct-initilization-c.html">Structure Initilization</a></li>
+												<li><a href="copy-compare-struct-c.html">Copying & Comparing Structure Variables</a></li>
+												<li><a href="array-struct-c.html">Array of Structure</a></li>
+												<li><a href="array-within-struct-c.html">Arrays Within Structure</a></li>
+												<li><a href="struct-within-struct-c.html">Structures Within Structures</a></li>
+												<li><a href="struct-and-function-c.html">Structures and Functions</a></li>
+												<li><a href="struct-assignment-c.html">Structure Examples/Assignments</a></li>
+											</ul>
+									  </li>
+										<li>
+
+
+											<span class="opener">Union</span>
+											<ul>
+												<li><a href="define-union-c.html">Define Union</a></li>
+												<li><a href="create-union-c.html">Create and use Union</a></li>
+												<li><a href="diff-struct-union-c.html">Difference Between Structure and Union</a></li>
+												<li><a href="union-c-example.html">Union Examples</a></li>
+												<li><a href="union-c-faq.html">Union FAQ</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Pointers</span>
+											<ul>
+												<li><a href="what-is-pointer-c.html">What Are Pointers In C?</a></li>
+												<li><a href="how-use-pointer-c.html">How Do We Use Pointers In C?</a></li>
+												<li><a href="declare-pointer-c.html">Declaration Of A Pointer</a></li>
+												<li><a href="pointer-init-c.html">The Initialization Of A Pointer</a></li>
+												<li><a href="pointer-syntax-init.html">Syntax Of Pointer Initialization</a></li>
+												<li><a href="use-pointer-c.html">Use Of Pointers In C</a></li>
+												<li><a href="pointer-to-array-c.html">The Pointer To An Array</a></li>
+												<li><a href="pointer-to-function-c.html">The Pointer To A Function</a></li>
+												<li><a href="pointer-to-struct-c.html">The Pointer To A Structure</a></li>
+												<li><a href="types-pointer-c.html">Types Of Pointers</a></li>
+												<li><a href="null-pointer-c.html">The Null Pointer</a></li>
+												<li><a href="void-pointer-c.html">The Void Pointer</a></li>
+												<li><a href="wild-pointer-c.html">The Wild Pointer</a></li>
+												<li><a href="near-pointer-c.html">The Near Pointer</a></li>
+												<li><a href="huge-pointer-c.html">The Huge Pointer</a></li>
+												<li><a href="far-pointer-c.html">The far Pointer</a></li>
+												<li><a href="dangling-pointer-c.html">dangling pointer </a></li>
+												<li><a href="access-pointer-c.html">Accessing Pointers- Indirectly And Directly</a></li>
+												<li><a href="pros-pointer-c.html">Pros Of Using Pointers In C</a></li>
+												<li><a href="cons-pointer-c.html">Cons Of Pointers In C</a></li>
+												<li><a href="application-pointer-c.html">Applications Of Pointers In C</a></li>
+												<li><a href="address-operator-c.html">The & Address Of Operator In C</a></li>
+												<li><a href="complex-pointer-c.html">How To Read The Complex Pointers In C?</a></li>
+												<li><a href="practice-pointer-c.html">Practice Problems On Pointers </a></li>
+												
+												
+											</ul>
+									  </li>
+
+
+ 									<li>
+											<span class="opener">File Processiong</span>
+											<ul>
+												<li><a href="file-intro-c.html">File Handling In C</a></li>
+												<li><a href="types-file-c.html">Types Of Files In C </a></li>
+												<li><a href="operation-file-c.html">Operations Done In File Handling</a></li>
+												<li><a href="file-example-c.html">File Examples</a></li>
+												<li><a href="binary-file-c.html"> Binary Files</a></li>
+												<li><a href="file-count-word-line-c.html">count words,lines in a file</a></li>
+												<li><a href="copy-file-c.html">Copy files</a></li>
+												<li><a href="update-file-c.html">Update File</a></li>
+												<li><a href="count-vowels-file-c.html">count vowels in a file</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Preprocessor</span>
+											<ul>
+												<li><a href="macro-sub-div-c.html">Macro substitution division</a></li>
+												<li><a href="file-inclusion-c.html">File Inclusion</a></li>
+												<li><a href="conditional-compile-c.html">Conditional Compilation</a></li>
+												<li><a href="other-dir-c.html">Other directives</a></li>
+												<li><a href="preprocessor-example-c.html">Examples</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Dynamic Memory Allocation</span>
+											<ul>
+												<li><a href="malloc-c.html">malloc</a></li>
+												<li><a href="calloc-c.html">calloc</a></li>
+												<li><a href="free-c.html">free</a></li>
+												<li><a href="realloc-c.html">realloc</a></li>
+												<li><a href="dynamic-mem-example-c.html">Examples</a></li>
+											</ul>
+									  </li>
+										<li><a href="storage-class-c.html">Storage Classes</a></li>
+										<li><a href="graphics-c.html">Graphics</a></li>
+										<li>
+											<span class="opener">Frequently Asked Interview Questions
+										(FAQ)</span>
+											<ul>
+												<li><a href="intro-c-faq-c.html">Introduction To C FAQ</a></li>
+												<li><a href="operators-c-faq.html">Operators FAQ</a></li>
+												<li><a href="conditional-stmt-c-faq.html">Conditional Statements FAQ</a></li>
+												<li><a href="loop-faq-c.html">Loops FAQ</a></li>
+												<li><a href="array-faq-c.html">Arrays FAQ</a></li>
+												<li><a href="function-faq-c.html">Function FAQ</a></li>
+												<li><a href="structure-faq-c.html">Structure FAQ</a></li>
+												<li><a href="pointer-faq-c.html">Pointers FAQ</a></li>
+												<li><a href="files-faq-c.html">Files FAQ</a></li>
+												<li><a href="storage-class-faq-c.html">Storage classes FAQ</a></li>
+												<li><a href="dma-faq-c.html">Dynamic Memory FAQ</a></li>
+												
+
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Programs/Assignments</span>
+											<ul>
+												<li><a href="intro-assign-c.html">Introduction To C </a></li>
+												<li><a href="operators-assign-c.html">Operators </a></li>
+												<li><a href="conditional-stmt-assign-c.html">Conditional Statements </a></li>
+												<li><a href="loop-assign-c.html">Loops </a></li>
+												<li><a href="array-assign-c.html">Arrays </a></li>
+												<li><a href="function-assign-c.html">Function </a></li>
+												<li><a href="structure-assign-c.html">Structure </a></li>
+												<li><a href="pointer-assign-c.html">Pointers </a></li>
+												<li><a href="file-assign-c.html">Files </a></li>
+												<li><a href="storage-class-assign-c.html">Storage classes </a></li>
+												<li><a href="dma-assign-c.html">Dynamic Memory </a></li>
+												
+
+											</ul>
+									  </li>
+										<li><a href="case-studies-c.html">Case Studies</a></li>
+										<li>
+											<span class="opener">Multiple Choice Questions</span>
+											<ul>
+												<li><a href="intro-mcq-c.html">Introduction To C MCQ</a></li>
+												<li><a href="operators-mcq-c.html">Operators MCQ</a></li>
+												<li><a href="conditional-mcq-c.html">Conditional Statements MCQ</a></li>
+												<li><a href="loops-mcq-c.html">Loops MCQ</a></li>
+												<li><a href="array-mcq-c.html">Arrays MCQ</a></li>
+												<li><a href="function-mcq-c.html">Function MCQ</a></li>
+												<li><a href="structure-mcq-c.html">Structure MCQ</a></li>
+												<li><a href="pointer-mcq-c.html">Pointers MCQ</a></li>
+												<li><a href="files-mcq-c.html">Files MCQ</a></li>
+												<li><a href="storage-class-mcq-c.html">Storage classes MCQ</a></li>
+												<li><a href="dma-mcq-c.html">Dynamic Memory MCQ</a></li>
+												<li><a href="more-faqc.html">More MCQ</a></li>
+
+											</ul>
+									  </li>
+									</ul>
+								</nav>
+
+							<!-- Section   for activities -->
+								<section>
+									<header class="">
+										<div>
+										<p>
+
+										</p>	
+									</div>
+									
+
+									</header>
+									
+			
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">tech2dsm@gmail.com</a></li>
+										<!--<li class="icon solid fa-phone">-----</li>
+										<li class="icon solid fa-home"><br />
+										</li> -->
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Sankalan Data Tech. All rights reserved. </p>
+
+								</footer>
+
+
+						</div>
+					</div>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+	</body>
+</html>

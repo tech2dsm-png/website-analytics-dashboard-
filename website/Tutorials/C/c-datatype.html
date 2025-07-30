@@ -1,0 +1,877 @@
+<!DOCTYPE HTML>
+<!--
+	
+	
+	Free tutorials for personal and commercial use 
+-->
+<html>
+	<head>
+		<title>Data Types  in C Language Skill UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="keywords" content="data type, int,float,char,long,double, in, C, Programming,primitive,derived">
+		
+		<meta name="description" content="A data type specifies the type of data that a variable can store such as integer, floating, character, etc.Data types are used to define a variable before use in a program. Data types determine the size of the variable, space it occupies in storage. ">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/intstyle.css" />
+		<script>
+					document.addEventListener("contextmenu", function(event)
+					{
+						event.preventDefault();
+						    
+					}, false);
+		</script>
+		<style>
+				
+				ul {
+ 					  padding: 20px;
+ 					  
+ 					}
+				li {
+					 	 background: #cce5ff;
+ 						 color: darkblue;
+ 						 margin: 5px;
+					}
+					body {
+							background: #cce5ff;	
+					    } 					
+         		p  {
+           				 
+  						font-size: 19px;
+  						color: black;
+  						font-family: Georgia, serif;
+  						font-style: italic;
+  						display:block;
+  						margin-left: 1.2em;
+  						margin-bottom: 1em;
+  						margin-right: 1em;
+
+         			 }
+         			 .bgc{
+         			 	background-color: rgb(155,142,179);
+         			 }
+         		.responsive {
+         			       width: 100%;
+         			       height: auto;
+         			      }
+ 	        	img {
+  					border-radius: 15%;
+					}
+					div.dashed{
+         				border-style: solid;
+         				border-width: 3px;
+
+         			}
+					
+					
+​
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="" class="logo"><strong>Data Types in C</strong> Language Skill UP</a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter">
+											<span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+
+									</ul>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+									<div class="content">
+										<header>
+											<h3 class="bgc">Data Types  in  C Language <br />
+											</h3>
+											
+										</header>
+										<p> In this article, lets  learn Data Types used in C programming language.<br>
+									
+										Data types in C programming specifies the type of data that a variable can store such as integer, floating, character, etc. They are declaration of variables. Data types are the data storage format that tells the compiler or interpreter how the programmer enters the data and what type of data they enter into the program. Data types used in C language to declare various types of functions or variables before use in a program. <br>
+										 C language supports a variety of data types. The variety of data types available allows the programmer to select the type appropriate to the program’s needs and the machine. C supports different types of data. <br>
+										 In other words we can define data types as <i>“ it is a classification of data which tell the compiler or interpreter how the programmers intends to use the data.”</i><br>
+
+
+
+
+										</p>
+										<p><b class="bgc">Example of Data Types in C</b><br>
+									For instance, let say we want to use some employee information such as name=Ajay,
+									Salary=80000,bonus=.56 etc. Then, the compiler used in C language would handle all of these very differently. Thus, here, we use different data types for defining what data types we want in the program.<br>
+									here  Ajay 80000 .56 are different kind of data types value.<br>
+									C supports different types of data which may be represented differently within computer’s memory.<br>
+
+<br>
+										</p>
+
+											
+
+
+											<article> 
+										
+														<h3 class="bgc">Types of Data Types in C language.</h3>
+												<p>Data types are divided into following three categories<br>
+												<b>1 Basic or Primary Data Types. <br>
+												2 Derived Data types. <br>
+												3 User defined Types<br></b><br></p>
+												<h3 class="bgc">1. Basic or Primary Data Types.</h3><p>
+												C language supports five primitive or primary data types   namely int, char, float, double and void..<br>
+												 <b class="bgc">1.Integer  </b><br>We use these for storing various whole numbers, such as 5, 8, 67, 2390, etc.<br>
+												Integers are whole numbers without a fractional part. <br>In C, the keyword  int or data type is used to represent integer number. They generally require 4 or 8 bytes of memory for their storage .The memory size occupied by int  depends on the compiler ,whether it is 32-bit or 64-bit. <br>32 bit compiler have 2 bytes but 64-bit compiler have it as 4 bytes. int data type in c  is a signed data type, that means it can be used to store both positive as well as negative numbers. <br>The range of values in a variables varies . <br>
+												For 2 bytes it is 0 to 65535 for unsigned integer.<br>
+												For 4 bytes it is 0 to 4,29,49,67,296  for unsigned integer.<br>
+												integer data type has use  in c programming. the syntax is given below.<br> data type &nbsp;&nbsp;&nbsp;variable name;<br>
+												<b class="bgc">e.g int rs;</b><br>
+												here  int is the data type and rs is the variable that store integer number values.<br>size and range of values for variable rs can varies compiler to compiler.
+												<br>For 2 bytes it is 0 to 65535 for unsigned integer.<br>
+												For 4 bytes it is 0 to 4,29,49,67,296  for unsigned integer.<br></p>
+												<div class="dashed scroll">
+													<p>
+														#include&lt;stdio.h&gt;<br>
+															void main()<br>
+															{<br>
+														   int i;<br>
+														   i=20;<br>
+														  printf("\n Value of i=%d",i);<br>
+														  printf("\n Size i=%u",sizeof(i));<br>
+														}<br>
+														<b> Output:</b><br>
+														Value of i=20<br>
+														Size of i=4<br>
+														here size occupied by variable i is 4 byte, The programm is running of 64-bit compiler.
+													</p>
+												</div>
+												
+											</article>
+											<article>
+												<p>
+													
+												</p>
+											</article>
+											<article>
+												<p>
+												<b class="bgc">Integers data type also differentiated into the following categories according to their size:</b><br>
+								i. variables having small integer range of values, the data type to be used is  short int or short.<br>
+								The amount of memory occupied by short int or short is 1 byte.<br>
+								ii.  For variables having an intermediate range of values, the  data type  is int.<br>
+								The amount of memory occupied by  int  is  2 or 4  byte.<br>
+								iii.  variables having large integer range values, the data type to be used is long int or long.<br>
+								The amount of memory occupied by  long int or long  is   4  byte.<br>
+								iv. variables having very large values, the type is long, long int, or only long long.<br>
+								The amount of memory occupied by  long long  is   8  byte.<br>
+									
+
+												</p>
+												<div class="dashed scroll">
+													
+														<h3 class="bgc">C Program To display the maximum and minimum range of some data types</h3><br><p>
+
+								#include&lt;stdio.h&gt;<br>
+							#include&lt;limits.h&gt;<br>
+							int main() {<br>
+							  printf ("\nMinimum value of int = %d", INT_MIN);<br>
+							  printf ("\nMaximum value of int = %d", INT_MAX);<br>
+							  printf ("\nMaximum value of unsigned int = %u", UINT_MAX);<br>
+							  printf("\nMinimum value of long int = %ld",LONG_MIN);<br>
+							  printf("\nMaximum value of long int = %ld",LONG_MAX);<br>
+							  return(0);
+							}<br>
+							<b>Output :</b><br>
+
+							Minimum value of int = -32768<br>
+							Maximum value of int = 32767<br>
+							Maximum value of unsigned int = 65535<br>
+							Minimum value of long int = -2147483648<br>
+							Maximum value of long int = 2147483647<br>
+							<b>Note:</b> output may be different it depends on compiler. 
+
+										</p>
+										</div>
+								</article>
+											<article>
+												<p><b class="bgc">2.&nbsp; Character Data Type in C :</b><br>
+													
+													this data type in c is used to store single character in memory. It knows as  all ASCII character sets as well as the single alphabets, such as ‘A’, ‘b’,’B’ etc. A  character variable may have value in the form of a character. And the type of such defined variable is char.
+													The character may be  a letter or a digit or a punctuation mark and so on. Char data type variable generally takes 1 byte of memory in c Programming. Characters assigned to a variable of the char types are stored using its ASCII code, an integer. In C language, the characters define as integer constants according to ASCII code. This code comprises Latin alphabets from A to Z in uppercase and a to z in lowercase, digits 0 to 9, symbols such as+, -, *, etc.<br>
+													the value stored in a variable of type char can range from -128 to +127.<br>
+													In the case of unsigned type, the value stored ranges from 0 to 255.<br></p>
+													<div class="dashed"><p>
+												    <b class="bgc">Syntax  for declare char:</b><br>
+												      char varname='c'<br>
+												       where char is data type and varname is the character variable that store single character which is on the right side.<br>
+												    'c' is the character which is assigned to char variable varname.</p>
+												</div><br>
+													<div class="dashed scroll">
+														<p><b class="bgc">The following program would tell how characters are accessed and declared.</b><br>
+															#include&lt;stdio.h&gt;<br>
+															int	main() {<br>
+															 char ch = 'a';<br>
+															 printf("\nASCII code of %c is %d",ch,ch);<br>
+															 return 0;<br>
+															}<br>
+															<b> Output:</b><br>
+															ASCII code of a is 97<br>
+															In the above program we have declared a variable ch of the data type char and assigned value a to it. <br>
+															In the printf() statement, we are printing its value and corresponding ASCII value.<br>
+															So the answer -> ASCII code of a is 97.
+
+
+														</p>
+													</div>
+											</article>
+										
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										
+									</header>
+									<div class="features">
+										<article>
+											<span class=""></span>
+											<div class="content">
+												
+												<p> <img src="images/data-types-in-c.jpg" class="responsive" alt="data types in c programming int,float,char long ,double, primary data type,secondary data type" />
+
+
+
+												</p>
+											</div>
+										</article>
+										<article>
+											<span class=""></span>
+											<div class="content">
+												
+												
+												<p><img src="images/data-type-format-specifier.jpg" class="responsive"/ alt="format specifies c programming language">
+
+
+												</p>
+											</div>
+										</article>
+										
+									
+									</article>
+									<article>
+										<p> 
+ </p>
+									</article>
+								</div>
+								<article>
+
+									<div><p><article><p> <b class="bgc">3.The float Data Type</b>:<br>The float data type in c language is used to store all real numbers.<br>.The range of the real number it can store vries from compiler to compiler.Float data type in C may havee both, the exponential part as well as the decimal part (or the fraction part). It is basically a single-precision type of number.<br>
+									for 32-bit and 64-bit compiler it is the same as 4 bytes.That is equivalent to 2^(4*8) length of value.<br>which is 4,29,49,67,296 i.e.0 to 4,29,49,67,296 <br>
+								</p><div class="dashed scroll"><h3 class="bgc">Float data type in C</h3><p>
+								     #include&lt;stdio.h&gt;<br>
+								     int main()<br>
+								     {<br>
+									float y = 427.665;<br>
+									/* by using the suffix f or F */<br>
+									float x = 1000.5454F;<br>
+									printf("\n Value of y=%f",y);<br>
+									printf("\n Value of x=%.2f",y);<br>
+							     	}
+							     	<br>
+							     	<b>Output:</b><br>
+							     	Value of y=427.665000<br>
+							     	Value of x=1000.55<br>
+							     	In our program the first printf("\n Value of y=%f",y); <br>displays output "Value of y=427.665000."<br> The %f format specifier is used to print the floating/decimal value of a variable up to the 6 decimal places  which is default in c Programming.<br>
+							     	The second printf("\n Value of x=%.2f",y); displays output "Value of x=1000.55",<br>
+							     	because the format specifier used is %.2f which prints two digits after decimal poit. <br>The value of variable x=1000.5454F but in output it is 1000.55 because %.2f format specifier rounds it up to two <br>digits and after two digits the value is 5 so it rounded to 1000.55.<br>
+									Just like the data type int, we can also use the float data type along with %f modifiers. </p>
+										
+									</p>
+
+									</div>
+									</article>	
+									<article>
+										<div>
+											<p>
+											
+											</p>
+										</div>
+									</article><article>
+										<div>
+											<p><b class="bgc">4.The double data type</b> <br>
+								Basically The size of the double data type is  64 bits or 8 bytes. It is capable of storing values that are comparatively double the size of the bytes that the float data type can store. This is the reason why it is known as the double. When looking at the 64 bits in total, the program has 1 bit for the sake of sign representation, the exponent uses 11 bits, and it uses the remaining 52 bits for the mantissa.
+								This data type is capable of holding about 15-17 digits, both after and before the decimal of the data type.
+
+											
+											</p>
+											<p>
+												<b class="bgc">5. Void Data type</b><br>
+												Void data type in C language has no meaning and do not have any size.<br>It is also known as empty data type that is used to declare variable that do not have any type.<br>Most importantly it is used in defining functions where function do not return any value.
+											</p>
+										</div>
+									</article>
+
+
+									<article>
+										<p>Every data type variable occupies some bytes of memory , it depends on the compiler either it is 32 bit or 64-bit compiler.<br>Following program demostrate Size of data type in C language
+											
+											</p>
+										<div class="dashed scroll">
+											<h3 class="bgc">Data types in C language and Size of data type </h3>
+											<p>
+												#include &lt;stdio.h&gt;<br>
+						int main() {<br>
+						  printf("Size of short int is %2d bytes \n", sizeof(short int));<br>
+						  printf("Size of int is %2d bytes \n", sizeof(int));<br>
+
+						  printf("Size of long int is %2d bytes \n", sizeof(long int));<br>
+						  
+						  printf("Size of signed int is %2d bytes \n", sizeof(signed int));<br>
+						  printf("Size of unsigned int is %2d bytes \n", sizeof(unsigned int));<br>
+					
+						  printf(" \n Size of float is %2d bytes \n", sizeof(float));<br>
+						  
+						  printf("Size of double is %2d bytes \n", sizeof(double));<br>
+						  
+						  printf("Size of long double is %2d bytes \n", sizeof(long double));<br>
+						 
+						  printf("\n Size of signed char is %2d bytes \n", sizeof(signed char));<br>
+						  printf("Size of char is %2d bytes \n", sizeof(char));<br>
+						  
+						  printf("Size of unsigned char is %2d bytes \n", sizeof(unsigned char));<br>
+						  return 0; <br>
+						}<br>
+						<b>Output:</b><br>
+						Size of short int is  2 bytes <br>
+						Size of int is  4 bytes <br>
+						Size of long int is  8 bytes<br> 
+						Size of signed int is  4 bytes <br>
+						Size of unsigned int is  4 bytes<br>
+						Size of float is  4 bytes <br>
+						Size of double is  8 bytes <br>
+						Size of long double is 16 bytes<br> 
+						Size of signed char is  1 bytes <br>
+						Size of char is  1 bytes <br>
+						Size of unsigned char is  1 bytes 
+																	
+											</p>
+										</div>
+									</article>
+									<article>
+										<div>
+											<p>
+											
+											</p>
+										</div>
+									</article><article>
+										<div><h3 class="bgc">2. Derived Data Types</h3>
+											
+											<p>
+											A derived data type in C language is basically an combination or aggregation of the primary data type. Examples of primary data types are Void, Float, Integer, and Character. Structures, Unions, Arrays, and Pointers are the derived data types. Derived data types are derived from the primary or fundamental data types.  <br>
+											<b class="bgc">1.Array: &nbsp;&nbsp;</b> 
+											An array is a collection of elements of the same data type. It used to handle a large amount of data, without the need to declare many individual variables separately. The array elements stored in contiguous memory locations (i.e. one after the other). All the array elements must either any primary data type like int, float, char, double etc., or they can be any user-defined data type like structure and unions.
+											To declare an array, you need to specify the type of the array elements and number of elements.<br>
+											<b>The syntax is</b><br>
+												data_type arrayname[size];<br></p><p>
+
+											<b class="bgc">2.Functions:&nbsp;&nbsp;</b>
+
+
+									A function is a group of statements that together perform a task . It allows us to avoid duplicating code that used more than once in Program. Using functions the program, can divide into smaller piece of code parts that are easier for us and others to understand, modify and maintain the program.<br>
+									Functions can divided into two categories: library functions (in-built functions) and user-defined functions.<br>
+									Library functions are predefined and precompiled functions that designed to perform some specific tasks. <br>Example Built in Function is , printf (),scanf (),  sqrt (), strlen (), pow() etc.<br>
+									User-defined functions are the functions which are explicitly defined by the user to meet his requirements. A user-defined function generally created when a user may require to perform some specific task repeatedly, and there is no library function available for performing this task.<br>
+									Every function in C consists of following components function definition (part of the function where actual code is defined), function prototype (specifies the name of the function, number and type of parameters (if any) and its return type), function call (It used to invoke the function by specifying the function name followed by a list of arguments separating the function name followed by a list of arguments separated by commas enclosed in pair of parentheses).
+
+
+											</p>
+											<p><b class="bgc">3.Pointer:&nbsp;&nbsp;</b>Pointer
+					A pointer is a variable that contains the address of the data items such as variable or function or array rather than a value. It is a derived data type as it built from one of the basic types available in C.<br>
+					 Pointers frequently used in C because of pointer provides efficient techniques for manipulating data in arrays.<br>
+					 function in C programming always return value, to return multiple values from function pointer is used.<br>
+					 Pointers support run type of dynamic memory allocation.<br>
+
+
+					A pointer variable can be  declared in the same way as that of normal variable except that an asterisk must precede the name of the pointer variable (*). <br>The syntax is<br>
+
+					data_type *ptr_var_name<br>
+					For example <br>
+					int *ptr;
+					Here, ptr is a pointer variable, Which stores the address of any another variable whose  data type is int.<br>
+					Once the pointer variable is declared, we can initialize the pointer variable by assigning the address of some other variable by using the address of operator (&).<br> For example :<br>
+
+					int p = 15;<br>
+					int *ptr = &p;<br>
+					A pointer variable can also use to indirectly access the value of the variable whose address stored in it. It is using the dereference operator (*).
+
+											</p>
+										
+												<article>	<h3 class="bgc">3. User Defined  Data Types in C</h3>
+													<p>
+														As the name suggests, these data types are created by users using one or more primitive or basic data types in combination.These data types are defined or created  by the user as per their need. If a user feels a need of having a data type which is not predefined in C library, then they make their own.<br>
+													
+													Primitive or basic data types Structure, union, enum type definitions help to define user-defined types.<br>
+													<b class="bgc"> Structure :</b> Structure is a user-defined data type in C, where we can store values of multiple data types.<br>
+
+										For example, if you want to store details of employees  of a company, where each employee will be having a name, empno and salary. But managing the data of one employee together (string, int and float variable) for a employee is not possible with any of the data types we have discussed so far. Now for this we use another data type known as Structure.
+												</p>
+												<div class="dashed scroll">
+													<b class="bgc"> e.g Structure in C to store employee detail</b>
+													<p>#include &lt;stdio.h&gt;<br> 
+											#include &lt;string.h&gt;<br> 
+											struct Employee {<br> 
+											   char name[50];<br> 
+											   int empno;<br> 
+											   float salary;<br> 
+											};<br> 
+
+											int main() {<br> 
+											   struct Employee emp1;<br> 
+											   strcpy(emp1.name, "Raj");<br> 
+											   emp1.empno = 1990; <br> 
+											   emp1.salary = 40980.99; <br> 
+											   
+											   return 0;<br> 
+											}<br> 
+													</p>
+												</div>
+									 			<br>
+
+												<p><b class="bgc">Union:</b> Union is Similar to Structure.<br>
+										 Unions consist of one or more members which may be of different data types just like structures. However, unlike structures where each member is assigned a unique storage area, in the union, all the members share the same storage area within the computer’s memory. <br>
+										 In union the space allocation is equal to the highest memory required by the data type.
+										 The e.g is:<br>
+
+
+												</p>
+												<div class="dashed scroll"><h3 class="bgc"> Union example in C</h3><p>
+													#include &lt;stdio.h&gt;<br>
+												#include &lt;string.h&gt;<br>
+												union Emp {<br>
+												   float salary;<br>
+												   char name[20];<br>
+												}e;<br>
+
+												int main() {<br>
+												   union Emp e;<br>        
+												   e.salary = 20090.034;<br>
+												   strcpy(e.name, "Raj");<br>
+
+												   return 0;<br>
+												}<br>
+												After declaring a union, you can define union variables, so to define a variable of Emp type, write<br>
+													union Emp e2;
+													</p>
+
+												</div
+												
+
+												</article><br>
+												<article>
+													<p><b class="bgc">Enum:</b>Enumerated Data Types
+											C provides a special kind of user-defined data type known as enumerated type.<br> Enum is user defined data type which is used to make program more redable and undersandable to prpgrammer.The main objective of enum is to assign text values to the concerned index value.<br>  The programmer lists the values that a variable of enumerated data type can take.<br>
+											Now let us consider a statement,<br>
+											enum countries{America,India,China,Japan,England,Shrilanka};
+											<br>
+											in the above statement 0 will be assigned to America,1 India,2 china and so on.
+
+													 </p>
+													 <div class="dashed scroll">
+													 	<p>#include&lt;stdio.h&gt;<br>
+												enum countries{America,India,China,Japan,England,Shrilanka};<br>
+
+												int main() {<br>
+												    enum countries cnt;<br>
+												    cnt = America;<br>
+												    printf("%d",cnt);<br>
+												    return 0;<br>
+												} <br>
+														<b> Output</b><br>
+														0											 		<p>
+													 </div>
+
+												</article>
+										
+										</div>
+									</article>
+									<article>
+										<div>
+											<p>
+											
+											</p>
+										</div>
+									</article>
+											<div>						
+											<p>
+											Previous Topic:--&gt;&gt;<a href="operators.html"> Operator and Expression</a>&nbsp;||&nbsp;Next topic:--&gt;&gt;<a href="c-variable-identifier.html">Variable and Identifiers</a>
+										</p>					
+									</div>
+								</section>
+
+							<!-- Section -->
+								
+
+						</div>
+						<div>
+				<!-- footer menu -->
+			</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<section>
+									<header class="">
+										<div>
+										<p>
+
+</p>	
+									</div>
+									
+
+									</header>
+									
+			
+								</section>
+							<!-- Section -->
+								
+
+							<!-- Section -->
+
+							<!-- Search -->
+								<!--<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form> 
+								</section> -->
+
+							<!-- Menu -->
+								
+								<nav id="menu">
+									<header class="major">
+										<h2>C Language</h2>
+									</header>
+									<ul>
+										<li><a href="../index.html">Home</a></li>
+										<li><a href="whyC.html">Why C Language</a></li>
+										<li><a href="historyC.html">History of C Language</a></li>
+										<li><a href="ApplicationsC.html">Applications of C Language</a>
+										</li>
+										<li>
+											<span class="opener">Introduction To C</span>
+											<ul><li><a href="whatisprogram.html">What is Program?</a></li>
+												<li><a href="cprogramstructure.html">Structure of C Program</a></li>
+												<li><a href="Cprogram.html">Working Of C Program</a></li>
+												<li><a href="CLanguageChar.html">CHARACTER SET </a></li>
+												<li><a href="c-variable-identifier.html">VARIABLES AND IDENTIFIERS </a></li>
+												<li><a href="c-datatype.html">BUILT-IN DATA TYPES </a></li>
+												
+												<li><a href="operators.html">OPERATORS AND EXPRESSIONS </a></li>
+												<li><a href="constant.html">CONSTANTS AND LITERALS</a></li>
+												<li><a href="assignment.html"> SIMPLE ASSIGNMENT STATEMENT </a></li>
+												<li><a href="inputoutput.html">BASIC INPUT/OUTPUT STATEMENT </a></li>
+												<li><a href="cprograms.html">SIMPLE 'C' PROGRAMS</a></li>
+												<li><a href="assignments-intro1.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Operators in C Programming </span>
+											<ul>
+											<li><a href="arithmatic-operators-c.html">Arithmetic Operators </a></li>
+												<li><a href="assignment-operators-c.html">Assignment Operators </a></li>
+												<li><a href="increment-decrement-operator-c.html">Increment and Decrement Operators</a></li>
+												<li><a href="relationaloperator.html">Relational Operators </a></li>
+												<li><a href="logicaloperator.html">Logical Operators</a></li>
+											 <li><a href="bitwiseopearator.html">Bitwise Operators </a></li>
+											 <li><a href="otheropearator.html">Other Operators </a></li>
+											 <li><a href="opearatorassignments.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">CONDITIONAL STATEMENTS</span>
+											<ul>
+												<li><a href="c-decision.html">DECISION MAKING WITHIN A PROGRAM</a></li>
+												<li><a href="c-condtions.html"> CONDITIONS</a></li>
+												<li><a href="c-if.html">IF STATEMENT </a></li>
+												<li><a href="c-ifelse.html">IF-ELSE STATEMENT</a></li>
+												<li><a href="c-ifelseladder.html">IF-ELSE LADDER</a></li>
+												<li><a href="c-nestedif.html">NESTED IF-ELSE </a></li>
+												<li><a href="c-switch.html">SWITCH CASE </a></li>
+												<li><a href="conditional-stmt-assign-c.html">Assignments</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">LOOPS STATEMENTS</span>
+											<ul>
+												<li><a href="loops-intro.html">Introduction to Loops</a></li>
+												<li><a href="c-goto.html"> GO TO Statement</a></li>
+												<li><a href="c-dowhile-loop.html"> Do while Loop </a></li>
+												<li><a href="c-while-loop.html">While Loop </a></li>
+												<li><a href="c-nested-while.html">Nested While Loop </a></li>
+												<li><a href="c-diff-while-dowhile.html">Difference Between While and Do while</a></li>
+												<li><a href="c-difference-goto-loop.html">Difference Between Goto and loop</a></li>
+												<li><a href="c-while-loop-assign.html"> while loop assignments</a></li>
+												<li><a href="c-for.html">C FOR Loop</a></li>
+												<li><a href="c-for-example.html">C For loop examples </a></li>
+												<li><a href="c-nested-for.html">Nested for loop</a></li>
+												<li><a href="nested-while-loop-c.html">Nested for loop examples </a></li>
+												<li><a href="infinite-while-loop-c.html">Infinite while Loops</a></li>
+												<li><a href="infinite-for-loop-c.html"> Infinite for Loops </a></li>
+												<li><a href="continue-c.html">Continue in Loops </a></li>
+												<li><a href="break-c.html">break in Loops </a></li>
+												<li><a href="while-vs-dowhile-vs-for-c.html">difference while do..while & for </a></li>
+												<li><a href="loop-assignment-c.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Arrays</span>
+											<ul>
+												<li><a href="one-d-array-c.html">One Dimensional Array</a></li>
+												<li><a href="declare-array-c.html">Declaring 1D Arrays</a></li>
+												<li><a href="initilize-array-c.html">Initilization of 1D arrays</a>
+												</li>
+												<li><a href="access-array-c.html">Accessing element of one 1D Array</a></li>
+												<li><a href="read-array-c.html">Read and Display 1D Arrays</a></li>
+												<li><a href="two-d-array.html">Two Dimensional Arrays</a></li>
+												<li><a href="declare-2d-array-c.html">Declare 2D Arrays</a></li>
+												<li><a href="read-2d-array.html">Read and Display 2D Arrays</a></li>
+												<li><a href="array-assignments.html">Assignments/Examples</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Functions</span>
+											<ul>
+												<li><a href="function-intro-c.html">Introduction</a></li>
+												<li><a href="user-defined-function-c.html">Need For User-Defined Function</a></li>
+												<li><a href="multiple-fun-program-c.html">Multiple Function Program</a></li>
+												
+												<li><a href="modular-programming-c.html">Modular Programming</a></li>
+												<li><a href="element-user-defined-fun-c.html">Elements Of User Defined Function</a></li>
+												<li><a href="function-definition-c.html">Function Definition</a></li>
+												</li>
+												<li><a href="function-declaration-c.html">Function Declaration</a></li>
+												</li>
+												<li><a href="types-of-function-c.html">Types of functions</a></li>
+												</li>
+												<li><a href="nesting-function-c.html">Nesting of Function</a></li>
+												<li><a href="recursion-c.html">Recursion</a></li>
+												<li><a href="passing-array-function-c.html">Passing Array To Functions</a></li>
+												<li><a href="visibility-scope-var-c.html">Scope,Visibility and Lifetime of Variables</a></li>
+												<li><a href="function-assignment-c.html">Assignments</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Structure</span>
+											<ul>
+												<li><a href="structure-intro-c.html">Introduction</a></li>
+												<li><a href="array-vs-structure-c.html">Array vs Structure</a></li>
+												<li><a href="define-structure-c.html">Defining Structure</a></li>
+												<li><a href="declare-structure-var-c.html">Declaring Structure Variables</a></li>
+												<li><a href="type-def-struct-c.html">Type Defined Structure</a></li>
+												<li><a href="access-struct-member-c.html">Accessing Structure Members</a></li>
+												<li><a href="struct-initilization-c.html">Structure Initilization</a></li>
+												<li><a href="copy-compare-struct-c.html">Copying & Comparing Structure Variables</a></li>
+												<li><a href="array-struct-c.html">Array of Structure</a></li>
+												<li><a href="array-within-struct-c.html">Arrays Within Structure</a></li>
+												<li><a href="struct-within-struct-c.html">Structures Within Structures</a></li>
+												<li><a href="struct-and-function-c.html">Structures and Functions</a></li>
+												<li><a href="struct-assignment-c.html">Structure Examples/Assignments</a></li>
+											</ul>
+									  </li>
+										<li>
+
+
+											<span class="opener">Union</span>
+											<ul>
+												<li><a href="define-union-c.html">Define Union</a></li>
+												<li><a href="create-union-c.html">Create and use Union</a></li>
+												<li><a href="diff-struct-union-c.html">Difference Between Structure and Union</a></li>
+												<li><a href="union-c-example.html">Union Examples</a></li>
+												<li><a href="union-c-faq.html">Union FAQ</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Pointers</span>
+											<ul>
+												<li><a href="what-is-pointer-c.html">What Are Pointers In C?</a></li>
+												<li><a href="how-use-pointer-c.html">How Do We Use Pointers In C?</a></li>
+												<li><a href="declare-pointer-c.html">Declaration Of A Pointer</a></li>
+												<li><a href="pointer-init-c.html">The Initialization Of A Pointer</a></li>
+												<li><a href="pointer-syntax-init.html">Syntax Of Pointer Initialization</a></li>
+												<li><a href="use-pointer-c.html">Use Of Pointers In C</a></li>
+												<li><a href="pointer-to-array-c.html">The Pointer To An Array</a></li>
+												<li><a href="pointer-to-function-c.html">The Pointer To A Function</a></li>
+												<li><a href="pointer-to-struct-c.html">The Pointer To A Structure</a></li>
+												<li><a href="types-pointer-c.html">Types Of Pointers</a></li>
+												<li><a href="null-pointer-c.html">The Null Pointer</a></li>
+												<li><a href="void-pointer-c.html">The Void Pointer</a></li>
+												<li><a href="wild-pointer-c.html">The Wild Pointer</a></li>
+												<li><a href="near-pointer-c.html">The Near Pointer</a></li>
+												<li><a href="huge-pointer-c.html">The Huge Pointer</a></li>
+												<li><a href="far-pointer-c.html">The far Pointer</a></li>
+												<li><a href="dangling-pointer-c.html">dangling pointer </a></li>
+												<li><a href="access-pointer-c.html">Accessing Pointers- Indirectly And Directly</a></li>
+												<li><a href="pros-pointer-c.html">Pros Of Using Pointers In C</a></li>
+												<li><a href="cons-pointer-c.html">Cons Of Pointers In C</a></li>
+												<li><a href="application-pointer-c.html">Applications Of Pointers In C</a></li>
+												<li><a href="address-operator-c.html">The & Address Of Operator In C</a></li>
+												<li><a href="complex-pointer-c.html">How To Read The Complex Pointers In C?</a></li>
+												<li><a href="practice-pointer-c.html">Practice Problems On Pointers </a></li>
+												
+												
+											</ul>
+									  </li>
+
+
+ 									<li>
+											<span class="opener">File Processiong</span>
+											<ul>
+												<li><a href="file-intro-c.html">File Handling In C</a></li>
+												<li><a href="types-file-c.html">Types Of Files In C </a></li>
+												<li><a href="operation-file-c.html">Operations Done In File Handling</a></li>
+												<li><a href="file-example-c.html">File Examples</a></li>
+												<li><a href="binary-file-c.html"> Binary Files</a></li>
+												<li><a href="file-count-word-line-c.html">count words,lines in a file</a></li>
+												<li><a href="copy-file-c.html">Copy files</a></li>
+												<li><a href="update-file-c.html">Update File</a></li>
+												<li><a href="count-vowels-file-c.html">count vowels in a file</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Preprocessor</span>
+											<ul>
+												<li><a href="macro-sub-div-c.html">Macro substitution division</a></li>
+												<li><a href="file-inclusion-c.html">File Inclusion</a></li>
+												<li><a href="conditional-compile-c.html">Conditional Compilation</a></li>
+												<li><a href="other-dir-c.html">Other directives</a></li>
+												<li><a href="preprocessor-example-c.html">Examples</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Dynamic Memory Allocation</span>
+											<ul>
+												<li><a href="malloc-c.html">malloc</a></li>
+												<li><a href="calloc-c.html">calloc</a></li>
+												<li><a href="free-c.html">free</a></li>
+												<li><a href="realloc-c.html">realloc</a></li>
+												<li><a href="dynamic-mem-example-c.html">Examples</a></li>
+											</ul>
+									  </li>
+										<li><a href="storage-class-c.html">Storage Classes</a></li>
+										<li><a href="graphics-c.html">Graphics</a></li>
+										<li>
+											<span class="opener">Frequently Asked Interview Questions
+										(FAQ)</span>
+											<ul>
+												<li><a href="intro-c-faq-c.html">Introduction To C FAQ</a></li>
+												<li><a href="operators-c-faq.html">Operators FAQ</a></li>
+												<li><a href="conditional-stmt-c-faq.html">Conditional Statements FAQ</a></li>
+												<li><a href="loop-faq-c.html">Loops FAQ</a></li>
+												<li><a href="array-faq-c.html">Arrays FAQ</a></li>
+												<li><a href="function-faq-c.html">Function FAQ</a></li>
+												<li><a href="structure-faq-c.html">Structure FAQ</a></li>
+												<li><a href="pointer-faq-c.html">Pointers FAQ</a></li>
+												<li><a href="files-faq-c.html">Files FAQ</a></li>
+												<li><a href="storage-class-faq-c.html">Storage classes FAQ</a></li>
+												<li><a href="dma-faq-c.html">Dynamic Memory FAQ</a></li>
+												
+
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Programs/Assignments</span>
+											<ul>
+												<li><a href="intro-assign-c.html">Introduction To C </a></li>
+												<li><a href="operators-assign-c.html">Operators </a></li>
+												<li><a href="conditional-stmt-assign-c.html">Conditional Statements </a></li>
+												<li><a href="loop-assign-c.html">Loops </a></li>
+												<li><a href="array-assign-c.html">Arrays </a></li>
+												<li><a href="function-assign-c.html">Function </a></li>
+												<li><a href="structure-assign-c.html">Structure </a></li>
+												<li><a href="pointer-assign-c.html">Pointers </a></li>
+												<li><a href="file-assign-c.html">Files </a></li>
+												<li><a href="storage-class-assign-c.html">Storage classes </a></li>
+												<li><a href="dma-assign-c.html">Dynamic Memory </a></li>
+												
+
+											</ul>
+									  </li>
+										<li><a href="case-studies-c.html">Case Studies</a></li>
+										<li>
+											<span class="opener">Multiple Choice Questions</span>
+											<ul>
+												<li><a href="intro-mcq-c.html">Introduction To C MCQ</a></li>
+												<li><a href="operators-mcq-c.html">Operators MCQ</a></li>
+												<li><a href="conditional-mcq-c.html">Conditional Statements MCQ</a></li>
+												<li><a href="loops-mcq-c.html">Loops MCQ</a></li>
+												<li><a href="array-mcq-c.html">Arrays MCQ</a></li>
+												<li><a href="function-mcq-c.html">Function MCQ</a></li>
+												<li><a href="structure-mcq-c.html">Structure MCQ</a></li>
+												<li><a href="pointer-mcq-c.html">Pointers MCQ</a></li>
+												<li><a href="files-mcq-c.html">Files MCQ</a></li>
+												<li><a href="storage-class-mcq-c.html">Storage classes MCQ</a></li>
+												<li><a href="dma-mcq-c.html">Dynamic Memory MCQ</a></li>
+												<li><a href="more-faqc.html">More MCQ</a></li>
+
+											</ul>
+									  </li>
+									</ul>
+								</nav>
+							<!-- Section   for activities -->
+								<section>
+									<header class="">
+										<div>
+										<p>
+
+										</p>	
+									</div>
+									
+
+									</header>
+									
+			
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">tech2dsm@gmail.com</a></li>
+										<!--<li class="icon solid fa-phone">-----</li>
+										<li class="icon solid fa-home"><br />
+										</li> -->
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Sankalan Data Technologies. All rights reserved. </p>
+
+								</footer>
+
+
+						</div>
+					</div>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+	</body>
+</html>

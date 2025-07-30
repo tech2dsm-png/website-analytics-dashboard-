@@ -1,0 +1,736 @@
+<!DOCTYPE HTML>
+<!--
+	
+-->
+<html>
+	<head>
+		<title>Assignment Operators in C with Simple Examples | Learn C Programming</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="keywords" content="Assignment operators in C, C programming operators, C language basics, = += -= *= /= in C,learn C language" />
+		<meta name="title" content="Assignment Operators in C Language with Real Examples | C Programming Tutorial">
+		<meta name="description" content="Understand assignment operators in C programming in a simple and clear way. This guide covers operators like =, +=, -=, and more with easy-to-follow examples." />
+		<link rel="canonical" href="https://www.sankalandtech.com/Tutorials/C/assignment-operators-c.html" />
+
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/intstyle.css" />
+
+		<script>
+					document.addEventListener("contextmenu", function(event)
+					{
+						event.preventDefault();
+						    
+					}, false);
+		</script>
+		<style>
+				
+				ul {
+ 					  padding: 20px;
+ 					  
+ 					}
+				li {
+					 	 background: #cce5ff;
+ 						 color: darkblue;
+ 						 margin: 5px;
+					}
+					body {
+							background: #cce5ff;	
+					    } 					
+         		p  {
+           				 
+  						font-size: 18px;
+  						color: black;
+  						font-family: Georgia, serif;
+  						font-style: italic;
+  						display:block;
+  						margin-left: 1em;
+  						margin-bottom: 1em;
+  						margin-right: 1em;
+
+         			 }
+         		.responsive {
+         			       width: 70%;
+         			       height: auto;
+         			      }
+ 	        	img {
+  					border-radius: 15%;
+					height:65%;
+					width:65%
+					}
+					div.dashed{
+         				border-style: solid;
+         				border-width: 3px;
+
+         			}
+					
+					
+​
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>C</strong> Assignment Operators</a>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter">
+											<span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+
+									</ul>
+								</header>
+
+							<!-- Banner -->
+								<section id="banner">
+								  <div class="content">
+										<header>
+											<h1>Assignment Operators in C with Clear Examples</h1>
+											
+									  </header>
+										<p>In this tutorial, you will learn about Assignment Operators in C programming, which are an essential part of C programs. <br>
+									In C programming, the program (computer) performs computations. Operators are used to perform all these computations. Assignment Operators are specifically used to assign values to variables. <br>
+									The most common assignment operator is <code>=</code>.<br>
+									Assignment Operators are binary operators.<br>
+									C language provides a wide range of operators, but in this tutorial, let's focus on Assignment Operators that are an integral part of C programming.
+									</p>
+									<br>
+									   <h3><b><font color="dark pink">Assignment Operators:</font></b></h3>
+									<p>
+									Assignment Operators in C are used to assign one or more values to variables, as well as to modify, change or append values. 
+									They can also perform numeric operations before assigning the result to a variable. 
+									The assignment operator (<code>=</code>) is the most commonly used operator in C programming, which assigns values to variables.
+									</p>
+								    </div>
+									
+								</section>
+
+							<!-- Section -->
+							<section>
+									<header class="major">
+										
+									</header>
+									<!-- <div class="features"> -->
+										
+										<article>
+											<span class=""></span>
+											<div class="content">
+												
+												
+													<b><h2><b><font  color="dark pink">C Language support <strong>the following assignment operators:</strong></font></b></h2></b>
+													<p>
+												1. Simple Assignment Operator (e.g. =) <br> 
+												2. Compound Assignment Operators (e.g. +=, -=, /=, %=, *=, etc.) <br> 
+
+												<b>1. Simple Assignment Operator (=):</b> <br>
+												There is only one simple assignment operator in C programming, which is <code>=</code>. <br>
+												It is used to assign the value of the right-hand side operand to the left-hand side operand. In simple terms, it assigns the value or result on the right side to the variable on the left side. <br>
+												The assignment operator is used to assign values (such as integers, strings, or arrays) to variables. <br>
+												<br>
+												<b>General Syntax for Assignment Operator:</b><br>
+												<b>Left Operand = Right Operand</b><br>
+												<br>
+												<b>Example of Simple Assignment Operator:</b><br>
+												</p>
+													&nbsp;
+											        <div class="dashed scroll">
+                                                      <p>#include&lt;stdio.h&gt;<br>
+                                                        void main() {<br>
+                                                        int x = 10;<br>
+                                                        int y = x; <em>&emsp;&emsp;/* value of x is assigned to y */<br>
+                                                          printf(&quot;x = %d\n&quot; , x); &emsp;&emsp;/* x = ? */</em> <br>
+                                                        printf(&quot;y = %d\n&quot; , y); &emsp;&emsp;/* y = ? */</em><br>
+                                                        } <br>
+                                                        <br>
+                                                        <b> Output</b><br>
+                                                        x = 10<br>
+                                                        y = 10</p>
+									          </div>
+											        <br>
+                                                    <br>
+                                                    <br>
+                                                    <h3> 2. Compound Assignment or Short hand Operator</h3>
+                                                    <p><br>
+                                                      <br><img src="images/assignment-operator-in-c.jpg" alt="Understanding assignment operators in C with beginner-friendly examples" class=""/>
+</p>
+											        <h3><b>1.Addition Assignment Operator += </b></h3>
+											      <p>
+													The <code>+=</code> operator is used to perform the addition of two variables or operands. <br>
+													It adds the right operand to the left operand and then assigns the result to the left operand. <br>
+													For example: <code>x += y</code> <br>
+													This is equivalent to: <code>x = x + y</code>
+													</p>
+											        <div class="dashed scroll">
+                                                      <p>#include &lt;stdio.h&gt;<br>
+                                                        void main() { <br>
+                                                        int x = 10; <br>
+                                                        int y = 10; <br>
+                                                        
+                                                        x += y; &emsp;&emsp;/* similar to x = x + y */
+                                                        <br>
+                                                        printf(&quot;x = %d\n&quot; , x);&emsp;&emsp; /* what is x now? */<br>
+                                                        <b> Output:</b><br>
+                                                        x=20  </p>                                                   
+									         
+											       
+											           </div>
+											            <p> <br>
+                                                        <b>Program Explanation:</b><br>
+											          Here, we show how the += operator behaves in C programming. Two integer variables, x and y are declared and initialized with 10.<br> The program's main action is captured in a single line: x += y;. This operator is a short hand for x = x + y; meaning it adds the value of y to x then stores the result back in x. At this point, both x and y are 10. <br>So by applying the += operation, y's value (10) is added to x's (also 10) in order to produce a different value for x, which is 20.<br> The program then gives a output of the updated value of x through the printf function the resulting output is x = 20, confirming that the operation works. <br>This was a good way to demonstrate the plus equal operator in C which adds and replaces that value to achieve a compact method of doing a thing that makes it a little more efficient. </p>
+											        <hr>
+                                                    <p> <b>2.Subtraction Assignment Operator -= </b><br>
+											       
+											       -= Operator is used to perform subtraction of two variable or operands. <br>
+											          the  left operand becomes equal to the subtraction of the right operand and left  operand.<br>
+											          e.g p-=q<br>
+											          which is equivalent to p=p-q 
+											        Example of -= operator 
+											        
+											        <div class="dashed scroll">
+                                                      <p>/* C program to demonstrate -= operator */                                                          
+                                                      #include &lt;stdio.h&gt;<br>
+                                                        void main() { <br>
+                                                        int p = 10; <br>
+                                                        int q = 3; <br>
+                                                        p -= q; &emsp;&emsp;/* similar to p = p-q */ <br>
+                                                        printf(&quot;p = %d\n&quot; , p); &emsp;&emsp;/* p=? */<br>
+                                                        }
+                                                      <b>Output:</b><br>
+                                                        x=7 </p>                                                        
+                                              </div>
+											        <p> <br>
+                                                        <b>Program Explanation:</b><br>
+											          Initially, the program defines two integer variables p and q and initializes them with values 10 and 3 respectively. Since these two values will be involved in the operation, it indicates an initialization up to the operation stage.<br>
+
+													The next operation is performed: p -= q;. The first part of the statement remembers the original value of p from which the value of q is to be subtracted and the result is stored back into the variable p. p was assigned 10 and q was assigned 3, so p is now evaluated as 10 - 3 = 7.<br>
+
+													We will use the printf method to display the value of p. The output 7 is shown on the screen, which informs the user that p has been updated after the subtraction.<br>
+
+													Thus, the program shows an example of how to use this operator in C. First, it subtracts the value of q from p, updating the value of p and then it prints the new value. This facilitates the coding process as it allows subtraction and assignment to be carried out in one line.<br>
+											        </p>
+											        <hr>
+											        <p>
+									         <b>3.Multiplication Assignment Operator *= </b><br>
+                                                    *= Operator is used to perform Multiplication of two variable or operands. <br>
+                                                      the  left operand or variable becomes equal to the multiplication of the right operand and left  operand.<br>
+                                                      e.g a*=b <br>
+                                                      which is equivalent to a=a*b<br>
+                                                      here the value of a is multiplied with the value of b and the final result or calculated result is stored or assigned to a itself.<br>
+                                                      C proram using *= Operator<br></p>
+                                                 
+                                                    <div class="dashed">
+                                                      <p>/* C program using *= Operator */<br>                                                           
+                                                      #include &lt;stdio.h&gt;<br>
+                                                        void main() { <br>
+                                                        int x= 10; <br>
+                                                        int y = 3; <br>
+                                                        x *= y; &emsp;&emsp;/* similar to x = x*y */ <br>
+                                                        printf(&quot;x = %d\n&quot; , x); &emsp;&emsp;// x=?<br>
+                                                        }
+                                                     <b>Output:</b><br>
+                                                        x=30 </p>                                                        
+                                              </div>
+                                                    <p> <br>
+                                                        <b>Program Explanation:</b><br>
+                                                      The program begins with declaring and initializing two integer variables named x and y. The declared values assigned to them are 10 to x and 3 to y. This pair is what the program uses in the multiplication operations.<br>
+
+																							The next command, line, x *= y;, used the multiply assign operation on the given operands. This is the perfect representation of the statement when using the shortcut of x = x * y;. <br>In such situations, value x should be multiplied with that of y and should be stored back into x. In this case, x is 10, and y is 3. <br>The output of this expression resolves to 30, which subsequently changes the value of x to this newly obtained product.<br>
+
+																							And finally, the program will output the new value of x via printf. The outcome displayed is x = 30 so that the multiplication operation really works and the updated value of x is unambiguously indicated.
+																	</p>
+<hr>
+
+                                                    <p><b>4.Division Assignment Operator /= </b>
+                                                        <p>/= Operator is used to perform Division of two variable or operands.  The&nbsp;<strong>division  Assignment operator</strong>&nbsp;is an assignment operator, which  divides the value of the variable by a given numeric value, which is specified  on the right side of the operator. <br>
+                                                          This operator combines the two operations. First, it&nbsp;<strong>divides</strong>&nbsp;the  values, and then it&nbsp;<strong>assigns</strong>&nbsp;to  the variable.the  left operand or variable becomes equal to the division of the right operand and left  operand.<br>
+                                                          Here is some example how to use the  division assignment operator in C Programing.<br>
+  <br>
+                                                          e.g a/=b <br>
+                                                          which is equivalent to a=a/b<br>
+                                                          here the value of a  divides with the value of b and the final result or calculated result is stored or assigned to the variable aitself.<br>
+                                                          C proram using /= Operator </p>
+                                                        
+                                                        <div class="dashed">
+                                                          <p>/* C program using /= Operator */ <br>                                                          
+                                                        #include &lt;stdio.h&gt;<br>
+                                                            void main() { <br>
+                                                            int a= 8; <br>
+                                                            int b = 2; <br>
+                                                            a/= b; &emsp;&emsp;/* similar to a = a/b */<br>
+                                                            printf(&quot;a = %d\n&quot; , a);&emsp;&emsp; // a=?<br>
+                                                            }
+                                                    <b>Output:</b><br>
+                                                            a=4  </p>                                                       
+                                              </div>
+                                                        <p> <br>
+                                                            <b>Program Explanation:</b><br>
+                                                          In the given Program the variables a and b are declared as integer and assigned values to them i.e a=8 and b=2.<br>
+                                                          a/=b which is similar  to  a=a/b this means in our program the instruction divides the  value of a=8   by the b=2  and assign the  result value to a itself hence value of a becomes 4.</p><hr>
+                                                          <p>
+                                                        <b>5.Modulus or Modulo Assignment Operator %= &nbsp;&nbsp;&nbsp;</b> The&nbsp;<strong>modulus  Assignment operator</strong>&nbsp;is an assignment operator which is  used to calculate the remainder of the division operation. This operator  divides the value of a variable by the specified value given on the right side  of the operator. After, it assigns the remainder to the variable.										  
+                                                         Here is some example how to use the  Modulus assignment operator in C Programing.<br>
+                                                          e.g a%=b <br>
+                                                          which is equivalent to a=a%b<br>
+                                                          here the value of a  divides with the value of b and the final result or calculated result i.e remainder is stored or assigned to the variable a itself.<br>
+                                                          C proram using %= Operator </p>
+                                                       
+                                                        <div class="dashed">
+                                                          <p>/* C program using %= Operator */ <br>                                                          
+                                                      #include &lt;stdio.h&gt;<br>
+                                                            void main() { <br>
+                                                            int a= 7; <br>
+                                                            int b = 2; <br>
+                                                            a%= b; &emsp;&emsp;/* similar to a = a%b */<br>
+                                                            printf(&quot;a = %d\n&quot; , a); &emsp;&emsp;// a=?<br>
+                                                            }
+                                                          <b>Output:</b><br>
+                                                            a=1   </p>                                                      
+                                              </div>
+                                                        <p> <br>
+                                                            <b>Program Explanation:</b><br>
+                                   The program begins with the standard procedure of including the standard input output header file #include &lt;stdio.h>. Only after this, the printing function printf can be used for displaying output.<br>
+
+															Two integer variables are declared and initialized inside the main() function: <br>
+															int a = 7; - 7 is stored in the variable a.<br>
+															int b =2; - 2 is stored in the variable b.<br>
+
+															The %= operator is then used: <br>
+															a %= b; <br>
+															This is an abbreviation of a = a % b. The remainder is computed by the % operator, which is a modulus operation.<br>
+
+															Here, it gives the remainder on dividing a with b, which is 7 % 2. Well, dividing 7 with 2 goes 3 times with a carryover of 1, so the remainder is 1.<br> That value is assigned back to a; thus, now a becomes 1. <br>
+
+															Finally, the printf function displays a=1 on the screen</p><hr><p>
+                                                       <b>6.<strong>Left Shift Assignment Operator</strong> &lt;&lt;= </b> &nbsp;&nbsp;&nbsp;<br>The&nbsp;<strong>Left shift   Assignment operator</strong>&nbsp;is an assignment operator in C which is  used to shift or moves all the bit in first variable to the left by the number of places specified in the second variable.<br>
+                                                          
+                                                         Here is some example how to use the  Left shift assignment operator in C Programing.<br>
+                                                          e.g a&lt;&lt;=b <br>
+                                                          which is equivalent to a=a&lt;&lt;b<br>
+                                                          here the bits in variable a  moves to the left by the number of places specified by the value of variable b<br>
+                                                          C proram using left shift &lt;&lt;= Operator </p>
+                                                      
+                                                        <div class="dashed">
+                                                          <p>/* C program using left shift &lt;&lt;= Operator */ <br>                                                          
+                                                          #include &lt;stdio.h&gt;<br>
+                                                            void main() { <br>
+                                                            int a= 7;  &emsp;&emsp;/* in binary 7 =0111 */ <br>
+                                                            int b = 1; <br>
+                                                            a&lt;&lt;= b; &emsp;&emsp;/* similar to a = a&lt;&lt;b  */<br>
+                                                            printf(&quot;a = %d\n&quot; , a);&emsp;&emsp; // a=?<br>
+                                                            }<br>
+                                                          <b>Output:</b><br>
+                                                            a=14
+															</p>
+                                              </div>
+                                                        <p> <br>
+                                                            <b>Program Explanation:</b><br>
+                                                         This C program is a demonstration of the operation of the left-shift assignment operator (<<=). Here are two integer variables: a, which is initialized to 7, and b, which is initialized to 1. Now, note that the left shift operator operates on the binary representation of a number. <br>In this case, the number 7 is represented by the binary number 0111. By applying a <<= b, we now bring it to writing it this way, that is, a = a << b, and depending what it means, we are shifting bits of a to the left by b positions.<br> Now, 0111 shifted once to the left gives us 1110, or in decimal terms, 14. So variable a contains this value now. Finally, the printf statement prints out this new value of a.<br> This kind of operation is very useful when it comes to low-level bit manipulation, especially useful application where performance matters like in embedded systems or game development.</p><hr>
+                                                       
+                                                          
+                                                        <p><b>7.<strong>Right Shift Assignment Operator </strong>&gt;&gt;= </b> &nbsp <br>The&nbsp;<strong>Right shift   Assignment operator</strong>&nbsp;is an assignment operator in C which is  used to shift or moves all the bit in first variable to the right by the number of places(value) specified in the second variable.
+                                                        Here is some example how to use the  Right shift assignment operator in C Programing.<br>
+                                                          e.g a&gt;&gt;=b <br>
+                                                          which is equivalent to a=a&gt;&gt;b<br>
+                                                          here the bits in variable a  moves to the right by the number of places specified by the value of variable b<br>
+                                                          C proram using left shift &gt;&gt;= Operator </p>
+                                                     
+                                                        <div class="dashed">
+                                                          <p>/* C program using left shift &gt;&gt;= Operator */<br>                                                           
+                                                       #include &lt;stdio.h&gt;<br>
+                                                            void main() { <br>
+                                                            int a= 7;  &emsp;&emsp;/* in binary 7 =0111 */ <br>
+                                                            int b = 1; <br>
+                                                            a&gt;&gt;= b; &emsp;&emsp;/* similar to a = a&gt;&gt;b */ <br>
+                                                            printf(&quot;a = %d\n&quot; , a); &emsp;&emsp;// a=?<br>
+                                                            }
+                                                        <b>Output:</b><br>
+                                                            a=3</p>
+                                              </div>
+                                                        <p> <br>
+                                                            <b>Program Explanation:</b><br>
+                                                         This C program illustrates the usage of the right shift assignment operator (>>=) in C. It opens by declaring and creating two integer variables: a has been assigned a value of 7 and b of 1. 7 in binary form is exhibited as 0111.<br> a >>= b means that we will perform right shifting on the binary digits of a for any given number of places (set by b). <br>Thus moving the bits of 0111 one place right will give us 0011 in binary which is 3 in decimal. Thus after this operation, a becomes 3. Then using printf, it prints the new value of a.<br> Right-shift operations are those that allow us to divide quickly a number by powers of two in low-level programming environments bitwise manipulations.
+                                                        </p>
+											</div>
+										
+										</article>
+										<hr>
+											<p>
+											  <u>Next Topic:</u>
+											  <a href="increment-decrement-operator-c.html">increment ++ |  Decrement --  Operators</a> <br>	
+											  &nbsp;&nbsp;
+											  <u>Previous Topic:</u> 
+											  <a href="arithmatic-operators-c.html">Arithmetic Operators  Operators</a>										</p>
+											
+									<hr>
+							
+								
+
+							<!-- Section -->
+								
+ 
+						</div>
+						
+						<div>
+				<!-- footer menu -->
+			</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+							<section>
+									<header class="">
+										<div>
+										<p>
+
+</p>	
+									</div>
+									
+
+									</header>
+									
+			
+								</section>
+							<!-- Section -->
+								
+
+							<!-- Section -->
+
+							<!-- Search -->
+								<!--<section id="search" class="alt">
+									<form method="post" action="#">
+										<input type="text" name="query" id="query" placeholder="Search" />
+									</form> 
+								</section> -->
+
+							<!-- Menu -->
+								
+								<nav id="menu">
+									<header class="major">
+										<h2>C Language</h2>
+									</header>
+									<ul>
+										<li><a href="../index.html">Home</a></li>
+										<li><a href="whyC.html">Why C Language</a></li>
+										<li><a href="historyC.html">History of C Language</a></li>
+										<li><a href="ApplicationsC.html">Applications of C Language</a>
+										</li>
+										<li>
+											<span class="opener">Introduction To C</span>
+											<ul><li><a href="whatisprogram.html">What is Program?</a></li>
+												<li><a href="cprogramstructure.html">Structure of C Program</a></li>
+												<li><a href="Cprogram.html">Working Of C Program</a></li>
+												<li><a href="CLanguageChar.html">CHARACTER SET </a></li>
+												<li><a href="c-variable-identifier.html">VARIABLES AND IDENTIFIERS </a></li>
+												<li><a href="c-datatype.html">BUILT-IN DATA TYPES </a></li>
+												
+												<li><a href="operators.html">OPERATORS AND EXPRESSIONS </a></li>
+												<li><a href="constant.html">CONSTANTS AND LITERALS</a></li>
+												<li><a href="assignment.html"> SIMPLE ASSIGNMENT STATEMENT </a></li>
+												<li><a href="inputoutput.html">BASIC INPUT/OUTPUT STATEMENT </a></li>
+												<li><a href="cprograms.html">SIMPLE 'C' PROGRAMS</a></li>
+												<li><a href="assignments-intro1.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Operators in C Programming </span>
+											<ul>
+											<li><a href="arithmatic-operators-c.html">Arithmetic Operators </a></li>
+												<li><a href="assignment-operators-c.html">Assignment Operators </a></li>
+												<li><a href="increment-decrement-operator-c.html">Increment and Decrement Operators</a></li>
+												<li><a href="relationaloperator.html">Relational Operators </a></li>
+												<li><a href="logicaloperator.html">Logical Operators</a></li>
+											 <li><a href="bitwiseopearator.html">Bitwise Operators </a></li>
+											 <li><a href="otheropearator.html">Other Operators </a></li>
+											 <li><a href="opearatorassignments.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">CONDITIONAL STATEMENTS</span>
+											<ul>
+												<li><a href="c-decision.html">DECISION MAKING WITHIN A PROGRAM</a></li>
+												<li><a href="c-condtions.html"> CONDITIONS</a></li>
+												<li><a href="c-if.html">IF STATEMENT </a></li>
+												<li><a href="c-ifelse.html">IF-ELSE STATEMENT</a></li>
+												<li><a href="c-ifelseladder.html">IF-ELSE LADDER</a></li>
+												<li><a href="c-nestedif.html">NESTED IF-ELSE </a></li>
+												<li><a href="c-switch.html">SWITCH CASE </a></li>
+												<li><a href="conditional-stmt-assign-c.html">Assignments</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">LOOPS STATEMENTS</span>
+											<ul>
+												<li><a href="loops-intro.html">Introduction to Loops</a></li>
+												<li><a href="c-goto.html"> GO TO Statement</a></li>
+												<li><a href="c-dowhile-loop.html"> Do while Loop </a></li>
+												<li><a href="c-while-loop.html">While Loop </a></li>
+												<li><a href="c-nested-while.html">Nested While Loop </a></li>
+												<li><a href="c-diff-while-dowhile.html">Difference Between While and Do while</a></li>
+												<li><a href="c-difference-goto-loop.html">Difference Between Goto and loop</a></li>
+												<li><a href="c-while-loop-assign.html"> while loop assignments</a></li>
+												<li><a href="c-for.html">C FOR Loop</a></li>
+												<li><a href="c-for-example.html">C For loop examples </a></li>
+												<li><a href="c-nested-for.html">Nested for loop</a></li>
+												<li><a href="nested-while-loop-c.html">Nested for loop examples </a></li>
+												<li><a href="infinite-while-loop-c.html">Infinite while Loops</a></li>
+												<li><a href="infinite-for-loop-c.html"> Infinite for Loops </a></li>
+												<li><a href="continue-c.html">Continue in Loops </a></li>
+												<li><a href="break-c.html">break in Loops </a></li>
+												<li><a href="while-vs-dowhile-vs-for-c.html">difference while do..while & for </a></li>
+												<li><a href="loop-assignment-c.html">Assignments </a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Arrays</span>
+											<ul>
+												<li><a href="one-d-array-c.html">One Dimensional Array</a></li>
+												<li><a href="declare-array-c.html">Declaring 1D Arrays</a></li>
+												<li><a href="initilize-array-c.html">Initilization of 1D arrays</a>
+												</li>
+												<li><a href="access-array-c.html">Accessing element of one 1D Array</a></li>
+												<li><a href="read-array-c.html">Read and Display 1D Arrays</a></li>
+												<li><a href="two-d-array.html">Two Dimensional Arrays</a></li>
+												<li><a href="declare-2d-array-c.html">Declare 2D Arrays</a></li>
+												<li><a href="read-2d-array.html">Read and Display 2D Arrays</a></li>
+												<li><a href="array-assignments.html">Assignments/Examples</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Functions</span>
+											<ul>
+												<li><a href="function-intro-c.html">Introduction</a></li>
+												<li><a href="user-defined-function-c.html">Need For User-Defined Function</a></li>
+												<li><a href="multiple-fun-program-c.html">Multiple Function Program</a></li>
+												
+												<li><a href="modular-programming-c.html">Modular Programming</a></li>
+												<li><a href="element-user-defined-fun-c.html">Elements Of User Defined Function</a></li>
+												<li><a href="function-definition-c.html">Function Definition</a></li>
+												</li>
+												<li><a href="function-declaration-c.html">Function Declaration</a></li>
+												</li>
+												<li><a href="types-of-function-c.html">Types of functions</a></li>
+												</li>
+												<li><a href="nesting-function-c.html">Nesting of Function</a></li>
+												<li><a href="recursion-c.html">Recursion</a></li>
+												<li><a href="passing-array-function-c.html">Passing Array To Functions</a></li>
+												<li><a href="visibility-scope-var-c.html">Scope,Visibility and Lifetime of Variables</a></li>
+												<li><a href="function-assignment-c.html">Assignments</a></li>
+											</ul>
+										</li>
+										<li>
+											<span class="opener">Structure</span>
+											<ul>
+												<li><a href="structure-intro-c.html">Introduction</a></li>
+												<li><a href="array-vs-structure-c.html">Array vs Structure</a></li>
+												<li><a href="define-structure-c.html">Defining Structure</a></li>
+												<li><a href="declare-structure-var-c.html">Declaring Structure Variables</a></li>
+												<li><a href="type-def-struct-c.html">Type Defined Structure</a></li>
+												<li><a href="access-struct-member-c.html">Accessing Structure Members</a></li>
+												<li><a href="struct-initilization-c.html">Structure Initilization</a></li>
+												<li><a href="copy-compare-struct-c.html">Copying & Comparing Structure Variables</a></li>
+												<li><a href="array-struct-c.html">Array of Structure</a></li>
+												<li><a href="array-within-struct-c.html">Arrays Within Structure</a></li>
+												<li><a href="struct-within-struct-c.html">Structures Within Structures</a></li>
+												<li><a href="struct-and-function-c.html">Structures and Functions</a></li>
+												<li><a href="struct-assignment-c.html">Structure Examples/Assignments</a></li>
+											</ul>
+									  </li>
+										<li>
+
+
+											<span class="opener">Union</span>
+											<ul>
+												<li><a href="define-union-c.html">Define Union</a></li>
+												<li><a href="create-union-c.html">Create and use Union</a></li>
+												<li><a href="diff-struct-union-c.html">Difference Between Structure and Union</a></li>
+												<li><a href="union-c-example.html">Union Examples</a></li>
+												<li><a href="union-c-faq.html">Union FAQ</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Pointers</span>
+											<ul>
+												<li><a href="what-is-pointer-c.html">What Are Pointers In C?</a></li>
+												<li><a href="how-use-pointer-c.html">How Do We Use Pointers In C?</a></li>
+												<li><a href="declare-pointer-c.html">Declaration Of A Pointer</a></li>
+												<li><a href="pointer-init-c.html">The Initialization Of A Pointer</a></li>
+												<li><a href="pointer-syntax-init.html">Syntax Of Pointer Initialization</a></li>
+												<li><a href="use-pointer-c.html">Use Of Pointers In C</a></li>
+												<li><a href="pointer-to-array-c.html">The Pointer To An Array</a></li>
+												<li><a href="pointer-to-function-c.html">The Pointer To A Function</a></li>
+												<li><a href="pointer-to-struct-c.html">The Pointer To A Structure</a></li>
+												<li><a href="types-pointer-c.html">Types Of Pointers</a></li>
+												<li><a href="null-pointer-c.html">The Null Pointer</a></li>
+												<li><a href="void-pointer-c.html">The Void Pointer</a></li>
+												<li><a href="wild-pointer-c.html">The Wild Pointer</a></li>
+												<li><a href="near-pointer-c.html">The Near Pointer</a></li>
+												<li><a href="huge-pointer-c.html">The Huge Pointer</a></li>
+												<li><a href="far-pointer-c.html">The far Pointer</a></li>
+												<li><a href="dangling-pointer-c.html">dangling pointer </a></li>
+												<li><a href="access-pointer-c.html">Accessing Pointers- Indirectly And Directly</a></li>
+												<li><a href="pros-pointer-c.html">Pros Of Using Pointers In C</a></li>
+												<li><a href="cons-pointer-c.html">Cons Of Pointers In C</a></li>
+												<li><a href="application-pointer-c.html">Applications Of Pointers In C</a></li>
+												<li><a href="address-operator-c.html">The & Address Of Operator In C</a></li>
+												<li><a href="complex-pointer-c.html">How To Read The Complex Pointers In C?</a></li>
+												<li><a href="practice-pointer-c.html">Practice Problems On Pointers </a></li>
+												
+												
+											</ul>
+									  </li>
+
+
+ 									<li>
+											<span class="opener">File Processiong</span>
+											<ul>
+												<li><a href="file-intro-c.html">File Handling In C</a></li>
+												<li><a href="types-file-c.html">Types Of Files In C </a></li>
+												<li><a href="operation-file-c.html">Operations Done In File Handling</a></li>
+												<li><a href="file-example-c.html">File Examples</a></li>
+												<li><a href="binary-file-c.html"> Binary Files</a></li>
+												<li><a href="file-count-word-line-c.html">count words,lines in a file</a></li>
+												<li><a href="copy-file-c.html">Copy files</a></li>
+												<li><a href="update-file-c.html">Update File</a></li>
+												<li><a href="count-vowels-file-c.html">count vowels in a file</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Preprocessor</span>
+											<ul>
+												<li><a href="macro-sub-div-c.html">Macro substitution division</a></li>
+												<li><a href="file-inclusion-c.html">File Inclusion</a></li>
+												<li><a href="conditional-compile-c.html">Conditional Compilation</a></li>
+												<li><a href="other-dir-c.html">Other directives</a></li>
+												<li><a href="preprocessor-example-c.html">Examples</a></li>
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Dynamic Memory Allocation</span>
+											<ul>
+												<li><a href="malloc-c.html">malloc</a></li>
+												<li><a href="calloc-c.html">calloc</a></li>
+												<li><a href="free-c.html">free</a></li>
+												<li><a href="realloc-c.html">realloc</a></li>
+												<li><a href="dynamic-mem-example-c.html">Examples</a></li>
+											</ul>
+									  </li>
+										<li><a href="storage-class-c.html">Storage Classes</a></li>
+										<li><a href="graphics-c.html">Graphics</a></li>
+										<li>
+											<span class="opener">Frequently Asked Interview Questions
+										(FAQ)</span>
+											<ul>
+												<li><a href="intro-c-faq-c.html">Introduction To C FAQ</a></li>
+												<li><a href="operators-c-faq.html">Operators FAQ</a></li>
+												<li><a href="conditional-stmt-c-faq.html">Conditional Statements FAQ</a></li>
+												<li><a href="loop-faq-c.html">Loops FAQ</a></li>
+												<li><a href="array-faq-c.html">Arrays FAQ</a></li>
+												<li><a href="function-faq-c.html">Function FAQ</a></li>
+												<li><a href="structure-faq-c.html">Structure FAQ</a></li>
+												<li><a href="pointer-faq-c.html">Pointers FAQ</a></li>
+												<li><a href="files-faq-c.html">Files FAQ</a></li>
+												<li><a href="storage-class-faq-c.html">Storage classes FAQ</a></li>
+												<li><a href="dma-faq-c.html">Dynamic Memory FAQ</a></li>
+												
+
+											</ul>
+									  </li>
+										<li>
+											<span class="opener">Programs/Assignments</span>
+											<ul>
+												<li><a href="intro-assign-c.html">Introduction To C </a></li>
+												<li><a href="operators-assign-c.html">Operators </a></li>
+												<li><a href="conditional-stmt-assign-c.html">Conditional Statements </a></li>
+												<li><a href="loop-assign-c.html">Loops </a></li>
+												<li><a href="array-assign-c.html">Arrays </a></li>
+												<li><a href="function-assign-c.html">Function </a></li>
+												<li><a href="structure-assign-c.html">Structure </a></li>
+												<li><a href="pointer-assign-c.html">Pointers </a></li>
+												<li><a href="file-assign-c.html">Files </a></li>
+												<li><a href="storage-class-assign-c.html">Storage classes </a></li>
+												<li><a href="dma-assign-c.html">Dynamic Memory </a></li>
+												
+
+											</ul>
+									  </li>
+										<li><a href="case-studies-c.html">Case Studies</a></li>
+										<li>
+											<span class="opener">Multiple Choice Questions</span>
+											<ul>
+												<li><a href="intro-mcq-c.html">Introduction To C MCQ</a></li>
+												<li><a href="operators-mcq-c.html">Operators MCQ</a></li>
+												<li><a href="conditional-mcq-c.html">Conditional Statements MCQ</a></li>
+												<li><a href="loops-mcq-c.html">Loops MCQ</a></li>
+												<li><a href="array-mcq-c.html">Arrays MCQ</a></li>
+												<li><a href="function-mcq-c.html">Function MCQ</a></li>
+												<li><a href="structure-mcq-c.html">Structure MCQ</a></li>
+												<li><a href="pointer-mcq-c.html">Pointers MCQ</a></li>
+												<li><a href="files-mcq-c.html">Files MCQ</a></li>
+												<li><a href="storage-class-mcq-c.html">Storage classes MCQ</a></li>
+												<li><a href="dma-mcq-c.html">Dynamic Memory MCQ</a></li>
+												<li><a href="more-faqc.html">More MCQ</a></li>
+
+											</ul>
+									  </li>
+									</ul>
+								</nav>
+
+							<!-- Section   for activities -->
+								<section>
+									<header class="">
+										<div>
+										<p>
+
+										</p>	
+									</div>
+									
+
+									</header>
+									
+			
+								</section>
+
+							<!-- Section -->
+								<section>
+									<header class="major">
+										<h2>Get in touch</h2>
+									</header>
+									<ul class="contact">
+										<li class="icon solid fa-envelope"><a href="#">tech2dsm@gmail.com</a></li>
+										<!--<li class="icon solid fa-phone">-----</li>
+										<li class="icon solid fa-home"><br />
+										</li> -->
+									</ul>
+								</section>
+
+							<!-- Footer -->
+								<footer id="footer">
+									<p class="copyright">&copy; Sankalan Data Technologies. All rights reserved. </p>
+								</footer>
+
+
+						</div>
+					</div>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+	</body>
+</html>

@@ -1,0 +1,31 @@
+ 
+
+img {
+            border-radius: 18%;
+          }
+
+ body {
+              background: #cce5ff;  
+              }     
+         
+              li a:hover{
+                background-color: #498;
+                 border-radius: 15px;
+              }
+              #menu li{
+                display:inline;
+                pading:8px;
+                
+                border-radius: 0px;
+                -webkit-border-radius:20px;
+                -moz-border-radius:20px;
+                -o-border-radius:20px;
+              }
+              #menu a:hover{
+                background-color: #F5F5DC;
+                border-radius: 15px;
+              }
+              #menu a{
+                padding: 10px;
+                text-decoration: none;
+              }
