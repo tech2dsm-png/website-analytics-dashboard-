@@ -25,3 +25,4 @@ Thumbs.db # Windows thumbnail cache
 .vscode/  # VS Code settings
 *.log
 *~service-account.json
+service-account.json
