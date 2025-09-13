@@ -26,3 +26,4 @@ Thumbs.db # Windows thumbnail cache
 *.log
 *~service-account.json
 service-account.json
+service-account.json
