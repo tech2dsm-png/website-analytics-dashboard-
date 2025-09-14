@@ -2,38 +2,33 @@ import os
 import streamlit as st
 from google.cloud import bigquery
 from google.oauth2 import service_account
+import json
 
-bq_client = None  # always define upfront
-
-# --- Step 1: Try local JSON (for local dev)
-script_dir = os.path.dirname(os.path.abspath(__file__))
-json_path = os.path.join(script_dir, '..', 'service-account.json')
-project_id = "brilliant-dryad-439810-q6"
-
-if os.path.exists(json_path):
+def get_bq_client():
+    """
+    Returns a BigQuery client.
+    - On Streamlit Cloud: reads credentials from st.secrets
+    - Locally: reads credentials from local JSON file (service-account.json)
+    """
     try:
-        credentials = service_account.Credentials.from_service_account_file(json_path)
-        bq_client = bigquery.Client(credentials=credentials, project=project_id)
-        print(f"[conn.py] ✅ BigQuery client initialized from local JSON: {json_path}")
-    except Exception as e:
-        print(f"[conn.py] ❌ Failed to init BigQuery from JSON: {e}")
+        # --- Local environment ---
+        if os.path.exists("service-account.json"):
+            credentials = service_account.Credentials.from_service_account_file("service-account.json")
+            project_id = "brilliant-dryad-439810-q6"  # Your GCP project ID
+            client = bigquery.Client(credentials=credentials, project=project_id)
+            return client
 
-# --- Step 2: If JSON not found, try Streamlit secrets (for cloud)
-if bq_client is None:
-    try:
+        # --- Streamlit Cloud ---
         service_account_info = st.secrets.get("gcp_service_account")
         if service_account_info:
             credentials = service_account.Credentials.from_service_account_info(service_account_info)
             project_id = service_account_info.get("project_id")
-            bq_client = bigquery.Client(credentials=credentials, project=project_id)
-            print("[conn.py] ✅ BigQuery client initialized from Streamlit secrets")
-        else:
-            print("[conn.py] ⚠️ gcp_service_account not found in st.secrets")
-    except Exception as e:
-        print(f"[conn.py] ❌ Failed to init BigQuery from Streamlit secrets: {e}")
+            client = bigquery.Client(credentials=credentials, project=project_id)
+            return client
 
-# --- Step 3: Function to return client
-def get_bq_client():
-    if bq_client is None:
-        print("[conn.py] ⚠️ bq_client is None. Check your JSON or Streamlit secrets.")
-    return bq_client
+        st.error("No BigQuery credentials found! Add 'service-account.json' locally or 'gcp_service_account' secret in Streamlit.")
+        return None
+
+    except Exception as e:
+        st.error(f"Failed to create BigQuery client: {e}")
+        return None
