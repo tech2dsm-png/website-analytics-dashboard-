@@ -71,7 +71,7 @@ with tab1:
         col1.metric("Total Sessions", int(df_kpis['total_sessions'].fillna(0)[0]))
         col2.metric("Page Views", int(df_kpis['total_page_views'].fillna(0)[0]))
         
-        # Format session duration as H:M:S
+        # Format session duration as Hours ,Minutes and Seconds H:M:S
         seconds = int(df_kpis['avg_session_duration'].fillna(0)[0])
         formatted_duration = str(datetime.timedelta(seconds=seconds))
         col3.metric("Avg Session Duration", formatted_duration)
