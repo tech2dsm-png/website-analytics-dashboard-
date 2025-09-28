@@ -15,7 +15,7 @@ query_trends_file = os.path.join(os.path.dirname(__file__), '..', 'database', 'p
 query_top_pages_file = os.path.join(os.path.dirname(__file__), '..', 'database', 'phase_4_top_pages.sql')
 query_device_file = os.path.join(os.path.dirname(__file__), '..', 'database', 'phase_4_device_breakdown.sql')
 query_browser_file = os.path.join(os.path.dirname(__file__), '..', 'database', 'phase_4_browser_breakdown.sql')
-query_trafiic_file = os.path.join(os.path.dirname(__file__), '..', 'database', 'phase_4_traffic_source.sql')
+query_traffic_file = os.path.join(os.path.dirname(__file__), '..', 'database', 'phase_4_traffic_source.sql')  # fixed typo
 query_user_clusters_file = os.path.join(os.path.dirname(__file__), '..', 'database', 'phase_5_user_clusters.sql')
 query_bounce_file = os.path.join(os.path.dirname(__file__), '..', 'database', 'phase_5_predicted_bounce.sql')
 
@@ -56,6 +56,9 @@ st.sidebar.header("Filters")
 start_date = st.sidebar.date_input("Start Date")
 end_date = st.sidebar.date_input("End Date")
 
+if start_date > end_date:
+    st.sidebar.error("Start Date cannot be after End Date")
+
 # --- Tabs ---
 tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs(
     ["KPIs", "Traffic Trends", "Top Pages", "Devices", "Browser", "Traffic Sources", "User Segments", "Bounce Prediction"]
@@ -67,22 +70,22 @@ tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs(
 with tab1:
     df_kpis = get_data_from_bigquery(query_kpis_file, start_date, end_date)
     if not df_kpis.empty:
-        col1, col2, col3, col4, col5 = st.columns(5)
+        col1, col2, col3, col4, col5, col6 = st.columns(6)
         col1.metric("Total Sessions", int(df_kpis['total_sessions'].fillna(0)[0]))
         col2.metric("Page Views", int(df_kpis['total_page_views'].fillna(0)[0]))
-        
-        # Format session duration as Hours ,Minutes and Seconds H:M:S
+
         seconds = int(df_kpis['avg_session_duration'].fillna(0)[0])
         formatted_duration = str(datetime.timedelta(seconds=seconds))
         col3.metric("Avg Session Duration", formatted_duration)
-        
+
         col4.metric("Avg Engagement Rate (%)", round(df_kpis['avg_engagement_rate'].fillna(0)[0]*100, 2))
         col5.metric("Avg Bounce Rate (%)", round(df_kpis['avg_bounce_rate'].fillna(0)[0]*100, 2))
+        col6.metric("Unique Visitors", int(df_kpis['unique_visitors'].fillna(0)[0]))  # new KPI
 
         # Narrative
         bounce_rate = round(df_kpis['avg_bounce_rate'].fillna(0)[0]*100, 2)
         if bounce_rate > 70:
-            st.info("⚠️ Many visitors are leaving quickly (high bounce rate). Maybe check page speed or content relevance.")
+            st.info("⚠️ Many visitors are leaving quickly (high bounce rate). Check page speed or content relevance.")
         else:
             st.success("✅ Bounce rate looks fine. Visitors are engaging with your site.")
     else:
@@ -104,7 +107,6 @@ with tab2:
         ).properties(title="Daily Page Views Over Time").interactive()
         st.altair_chart(chart, use_container_width=True)
 
-        # Narrative
         latest_views = df_trends['daily_page_views'].iloc[-1]
         st.write(f"📈 On the last recorded day, your site had **{latest_views} page views**.")
     else:
@@ -126,7 +128,6 @@ with tab3:
         st.subheader("📋 Top Pages Data")
         st.dataframe(df_pages)
 
-        # Narrative
         top_page = df_pages.loc[df_pages['page_views'].idxmax()]
         st.write(f"🔥 Your most visited page is **{top_page['page_url']}** with **{top_page['page_views']} views**.")
     else:
@@ -148,12 +149,10 @@ with tab4:
         )
         st.altair_chart(chart_device, use_container_width=True)
 
-        # Narrative
         top_device = df_device.loc[df_device['sessions'].idxmax()]
-        st.write(f"📱 Most users are on **{top_device['device_category']}** ({top_device['percentage']:.1f}%). Make sure your site looks great there.")
+        st.write(f"📱 Most users are on **{top_device['device_category']}** ({top_device['percentage']:.1f}%).")
     else:
         st.warning("No device data available.")
-
 
 # -------------------------------
 # Tab 5: Browser
@@ -174,10 +173,8 @@ with tab5:
         st.subheader("📋 Browser Data")
         st.dataframe(df_browser)
 
-        # Narrative
         top_browser = df_browser.loc[df_browser['sessions'].idxmax()]
-        st.write(f"🌐 Most visitors use **{top_browser['browser']}** "
-                 f"({top_browser['percentage']:.1f}% of sessions).")
+        st.write(f"🌐 Most visitors use **{top_browser['browser']}** ({top_browser['percentage']:.1f}% of sessions).")
     else:
         st.warning("No browser data available.")
 
@@ -185,7 +182,7 @@ with tab5:
 # Tab 6: Traffic Sources
 # -------------------------------
 with tab6:
-    df_traffic = get_data_from_bigquery(query_trafiic_file, start_date, end_date)
+    df_traffic = get_data_from_bigquery(query_traffic_file, start_date, end_date)
     if not df_traffic.empty:
         df_traffic = df_traffic.rename(columns={'session_count': 'sessions'})
         df_traffic['sessions'] = df_traffic['sessions'].fillna(0).astype(int)
@@ -201,7 +198,6 @@ with tab6:
         st.subheader("📋 Traffic Sources Data")
         st.dataframe(df_traffic)
 
-        # Narrative
         top_source = df_traffic.loc[df_traffic['sessions'].idxmax()]
         st.write(f"🚀 Most traffic comes from **{top_source['source']}** with {top_source['sessions']} sessions.")
     else:
@@ -213,10 +209,9 @@ with tab6:
 with tab7:
     df_clusters = get_data_from_bigquery(query_user_clusters_file, start_date, end_date)
     if not df_clusters.empty:
-        st.subheader("📊 User Segmentation for Tutorial Website")
+        st.subheader("📊 User Segmentation")
         st.dataframe(df_clusters)
 
-        # Donut chart showing % of users per segment
         chart_clusters = alt.Chart(df_clusters).mark_arc(innerRadius=80).encode(
             theta=alt.Theta(field='users', type='quantitative'),
             color=alt.Color(field='cluster_name', type='nominal', legend=alt.Legend(title="User Segment")),
@@ -225,20 +220,15 @@ with tab7:
                 alt.Tooltip('users:Q', title='Users'),
                 alt.Tooltip('pct_users:Q', title='Percentage', format='.2f')
             ]
-        ).properties(
-            title="User Segments Distribution",
-            width=700,
-            height=400
-        )
+        ).properties(title="User Segments Distribution", width=700, height=400)
 
         st.altair_chart(chart_clusters, use_container_width=True)
 
-        # Narrative highlighting the largest segment
         top_cluster = df_clusters.loc[df_clusters['users'].idxmax()]
-        st.write(f"🚀 Largest segment: **{top_cluster['cluster_name']}** with {top_cluster['users']} users "
-                 f"({top_cluster['pct_users']}%).")
+        st.write(f"🚀 Largest segment: **{top_cluster['cluster_name']}** with {top_cluster['users']} users ({top_cluster['pct_users']}%).")
     else:
         st.warning("No user segment data available for the selected date range.")
+
 # -------------------------------
 # Tab 8: Bounce Prediction
 # -------------------------------
@@ -256,13 +246,10 @@ with tab8:
         ).properties(title='Bounce Prediction Distribution')
         st.altair_chart(chart_bounce, use_container_width=True)
 
-        # Narrative
         bounce_count = (df_bounce['predicted_is_bounce'] == 1).sum()
-        st.write(f"🔮 About **{bounce_count} sessions** are predicted to bounce soon. You may want to improve landing page experience.")
+        st.write(f"🔮 About **{bounce_count} sessions** are predicted to bounce soon.")
 
         st.subheader("Top Sessions Likely to Bounce")
-
-        # ✅ FIX: sort by 'predicted_is_bounce' column instead of last column
         if 'predicted_is_bounce' in df_bounce.columns:
             df_top_bounce = df_bounce.sort_values(by='predicted_is_bounce', ascending=False).head(10)
             st.dataframe(df_top_bounce)
